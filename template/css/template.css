@@ -1,11 +1,8 @@
-/*基本のフォント*/
-text{
-    font-family: "MS 明朝"
-}
+
 
 /*ヘッター*/
 title{
-    text: #fff;
+    color: #fff;
     font-family: "Dynalight";
 }
 /* ハンバーガーメニュー*/
