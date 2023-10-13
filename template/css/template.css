@@ -1,4 +1,6 @@
-
+body{
+  margin: 0%;
+}
 
 /*ヘッター*/
 title{
@@ -7,16 +9,18 @@ title{
 }
 /* ハンバーガーメニュー*/
 .header {
+    padding-top: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    background-color: #9DA9B6;
+    background-color: rgb(147, 164, 179);
   }
   
   .logo {
-    font-size: 34px;
-    color: #ffffff;
+    color: #fff;
+    font-size: 3rem;
+    margin: 0 auto;
+    font-family: 'Caveat', cursive;
   }
   
   /* ここから下がハンバーガーメニューに関するCSS */
@@ -99,3 +103,9 @@ title{
   #drawer_input:checked ~ .nav_content {
     left: 0;/* メニューを画面に入れる */
   }
+
+  /*h1*/
+h1{
+  font-family: 'Sacramento', cursive;
+  text-align: center;
+
