@@ -109,4 +109,13 @@ h1{
   font-family: 'Sacramento', cursive;
   text-align: center;
 }
-
+  /*h2*/
+h2{
+  font-family: 'Sacramento', cursive;
+  text-align: center;
+}
+  /*h3*/
+  h3{
+    font-family: 'Sacramento', cursive;
+    text-align: center;
+  }
