@@ -1,0 +1,30 @@
+input{
+    background-color: #d3d3d3;
+    border: none;
+    width: 250px; height: 40px;
+}
+
+.left-aligned-text {
+    text-align: left;
+  }
+
+  .login-input{
+    text-align: right;
+}
+
+/*ボタン*/
+.example {
+    background-color: #9DA9B6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  .example span{
+    font-size: 25px;
+  }
+  .login-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+  }
