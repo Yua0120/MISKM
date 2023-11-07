@@ -28,5 +28,19 @@ body{
     height: 7rem;
 }
 
-/*商品画像などなど*/
+/*商品box*/
+.shohin{
+    width: 50%;
+    text-align: center;
+}
 
+/*商品画像*/
+.shohin-img{
+    width: 80%;
+    margin: 10 auto;
+}
+
+/*部品*/
+.shohin-item{
+    text-align: center;
+}
