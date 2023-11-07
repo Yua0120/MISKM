@@ -33,3 +33,40 @@
     justify-content: center;
     margin-bottom: 5%;
   }
+
+/*OKボタンの色を青にするところ*/
+.baba{
+  background-color: #5391EF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+.baba span{
+  font-size: 25px;
+}
+
+/*ボタンとボタンの間にスペース*/
+.space {
+  width: 80px;
+  height: auto;
+  display: inline-block;
+}
+
+/*up_check.htmlに使うボタンの大きさを統一するやつ*/
+.toitu{
+  width: 300px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #68779a;
+  background: #cbe8fa;
+  cursor: pointer;
+}
+
+/*info_update.htmlで使う！プロフィール画像の仮だよ*/
+.circle {
+    background: lightblue;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
