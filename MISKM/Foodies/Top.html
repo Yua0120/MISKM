@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="header.css">
-    <title></title>
+    <link rel="stylesheet" href="../Foodies/css/header.css">
+    <link rel="stylesheet" href="../Foodies/css/top.css">
+    <title>商品一覧</title>
 </head>
 <body>
     <header class="header">
@@ -30,5 +31,33 @@
 
         </div>
     </header>
+
+    <!--商品検索機能-->
+    <div class="search">
+        <form action="Top.html" method="post">
+            <input type="text" name="keyword" placeholder="search">
+        </form>
+    </div>
+
+    <!--絞り込み機能-->
+    <select name="narrowingdown">
+        <option value="">絞り込む</option>
+        <option>金額： 6000円以内</option>
+        <option>金額：10000円以内<option>
+        <!--ここは後々増やす-->
+    </select>
+
+    <!--タイムセール-->
+    <div class="time-sale">
+        <img src="../img/time_sale.jpg">    
+    </div>
+    
+    <div class="shohin">
+        <img src="../img/pa-ka-.jpg">
+        <p>商品名</p>
+        <p>￥〇〇〇〇　JPY</p>
+        <button type="submit">Add to cart</button>
+    </div>
+
 </body>
 </html>
