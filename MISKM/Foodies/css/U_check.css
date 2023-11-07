@@ -1,0 +1,49 @@
+/*テキストボックスの色*/
+input{
+    background-color: #d3d3d3;
+    border: none;
+}
+@media(max-width: 850px) {
+       
+button{
+    /*位置*/
+    position: absolute;
+    top: 60%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    /*デザイン*/
+    width: 150px;
+    font-size: 30px;
+    color: #fff;
+    border: none;
+    background-color: #9DA9B6;
+
+}
+.main{
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    /*デザイン*/
+}
+.text1{
+    width: 200px;
+    position: absolute;
+    top: 18%;
+    left: 20%;
+    right: 0;
+    margin: 0 auto;
+    font-size: 20px;
+}
+/*.text2{
+    width: 200px;
+    position: absolute;
+    top: 58%;
+    left: 20%;
+    right: 0;
+    margin: 0 auto;
+    font-size: 20px;
+    }*/
+}
