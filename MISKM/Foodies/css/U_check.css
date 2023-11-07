@@ -29,7 +29,7 @@ button{
     /*デザイン*/
 }
 .text1{
-    width: 200px;
+    width: 250px;
     position: absolute;
     top: 18%;
     left: 20%;
@@ -38,7 +38,7 @@ button{
     font-size: 20px;
 }
 .text2{
-    width: 200px;
+    width: 250px;
     position: absolute;
     top: 58%;
     left: 20%;
