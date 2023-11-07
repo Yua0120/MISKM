@@ -3,32 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/centerYoo.css">
+    <link rel="stylesheet" href="../Foodies/css/header.css">
     <link rel="stylesheet" href="./css/template.css">
-    <link rel="stylesheet" href="./css/login.css">
-    <title>新しいパスワード</title>
+    <link rel="stylesheet" href="./css/U_check.css">
+    <title>本人確認画面</title>
 </head>
 <body>
     <header class="header">
-        <!-- ヘッダーロゴ -->
-        <div class="logo" id="title">Foodies</div>
+    <div class="logo" id="title">Foodies</div>
     </header>
-    <br><br><br>
-    <form action="productlist.html">
-        <div class="container">
-            <div class="left-aligned-text">
-                <div class="login-input">
-                    <p>User ID
-                    <input type="text" name="loginid" style="width: 200px; height: 30px;"></p>
-                    <p>秘密の質問
-                    <input type="text" placeholder="卒業した小学校は？" name="Question" style="width: 200px; height: 30px;"></p>
-                </div>
-                <div class="login-button">
-                    <p><button class="example" type="submit" name="next"><span>Next</span></button></p>
-                </div>
-            </div>
-        </div>    
+    <form action="newpass.html">
+        <div class="main">
+            <p>
+              New<br>
+              Pass Word
+              <input type="text" class="text1" id="password" placeholder="8文字以上16文字以下で入力してください">
+            </p>
+            <p>
+               <input type="text" class="text2" id="question" placeholder="もう一度パスワードを入力してください">
+            </p>
+         </div>
+         <button type="submit" >Next</button>
     </form>
-
 </body>
-</html> 
+</html>
