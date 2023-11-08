@@ -26,7 +26,9 @@ button{
     width: 330px;
     height: 30px;
     font-size: 20px;
+
     border-style: none;
     border-bottom:3px solid #ccc;
     margin: 10px;
 }
+
