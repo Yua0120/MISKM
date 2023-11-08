@@ -21,9 +21,9 @@
         <div class="container">
         <div class="left-aligned-text">
         <div class="login-input">
-            <p>LoginID
+            <p>NickName
                 <input type="text" name="loginid" style="width: 200px; height: 30px;"></p>
-            <p>Pass Word
+            <p>PassWord
                 <input type="password" name="password" style="width: 200px; height: 30px;"></p>
         </div>
         <div class="login-confirmation">
