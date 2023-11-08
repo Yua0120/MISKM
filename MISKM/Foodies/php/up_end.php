@@ -12,7 +12,7 @@
         <!-- ヘッダーロゴ -->
         <div class="logo" id="title">Foodies</div>
     </header>
-    <form action="up_check.html" method="post">
+    <form action="Top.php" method="post">
         <br><br>
     <center><h2>Edit Completed!</h2></center>
         <br><br>
