@@ -12,7 +12,8 @@
             'password' => password_hash($row['password'],PASSWORD_DEFAULT)];
     }
     if (isset($_SESSION['User'])) {
-        echo 'いらっしゃいませ、', $_SESSION['User']['nickname'],'さん。';
+        header( "Location: ./Top.php" ) ;
+	    exit ;
     }else{
         echo 'ログイン名またはパスワードが違います。';
     }
