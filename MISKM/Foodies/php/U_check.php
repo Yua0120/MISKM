@@ -1,3 +1,4 @@
+<?php require 'header.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +10,6 @@
     <title>本人確認画面</title>
 </head>
 <body>
-    <header class="header">
-    <div class="logo" id="title">Foodies</div>
-    </header>
     <form action="newpass.html">
         <div class="main">
             <p>

@@ -1,3 +1,4 @@
+<?php require 'header.php'?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -9,20 +10,16 @@
     <title>login.html</title>
 </head>
 <body>
-    <header class="header">
-        <!-- ヘッダーロゴ -->
-        <div class="logo" id="title">Foodies</div>
-    </header>
 
     <h1>Choice is yours</h1>
 
-    <form action="Top.html" method="post">
+    <form action="login-output.php" method="post">
 
         <div class="container">
         <div class="left-aligned-text">
         <div class="login-input">
             <p>NickName
-                <input type="text" name="loginid" style="width: 200px; height: 30px;"></p>
+                <input type="text" name="nickname" style="width: 200px; height: 30px;"></p>
             <p>PassWord
                 <input type="password" name="password" style="width: 200px; height: 30px;"></p>
         </div>
