@@ -1,20 +1,19 @@
 <?php session_start(); ?>
 <?php require 'connect.php'; ?>
 <?php
-    unset($_SESSION['customer']);
+    unset($_SESSION['User']);
     $pdo = new PDO($connect,USER,PASS);
     $sql = $pdo -> prepare('select * from User where nickname = ? and password = ?');
-    $sql -> execute([$_REQUEST['login'],$_REQUEST['password']]);
+    $sql -> execute([$_REQUEST['nickname'],$_REQUEST['password']]);
     foreach($sql as $row){
-        $_SESSION['customer'] = [
-            'id' => $row['id'], 'name' => $row['name'],
+        $_SESSION['User'] = [
+            'id' => $row['id'], 'nickname' => $row['nickname'],
             'address' => $row['address'], 'login' => $row['login'],
             'password' => password_hash($row['password'],PASSWORD_DEFAULT)];
     }
-    if (isset($_SESSION['customer'])) {
-        echo 'いらっしゃいませ、', $_SESSION['customer']['name'],'さん。';
+    if (isset($_SESSION['User'])) {
+        echo 'いらっしゃいませ、', $_SESSION['User']['nickname'],'さん。';
     }else{
         echo 'ログイン名またはパスワードが違います。';
     }
 ?>
-<?php require 'footer.php'; ?>
