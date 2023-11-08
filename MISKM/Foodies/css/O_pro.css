@@ -19,13 +19,21 @@ button{
     position: absolute;
     top: 90%;
     left: 0;
-    right: 7%;
+    right: 9%;
     margin: 0 auto;
 }
 .text{
     width: 330px;
     height: 30px;
     font-size: 20px;
+}
+input{
+    margin: 10px;
+    outline: #ccc;
+    border-style: none;
+    border-bottom: 3px solid #ccc;
+   
+
 }
 /*次は
 　　・テキストボックス丸くする
