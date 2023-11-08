@@ -1,3 +1,4 @@
+<?php require 'header.php'?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -9,10 +10,6 @@
     <title>login.html</title>
 </head>
 <body>
-    <header class="header">
-        <!-- ヘッダーロゴ -->
-        <div class="logo" id="title">Foodies</div>
-    </header>
 
     <h1>Choice is yours</h1>
 
