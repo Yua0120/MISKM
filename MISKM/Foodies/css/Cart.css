@@ -1,0 +1,16 @@
+.bto{
+        /*位置*/
+        position: absolute;
+        top: 88%;
+        left: 25%;
+        margin: 0 auto;
+       /*デザイン*/
+        width: 200px;
+        font-size: 30px;
+        font-size: 20px;
+        color: #fff;
+        border: none;
+        background-color: #9DA9B6;
+        border-radius: 5px;
+
+}
