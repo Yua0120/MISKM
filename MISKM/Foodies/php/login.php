@@ -14,7 +14,7 @@
     <h1>Choice is yours</h1>
 
     <form action="login-output.php" method="post">
-
+    <form action="Top.php" method="post">
         <div class="container">
         <div class="left-aligned-text">
         <div class="login-input">
@@ -43,3 +43,4 @@
     <center><h2>New Member registration</h2></center>
 
 </body>
+</html>
