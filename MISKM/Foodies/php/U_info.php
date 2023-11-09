@@ -13,7 +13,7 @@
         <div class="logo" id="title">Foodies</div>
     </header>
     <center><h1>Sign up</h1></center>
-    <form action="#" method="post">
+    <form action="Top.php" method="post">
         <div class="container">
         <div class="left-aligned-text">
             
