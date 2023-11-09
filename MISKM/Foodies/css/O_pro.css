@@ -19,15 +19,16 @@ button{
     position: absolute;
     top: 90%;
     left: 0;
-    right: 7%;
+    right: 9%;
     margin: 0 auto;
 }
 .text{
     width: 330px;
     height: 30px;
     font-size: 20px;
+
+    border-style: none;
+    border-bottom:3px solid #ccc;
+    margin: 10px;
 }
-/*次は
-　　・テキストボックス丸くする
-　　・周りに余白を付ける
-　　　*/
+

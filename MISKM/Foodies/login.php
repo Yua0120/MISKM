@@ -14,11 +14,10 @@
     <h1>Choice is yours</h1>
 
     <form action="login-output.php" method="post">
-    <form action="Top.php" method="post">
+
         <div class="container">
         <div class="left-aligned-text">
         <div class="login-input">
-
             <p>NickName
                 <input type="text" name="nickname" style="width: 200px; height: 30px;"></p>
             <p>PassWord
@@ -29,18 +28,14 @@
         </div>
         <div class="NEWlogin-confirmation">
             <a href="U_reg.html">新規の方はこちら</a><br>
-
         </div>
         </div>
         </div>
 
         <div class="login-button">
-
             <p><button class="example" type="submit" name="login"  onclick="location.href='Top.html'"><span>Login</span></button></p>
-
         </div>
     </form>
     <center><h2>New Member registration</h2></center>
 
 </body>
-</html>

@@ -1,0 +1,44 @@
+.img1{
+    position: absolute;
+    top: 18%;
+    left: 10%;
+    margin: 0 auto;
+}
+.img2{
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    margin: 0 auto;
+}
+p{
+    position: absolute;
+    top: 58%;
+    left: 12%;
+    margin: 0 auto;
+    text-align: center;
+
+    /*デザイン*/
+    width: 280px;
+    font-size: 25px;
+    background-color: #9DA9B6;
+    color: #fff;
+    padding: 0;
+    margin: 10px;
+    border-radius: 5px;
+
+}
+button{
+    /*位置*/
+    position: absolute;
+    top: 88%;
+    left: 25%;
+    margin: 0 auto;
+   /*デザイン*/
+    width: 200px;
+    font-size: 30px;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    background-color: #9DA9B6;
+    border-radius: 5px;
+}
