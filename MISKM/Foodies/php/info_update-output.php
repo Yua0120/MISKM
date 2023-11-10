@@ -5,10 +5,10 @@
     $pdo = new PDO($connect,USER,PASS);
     if(isset($_SESSION['User'])){
         $id=$_SESSION['User']['id'];
-        $sql=$pdo->prepare('select * from Customer where id != ? and nickname = ?');
-        $sql->execute([$id, $_POST['Nickname']]);
+        $sql=$pdo->prepare('select * from User where id != ? and nickname = ?');
+        $sql->execute([$id, $_POST['nickname']]);
     }else{
-        $sql=$pdo->prepare('select * from Customer where nickname = ?');
+        $sql=$pdo->prepare('select * from User where nickname = ?');
         $sql->execute([$_POST['nickname']]);
     }
     if(empty($sql->fetchAll())){
