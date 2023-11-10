@@ -1,3 +1,4 @@
+<?php require 'H_heder.php'; ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -22,7 +23,7 @@
         {{num}}
         <button @click="increment" class="bto2">+</button>
         </p>
-        <p>小計 2個 (税込):〇〇〇〇円</p>
+        <p class="kei">小計 2個 (税込):〇〇〇〇円</p>
         </div>
         <button type="submit" class="bto">ご購入手続きへ</button>
     </form>
