@@ -39,14 +39,22 @@ p{
     margin-right: 5%;
     width: 40%;
     float: left;
+    text-align: center;
+}
+
+/*商品画像*/
+.shohin-img{
+    width: 90%;
+    margin: auto;
 }
 
 /*投稿box内のニックネーム*/
 .toukou-box-nickname{
-    width: 50%;
-    margin: 0;
-    padding: 0;
+    width: 45%;
+    margin-left: 5%;
+    padding-bottom: 0.3rem;
     text-align: left;
+    float: left;
     font-size: 0.5rem;
     border-bottom:1px solid;
     
@@ -54,9 +62,24 @@ p{
 
 /*投稿日*/
 .toukou-day{
-    text-align: right;
-    width: 49%;
+    margin-right: 5%;
+    padding-bottom: 0.3rem;
+    text-align: center;
+    width: 45%;
     font-size: 0.5rem;
     float: right;
     border-bottom:1px solid;
+}
+
+/*コメント*/
+.toukou-coment{
+    width: 90%;
+    height: 2rem;
+    margin: 0.3rem;
+    font-size: 0.5rem;
+}
+
+/*削除ボタン*/
+.toukou-delete{
+    margin: auto;
 }
