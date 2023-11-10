@@ -25,7 +25,7 @@
             header("Location: ../Top.html");
             exit;
         }else{
-            $sql=$pdo->prepare('insert into User(id,name,nickname,adddress,tel_number,zip_code) values(null,?,?,?,?,?)');
+            $sql=$pdo->prepare('insert into User(id,name,nickname,address,tel_number,zip_code) values(null,?,?,?,?,?)');
             $sql->execute([
                 $_POST['name'],$_POST['nickname'],$_POST['address'], $_POST['phonenumber'],$_POST['postcode']
             ]);
