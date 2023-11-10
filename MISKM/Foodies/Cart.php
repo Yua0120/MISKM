@@ -9,25 +9,27 @@
     <title>カート</title>
 </head>
 <body>
-    <div id="app">
-    <form action="">
-        <div class="main">
-        <p>
-        <img src="" alt=""><!--商品の画像-->
-        商品名<br>
-        金額
-        サイズ<br>
-        </p>
-        <p>
-        <button @click="decrement" class="bto2">-</button>
-        {{num}}
-        <button @click="increment" class="bto2">+</button>
-        </p>
-        <p class="kei">小計 2個 (税込):〇〇〇〇円</p>
-        </div>
-        <button type="submit" class="bto">ご購入手続きへ</button>
-    </form>
-    </div>
+    <?php
+       echo '<div id="app">';
+       echo '<form action="O_pro.php">';
+       echo '<div class="main">';
+       echo '<p>';
+       echo '<img alt="image" src="../img/',$row['id'],'."><!--商品の画像-->';
+       echo '商品名<br>';
+       echo '金額';
+       echo 'サイズ<br>';
+       echo '</p>';
+       echo '<p>';
+       echo '<button @click="decrement" class="bto2">-</button>';
+       echo '{{num}}';
+       echo '<button @click="increment" class="bto2">+</button>';
+       echo '</p>';
+       echo '<p class="kei">小計 2個 (税込):〇〇〇〇円</p>';
+       echo '</div>'
+       echo '<button type="submit" class="bto">ご購入手続きへ</button>'
+       echo '</form>'
+       echo '</div>'
+    ?>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="./script/Cart.js"></script>
