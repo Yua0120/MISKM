@@ -20,9 +20,9 @@
         <div class="login-input">
 
             <p>NickName
-                <input type="text" name="nickname" style="width: 200px; height: 30px;"></p>
+                <input type="text" name="nickname" class="in"></p>
             <p>PassWord
-                <input type="password" name="password" style="width: 200px; height: 30px;"></p>
+                <input type="password" name="password" class="in"></p>
         </div>
         <div class="login-confirmation">
             <a href="newpass.html">パスワードを忘れた方はこちら</a><br>
