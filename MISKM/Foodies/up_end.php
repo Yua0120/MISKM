@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/template.css">
     <link rel="stylesheet" href="css/touroku.css">
-    <title>ユーザー情報更新確認</title>
+    <title>ユーザー情報更新完了</title>
 </head>
 <body>
     <header class="header">
         <!-- ヘッダーロゴ -->
         <div class="logo" id="title">Foodies</div>
     </header>
-    <form action="up_end.html" method="post">
-    <center><h2>Do you really want to update?</h2></center>
+    <form action="Top.php" method="post">
+        <br><br>
+    <center><h2>Edit Completed!</h2></center>
+        <br><br>
     <div class="bobo">
-    <button class="example"><span>Up Date</span></button>
-    </div>
+    <button class="example"><span>OK</span></button>
     </div>
     </form>
 </body>
