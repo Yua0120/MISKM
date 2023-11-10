@@ -19,7 +19,7 @@
             ]);
             $_SESSION['User'] = [
                 'id' => $id, 'name' => $_POST['name'],
-                'nickname' => $_POST['nickname'], 'address' => $_POST['address'],
+                'nickname' => $_POST['nickname'], 'addres' => $_POST['address'],
                 'tel_number'=> $_POST['phonenumber'],'zip_code' => $_POST['postcode'],
             ];
             header("Location: ../Top.html");
