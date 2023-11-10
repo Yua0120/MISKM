@@ -29,7 +29,7 @@
         echo '<h4>Name</h4>';
         echo '<input type="text" name="name" class="text">';
         echo '<h4>Nickname</h4>';
-        echo '<input type="text" name="nicename" class="text">';
+        echo '<input type="text" name="nickname" class="text">';
         echo '<h4>Phone number</h4>';
         echo '<input type="text" size="30" placeholder="ハイフンなしで入力してください" name="phonenumber" class="text">';
         echo '<h4>Post code</h4>';
