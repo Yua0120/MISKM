@@ -35,8 +35,8 @@
         </div>
 
         <div class="login-button">
-
-            <p><button class="example" type="submit" name="login"  onclick="location.href='Top.html'"><span>Login</span></button></p>
+            //login-output側でTop.phpに飛ばしてる！
+            <p><button class="example" type="submit" name="login"><span>Login</span></button></p>
 
         </div>
     </form>
