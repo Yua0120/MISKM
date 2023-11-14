@@ -14,10 +14,10 @@
        echo '<form action="O_pro.php">';
        echo '<div class="main">';
        echo '<p>';
-       echo '<img alt="image" src="../img/',$row['id'],'."><!--商品の画像-->';
-       echo '商品名<br>';
-       echo '金額';
-       echo 'サイズ<br>';
+       echo '<img alt="image" src="../img/',$row['id'],'.jpg">'/*商品の画像*/
+       echo  $row['name'],'<br>';/*商品名*/
+       echo  $row['prie']; /*金額*/
+       echo  $row['size'],'<br>';/*サイズ*/
        echo '</p>';
        echo '<p>';
        echo '<button @click="decrement" class="bto2">-</button>';
