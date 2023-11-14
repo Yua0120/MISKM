@@ -14,7 +14,6 @@
     <h1>Choice is yours</h1>
 
     <form action="login-output.php" method="post">
-    <form action="Top.php" method="post">
         <div class="container">
         <div class="left-aligned-text">
         <div class="login-input">
@@ -25,10 +24,10 @@
                 <input type="password" name="password" class="in"></p>
         </div>
         <div class="login-confirmation">
-            <a href="newpass.html">パスワードを忘れた方はこちら</a><br>
+            <a href="U_check.php">パスワードを忘れた方はこちら</a><br>
         </div>
         <div class="NEWlogin-confirmation">
-            <a href="U_reg.html">新規の方はこちら</a><br>
+            <a href="U_reg.php">新規の方はこちら</a><br>
 
         </div>
         </div>
