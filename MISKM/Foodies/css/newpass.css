@@ -28,3 +28,8 @@ input{
     justify-content: center;
     margin-bottom: 5%;
   }
+
+  .in{
+    width: 200px;
+    height: 30px;
+  }
