@@ -15,6 +15,7 @@
         header( "Location: ./Top.php" ) ;
 	    exit ;
     }else{
-        echo 'ログイン名またはパスワードが違います。';
+        header( "Location: ./login.php?flag=false" ) ;
+	    exit ;
     }
 ?>

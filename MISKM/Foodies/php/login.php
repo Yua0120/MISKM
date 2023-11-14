@@ -29,11 +29,16 @@
         </div>
         <div class="NEWlogin-confirmation">
             <a href="U_reg.html">新規の方はこちら</a><br>
-
         </div>
         </div>
         </div>
-
+        <div class="login-fail">
+            <?php
+                if($_GET['flag']==false){
+                    echo '<p class="error">ニックネームあるいはパスワードが違います。</p>';
+                }
+            ?>
+        </div>
         <div class="login-button">
             //login-output側でTop.phpに飛ばしてる！
             <p><button class="example" type="submit" name="login"><span>Login</span></button></p>
