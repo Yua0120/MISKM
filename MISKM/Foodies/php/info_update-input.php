@@ -1,16 +1,11 @@
 <?php session_start()?>
 <?php require 'header.php';?>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/template.css">
     <link rel="stylesheet" href="../css/touroku.css">
     <title>ユーザー個人情報更新確認</title>
 </head>
-<body>
     <?php
+        require 'FoodiesTitle.php';
         $name=$nickname=$address=$tel_number=$zip_code='';
         if(isset($_SESSION['User'])){
             $name=$_SESSION['User']['name'];
