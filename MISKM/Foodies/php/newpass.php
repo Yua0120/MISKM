@@ -18,8 +18,8 @@
         <div class="login-input">
 
             New PassWord
-            <input type="password"  class="in" name="password" placeholder="8文字以上16文字以下で入力してください"><br>
-         <p><input type="password" class="in" name="password" placeholder="もう一度パスワードを入力してください"></p>
+            <input type="password"  class="in" name="new_password" placeholder="8文字以上16文字以下で入力してください"><br>
+         <p><input type="password" class="in" name="new_password" placeholder="もう一度パスワードを入力してください"></p>
         
         <div class="login-button">
             <p><button class="example" type="submit" name="login"><span>Login</span></button></p>
