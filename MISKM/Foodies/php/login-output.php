@@ -15,7 +15,7 @@
         header( "Location: ./Top.php" ) ;
 	    exit ;
     }else{
-        header( "Location: ./login.php?flag=false" ) ;
+        header( "Location: ./login.php?flag='fail'" ) ;
 	    exit ;
     }
 ?>
