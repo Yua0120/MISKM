@@ -14,7 +14,7 @@
         <div class="logo" id="title">Foodies</div>
     </header>
     <br><br><br>
-    <form action="productlist.html">
+    <form action="Top.php">
         <div class="container">
             <div class="left-aligned-text">
                 <div class="login-input">
@@ -25,7 +25,7 @@
                     <input type="text" name="Question" placeholder="もう一度パスワードを入力してください"></p>
                 </div>
                 <div class="login-button">
-                    <p><button class="example" type="submit" name="kakutei"><span>確定</span></button></p>
+                    <p><button class="example" type="submit" name="login"><span>Login</span></button></p>
                 </div>
             </div>
         </div>    
@@ -33,4 +33,3 @@
 
 </body>
 </html> 
-
