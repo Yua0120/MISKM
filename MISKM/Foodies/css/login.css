@@ -27,3 +27,12 @@
 .login-input{
     text-align: right;
 }
+.error{
+  color: red;
+  text-align: right;
+  font-size: 0.5em;
+}
+.in{
+width: 200px;
+height: 30px;
+}
