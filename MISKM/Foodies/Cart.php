@@ -20,6 +20,7 @@
        echo  $row['prie']; /*金額*/
        echo  $row['size'],'<br>';/*サイズ*/
        echo '</p>';
+       $toal = $row['price'] *  /*合計の値段を出したい*/
        echo '<p>';
        echo '<button @click="decrement" class="bto2">-</button>';
        echo '{{num}}';
