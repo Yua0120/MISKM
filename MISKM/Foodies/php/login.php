@@ -34,7 +34,8 @@
         </div>
         <div class="login-fail">
             <?php
-                if($_GET['flag']=='fail'){
+                 // $_GET['flag']がセットされているか確認
+                 if(isset($_GET['flag']) && $_GET['flag'] == 'fail'){
                     echo '<p class="error">ニックネームあるいはパスワードが違います。</p>';
                 }
             ?>
