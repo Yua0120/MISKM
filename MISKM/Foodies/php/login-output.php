@@ -1,7 +1,6 @@
 <?php
     // セッションの開始を最初に置く
     session_start();
-    require 'header.php';
     require 'connect.php';
 
     unset($_SESSION['User']);
