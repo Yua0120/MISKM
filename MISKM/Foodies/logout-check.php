@@ -1,3 +1,4 @@
+<?php require 'header.php';?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -9,10 +10,6 @@
     <title>logout</title>
 </head>
 <body>
-    <header class="header">
-        <!-- ヘッダーロゴ -->
-        <div class="logo" id="title">Foodies</div>
-    </header>
         <br><br>
         <center><h2>Are you sure you want to logout?</h2></center>
         <br><br>

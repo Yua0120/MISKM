@@ -1,3 +1,4 @@
+<?php require 'header.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +8,6 @@
     <title>注文確定</title>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">Foodies</div>
-    </header>
     <img src="" alt=""><!--くまの画像はる？-->
     <p>配達予定日：〇月〇日</p>
     <p>

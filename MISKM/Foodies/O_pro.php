@@ -1,3 +1,4 @@
+<?php require 'header.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +9,6 @@
     <title>注文手続き</title>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">Foodies</div>
-    </header>
     <form action="O_check.html" method="post">
     <div class="main">
         <p>配送先住所<br>

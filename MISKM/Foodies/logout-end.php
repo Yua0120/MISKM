@@ -1,3 +1,4 @@
+<?php require 'header.php';?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -9,10 +10,6 @@
     <title>ログアウト完了画面</title>
 </head>
 <body>
-    <header class="header">
-        <!-- ヘッダーロゴ -->
-        <div class="logo" id="title">Foodies</div>
-    </header>
     <form action="logout-check.html" method="post">
         <br><br>
         <center><h2>Logout Completed!</h2></center>

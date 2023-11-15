@@ -1,3 +1,4 @@
+<?php require 'header.php';?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -6,9 +7,6 @@
     <title>マイページ</title>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">Foodies</div>
-    </header>
 
     <!--ここに画像 改行はしない-->
 </body>

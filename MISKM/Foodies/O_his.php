@@ -1,3 +1,4 @@
+<?php require 'header.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +8,6 @@
     <title>注文履歴</title>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">Foodies</div>
-        <!--ハンバーガーメニュー追加-->
-    </header>
     <p>注文履歴</p>
     <!--スクロールの設定　お試し-->
     <div style="width: 100%; height: 100px; overflow-y: scroll; border: 1px #999999 soild;">
