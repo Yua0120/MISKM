@@ -1,4 +1,4 @@
-<?php require 'header.php' ?>
+<?php require 'header.php'?>
     <link rel="stylesheet" href="./css/centerYoo.css">
     <link rel="stylesheet" href="./css/template.css">
     <link rel="stylesheet" href="./css/newpass.css">
