@@ -1,3 +1,4 @@
+<?php require 'heder.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,21 +15,23 @@
     <form action="O_check.html" method="post">
     <div class="main">
         <p>配送先住所<br>
-          <input type="checkbox" name="address" id="address">登録した住所に配送する
         </p>
-        <p>
-           <input type="text" class="text" name="name" id="name" placeholder="名前（カナ）"><br>
-           <input type="text" class="text" name="zip_coded" id="zip_code" placeholder="郵便番号"><br>
-           <input type="text" class="text" name="address" id="address" placeholder="住所"><br>
-           <input type="text" class="text" name="address_num" id="address2_num" placeholder="番地"><br>
-           <input type="text" class="text" name="address_apart" id="address_apart" placeholder="マンション名、部屋番号など"><br>
-           <input type="text" class="text" name="tel_number" id="telnumber" placeholder="電話番号"><br>
-           <input type="text" class="text" name="e-mail" id="e-mail" placeholder="メールアドレス"><br>
-            支払い方法<br>
-           <input type="radio" name="pay" id="cash">現金（コンビニ払い<br>
-        </p>
+        <?php
+          echo '<p>';
+          echo '<input type="text" class="text" name="name" id="name" value="',$_POST['name'],'"><br>';
+          echo '<input type="text" class="text" name="zip_coded" id="zip_code" value="',$_POST['zip_code'],'"><br>';
+          echo '<input type="text" class="text" name="address" id="address" value="',$_POST['addres'],'"><br>';
+          echo '<input type="text" class="text" name="address_num" id="address2_num" value="',$_POST[''],'"><br>';
+          echo '<input type="text" class="text" name="address_apart" id="address_apart" value="',$_POST[],'"><br>';
+          echo '<input type="text" class="text" name="tel_number" id="telnumber" value="',$_POST[],'"><br>';
+          echo '<input type="text" class="text" name="e-mail" id="e-mail" value="',$_POST['mail'],'"><br>';
+          echo '支払い方法<br>';
+          echo '<input type="radio" name="pay" id="cash">現金（コンビニ払い<br>';
+          echo '</p>';
+          ?>
     </div>
     <p><button type="submit">注文確認</button></p>
     </form>
 </body>
 </html>
+<!--DBとつなげる-->
