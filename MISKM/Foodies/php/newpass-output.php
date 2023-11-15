@@ -26,9 +26,6 @@
 <?php require 'footer.php'; ?>
 パスワードを保存完了したら、トップにそのまま飛べる
 
-
-<?php
-
 <!-- パスワード変更フォーム -->
     <label for="new_password">新しいパスワード:</label>
     <input type="password" name="new_password" id="new_password" required>
