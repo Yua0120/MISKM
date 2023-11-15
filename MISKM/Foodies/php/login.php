@@ -34,13 +34,14 @@
         </div>
         <div class="login-fail">
             <?php
-                if($_GET['flag']==false){
+                 // $_GET['flag']がセットされているか確認
+                 if(isset($_GET['flag']) && $_GET['flag'] == 'fail'){
                     echo '<p class="error">ニックネームあるいはパスワードが違います。</p>';
                 }
             ?>
         </div>
         <div class="login-button">
-            //login-output側でTop.phpに飛ばしてる！
+            <!--login-output側でTop.phpに飛ばしてる！-->
             <p><button class="example" type="submit" name="login"><span>Login</span></button></p>
 
         </div>

@@ -1,35 +1,35 @@
 /*ボタン*/
 .example {
-    background-color: #9DA9B6;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-  }
-  .example span{
-    font-size: 25px;
-  }
-  .login-button {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5%;
-  }
+  background-color: #9DA9B6;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+.example span{
+  font-size: 25px;
+}
+.login-button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+}
   /*リンクのところ*/
 .login-confirmation{
-    text-align: right;
-    font-size: 0.5em;
-    }
+  text-align: right;
+  font-size: 0.5em;
+}
 .NEWlogin-confirmation{
-    text-align: right;
-    font-size: 0.5em;
+  text-align: right;
+  font-size: 0.5em;
 }
 
 .login-input{
-    text-align: right;
+  text-align: right;
 }
 .error{
   color: red;
-  text-align: right;
+  text-align: center;
   font-size: 0.5em;
 }
 .in{
