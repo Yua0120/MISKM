@@ -1,4 +1,4 @@
-<?php require 'FoodiseMenu.php'; ?>
+<?php require 'FoodiesMenu.php'; ?>
 <?php require 'connect.php'; ?>
 <!DOCTYPE html>
 <html lang="ja">
