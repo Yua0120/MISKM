@@ -20,13 +20,13 @@
        echo  $row['prie']; /*金額*/
        echo  $row['size'],'<br>';/*サイズ*/
        echo '</p>';
-       $toal = $row['price'] *  1;/*合計の値段を出したい 1って入れてるのはエラー対策*/
        echo '<p>';
        echo '<button @click="decrement" class="bto2">-</button>';
        echo '{{num}}';
        echo '<button @click="increment" class="bto2">+</button>';
        echo '</p>';
-       echo '<p class="kei">小計 2個 (税込):〇〇〇〇円</p>';
+       echo '<input type="hidden" name="price" id="price" value="',$_POST['price'],'">'
+       echo '<p class="kei">合計 {{count}}個 (税込):{{total}}円</p>';
        echo '</div>'
        echo '<button type="submit" class="bto">ご購入手続きへ</button>'
        echo '</form>'
