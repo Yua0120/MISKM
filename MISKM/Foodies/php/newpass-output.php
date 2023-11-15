@@ -3,6 +3,7 @@
 <?php require 'connect.php'; ?>
 <?php
     $pdo = new PDO($connect,USER,PASS);
+
     // サンプルのユーザーパスワード（実際にはデータベースから取得するなどの処理が必要）
     $previousPassword = "previous_password";
 
@@ -24,10 +25,6 @@
 ?>
 <?php require 'footer.php'; ?>
 パスワードを保存完了したら、トップにそのまま飛べる
-
-
-<?php
-
 
 <!-- パスワード変更フォーム -->
     <label for="new_password">新しいパスワード:</label>

@@ -4,7 +4,8 @@
     <link rel="stylesheet" href="./css/newpass.css">
     <title>新しいパスワード</title>
 </head>
-<body>
+<?php require 'FoodiesTitle.php' ?>
+
     <br><br><br>
     <form action="newpass-output.php" method="post">
 
