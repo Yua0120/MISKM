@@ -1,4 +1,4 @@
-<?php require 'H_heder.php'; ?>
+<?php require 'FoodiseMenu.php'; ?>
 <?php require 'connect.php'; ?>
 <!DOCTYPE html>
 <html lang="ja">
