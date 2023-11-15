@@ -3,11 +3,6 @@ input{
     border: none;
     width: 250px; height: 40px;
 }
-
-.left-aligned-text {
-    text-align: left;
-  }
-
   .login-input{
     text-align: right;
 }
