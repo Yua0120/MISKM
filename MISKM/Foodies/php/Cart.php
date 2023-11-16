@@ -16,7 +16,7 @@
        echo '<p>';
        echo '<img alt="image" src="../img/',$row['id'],'.jpg">';/*商品の画像*/
        echo  $row['name'],'<br>';/*商品名*/
-       echo  $row['prie']; /*金額*/
+       echo  $row['price']; /*金額*/
        echo  $row['size'],'<br>';/*サイズ*/
        echo '</p>';
        echo '<p>';
