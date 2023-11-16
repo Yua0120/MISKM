@@ -41,7 +41,7 @@
     <div class="update-fail">
         <?php
         // $_GET['flag']がセットされているか確認(セットされてると、ニックネームかぶってるからやり直し)
-        if (isset($_GET['flag']) && $_GET['flag'] == 'fail') {
+        if (isset($_GET['flag']) && $_GET['flag'] == 'rename') {
             echo '<p class="error">そのニックネームは既に使用されています。</p>';
         }
         ?>
