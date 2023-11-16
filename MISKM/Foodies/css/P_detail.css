@@ -3,14 +3,14 @@ body{
     padding: 0;
 }
 
-p{
-    margin: 0;
-}
 
-/*選択された画像*/
 .shohin-img{
     width: 50%;
     margin-left: 25%;
+}
+
+.img-box{
+    width: 100;
 }
 
 .shohin-name-money-box{
@@ -22,15 +22,12 @@ p{
     text-align: center;
     width: 50%;
     float: left;
-    margin-bottom: 5%;
 }
 
 .shohin-money{
     text-align: center;
-    width: 40%;
+    width: 50%;
     float: right;
-    padding-right: 10%;
-    margin-bottom: 5%;
 }
 
 .shohin-size-number-box{
@@ -45,41 +42,12 @@ p{
 }
 
 .number-box{
-    width: 35%;
+    width: 50%;
     text-align: right;
-    padding-right: 15%;
     float: right;  
 }
 
 .number-button{
     display: inline-block;
     margin: 0;
-}
-
-/*サイズ確認用の画像*/
-.size-img-box{
-    width: 100%;
-    text-align: center;
-}
-
-.size-img{
-    width: 40%;
-}
-
-/*商品の説明*/
-.description-text{
-    width: 80%;
-    height: 5rem;
-    border: none;
-    background-color: #9DA9B6;
-}
-
-.description-text-box{
-    width: 100%;
-    text-align: center;
-}
-
-.cart-button-box{
-    margin-top: 2rem;
-    text-align: center;
 }

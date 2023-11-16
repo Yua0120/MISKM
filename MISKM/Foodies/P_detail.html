@@ -34,8 +34,9 @@
 
     <div class="shohin-detail">
 
-        <!--選択された画像-->
-        <img src="../img/pa-ka-.jpg" class="shohin-img">
+        <div class="img-box">
+            <img src="../img/pa-ka-.jpg" class="shohin-img">
+        </div>
 
         <div class="shohin-name-money-box">
             <div class="shohin-name">
@@ -64,19 +65,6 @@
                 <p class="number-button">{{count}}</p>
                 <button @click="increment" class="number-button">+1</button>
             </div>
-        </div>
-
-        <!--サイズ確認画像-->
-        <div class="size-img-box">
-            <img src="../img/size.jpg" class="size-img">
-        </div>
-
-        <div class="description-text-box">
-            <input type="text" class="description-text" value="Description Of Item"></textarea>
-        </div>
-
-        <div class="cart-button-box">
-            <button type="submit" class="cart-button">Add to cart</button>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
