@@ -32,6 +32,7 @@
             exit;
         }
     }else{
+        // nicknameが重複しているとき
         header("Location: ../info_update-input.php?flag=fail");
         exit;
     }    
