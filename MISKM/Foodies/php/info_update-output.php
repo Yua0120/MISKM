@@ -1,6 +1,4 @@
 <?php session_start()?>
-<?php require 'header.php';?>
-</head>
 <?php require 'connect.php'; ?>
 <?php 
     $pdo = new PDO($connect,USER,PASS);
@@ -34,6 +32,7 @@
             exit;
         }
     }else{
-        echo 'ログイン名が既に使用されていますので、変更してください。';
+        header("Location: ../info_update-input.php?flag=fail");
+        exit;
     }    
 ?>
