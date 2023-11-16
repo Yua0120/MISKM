@@ -59,11 +59,25 @@
                 </select>
             </div>
 
+        <div shohin-size-number-box>
+            <!--サイズ選択-->
+            <div class="size-box">
+                <select name="size">
+                    <option>XS</option>
+                    <option>S</option>
+                    <option>M<option>
+                    <option>L</option>
+                    <option>XL<option>
+                </select>
+            </div>
+
             <!--個数選択-->
-            <div id="app" class="number-box">
-                <button @click="decrement" class="number-button">-1</button>
-                <p class="number-button">{{count}}</p>
-                <button @click="increment" class="number-button">+1</button>
+            <div class="number-box">
+                <div id="app">
+                    <button @click="decrement">-1</button>
+                    <p>{{count}}</p>
+                    <button @click="increment">+1</button>
+                </div>
             </div>
         </div>
 
