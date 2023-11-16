@@ -14,7 +14,7 @@
     }
     if(empty($sql->fetchAll())){
         if (isset($_SESSION['User'])) {
-            $sql=$pdo->prepare('update User set name = ?, nickname= ?, address = ?, tel_number = ?, zip_code = ? where id = ?');
+            $sql=$pdo->prepare('update User set name = ?, nickname= ?, addres = ?, tel_number = ?, zip_code = ? where id = ?');
             $sql->execute([
                 $_POST['name'],$_POST['nickname'],$_POST['address'],$_POST['phonenumber'],$_POST['postcode'],$id                
             ]);
@@ -26,7 +26,7 @@
             header("Location: ../Top.html");
             exit;
         }else{
-            $sql=$pdo->prepare('insert into User(id,name,nickname,address,tel_number,zip_code) values(null,?,?,?,?,?)');
+            $sql=$pdo->prepare('insert into User(id,name,nickname,addres,tel_number,zip_code) values(null,?,?,?,?,?)');
             $sql->execute([
                 $_POST['name'],$_POST['nickname'],$_POST['address'], $_POST['phonenumber'],$_POST['postcode']
             ]);
