@@ -47,8 +47,7 @@
                 <p>￥〇〇〇〇</p>
             </div>
         </div>
-
-        <div shohin-size-number-box>
+        <div class="shohin-size-number-box">
             <!--サイズ選択-->
             <div class="size-box">
                 <select name="size">
@@ -61,15 +60,13 @@
             </div>
 
             <!--個数選択-->
-            <div class="number-box">
-                <div id="app">
-                    <button @click="decrement">-1</button>
-                    <p>{{count}}</p>
-                    <button @click="increment">+1</button>
-                </div>
+            <div id="app" class="number-box">
+                <button @click="decrement" class="number-button">-1</button>
+                <p class="number-button">{{count}}</p>
+                <button @click="increment" class="number-button">+1</button>
             </div>
         </div>
-        
+
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script src="./script/P_detail.js"></script>
     </div>

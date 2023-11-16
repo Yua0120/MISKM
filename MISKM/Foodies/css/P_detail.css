@@ -37,5 +37,17 @@ body{
 
 .size-box{
     text-align: center;
+    width: 50%;
     float: left;
+}
+
+.number-box{
+    width: 50%;
+    text-align: right;
+    float: right;  
+}
+
+.number-button{
+    display: inline-block;
+    margin: 0;
 }
