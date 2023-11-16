@@ -1,4 +1,4 @@
-<?php require 'H_heder.php'; ?>
+<?php require 'FoodiesMenu.php'; ?>
 <?php require 'connect.php'; ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -15,22 +15,22 @@
        echo '<form action="O_pro.php">';
        echo '<div class="main">';
        echo '<p>';
-       echo '<img alt="image" src="../img/',$row['id'],'.jpg">'/*商品の画像*/
+       echo '<img alt="image" src="../img/',$row['id'],'.jpg">';/*商品の画像*/
        echo  $row['name'],'<br>';/*商品名*/
        echo  $row['prie']; /*金額*/
        echo  $row['size'],'<br>';/*サイズ*/
        echo '</p>';
-       $toal = $row['price'] *  1;/*合計の値段を出したい 1って入れてるのはエラー対策*/
        echo '<p>';
        echo '<button @click="decrement" class="bto2">-</button>';
        echo '{{num}}';
        echo '<button @click="increment" class="bto2">+</button>';
        echo '</p>';
-       echo '<p class="kei">小計 2個 (税込):〇〇〇〇円</p>';
-       echo '</div>'
-       echo '<button type="submit" class="bto">ご購入手続きへ</button>'
-       echo '</form>'
-       echo '</div>'
+       echo '<input type="hidden" name="price" id="price" value="',$_POST['price'],'">';
+       echo '<p class="kei">合計 {{count}}個 (税込):{{total}}円</p>';
+       echo '</div>';
+       echo '<button type="submit" class="bto">ご購入手続きへ</button>';
+       echo '</form>';
+       echo '</div>';
     ?>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
