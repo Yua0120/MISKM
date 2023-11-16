@@ -1,3 +1,4 @@
+<!--商品テーブルにデータが挿入されるまで凍結-->
 <?php require 'H_heder.php'; ?>
 <?php require 'connect.php'; ?>
 <!DOCTYPE html>
