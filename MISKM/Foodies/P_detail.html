@@ -33,35 +33,43 @@
     </header>
 
     <div class="shohin-detail">
-        <img src="../img/pa-ka-.jpg" class="shohin-img">
 
-        <div class="shohin-name">
-            <p>商品名</p>
+        <div class="img-box">
+            <img src="../img/pa-ka-.jpg" class="shohin-img">
         </div>
 
-        <div class="shohin-money">
-            <p>￥〇〇〇〇</p>
-        </div>
+        <div class="shohin-name-money-box">
+            <div class="shohin-name">
+                <p>商品名</p>
+            </div>
 
-        <!--サイズ選択-->
-        <div class="size-box">
-            <select name="size">
-                <option>XS</option>
-                <option>S</option>
-                <option>M<option>
-                <option>L</option>
-                <option>XL<option>
-            </select>
-        </div>
-
-        <!--個数選択-->
-        <div class="number-box">
-            <div id="app">
-                <button @click="decrement">-1</button>
-                <p>{{count}}</p>
-                <button @click="increment">+1</button>
+            <div class="shohin-money">
+                <p>￥〇〇〇〇</p>
             </div>
         </div>
+
+        <div shohin-size-number-box>
+            <!--サイズ選択-->
+            <div class="size-box">
+                <select name="size">
+                    <option>XS</option>
+                    <option>S</option>
+                    <option>M<option>
+                    <option>L</option>
+                    <option>XL<option>
+                </select>
+            </div>
+
+            <!--個数選択-->
+            <div class="number-box">
+                <div id="app">
+                    <button @click="decrement">-1</button>
+                    <p>{{count}}</p>
+                    <button @click="increment">+1</button>
+                </div>
+            </div>
+        </div>
+        
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script src="./script/P_detail.js"></script>
     </div>
