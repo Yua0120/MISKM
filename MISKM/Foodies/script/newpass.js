@@ -7,7 +7,7 @@ new Vue({
             return isErr;
         },
         isInValidPassW(){
-            return this.name.length < 4;
+            return this.pass2 != this.pass;
         }
     }
 });
