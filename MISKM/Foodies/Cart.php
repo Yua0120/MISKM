@@ -26,10 +26,10 @@
        echo '<button @click="increment" class="bto2">+</button>';
        echo '</p>';
        echo '<p class="kei">小計 2個 (税込):〇〇〇〇円</p>';
-       echo '</div>'
-       echo '<button type="submit" class="bto">ご購入手続きへ</button>'
-       echo '</form>'
-       echo '</div>'
+       echo '</div>';
+       echo '<button type="submit" class="bto">ご購入手続きへ</button>';
+       echo '</form>';
+       echo '</div>';
     ?>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
