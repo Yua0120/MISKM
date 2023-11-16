@@ -1,4 +1,3 @@
-<?php require 'H_heder.php'; ?>
 <?php require 'connect.php'; ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -9,8 +8,8 @@
     <link rel="stylesheet" href="../css/Cart.css">
     <title>カート</title>
 </head>
-<body>
     <?php
+       require 'FoodiesMenu.php';
        echo '<div id="app">';
        echo '<form action="O_pro.php">';
        echo '<div class="main">';
