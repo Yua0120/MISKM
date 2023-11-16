@@ -1,16 +1,10 @@
 <?php require 'header.php'?>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <link rel="stylesheet" href="./css/centerYoo.css">
     <link rel="stylesheet" href="./css/template.css">
     <link rel="stylesheet" href="./css/newpass.css">
     <title>新しいパスワード</title>
 </head>
-<body>
 <?php require 'FoodiesTitle.php' ?>
 <?php
     echo '<div id="app">';
