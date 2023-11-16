@@ -17,7 +17,12 @@
             New PassWord
             <input type="password"  class="in" name="new_pass" id="new_password" placeholder="8文字以上16文字以下で入力してください"><br>
          <p><input type="password" class="in" name="new_pass2" id="new_password" placeholder="もう一度パスワードを入力してください"></p>
-        
+    
+    <?php
+        if ($_POST["new_pass"] != $_POST["new_pass2"]) {
+            echo 'パスワードが一致しません。もう一度確認してください。';
+        }
+    ?>
         <div class="login-button">
             <p><button class="example" type="submit" name="login"><span>Login</span></button></p>
         </div>
