@@ -1,5 +1,5 @@
 <?php require 'heder.php';?>
-<?php require 'connect.php';
+<?php require 'connect.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,10 +22,10 @@
           echo '<input type="text" class="text" name="name" id="name" value="',$_POST['name'],'"><br>';
           echo '<input type="text" class="text" name="zip_coded" id="zip_code" value="',$_POST['zip_code'],'"><br>';
           echo '<textarea class="text" name="address" id="address" value="',$_POST['addres'],'"><br>';
-          echo '<input type="text" class="text" name="tel_number" id="telnumber" value="',$_POST[],'"><br>';
+          echo '<input type="text" class="text" name="tel_number" id="telnumber" value="',$_POST['tel_number'],'"><br>';
           echo '<input type="text" class="text" name="e-mail" id="e-mail" value="',$_POST['mail'],'"><br>';
           echo '支払い方法<br>';
-          echo '<input type="radio" name="pay" id="cash">現金（コンビニ払い<br>';
+          echo '<input type="radio" name="pay" id="cash">現金（コンビニ払い)<br>';
           echo '</p>';
           ?>
     </div>
