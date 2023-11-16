@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+.shohin-img{
+    width: 50%;
+    margin-left: 25%;
+}
+
+.img-box{
+    width: 100;
+}
+
+.shohin-name-money-box{
+    width: 70%;
+    margin-left: 15%;
+}
+
+.shohin-name{
+    text-align: center;
+    width: 50%;
+    float: left;
+}
+
+.shohin-money{
+    text-align: center;
+    width: 50%;
+    float: right;
+}
+
+.shohin-size-number-box{
+    width: 70%;
+    margin-left: 15%;
+}
+
+.size-box{
+    text-align: center;
+
+    width: 50%;
+    float: left;
+}
+
+.number-box{
+    width: 50%;
+    text-align: right;
+    float: right;  
+}
+
+.number-button{
+    display: inline-block;
+    margin: 0;
+}

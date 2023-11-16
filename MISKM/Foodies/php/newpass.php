@@ -1,15 +1,12 @@
+
 <?php require 'header.php'?>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/centerYoo.css">
     <link rel="stylesheet" href="./css/template.css">
     <link rel="stylesheet" href="./css/newpass.css">
     <title>新しいパスワード</title>
 </head>
-<body>
+<?php require 'FoodiesTitle.php' ?>
+
     <br><br><br>
     <form action="newpass-output.php" method="post">
 
@@ -18,9 +15,14 @@
         <div class="login-input">
 
             New PassWord
-            <input type="password"  class="in" name="password" placeholder="8文字以上16文字以下で入力してください"><br>
-         <p><input type="password" class="in" name="password" placeholder="もう一度パスワードを入力してください"></p>
-        
+            <input type="password"  class="in" name="new_pass" id="new_password" placeholder="8文字以上16文字以下で入力してください"><br>
+         <p><input type="password" class="in" name="new_pass2" id="new_password" placeholder="もう一度パスワードを入力してください"></p>
+    
+    <?php
+        if ($_POST["new_pass"] != $_POST["new_pass2"]) {
+            echo 'パスワードが一致しません。もう一度確認してください。';
+        }
+    ?>
         <div class="login-button">
             <p><button class="example" type="submit" name="login"><span>Login</span></button></p>
         </div>

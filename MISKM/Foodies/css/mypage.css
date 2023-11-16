@@ -1,0 +1,85 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+/*ユーザー画像*/
+.icon-img{
+    width: 9rem;
+    height: 9rem;
+    margin: 10 auto;
+}
+
+/*ニックネーム*/
+.nickname{
+    width: 40%;
+    text-align: center;
+    margin-top: 3.8rem;
+    padding-right: 15%;
+    font-size: 1.2rem;
+    float:right;
+}
+
+/*My投稿*/
+.toukou{
+    width: 100%;
+    font-size: 1.3rem;
+    text-align: center;
+    border-bottom:1px solid;
+}
+
+/*投稿box*/
+.toukou-box{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 40%;
+    float: left;
+    text-align: center;
+}
+
+/*商品画像*/
+.shohin-img{
+    width: 90%;
+    margin: auto;
+}
+
+/*投稿box内のニックネーム*/
+.toukou-box-nickname{
+    width: 45%;
+    margin-left: 5%;
+    padding-bottom: 0.3rem;
+    text-align: left;
+    float: left;
+    font-size: 0.5rem;
+    border-bottom:1px solid;
+    
+}
+
+/*投稿日*/
+.toukou-day{
+    margin-right: 5%;
+    padding-bottom: 0.3rem;
+    text-align: center;
+    width: 45%;
+    font-size: 0.5rem;
+    float: right;
+    border-bottom:1px solid;
+}
+
+/*コメント*/
+.toukou-coment{
+    width: 90%;
+    height: 2rem;
+    margin: 0.3rem;
+    font-size: 0.5rem;
+}
+
+/*削除ボタン*/
+.toukou-delete{
+    margin: auto;
+}
