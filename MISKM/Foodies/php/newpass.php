@@ -7,22 +7,21 @@
 </head>
 <?php require 'FoodiesTitle.php' ?>
 
+<div id="app">            
     <br><br><br>
-    <form action="newpass-output.php" method="post">
-
         <div class="container">
         <div class="left-aligned-text">
         <div class="login-input">
 
             New PassWord
-            <input type="password"  class="in" name="new_pass" id="new_password" placeholder="8文字以上16文字以下で入力してください"><br>
-         <p><input type="password" class="in" name="new_pass2" id="new_password" placeholder="もう一度パスワードを入力してください"></p>
-    
-    <?php
-        if ($_POST["new_pass"] != $_POST["new_pass2"]) {
-            echo 'パスワードが一致しません。もう一度確認してください。';
-        }
-    ?>
+            <input type="password"  class="in" name="new_pass" id="new_password" v-model="pass" placeholder="8文字以上16文字以下で入力してください"><br>
+            <p v-if="isInValidPass" class="error">
+                8文字以上16文字以下で入力してください</p>
+
+         <p><input type="password" class="in" name="new_pass2" id="new_password" v-model="pass2" placeholder="もう一度パスワードを入力してください"></p>
+            <p v-if="isInValidPassW" class="error">
+                名前は４文字以上で入力してください</p>
+
         <div class="login-button">
             <p><button class="example" type="submit" name="login"><span>Login</span></button></p>
         </div>
@@ -30,7 +29,10 @@
         </div>
         </div>
         </div>    
-    </form>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="./script/newpass.js"></script>
 
 </body>
 </html> 
