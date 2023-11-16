@@ -1,16 +1,22 @@
+var price = document.getElementById("price").value;
 new Vue({
     el:'#app',
     data(){
         return{
-            num:1
+            count:1
         };
     },
     methods:{
         decrement(){
-            this.num--;
+            this.count--;
         },
         increment(){
-            this.num++;
+            this.count++;
+        }
+    },
+    watch:{
+        count(newValue,pldValue){
+            this.total = this.count * this.price;
         }
     }
 });
