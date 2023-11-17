@@ -28,3 +28,7 @@ input{
   width: 200px;
   height: 30px;
 }
+
+.error{
+  color: #e74c3c;
+}

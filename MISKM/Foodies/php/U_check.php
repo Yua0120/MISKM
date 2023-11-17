@@ -14,11 +14,11 @@
         <div class="main">
             <p>
               User ID
-              <input type="text" class="text1" id="UserID">
+              <input type="text" class="text1" name ="UserId" id="UserId">
             </p>
             <p>
                秘密の質問
-               <input type="text" class="text2" id="question" placeholder="卒業した小学校名を入力してください">
+               <input type="text" class="text2"name="question" id="question" placeholder="卒業した小学校名を入力してください">
             </p>
          </div>
          <button type="submit" >Next</button>
