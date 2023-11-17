@@ -26,9 +26,9 @@
 </body>
 </html>
 DBとつなげる-->
+<?php session_start();?>
 <?php require 'header.php';?>
 <?php require 'connect.php';?>
-<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
