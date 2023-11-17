@@ -1,4 +1,4 @@
-<?php require 'heder.php';?>
+<?php require 'header.php';?>
 <?php require 'connect.php';?>
 <!DOCTYPE html>
 <html lang="en">
