@@ -18,8 +18,8 @@
         <p>
         <?php
         $pdo = new PDO($connect,USER,PASS);
-        $sql = $pdo->prepare('select name,zip_code,addres,tel_number from User where id=?');
-        $sql -> execute([$_GET['id']]);
+        $sql = $pdo->prepare('select name,zip_code,addres,tel_number from User where nickname=?');
+        $sql -> execute([$_SESSION['User']['nickname']]);
           echo '<input type="text" class="text" name="name" id="name" value="',$row['name'],'"><br>';
           echo '<input type="text" class="text" name="zip_coded" id="zip_code" value="',$row['zip_code'],'"><br>';
           echo '<textarea class="text" name="address" id="address" value="',$row['addres'],'"><br>';
