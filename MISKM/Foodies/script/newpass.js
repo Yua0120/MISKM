@@ -4,25 +4,26 @@ new Vue({
         return {
           password: '',
           confirmPassword: '',
-          isError: false,
-          errorMessage: ''
+          isLengthError: false,
+          isMatchError: false
         };
       },
-      methods: {
+    methods: {
         checkInput() {
           const passwordLength = this.password.length;
-          const confirmPasswordLength = this.confirmPassword.length;
     
-          this.isError = false;
-          this.errorMessage = '';
+          // パスワードの長さに関するエラーチェック
+          this.isLengthError = passwordLength < 8 || passwordLength > 16;
     
-          if (passwordLength < 8 || passwordLength > 16) {
-            this.isError = true;
-            this.errorMessage = 'パスワードは8文字以上16文字以下で入力してください。';
-          } else if (this.password !== this.confirmPassword) {
-            this.isError = true;
-            this.errorMessage = 'パスワードが一致しません。';
+          // パスワードが一致しているかのエラーチェック
+          this.isMatchError = this.password !== this.confirmPassword;
+        },
+        submitForm() {
+            // エラーチェック
+            if (!this.isLengthError && !this.isMatchError) {
+              // フォーム送信の処理はformタグのaction属性に指定されたページ(newpass-output.php)に自動的にリダイレクトされる
+              // この例では何も行わない
+            }
           }
-        }
     }
 });
