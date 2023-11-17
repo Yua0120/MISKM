@@ -1,16 +1,10 @@
 <?php session_start();?>
 <?php require 'header.php';?>
 <?php require 'connect.php';?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Foodies/css/header.css">
-    <link rel="stylesheet" href="css/O_pro.css">
+    <link rel="stylesheet" href="./css/O_pro.css">
     <title>注文手続き</title>
 </head>
-<body>
+<?php require 'FoodiesTitle.php';?>
     <form action="O_check.php" method="post">
     <div class="main">
         <p>
