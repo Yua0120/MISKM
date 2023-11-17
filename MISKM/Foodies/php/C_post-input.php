@@ -10,7 +10,7 @@
         <label for="upload"><input type="file" name="test" onchange="previewFile(this);" id="upload"></label>
         <br>
         <p>購入商品<input type="text" name="product_name" id="pro_name"></p>
-        <p>購入商品
+        <p>サイズ
             <select name="size" id="pro_size">
                 <option value="">XS</option>
                 <option value="">S</option>
