@@ -9,7 +9,7 @@
         $_SESSION['User'] = [
             'id' => $row['user_id'],
             'nickname' => $row['nickname'],
-            'password' => password_hash($row['password'], PASSWORD_DEFAULT)
+            'password' => password_hash($row['hash_pass'], PASSWORD_DEFAULT)
         ];
     }
     if (isset($_SESSION['User'])) {
