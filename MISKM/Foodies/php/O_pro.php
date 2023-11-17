@@ -15,19 +15,20 @@
     </header>
     <form action="O_check.html" method="post">
     <div class="main">
-        <p>配送先住所<br>
+        <p>
+            配送先住所
         </p>
+        <p>
         <?php
-          echo '<p>';
           echo '<input type="text" class="text" name="name" id="name" value="',$row['name'],'"><br>';
           echo '<input type="text" class="text" name="zip_coded" id="zip_code" value="',$row['zip_code'],'"><br>';
           echo '<textarea class="text" name="address" id="address" value="',$row['addres'],'"><br>';
           echo '<input type="text" class="text" name="tel_number" id="tel_number" value="',$rowT['tel_number'],'"><br>';
           echo '<input type="text" class="text" name="mail" id="mail" value="',$row['mail'],'"><br>';
-          echo '支払い方法<br>';
-          echo '<input type="radio" name="pay" id="cash">現金（コンビニ払い)<br>';
-          echo '</p>';
           ?>
+          支払い方法<br>
+          <input type="radio" name="pay" id="cash">現金（コンビニ払い)<br>
+          </p>
     </div>
     <p><button type="submit">注文確認</button></p>
     </form>
