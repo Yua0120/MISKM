@@ -28,6 +28,7 @@
 DBとつなげる-->
 <?php require 'header.php';?>
 <?php require 'connect.php';?>
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,8 +51,6 @@ DBとつなげる-->
         $sql = $pdo->prepare('SELECT  name, zip_code, addres, tel_number, mail FROM User WHERE nickname=?');
         $sql->execute([$_SESSION['User']['nickname']]);
         $row = $sql->fetch(PDO::FETCH_ASSOC);
-
-        var_dump($row);
 
         echo '<input type="text" class="text" name="name" id="name" value="', $row['name'], '"><br>';
         echo '<input type="text" class="text" name="zip_code" id="zip_code" value="', $row['zip_code'], '"><br>';
