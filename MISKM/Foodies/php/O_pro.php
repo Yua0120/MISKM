@@ -45,6 +45,7 @@ DBとつなげる-->
         </p>
         <p>
         <?php
+        if(isset($_SESSION['User'])){
         $pdo = new PDO($connect, USER, PASS);
         $sql = $pdo->prepare('SELECT name, zip_code, addres, tel_number, mail FROM User WHERE nickname=?');
         $sql->execute([$_SESSION['User']['nickname']]);
@@ -55,6 +56,9 @@ DBとつなげる-->
         echo '<textarea class="text" name="address" id="address">', $row['addres'], '</textarea><br>';
         echo '<input type="text" class="text" name="tel_number" id="tel_number" value="', $row['tel_number'], '"><br>';
         echo '<input type="text" class="text" name="mail" id="mail" value="', $row['mail'], '"><br>';
+        }else{
+            echo 'セッションが設定されていません。'
+        }
         ?>
         支払い方法<br>
         <input type="radio" name="pay" id="cash">現金（コンビニ払い）<br>
