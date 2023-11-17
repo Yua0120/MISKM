@@ -1,31 +1,3 @@
-
-<!--
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Foodies/css/header.css">
-    <link rel="stylesheet" href="css/O_pro.css">
-    <title>注文手続き</title>
-</head>
-<body>
-    <form action="O_check.html" method="post">
-    <div class="main">
-        <p>
-            配送先住所
-        </p>
-        <p>
-
-          支払い方法<br>
-          <input type="radio" name="pay" id="cash">現金（コンビニ払い）<br>
-          </p>
-    </div>
-    <p><button type="submit">注文確認</button></p>
-    </form>
-</body>
-</html>
-DBとつなげる-->
 <?php session_start();?>
 <?php require 'header.php';?>
 <?php require 'connect.php';?>
