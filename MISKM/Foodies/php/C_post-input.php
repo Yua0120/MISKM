@@ -1,5 +1,5 @@
 <?php require 'header.php' ?>
-<link rel="stylesheet" href="../css/centerYoo.css">
+<link rel="stylesheet" href="../css/Coordinate.css">
 <link rel="stylesheet" href="../css/template.css">
 <title>CoordinatePost.html</title>
 </head>
