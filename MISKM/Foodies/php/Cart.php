@@ -11,6 +11,9 @@
 </head>
 <body>
     <?php
+       $pdo = new PDO($connect, USER, PASS);
+       $sql = $pdo->prepare('SELECT name, zip_code, addres, tel_number, mail FROM User WHERE nickname=?');
+       $sql->execute([$_SESSION['Cart']['nickname']]);
        echo '<div id="app">';
        echo '<form action="O_pro.php">';
        echo '<div class="main">';
