@@ -1,8 +1,8 @@
 <?php require 'header.php'?>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <link rel="stylesheet" href="./css/centerYoo.css">
-    <link rel="stylesheet" href="./css/template.css">
-    <link rel="stylesheet" href="./css/newpass.css">
+    <link rel="stylesheet" href="../css/centerYoo.css">
+    <link rel="stylesheet" href="../css/template.css">
+    <link rel="stylesheet" href="../css/newpass.css">
     <title>新しいパスワード</title>
 </head>
 <?php require 'FoodiesTitle.php' ?>
@@ -31,7 +31,7 @@
         </div>
         </form>
         </div>
-</body>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script src="./script/newpass.js"></script>
+        <script src="../script/newpass.js"></script>
+        </body>
 </html> 
