@@ -1,5 +1,5 @@
 <?php require 'header.php' ?>
-<link rel="stylesheet" href="../css/Coordinate.css">
+<link rel="stylesheet" href="../css/coordinate.css">
 <link rel="stylesheet" href="../css/template.css">
 <title>CoordinatePost.html</title>
 </head>
@@ -7,10 +7,10 @@
 
 <form action="C_browsing.php" method="post">
     <div class="container">
-        <input type="file" name="test" onchange="previewFile(this);">
+        <label for="upload"><input type="file" name="test" onchange="previewFile(this);" id="upload"></label>
         <br>
         <p>購入商品<input type="text" name="product_name" id="pro_name"></p>
-        <p>購入商品
+        <p>サイズ
             <select name="size" id="pro_size">
                 <option value="">XS</option>
                 <option value="">S</option>
