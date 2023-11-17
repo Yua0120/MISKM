@@ -1,4 +1,3 @@
-<?php require 'FoodiesMenu.php'; ?>
 <?php require 'connect.php'; ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -9,7 +8,6 @@
     <link rel="stylesheet" href="../css/Cart.css">
     <title>カート</title>
 </head>
-<body>
     <?php
        $pdo = new PDO($connect, USER, PASS);
        $sql = $pdo->prepare('SELECT name, zip_code, addres, tel_number, mail FROM User WHERE nickname=?');
@@ -20,7 +18,7 @@
        echo '<p>';
        echo '<img alt="image" src="../img/',$row['id'],'.jpg">';/*商品の画像*/
        echo  $row['name'],'<br>';/*商品名*/
-       echo  $row['prie']; /*金額*/
+       echo  $row['price']; /*金額*/
        echo  $row['size'],'<br>';/*サイズ*/
        echo '</p>';
        echo '<p>';

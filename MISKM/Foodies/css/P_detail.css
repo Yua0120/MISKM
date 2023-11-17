@@ -3,10 +3,8 @@ body{
     padding: 0;
 }
 
-
-.shohin-img{
-    width: 50%;
-    margin-left: 25%;
+p{
+    margin: 0;
 }
 
 .img-box{
@@ -26,8 +24,9 @@ body{
 
 .shohin-money{
     text-align: center;
-    width: 50%;
+    width: 40%;
     float: right;
+    padding-right: 10%;
 }
 
 .shohin-size-number-box{
@@ -42,12 +41,38 @@ body{
 }
 
 .number-box{
-    width: 50%;
+    width: 35%;
+    margin: 0;
     text-align: right;
-    float: right;  
+    float: right;
+    padding-right: 15%;  
 }
 
 .number-button{
     display: inline-block;
     margin: 0;
+}
+
+.size-img-box{
+    text-align: center;
+}
+
+.size-img{
+    width: 45%;
+}
+
+.description-text{
+    background-color: #9DA9B6;
+    width: 80%;
+    height: 5rem;
+    border: none;
+}
+
+.description-text-box{
+    text-align: center;
+}
+
+.cart-button-box{
+    margin-top: 5%;
+    text-align: center;
 }
