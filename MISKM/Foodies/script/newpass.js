@@ -1,13 +1,21 @@
 new Vue({
     el:'#app',
-    computed:{
-        isInValidPass(){
-            const pass = this.pass;
-            const isErr = pass.length < 8 || isNaN(Number(pass));
-            return isErr;
+    data() {
+        return {
+          password: '',
+          confirmPassword: '',
+          isLengthError: false,
+          isPasswordError: false
+        };
+      },
+      methods: {
+        checkInputLength() {
+          const length = this.password.length;
+          this.isLengthError = length < 8 || length > 16;
+          this.checkPasswordMatch();
         },
-        isInValidPassW(){
-            return this.pass2 != this.pass;
+        checkPasswordMatch() {
+          this.isPasswordError = this.password !== this.confirmPassword;
         }
-    }
+      }
 });

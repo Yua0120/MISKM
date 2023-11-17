@@ -15,12 +15,12 @@
     echo '<div class="login-input">';
 
         echo 'New PassWord';
-        echo '<input type="password"  class="in" name="new_pass" id="new_password" v-model="pass" placeholder="8文字以上16文字以下で入力してください"><br>';
-        echo '<p v-if="isInValidPass" class="error">';
+        echo '<input type="password"  class="in" id="new_password" v-model="password" @input="checkInputLength" placeholder="8文字以上16文字以下で入力してください"><br>';
+        echo '<p v-if="isPasswordError" class="error">';
             echo '8文字以上16文字以下で入力してください。</p>';
 
-        echo '<p><input type="password" class="in" name="new_pass2" id="new_password" v-model="pass2" placeholder="もう一度パスワードを入力してください"></p>';
-        echo '<p v-if="isInValidPassW" class="error">';
+        echo '<p><input type="password" class="in" id="new_password" v-model="confirmPassword" @input="checkPasswordMatch" placeholder="もう一度パスワードを入力してください"></p>';
+        echo '<p v-if="isLengthError" class="error">';
             echo 'パスワードが一致していません。確認してください。</p>';
 
         echo '<div class="login-button">';
