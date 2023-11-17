@@ -10,9 +10,6 @@
     <title>注文手続き</title>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">Foodies</div>
-    </header>
     <form action="O_check.html" method="post">
     <div class="main">
         <p>
@@ -20,6 +17,9 @@
         </p>
         <p>
         <?php
+        $pdo = new PDO($connect,USER,PASS);
+        $sql = $pdo->preapare('select name,zip_code,addres,tel_number from User where id=?');
+        $sql -> execute([$_GET['id']]);
           echo '<input type="text" class="text" name="name" id="name" value="',$row['name'],'"><br>';
           echo '<input type="text" class="text" name="zip_coded" id="zip_code" value="',$row['zip_code'],'"><br>';
           echo '<textarea class="text" name="address" id="address" value="',$row['addres'],'"><br>';
@@ -27,7 +27,7 @@
           echo '<input type="text" class="text" name="mail" id="mail" value="',$row['mail'],'"><br>';
           ?>
           支払い方法<br>
-          <input type="radio" name="pay" id="cash">現金（コンビニ払い)<br>
+          <input type="radio" name="pay" id="cash">現金（コンビニ払い）<br>
           </p>
     </div>
     <p><button type="submit">注文確認</button></p>
