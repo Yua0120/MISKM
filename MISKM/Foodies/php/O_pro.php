@@ -51,6 +51,8 @@ DBとつなげる-->
         $sql->execute([$_SESSION['User']['nickname']]);
         $row = $sql->fetch(PDO::FETCH_ASSOC);
 
+        var_dump($row);
+
         echo '<input type="text" class="text" name="name" id="name" value="', $row['name'], '"><br>';
         echo '<input type="text" class="text" name="zip_code" id="zip_code" value="', $row['zip_code'], '"><br>';
         echo '<textarea class="text" name="address" id="address">', $row['addres'], '</textarea><br>';
