@@ -7,7 +7,7 @@
 <?php require 'FoodiesTitle.php';?>
     <form action="O_check.php" method="post">
     <div class="main">
-        <p>
+        <p class="sabtitle">
             配送先住所
         </p>
         <p>
@@ -27,7 +27,7 @@
             echo 'セッションが設定されていません。';
         }
         ?>
-        支払い方法<br>
+        <p class="sabtitle">支払い方法<p><br>
         <input type="radio" name="pay" id="cash">現金（コンビニ払い）<br>
         </p>
     </div>
