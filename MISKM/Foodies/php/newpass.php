@@ -7,20 +7,19 @@
 </head>
 <?php require 'FoodiesTitle.php' ?>
 
-    <div id="app">
+<div id="app">
     <form action="newpass-output.php" method="post" @submit.prevent="submitForm">    
         <br><br><br>
         <div class="container">
         <div class="left-aligned-text">
         <div class="login-input">
 
-            New PassWord
-            <input type="password" class="in" v-model="password" zise="20" @input="checkInput" placeholder="8文字以上16文字以下で入力してください"><br>
-            <p v-if="isLengthError" class="error">パスワードは8文字以上16文字以下で入力してください。</p>
-            
+            New Password
+            <input type="password" class="in" v-model="password" size="13" @input="checkInput" placeholder="8文字以上16文字以下で入力してください"><br>                <div v-if="isLengthError" class="error">パスワードは8文字以上16文字以下で入力してください。</div>
+                    
             Confirm Password
-            <input type="password" class="in" v-model="confirmPassword" zise="18" @input="checkInput" placeholder="もう一度パスワードを入力してください"><br>
-            <p v-if="isMatchError" class="error">パスワードが一致しません。</p>
+            <input type="password" class="in" v-model="confirmPassword" size="13" @input="checkInput" placeholder="もう一度パスワードを入力してください"><br>
+            <div v-if="isMatchError" class="error">パスワードが一致しません。</div>
 
             <div class="login-button">
                 <p><button class="example" type="submit"><span>Login</span></button></p>
@@ -29,9 +28,9 @@
         </div>
         </div>
         </div>
-        </form>
-        </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script src="../script/newpass.js"></script>
-        </body>
-</html> 
+    </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="../script/newpass.js"></script>
+</body>
+</html>
