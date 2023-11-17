@@ -18,7 +18,7 @@
         <p>
         <?php
         $pdo = new PDO($connect,USER,PASS);
-        $sql = $pdo->preapare('select name,zip_code,addres,tel_number from User where id=?');
+        $sql = $pdo->prepare('select name,zip_code,addres,tel_number from User where id=?');
         $sql -> execute([$_GET['id']]);
           echo '<input type="text" class="text" name="name" id="name" value="',$row['name'],'"><br>';
           echo '<input type="text" class="text" name="zip_coded" id="zip_code" value="',$row['zip_code'],'"><br>';
