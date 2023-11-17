@@ -15,11 +15,11 @@
         <div class="login-input">
 
             New PassWord
-            <input type="password" class="in" v-model="password" @input="checkInput" placeholder="8文字以上16文字以下で入力してください"><br>
+            <input type="password" class="in" v-model="password" zise="20" @input="checkInput" placeholder="8文字以上16文字以下で入力してください"><br>
             <p v-if="isLengthError" class="error">パスワードは8文字以上16文字以下で入力してください。</p>
             
             Confirm Password
-            <input type="password" class="in" v-model="confirmPassword" @input="checkInput" placeholder="もう一度パスワードを入力してください"><br>
+            <input type="password" class="in" v-model="confirmPassword" zise="18" @input="checkInput" placeholder="もう一度パスワードを入力してください"><br>
             <p v-if="isMatchError" class="error">パスワードが一致しません。</p>
 
             <div class="login-button">
