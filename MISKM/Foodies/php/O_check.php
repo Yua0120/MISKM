@@ -1,10 +1,6 @@
+<?php require 'header.php';?>
 <?php require 'connect.php';?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Foodies/css/header.css">
+
     <title>注文確認</title>
 </head>
 <body>
@@ -15,7 +11,7 @@
        echo $_POST['zip_code'],'<br>';/*-郵便番号*/
        echo $_POST['address'],'<br>';/*住所*/
        echo $_POST['tel_number'],'<br>';/*電話番号*/
-       echo $_POST['mail']'<br>';/*メールアドレス*/
+       echo $_POST['mail'],'<br>';/*メールアドレス*/
        echo '<p>支払方法</p>';
        echo '現金（コンビニ払い）';
        ?>
