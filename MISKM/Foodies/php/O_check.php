@@ -3,7 +3,7 @@
 
     <title>注文確認</title>
 </head>
-<body>
+<?php require 'FoodiesTitle.php';?>
     <div class="main">
     <p>配送先住所</p>
     <?php
