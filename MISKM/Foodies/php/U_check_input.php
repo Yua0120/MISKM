@@ -9,7 +9,7 @@
        echo '<div class="main">';
        echo '<p>';
        echo 'mail';
-       echo '<input type="mail" class="text1" name ="mail" id="mail">';
+       echo '<input type="email" class="text1" name ="mail" id="mail">';
        echo '</p>';
        echo '<p>';
        echo '秘密の質問';
