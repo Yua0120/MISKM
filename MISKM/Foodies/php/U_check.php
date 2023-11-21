@@ -1,4 +1,5 @@
-<?php require 'header.php'?>
+<?php require 'header.php';?>
+
     <link rel="stylesheet" href="../css/template.css">
     <link rel="stylesheet" href="../css/U_check.css">
     <title>本人確認画面</title>
