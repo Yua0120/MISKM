@@ -1,5 +1,4 @@
 <?php require 'connect.php';?>
-<?php require 'header.php'; ?>
 <form action="newpass.php">
 <?php
 unset($_SESSION['User']);
