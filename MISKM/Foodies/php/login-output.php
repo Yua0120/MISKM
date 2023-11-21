@@ -13,7 +13,7 @@
         ];
     }
     if (isset($_SESSION['User'])) {
-        header("Location: ./Top.php");
+        header("Location: ./O_pro.php");
         exit;
     } else {
         header("Location: ./login.php?flag=fail");

@@ -29,21 +29,21 @@ button{
     /*デザイン*/
 }
 .text1{
-    width: 260px;
+    width: 200px;
     position: absolute;
     top: 18%;
     left: 20%;
     right: 0;
     margin: 0 auto;
-    font-size: 15px;
+    font-size: 20px;
 }
 .text2{
-    width: 260px;
+    width: 200px;
     position: absolute;
     top: 58%;
     left: 20%;
     right: 0;
     margin: 0 auto;
-    font-size: 15px;
+    font-size: 20px;
     }
 }
