@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*検索フォーム*/
+.search-box{
+    text-align: center;
+}
+
+.search{
+    margin: auto;
+    width: 95vw;
+}
+
+/*絞り込みプルダウン*/
+.narrow-box{
+    text-align: right;
+}
+
+.narrow{
+    margin-left: 95%;
+}
+
+/*タイムセール*/
+.time-sale{
+    width: 100vw;
+    height: 7rem;
+}
+
+/*商品画像などなど*/
+
