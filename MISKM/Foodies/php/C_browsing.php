@@ -65,14 +65,16 @@ import VueStar from 'vue-star'
         </div>
         <!--いいね機能-->
         <div class="like-box">
+            <div class="like-count">
+                <p>0</p>
+            </div>
             <div class="box unlike">
                 <img src="../img/kuroha-to.jpg">
             </div>
             <div class="box like hidden">
                 <img src="../img/pinkuha-to.jpg">
             </div>
-          </div>
-        <p>0</p>
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
         <script src="./script/C_browsing.js"></script>
     </div>
