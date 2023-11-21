@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // パスワードの長さを検証
                 if (this.password1.length < 8 || this.password1.length > 16) {
-                    this.errors.push('パスワードは8文字から16文字で入力してください');
+                    this.errors.push('パスワードは8文字から16文字である必要があります');
                 }
 
                 // パスワードの一致を検証
@@ -35,6 +35,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (this.errors.length === 0) {
                     // エラーがない場合、フォームを送信
                     document.querySelector('form').submit();
+                } else {
+                    // エラーがある場合、コンソールにエラーメッセージを表示
+                    console.error('Validation failed:', this.errors);
                 }
             },
             validateEmail: function (email) {

@@ -9,7 +9,7 @@
         header("Location: ./Top.php");
         exit;
     }else{
-        header("Location: ./C_post-input.php");
+        header("Location: ./C_post-input.php?flag=fail");
         exit;
     }
 ?>
