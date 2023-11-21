@@ -1,5 +1,4 @@
-<?php require 'header.php';?>
-
+<?php require 'header.php'?>
     <link rel="stylesheet" href="../css/template.css">
     <link rel="stylesheet" href="../css/U_check.css">
     <title>本人確認画面</title>
@@ -8,8 +7,8 @@
     <form action="newpass.php" method="get">
         <div class="main">
             <p>
-              User ID
-              <input type="text" class="text1" name ="UserId" id="UserId">
+              mail
+              <input type="mail" class="text1" name ="mail" id="mail">
             </p>
             <p>
                秘密の質問
