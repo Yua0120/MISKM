@@ -5,7 +5,7 @@
 </head>
 <?php require 'FoodiesTitle.php';?>
     <?php
-       echo '<form action="newpass.php" method="post">';
+       echo '<form action="U_check_output.php" method="post">';
        echo '<div class="main">';
        echo '<p>';
        echo 'mail';
