@@ -1,33 +1,28 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php require 'header.php' ?>
     <link rel="stylesheet" href="./css/centerYoo.css">
     <link rel="stylesheet" href="./css/template.css">
     <link rel="stylesheet" href="./css/newpass.css">
     <title>新しいパスワード</title>
 </head>
-<body>
-    <header class="header">
-        <!-- ヘッダーロゴ -->
-        <div class="logo" id="title">Foodies</div>
-    </header>
+<?php require 'FoodiesTitle.php' ?>
+
     <br><br><br>
-    <form action="Top.php">
+    <form action="newpass-output.php" method="post">
+
         <div class="container">
-            <div class="left-aligned-text">
-                <div class="login-input">
-                    New
-                    PassWord
-                    <input type="text" name="loginid" placeholder="8文字以上16文字以下で入力してください"><br>
-                    <p>
-                    <input type="text" name="Question" placeholder="もう一度パスワードを入力してください"></p>
-                </div>
-                <div class="login-button">
-                    <p><button class="example" type="submit" name="login"><span>Login</span></button></p>
-                </div>
-            </div>
+        <div class="left-aligned-text">
+        <div class="login-input">
+
+            New PassWord
+            <input type="password"  class="in" name="new_password" placeholder="8文字以上16文字以下で入力してください"><br>
+         <p><input type="password" class="in" name="new_password" placeholder="もう一度パスワードを入力してください"></p>
+        
+        <div class="login-button">
+            <p><button class="example" type="submit" name="login"><span>Login</span></button></p>
+        </div>
+
+        </div>
+        </div>
         </div>    
     </form>
 
