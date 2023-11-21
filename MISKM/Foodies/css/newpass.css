@@ -4,7 +4,7 @@ input{
     width: 250px; height: 40px;
 }
   .login-input{
-    text-align: right;
+    text-align: left;
 }
 
 /*ボタン*/
@@ -36,9 +36,4 @@ input{
 /*エラーの時*/
 .error{
   color: red;
-}
-
-/*文字のやつ*/
-.aa{
-  text-align: right;
 }

@@ -24,7 +24,7 @@ new Vue({
         try {
           // フォームデータの作成
           const formData = new FormData();
-          formData.append('new_password', this.password);
+          formData.append('new_pass', this.password);
 
           // フォーム送信の処理
           const response = await fetch('newpass-output.php', {
