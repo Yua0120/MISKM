@@ -8,7 +8,7 @@
     <title>注文確定</title>
 </head>
 <body>
-    <form action="Top.html">
+    <form action="Top.php">
     <header class="header">
         <div class="logo">Foodies</div>
     </header>

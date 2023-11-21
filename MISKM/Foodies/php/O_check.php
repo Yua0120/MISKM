@@ -17,6 +17,6 @@
        ?>
     </div>
     <p class="cheak"> 情報に誤りがないかご確認ください</p>
-    <button><a href="O_con.html">注文確定</a></button>
+    <button><a href="O_con.php">注文確定</a></button>
 </body>
 </html>
