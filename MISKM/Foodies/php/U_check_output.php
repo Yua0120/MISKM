@@ -3,7 +3,7 @@
 unset($_SESSION['User']);
 $pdo=new PDO($connect,USER,PASS);
 $sql=$pdo->prepare('select * from User where mail=?');
-$sql->execute([$_POST['mail']]);
+$result = $sql->execute([$_POST['mail']]);
 foreach ($sql as $row){
     if(strcmp($_POST['mail'],$row['mail']) == 0 && strcmp($_POST['question'],$row['question']) == 0){
     $_SESSION['User']=[
@@ -17,7 +17,7 @@ foreach ($sql as $row){
 if(isset($_SESSION['User'])){
     header("Location:./newpass.php");
     exit;
-}else {
+}else if(!($result)){
     header("Location:./U_check_output.php?flag=fail");
     exit;
 }
