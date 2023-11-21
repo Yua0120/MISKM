@@ -1,16 +1,15 @@
-<?php require 'header.php';?>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Foodies/css/header.css">
-    <link rel="stylesheet" href="../Foodies/css/top.css">
-    <title>商品一覧</title>
-</head>
+<?php 
+    require 'header.php'
+?>
+<link rel="stylesheet" href="../template.css">
+<link rel="stylesheet" href="../.css">
+<link rel="stylesheet" href="../Foodies/css/top.css">
+<title>Top</title>
+</header>
+<?php 
+    require 'FoodiesTitle.php'
+?>
 <body>
-    
-
     <!--商品検索機能-->
     <div class="search-box">
         <form action="Top.html" method="post">
