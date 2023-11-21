@@ -17,7 +17,8 @@
         <div class="login-input">
 
             <div class="aa">New Password<br></div>
-            <input type="password" class="in" v-model="password" size="13" @input="checkInput" placeholder="8文字以上16文字以下で入力してください"><br>                <div v-if="isLengthError" class="error">パスワードは8文字以上16文字以下で入力してください。</div>
+            <input type="password" class="in" v-model="password" size="13" @input="checkInput" placeholder="8文字以上16文字以下で入力してください"><br>
+            <div v-if="isLengthError" class="error">パスワードは8文字以上16文字以下で入力してください。</div>
                     
             <div class="aa">Confirm Password<br></div>
             <input type="password" class="in" v-model="confirmPassword" size="13" @input="checkInput" placeholder="もう一度パスワードを入力してください"><br>
