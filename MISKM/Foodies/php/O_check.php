@@ -1,22 +1,23 @@
 <?php require 'header.php';?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Foodies/css/header.css">
+
+<?php require 'connect.php';?>
+
     <title>注文確認</title>
 </head>
-<body>
+<?php require 'FoodiesTitle.php';?>
+    <div class="main">
     <p>配送先住所</p>
-    　<br><!--名前-->
-    　<br><!--住所-->
-    　<br><!--電話番号-->
-    　<br><!--メールアドレス-->
-    <p>支払方法
-        　<!--支払方法-->
-    </p>
-    <p> 注文に誤りがないかご確認くっださい</p>
+    <?php
+       echo $_POST['name'],'<br>';/*-名前*/
+       echo $_POST['zip_code'],'<br>';/*-郵便番号*/
+       echo $_POST['address'],'<br>';/*住所*/
+       echo $_POST['tel_number'],'<br>';/*電話番号*/
+       echo $_POST['mail'],'<br>';/*メールアドレス*/
+       echo '<p>支払方法</p>';
+       echo '現金（コンビニ払い）';
+       ?>
+    </div>
+    <p class="cheak"> 情報に誤りがないかご確認ください</p>
     <button><a href="O_con.html">注文確定</a></button>
 </body>
 </html>

@@ -70,3 +70,9 @@
     width: 100px;
     height: 100px;
 }
+/*ニックネームかぶった時のエラー文字用css*/
+.error{
+  color: red;
+  text-align: center;
+  font-size: 0.5em;
+}
