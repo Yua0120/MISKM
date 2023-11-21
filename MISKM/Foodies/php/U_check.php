@@ -4,7 +4,7 @@
     <title>本人確認画面</title>
 </head>
 <?php require 'FoodiesTitle.php';?>
-    <form action="newpass.html">
+    <form action="newpass.php" method="get">
         <div class="main">
             <p>
               User ID
