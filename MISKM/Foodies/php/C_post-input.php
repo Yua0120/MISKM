@@ -8,7 +8,7 @@
 
 <form action="C_post-output.php" method="post">
     <div class="container">
-        <label for="upload"><input type="file" name="image_path" onchange="previewFile(this);" id="upload"></label>
+        <label for="upload"><input type="file" name="image_path" onchange="previewFile(this);" id="upload">+</label>
         <br>
         <p>購入商品<input type="text" name="product_name" id="pro_name"></p>
         <p>サイズ
