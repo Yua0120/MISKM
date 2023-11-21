@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // パスワードの長さを検証
                 if (this.password1.length < 8 || this.password1.length > 16) {
-                    this.errors.push('パスワードは8文字から16文字である必要があります');
+                    this.errors.push('パスワードは8文字から16文字で入力してください');
                 }
 
                 // パスワードの一致を検証
