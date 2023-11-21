@@ -3,33 +3,37 @@ input{
     border: none;
     width: 250px; height: 40px;
 }
-
-.left-aligned-text {
-    text-align: left;
-  }
-
   .login-input{
     text-align: right;
 }
 
 /*ボタン*/
 .example {
-    background-color: #9DA9B6;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-  }
-  .example span{
-    font-size: 25px;
-  }
-  .login-button {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5%;
-  }
+  background-color: #9DA9B6;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+.example span{
+  font-size: 25px;
+}
+.login-button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+}
 
-  .in{
-    width: 200px;
-    height: 30px;
-  }
+.in{
+  margin-top: 30px;
+  height: 30px;
+}
+.in :hover{
+  border-bottom: solid 1px black
+}
+
+
+
+.error{
+  color: red;
+}
