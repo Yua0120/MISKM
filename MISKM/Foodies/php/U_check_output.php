@@ -17,11 +17,11 @@ foreach ($sql as $row){
     
 }
 if(isset($_SESSION['User'])){
-    echo '本人確認が完了しました<br>';
-    echo 'Nextで新しいパスワードの設定画面に移動します';
+    header("Location:./newpass.php");
+    exit;
 }else {
-    echo 'メールアドレスまたは秘密の質問が違います<br>';
-    echo '戻るでもう一度やり直してください';
+    header("Location:./U_check_output.php?flag=fail");
+    exit;
 }
 ?>
-<button type="submit">Next</button>
+<!--<button type="submit">Next</button>-->
