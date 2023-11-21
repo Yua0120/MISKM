@@ -1,4 +1,5 @@
 <?php require 'header.php';?>
+
 <?php require 'connect.php';?>
 
     <title>注文確認</title>

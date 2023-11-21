@@ -1,0 +1,72 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh; /* ビューポートの高さいっぱいに要素を配置 */
+  }
+
+  /* テキスト要素のスタイル */
+  .left-aligned-text {
+    text-align: left;
+  }
+.text{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #000000;
+    padding: 5px 10px;
+}
+.text:focus{
+    border-bottom-color: #3ea1c5;
+}
+.example {
+    background-color: #9DA9B6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+.example span{
+    font-size: 25px;
+}
+.bobo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+  }
+
+/*OKボタンの色を青にするところ*/
+.baba{
+  background-color: #5391EF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+.baba span{
+  font-size: 25px;
+}
+
+/*ボタンとボタンの間にスペース*/
+.space {
+  width: 80px;
+  height: auto;
+  display: inline-block;
+}
+
+/*up_check.htmlに使うボタンの大きさを統一するやつ*/
+.toitu{
+  width: 300px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #68779a;
+  background: #cbe8fa;
+  cursor: pointer;
+}
+
+/*info_update.htmlで使う！プロフィール画像の仮だよ*/
+.circle {
+    background: lightblue;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
