@@ -1,8 +1,8 @@
 <?php require 'header.php'?>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <link rel="stylesheet" href="../css/template.css">
-    <link rel="stylesheet" href="../css/touroku.css">
-    <title>ユーザー登録</title>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<link rel="stylesheet" href="../css/template.css">
+<link rel="stylesheet" href="../css/touroku.css">
+<title>ユーザー登録</title>
 </head>
 <body>
     <?php require 'FoodiesTitle.php' ?>
@@ -37,7 +37,7 @@
         </div>
         </div>
     </form>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="../script/U_reg.js"></script>
 </body>
 </html>
