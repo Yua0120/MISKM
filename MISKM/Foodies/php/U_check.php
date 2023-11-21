@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="../css/U_check.css">
     <title>本人確認画面</title>
 </head>
-<body>
+<?php require 'FoodiesTitle.php';?>
     <form action="newpass.html">
         <div class="main">
             <p>
