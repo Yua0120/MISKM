@@ -7,7 +7,7 @@ $pdo=new PDO($connect,USER,PASS);
 $sql=$pdo->prepare('select * from User where mail=?');
 $sql->execute([$_POST['mail']]);
 foreach ($sql as $row){
-    if(strcmp($_POST['mail'],$row['mail'] == 0)){
+    if((strcmp($_POST['mail'],$row['mail'] == 0)) && (strcmp($_POST['question'],$row['question']))){
     $_SESSION['User']=[
         'id' =>$row['id'],'mail'=>$row['mail'],
         'name'=>$row['name'],'zip_code' => $row['zip_code'],
