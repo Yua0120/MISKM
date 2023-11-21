@@ -13,6 +13,14 @@
     <form id="app" action="U_info.php" method="post">
         <div class="container">
         <div class="left-aligned-text">
+
+        <!-- エラーメッセージを表示する部分を追加 -->
+    <div v-if="errors.length > 0" class="error-messages">
+        <ul>
+            <li v-for="error in errors" :key="error">{{ error }}</li>
+        </ul>
+    </div>
+
     <h4>E-mail</h4>
     <input v-model="email" type="text" size="40" name="E-mail" class="text">
     
@@ -35,3 +43,7 @@
     <script src="../script/U_reg.js"></script>
 </body>
 </html>
+    
+    
+    
+    
