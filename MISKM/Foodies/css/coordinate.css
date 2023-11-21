@@ -13,3 +13,9 @@
     font-size: 0.5rem;
     color: #47494a;
 }
+
+.error{
+    color: red;
+    text-align: center;
+    font-size: 0.5em;
+}
