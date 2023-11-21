@@ -32,6 +32,7 @@
         <textarea name="url" id="another_link" cols="50" rows="3">画像内の他サイトの商品リンクを掲載してください。</textarea>
         <br>
         <button type="submit">投稿</button>
+    </div>
 </form>
 <img id="preview">
 
