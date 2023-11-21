@@ -18,7 +18,7 @@ if(isset($_SESSION['User'])){
     header("Location:./newpass.php");
     exit;
 }else if(!($result)){
-    header("Location:./U_check_output.php?flag=fail");
+    header("Location:./U_check_input.php?flag=fail");
     exit;
 }
 ?>
