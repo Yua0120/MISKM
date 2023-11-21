@@ -1,5 +1,4 @@
 <?php require 'connect.php';?>
-<form action="newpass.php">
 <?php
 unset($_SESSION['User']);
 $pdo=new PDO($connect,USER,PASS);
