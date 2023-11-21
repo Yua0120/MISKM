@@ -35,9 +35,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (this.errors.length === 0) {
                     // エラーがない場合、フォームを送信
                     document.querySelector('form').submit();
-                } else {
-                    // エラーがある場合、コンソールにエラーメッセージを表示
-                    console.error('Validation failed:', this.errors);
                 }
             },
             validateEmail: function (email) {
