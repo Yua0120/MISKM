@@ -8,7 +8,12 @@
 
 <form action="C_post-output.php" method="post">
     <div class="container">
-        <label for="upload"><input type="file" name="image_path" onchange="previewFile(this);" id="upload">+</label>
+        <label id="upload-wrapper" for="upload">
+            <input type="file" name="image_path" onchange="previewFile(this);" id="upload">
+            <div id="upload-preview">
+                <div id="upload-text">+</div>
+            </div>
+        </label>
         <br>
         <p>購入商品<input type="text" name="product_name" id="pro_name"></p>
         <p>サイズ
@@ -27,29 +32,30 @@
         <textarea name="url" id="another_link" cols="50" rows="3">画像内の他サイトの商品リンクを掲載してください。</textarea>
         <br>
         <button type="submit">投稿</button>
-    </form>
-    <img id="preview">
- 
-  <script>
-  function previewFile(hoge){
-    var fileData = new FileReader();
-    fileData.onload = (function() {
-      //id属性が付与されているimgタグのsrc属性に、fileReaderで取得した値の結果を入力することで
-      //プレビュー表示している
-      document.getElementById('preview').src = fileData.result;
-    });
-    fileData.readAsDataURL(hoge.files[0]);
-  }
-  </script>
-    <div class="post-fail">
-        <?php
-        // $_GET['flag']がセットされているか確認
-        if (isset($_GET['flag']) && $_GET['flag'] == 'fail') {
-            echo '<p class="error">コーディネートの投稿に失敗しました。もう一度入力してください。</p>';
-        }else if(isset($_GET['flag']) && $_GET['flag'] == 'none'){
-            echo '<p class="error">セッションが無効です。ログインしなおしてください。</p>';
-        }
-        ?>
-    </div>
+</form>
+<img id="preview">
+
+<script>
+    function previewFile(hoge) {
+        var fileData = new FileReader();
+        fileData.onload = (function () {
+            //id属性が付与されているimgタグのsrc属性に、fileReaderで取得した値の結果を入力することで
+            //プレビュー表示している
+            document.getElementById('preview').src = fileData.result;
+        });
+        fileData.readAsDataURL(hoge.files[0]);
+    }
+</script>
+<div class="post-fail">
+    <?php
+    // $_GET['flag']がセットされているか確認
+    if (isset($_GET['flag']) && $_GET['flag'] == 'fail') {
+        echo '<p class="error">コーディネートの投稿に失敗しました。もう一度入力してください。</p>';
+    } else if (isset($_GET['flag']) && $_GET['flag'] == 'none') {
+        echo '<p class="error">セッションが無効です。ログインしなおしてください。</p>';
+    }
+    ?>
+</div>
 </body>
+
 </html>

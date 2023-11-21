@@ -1,9 +1,22 @@
-#update{
-    border: none;
-    background-color: #d4d9dc;
+#upload-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+#upload-preview {
     width: 70%;
     height: 20%;
+    background-color: #ccc;
 }
+
+#upload-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
 
 .suport{
     font-size: 0.8rem;
