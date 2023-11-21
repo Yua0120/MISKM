@@ -46,6 +46,8 @@
         // $_GET['flag']がセットされているか確認
         if (isset($_GET['flag']) && $_GET['flag'] == 'fail') {
             echo '<p class="error">コーディネートの投稿に失敗しました。もう一度入力してください。</p>';
+        }else if(isset($_GET['flag']) && $_GET['flag'] == 'none'){
+            echo '<p class="error">セッションが無効です。ログインしなおしてください。</p>';
         }
         ?>
     </div>

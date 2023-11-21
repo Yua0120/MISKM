@@ -28,12 +28,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // 適切なテーブルに対して更新
     $sql = $pdo->prepare('UPDATE User SET password = ? WHERE id = ?');
 
-    // クエリの実行中にエラーが発生した場合はエラーを表示して終了
+    // クエリの実行中にエラーが発生した場合はエラーをログに残す
     if (!$sql->execute([$hashedpass, $id])) {
-        die('エラー: ' . implode($sql->errorInfo()));
+        error_log('エラー: ' . implode($sql->errorInfo()));
+        die('エラーが発生しました。');
     }
 
     // アラートを表示
-    echo '<script>alert("パスワードを変更しました。");</script>';
+    echo 'パスワードを変更しました。';
+
+    // セッションの更新
+    session_regenerate_id(true);
+
+    // ユーザーが存在する場合はTop.phpにリダイレクト
+    if (isset($_SESSION['User'])) {
+        header("Location: ./Top.php");
+        exit;
+    } else {
+        header("Location: ./login.php?flag=fail");
+        exit;
+    }
 }
 ?>
