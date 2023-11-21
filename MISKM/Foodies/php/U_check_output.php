@@ -18,10 +18,10 @@ foreach ($sql as $row){
 }
 if(isset($_SESSION['User'])){
     echo '本人確認が完了しました<br>';
-    echo 'Nextで新しいパスワードの設定画面に移動します'
+    echo 'Nextで新しいパスワードの設定画面に移動します';
 }else {
     echo 'メールアドレスまたは秘密の質問が違います<br>';
-    echo '戻るでもう一度やり直してください'
+    echo '戻るでもう一度やり直してください';
 }
 ?>
 <button type="submit">Next</button>
