@@ -1,8 +1,10 @@
 <?php session_start(); ?>
-<?php require 'header.php'; ?>
 <?php require 'connect.php'; ?>
 <?php
     $pdo = new PDO($connect,USER,PASS);
+
+    // サンプルのユーザーパスワード（実際にはデータベースから取得するなどの処理が必要）
+    $previousPassword = "previous_password"
 
     // フォームが送信されたときの処理
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -16,11 +18,3 @@
         echo '<script>alert("パスワードを変更しました。");</script>';
     }
 ?>
-<?php require 'footer.php'; ?>
-
-
-
-php
-<!-- パスワード変更フォーム -->
-    <label for="new_password">新しいパスワード:</label>
-    <input type="password" name="new_password" id="new_password" required>

@@ -1,16 +1,11 @@
 <?php session_start()?>
 <?php require 'header.php';?>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/template.css">
     <link rel="stylesheet" href="../css/touroku.css">
     <title>ユーザー個人情報更新確認</title>
 </head>
-<body>
     <?php
+        require 'FoodiesTitle.php';
         $name=$nickname=$address=$tel_number=$zip_code='';
         if(isset($_SESSION['User'])){
             $name=$_SESSION['User']['name'];
@@ -43,5 +38,13 @@
         echo '</div>';
         echo '</form>';
     ?>
+    <div class="update-fail">
+        <?php
+        // $_GET['flag']がセットされているか確認(セットされてると、ニックネームかぶってるからやり直し)
+        if (isset($_GET['flag']) && $_GET['flag'] == 'rename') {
+            echo '<p class="error">そのニックネームは既に使用されています。</p>';
+        }
+        ?>
+    </div>
 </body>
 </html>
