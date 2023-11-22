@@ -1,0 +1,33 @@
+body{
+    font-size: 25px;
+}
+.main{
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+button{
+    /*デザイン*/
+    width: 150px;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    background-color: #9DA9B6;
+    /*位置*/
+    position: absolute;
+    top: 90%;
+    left: 0;
+    right: 7%;
+    margin: 0 auto;
+}
+.text{
+    width: 330px;
+    height: 30px;
+    font-size: 20px;
+}
+/*次は
+　　・テキストボックス丸くする
+　　・周りに余白を付ける
+　　　*/
