@@ -38,7 +38,6 @@
             </div>
             <p>￥〇〇〇〇　JPY</p>
         </div>
-        <button type="submit">Add to cart</button>
     </div>
 
     <div class="shohin">
@@ -47,7 +46,6 @@
             <p>商品名</p>
             <p>￥〇〇〇〇　JPY</p>
         </div>
-        <button type="submit">Add to cart</button>
     </div>
 
     <div class="shohin">
@@ -55,8 +53,7 @@
         <div class="shohin-item">
             <p>商品名</p>
             <p>￥〇〇〇〇　JPY</p>
-        </div>
-        <button type="submit">Add to cart</button>
+        </div> 
     </div>
 
     <div class="shohin">
@@ -64,8 +61,7 @@
         <div class="shohin-item">
             <p>商品名</p>
             <p>￥〇〇〇〇　JPY</p>
-        </div>
-        <button type="submit">Add to cart</button>
+        </div>       
     </div>
 </body>
 </html>
