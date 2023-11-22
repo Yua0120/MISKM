@@ -2,6 +2,8 @@
 <?php 'connect.php' ?>
 <?php
 
+$pdo = new PDO('Product',USER,PASS);
+
 // ログインユーザーのIDをセッションから取得
 $user_id = $_SESSION['user_id'];
 
