@@ -11,8 +11,7 @@
         <label id="upload-wrapper" for="upload">
             <div id="upload-preview">
                 <!--acceptで画像ファイルのみ投稿可能と指定-->
-                <input type="file" name="image_path" onchange="previewFile(this);" id="upload" accept="image/*">
-                <div id="upload-text">+</div>
+                <input type="file" name="image_path" onchange="previewFile(this);" id="upload" accept="image/*" aria-label="+">
             </div>
         </label>
         <br>
