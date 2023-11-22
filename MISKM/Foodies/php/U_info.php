@@ -14,26 +14,26 @@
                     
                     <h4>Name</h4>
                     <input v-model="name" type="text" name="Name" class="text">
-                    <div v-if="!name" class="error">名前を入力してください</div>
+                    <div v-if="isNameError" class="error">名前を入力してください</div>
                     
                     <h4>Nickname</h4>
                     <input v-model="nicename" type="text" name="Nicename" class="text">
-                    <div v-if="!nicename" class="error">ニックネームを入力してください</div>
+                    <div v-if="isNicenameError" class="error">ニックネームを入力してください</div>
 
                     <h4>Phone number</h4>    
                     <input v-model="phoneNumber" type="text" size="30" placeholder="ハイフンなしで入力してください" name="Phonenumber" class="text">
-                    <div v-if="!validatePhoneNumber(phoneNumber)" class="error">正しい電話番号を入力してください</div>
+                    <div v-if="isPhoneNumberError" class="error">正しい電話番号を入力してください</div>
 
                     <h4>Post code</h4>    
                     <input v-model="postCode" type="text" size="30" placeholder="ハイフンなしで入力してください" name="Postcode" class="text">
-                    <div v-if="!validatePostCode(postCode)" class="error">正しい郵便番号を入力してください</div>
+                    <div v-if="isPostCodeError" class="error">正しい郵便番号を入力してください</div>
 
                     <h4>Address</h4>
                     <input v-model="address" type="text" size="40" placeholder="番地や部屋番号まで書いてください" name="Address" class="text">
-                    <div v-if="!address" class="error">番地や部屋番号を入力してください</div>
+                    <div v-if="isAddressError" class="error">番地や部屋番号を入力してください</div>
                     <br><br>
                     <div class="bobo">
-                        <button class="example" type="submit"><span>Sign up</span></button>
+                        <button class="example" type="submit" @click.prevent="validateForm"><span>Sign up</span></button>
                     </div>
                 </div>
             </div>

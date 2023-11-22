@@ -30,7 +30,7 @@
         <div v-if="isQuestionError" class="error">秘密の質問を入力してください</div>
         <br><br>
         <div class="bobo">
-            <button class="example" @click.prevent="validateForm"><span>Next</span></button>
+            <button class="example" @click.prevent="submitForm"><span>Next</span></button>
         </div>
 
         </div>
