@@ -2,11 +2,19 @@ body{
   margin: 0%;
 }
 
+/*return*/
+.return-button{
+  text-align: left;
+  position: relative;
+  top: 1rem;
+}
+
 /*ヘッター*/
 title{
   color: #ffffff;
   font-family: "Dynalight";
 }
+
 /* ハンバーガーメニュー*/
 .header {
   padding-top: 2rem;
@@ -17,9 +25,9 @@ title{
 }
 
 .logo {
+  margin: 0px;
   color: #fff;
   font-size: 3rem;
-  margin: 0 auto;
   font-family: 'Caveat', cursive;
 }
 
