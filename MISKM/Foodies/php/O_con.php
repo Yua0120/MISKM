@@ -8,7 +8,7 @@
     <form action="Top.php">
     <img src="../img/O_1.jpg" class="img1"><br><!--くまの画像はる？-->
     <?php
-    echo '配達予定日　'
+    echo '配達予定日　';
     echo date("m月d日",strtotime("+3 day"));
     echo '<br>';
     ?>
