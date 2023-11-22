@@ -13,7 +13,6 @@
 
 <div id="app">
     <form action="newpass-output.php" method="post" @submit.prevent="submitForm">    
-        <br><br><br>
         <div class="container">
         <div class="left-aligned-text">
         <div class="login-input">
