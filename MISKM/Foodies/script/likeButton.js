@@ -20,14 +20,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 var response = xhr.responseText;
                 console.log(response);
                 if (response.includes("解除")) {
-                    button.src = 'kuroha-to.jpg';  // 未いいねの画像
+                    button.src = '../../img/kuroha-to.jpg';  // 未いいねの画像
                 } else {
-                    button.src = 'pinkuha-to.jpg';  // いいねの画像
+                    button.src = '../../img/pinkuha-to.jpg';  // いいねの画像
                 }
             }
         };
 
-        xhr.open("POST", "likeHandler.php", true);
+        xhr.open("POST", "likeButton.php", true);
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhr.send("product_id=" + product_id);
     }

@@ -27,7 +27,7 @@
 
     <!--投稿一覧-->
     <div class="toukou-box">
-        <img src="../img/pa-ka-.jpg" class="shohin-img">
+        <img src="../../img/pa-ka-.jpg" class="shohin-img">
         <div class="toukou-box-nickname">
             <p>ニックネーム</p>
         </div>
@@ -38,6 +38,6 @@
             <input type="text" name="coment" placeholder="コメント" disabled class="toukou-coment">
         </div>        
     </div>
-    <img class="like-button" src="../img/turoha-to.jpg" data-product-id="商品のID" alt="いいね">
+    <img class="like-button" src="../../img/turoha-to.jpg" data-product-id="商品のID" alt="いいね">
 </body>
 </html>
