@@ -29,9 +29,9 @@
                     <div v-if="!validatePostCode(postCode)" class="error">正しい郵便番号を入力してください</div>
 
                     <h4>Address</h4>
-                    <input v-model="address" type="text" size="40" placeholder="番地や部屋番号まで書いてください" name="Address" class="text"><br><br>
+                    <input v-model="address" type="text" size="40" placeholder="番地や部屋番号まで書いてください" name="Address" class="text">
                     <div v-if="!address" class="error">番地や部屋番号を入力してください</div>
-                    
+                    <br><br>
                     <div class="bobo">
                         <button class="example" type="submit"><span>Sign up</span></button>
                     </div>
