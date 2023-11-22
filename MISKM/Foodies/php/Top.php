@@ -1,37 +1,12 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Foodies/css/header.css">
-    <link rel="stylesheet" href="../Foodies/css/top.css">
-    <title>商品一覧</title>
-</head>
+<?php require 'header.php'?>
+<?php require 'connect.php'?>
+<link rel="stylesheet" href="../css/template.css">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/top.css">
+<title>Top</title>
+</header>
+<?php require 'FoodiesMenu.php'?>
 <body>
-    <header class="header">
-        <!-- ヘッダーロゴ -->
-        <div class="logo">Foodies</div>
-        <!-- ハンバーガーメニュー部分 -->
-        <div class="nav">
-        <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
-        <input id="drawer_input" class="drawer_hidden" type="checkbox">
-        <!-- ハンバーガーアイコン -->
-        <label for="drawer_input" class="drawer_open"><span></span></label>
-    
-        <!-- メニュー -->
-        <nav class="nav_content">
-            <ul class="nav_list">
-            <li class="nav_item"><a href="">トップ</a></li>
-            <li class="nav_item"><a href="">投稿</a></li>
-            <li class="nav_item"><a href="">カート</a></li>
-            <li class="nav_item"><a href="">注文履歴</a></li>
-            <li class="nav_item"><a href="">アカウント情報</a></li>
-            </ul>
-        </nav>
-
-        </div>
-    </header>
-
     <!--商品検索機能-->
     <div class="search-box">
         <form action="Top.html" method="post">
