@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    height: 100vh; /* ビューポートの高さいっぱいに要素を配置 */
+     /*height: 100vh; ビューポートの高さいっぱいに要素を配置 */
   }
 
   /* テキスト要素のスタイル */
