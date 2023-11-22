@@ -1,19 +1,5 @@
-.like-box {
-    width: 80%;
-    height: 300px;
-    margin: 0 auto;
-    cursor: pointer;
-  }
-  
-  .box {
-    width: 100%;
-    height: 100%;
-  }
-  .unlike {
-  }
-  
-  .like {
-  }  
-  .hidden {
-    display: none;
-  }
+.like-button {
+    width: 50px;  /* 画像の幅 */
+    height: 50px; /* 画像の高さ */
+    cursor: pointer; /* カーソルをポインターに変更 */
+}
