@@ -26,9 +26,9 @@
         <div v-if="isMatchError" class="error">パスワードが一致しません。</div>
             
         <h4>Security Question</h4>
-        <input v-model="question" type="text" placeholder="卒業した小学校は？" name="Question" class="text"><br><br>
+        <input v-model="question" type="text" placeholder="卒業した小学校は？" name="Question" class="text">
         <div v-if="isQuestionError" class="error">秘密の質問を入力してください</div>
-        
+        <br><br>
         <div class="bobo">
             <button class="example" @click.prevent="validateForm"><span>Next</span></button>
         </div>

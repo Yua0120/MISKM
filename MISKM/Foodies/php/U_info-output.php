@@ -1,38 +1,36 @@
 <?php
-// output.php
-
-// データベース接続情報
-$servername = "your_servername";
-$username = "your_username";
-$password = "your_password";
-$dbname = "your_dbname";
+session_start();
+require 'connect.php';
 
 try {
-    // データベースに接続
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    
+    // データベース接続
+    $pdo = new PDO($connect, USER, PASS);
+
     // PDOのエラーモードを例外に設定
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // POSTデータを取得
+    $email = $_POST['E-mail'];
+    $pass = $_POST['Pass2'];
+    $question = $_POST['Question'];
     $name = $_POST['Name'];
     $nicename = $_POST['Nicename'];
     $phoneNumber = $_POST['Phonenumber'];
     $postCode = $_POST['Postcode'];
     $address = $_POST['Address'];
 
-    // データベースにユーザー情報を挿入
-    $stmt = $conn->prepare("INSERT INTO users (name, nicename, phone_number, post_code, address) VALUES (?, ?, ?, ?, ?)");
-    $stmt->execute([$name, $nicename, $phoneNumber, $postCode, $address]);
+    // ユーザー情報を挿入するSQLクエリ
+    $sql = $pdo->prepare("INSERT INTO user (email , name , nicename , zip_code , addres , tel_number , flag , question) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+    $sql->execute([$email, $name, $nicename, $postCode, $address, $phoneNumber, , $question]);
 
     // データベース接続をクローズ
-    $conn = null;
+    $pdo = null;
 
-    // トップページにリダイレクト（例：Top.php）
+    // トップページにリダイレクト
     header("Location: Top.php");
     exit();
 } catch (PDOException $e) {
+    // エラーメッセージを表示して終了
     echo "Error: " . $e->getMessage();
 }
-
 ?>
