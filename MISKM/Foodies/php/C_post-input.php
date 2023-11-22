@@ -10,7 +10,8 @@
     <div class="container">
         <label id="upload-wrapper" for="upload">
             <div id="upload-preview">
-                <input type="file" name="image_path" onchange="previewFile(this);" id="upload">
+                <!--acceptで画像ファイルのみ投稿可能と指定-->
+                <input type="file" name="image_path" onchange="previewFile(this);" id="upload" accept="image/*">
                 <div id="upload-text">+</div>
             </div>
         </label>
