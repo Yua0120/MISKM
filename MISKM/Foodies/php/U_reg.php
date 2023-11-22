@@ -1,5 +1,4 @@
 <?php require 'header.php'?>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 <link rel="stylesheet" href="../css/template.css">
 <link rel="stylesheet" href="../css/touroku.css">
 <title>ユーザー登録</title>
