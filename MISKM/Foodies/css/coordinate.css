@@ -1,4 +1,9 @@
 /*input要素を全部クリア*/
+/* input type="file"をカスタマイズして非表示にする */
+input[type="file"] {
+    display: none; /* デフォルトの表示を非表示にする */
+}
+
 #upload{
     position: relative;
     display: inline-block;
