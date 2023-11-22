@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="../css/top.css">
 <title>Top</title>
 </header>
-<?php require 'Foodies.php'?>
+<?php require 'FoodiesMenu.php'?>
 <body>
     <!--商品検索機能-->
     <div class="search-box">
