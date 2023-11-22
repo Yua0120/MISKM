@@ -1,6 +1,11 @@
 /*input要素を全部クリア*/
-input {
-	margin: 0;
+#upload{
+    position: relative;
+    display: inline-block;
+}
+
+#upload-wrapper {
+    margin: 0;
 	padding: 0;
 	background: none;
 	border: none;
@@ -11,12 +16,8 @@ input {
 	appearance: none;
 }
 
-#upload-wrapper {
-    position: relative;
-    display: inline-block;
-}
-
 #upload-preview {
+    margin: 5% 15%;
     width: 70%;
     height: 20%;
     background-color: #ddd;

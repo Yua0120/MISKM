@@ -9,8 +9,8 @@
 <form action="C_post-output.php" method="post">
     <div class="container">
         <label id="upload-wrapper" for="upload">
-            <input type="file" name="image_path" onchange="previewFile(this);" id="upload">
             <div id="upload-preview">
+                <input type="file" name="image_path" onchange="previewFile(this);" id="upload">
                 <div id="upload-text">+</div>
             </div>
         </label>
