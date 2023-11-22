@@ -1,3 +1,16 @@
+/*input要素を全部クリア*/
+input {
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
 #upload-wrapper {
     position: relative;
     display: inline-block;
@@ -6,7 +19,7 @@
 #upload-preview {
     width: 70%;
     height: 20%;
-    background-color: #ccc;
+    background-color: #ddd;
 }
 
 #upload-text {
