@@ -1,14 +1,11 @@
-<?php 
-    require 'header.php'
-?>
-<link rel="stylesheet" href="../template.css">
-<link rel="stylesheet" href="../.css">
-<link rel="stylesheet" href="../Foodies/css/top.css">
+<?php require 'header.php'?>
+<?php require 'connect.php'?>
+<link rel="stylesheet" href="../css/template.css">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/top.css">
 <title>Top</title>
 </header>
-<?php 
-    require 'FoodiesTitle.php'
-?>
+<?php require 'FoodiesMenu.php'?>
 <body>
     <!--商品検索機能-->
     <div class="search-box">
