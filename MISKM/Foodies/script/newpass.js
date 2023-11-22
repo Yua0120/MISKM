@@ -14,7 +14,6 @@ new Vue({
 
       // パスワードの長さに関するエラーチェック
       this.isLengthError = passwordLength < 8 || passwordLength > 16;
-
       // パスワードが一致しているかのエラーチェック
       this.isMatchError = this.password !== this.confirmPassword;
     },
