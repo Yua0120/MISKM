@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/C_browsing.css">
 <title>C_browsing</title>
-<script src="likeButton.js" defer></script>
+<script src="../script/likeButton.js" defer></script>
 </header>
 <?php require 'FoodiesMenu.php'?>
 <body>
@@ -38,6 +38,6 @@
             <input type="text" name="coment" placeholder="コメント" disabled class="toukou-coment">
         </div>        
     </div>
-    <img class="like-button" src="../../img/turoha-to.jpg" data-product-id="商品のID" alt="いいね">
+    <img class="like-button" src="../../img/kuroha-to.jpg" data-product-id="商品のID" alt="いいね">
 </body>
 </html>
