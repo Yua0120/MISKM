@@ -3,34 +3,51 @@ session_start();
 require 'connect.php';
 
 try {
-    // データベース接続
     $pdo = new PDO($connect, USER, PASS);
-
-    // PDOのエラーモードを例外に設定
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // POSTデータを取得
-    $email = $_POST['E-mail'];
-    $pass = $_POST['Pass2'];
-    $question = $_POST['Question'];
-    $name = $_POST['Name'];
-    $nicename = $_POST['Nicename'];
-    $phoneNumber = $_POST['Phonenumber'];
-    $postCode = $_POST['Postcode'];
-    $address = $_POST['Address'];
+    // ニックネームの重複確認
+    $sql = $pdo->prepare('SELECT * FROM User WHERE nickname = ?');
+    $sql->execute([$_POST['Nickname']]);
+    $existingUser = $sql->fetch(PDO::FETCH_ASSOC);
 
-    // ユーザー情報を挿入するSQLクエリ
-    $sql = $pdo->prepare("INSERT INTO user (email , name , nicename , zip_code , addres , tel_number , flag , question) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-    $sql->execute([$email, $name, $nicename, $postCode, $address, $phoneNumber, , $question]);
+    // ユーザーが存在し、かつ他の情報も一致する場合
+    if ($existingUser &&
+        $existingUser['mail'] == $_POST['E-mail'] &&
+        $existingUser['name'] == $_POST['Name'] &&
+        $existingUser['zip_code'] == $_POST['Postcode'] &&
+        $existingUser['address'] == $_POST['Addres'] &&
+        $existingUser['tel_number'] == $_POST['Phonenumber'] &&
+        $existingUser['question'] == $_POST['Question']
+    ) {
+        echo '<script>alert("ユーザーが既に存在します。");</script>';
+    } else {
+        // ユーザーが存在しない場合、新規登録
+        $hashedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    // データベース接続をクローズ
-    $pdo = null;
+        // 住所が登録される場合、flag を 1 に設定
+        $flagValue = isset($_POST['Addres']) ? 1 : '';
 
-    // トップページにリダイレクト
-    header("Location: Top.php");
-    exit();
+        // 正しいSQLクエリを使用
+        $sql = $pdo->prepare('insert into User (mail, name, nicename, zip_code, address, tel_number, flag, question, password) values (?, ?, ?, ?, ?, ?, ?, ?, ?)');
+        $sql->execute([
+            $_POST['E-mail'],
+            $_POST['Name'],
+            $_POST['Nickname'],
+            $_POST['Postcode'],
+            $_POST['Addres'],
+            $_POST['Phonenumber'],
+            $flagValue,
+            $_POST['Question'],
+            $hashedPassword
+        ]);
+
+        // 登録が成功した場合、Top.php にリダイレクト
+        header('Location: Top.php');
+        exit();
+    }
 } catch (PDOException $e) {
-    // エラーメッセージを表示して終了
-    echo "Error: " . $e->getMessage();
+    // エラーハンドリング
+    echo 'データベースエラー: ' . $e->getMessage();
 }
 ?>
