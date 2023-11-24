@@ -22,7 +22,7 @@
                 <option value="XL">XL</option>
             </select>
         </p>
-        <p class="suport">comment</p>
+        <p class="suport">Comment</p>
         <textarea name="comment" id="review" cols="50" rows="10"></textarea>
         <br>
         <p class="suport">URL</p>
