@@ -12,4 +12,5 @@ if(!isset($_SESSION['User'])){
 foreach($result as $row){ 
     echo "{$row['name']},size:{$row['size']},{row['price']},{$row['buy_count']}";
 }
+}
 ?>
