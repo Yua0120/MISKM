@@ -50,7 +50,7 @@ try {
         }
     } else {
         // データが足りない場合の処理
-        echo '<script>alert("データが不足しています。");</script>';
+        //echo '<script>alert("データが不足しています。");</script>';
     }
 } catch (PDOException $e) {
     // エラーハンドリング
