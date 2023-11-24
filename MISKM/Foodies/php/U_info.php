@@ -32,9 +32,14 @@
                     <input v-model="address" type="text" size="40" placeholder="番地や部屋番号まで書いてください" name="Addres" class="text">
                     <div v-if="isAddressError" class="error">番地や部屋番号を入力してください</div>
                     <br><br>
+
                     <div class="bobo">
                         <button class="example" type="submit"><span>Sign up</span></button>
                     </div>
+                    
+                    <input type="hidden" name="E-mail" valeu="<?= $_POST['E-mail'] ?>">
+                    <input type="hidden" name="Pass2" valeu="<?= $_POST['Pass2'] ?>">
+                    <input type="hidden" name="Question" valeu="<?= $_POST['Question'] ?>">
                 </div>
             </div>
         </form>
