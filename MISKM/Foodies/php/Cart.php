@@ -11,7 +11,7 @@ if(!isset($_SESSION['User'])){
     $stmt = $pdo->query($sql);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach($result as $row){ 
-    echo "{$row['name']},size:{$row['size']},{row['price']},{$row['buy_counts']}";
+    echo "{$row['name']},size:{$row['size']},{$row['price']},{$row['buy_counts']}";
 }
 }
 ?>
