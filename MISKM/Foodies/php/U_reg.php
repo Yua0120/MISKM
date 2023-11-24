@@ -18,7 +18,7 @@
         <div v-if="isEmailError" class="error">無効なメール形式です</div>
     
         <h4>Pass word</h4>
-        <input v-model="password1" type="password" size="30" placeholder="8文字以上16以下で入力してください" name="Pass1" class="text">
+        <input v-model="password1" type="password" size="30" placeholder="8文字以上16以下で入力してください" name="password" class="text">
         <div v-if="isLengthError" class="error">パスワードは8文字以上16文字以下で入力してください。</div>
     
         <h4>Pass word(confirmation)</h4>

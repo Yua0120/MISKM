@@ -2,6 +2,7 @@
 session_start();
 require 'connect.php';
 
+var_dump($_POST);
 try {
     if (isset($_POST['E-mail']) && isset($_POST['Name']) && isset($_POST['Nickname']) && isset($_POST['Postcode']) && isset($_POST['Addres']) && isset($_POST['Phonenumber']) && isset($_POST['Question']) && isset($_POST['password'])) {
         
@@ -18,7 +19,7 @@ try {
             $existingUser['mail'] == $_POST['E-mail'] &&
             $existingUser['name'] == $_POST['Name'] &&
             $existingUser['zip_code'] == $_POST['Postcode'] &&
-            $existingUser['address'] == $_POST['Addres'] &&
+            $existingUser['addres'] == $_POST['Addres'] &&
             $existingUser['tel_number'] == $_POST['Phonenumber'] &&
             $existingUser['question'] == $_POST['Question']
         ) {
@@ -31,7 +32,7 @@ try {
             $flagValue = isset($_POST['Addres']) ? 1 : '';
 
             // 正しいSQLクエリを使用
-            $sql = $pdo->prepare('insert into User (mail, name, nickname, zip_code, address, tel_number, flag, question, password) values (?, ?, ?, ?, ?, ?, ?, ?, ?)');
+            $sql = $pdo->prepare('insert into User (mail, name, nickname, zip_code, addres, tel_number, flag, question, password) values (?, ?, ?, ?, ?, ?, ?, ?, ?)');
             $sql->execute([
                 $_POST['E-mail'],
                 $_POST['Name'],
@@ -43,6 +44,8 @@ try {
                 $_POST['Question'],
                 $hashedPassword
             ]);
+            $sql = $pdo->prepare('update User set hash_pass=? where user_id=?');
+            $sql->execute([$hashedPassword],[$id]);
 
             // 登録が成功した場合、Top.php にリダイレクト
             header('Location: Top.php');
