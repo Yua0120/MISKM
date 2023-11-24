@@ -32,7 +32,7 @@ try {
             $flagValue = isset($_POST['Addres']) ? 1 : '';
 
             // 正しいSQLクエリを使用
-            $sql = $pdo->prepare('insert into User (mail, name, nickname, zip_code, addres, tel_number, flag, question, password) values (?, ?, ?, ?, ?, ?, ?, ?, ?)');
+            $sql = $pdo->prepare('insert into User (mail, name, nickname, zip_code, addres, tel_number, flag, question) values (?, ?, ?, ?, ?, ?, ?, ?,)');
             $sql->execute([
                 $_POST['E-mail'],
                 $_POST['Name'],
@@ -42,10 +42,9 @@ try {
                 $_POST['Phonenumber'],
                 $flagValue,
                 $_POST['Question'],
-                $hashedPassword
             ]);
-            $sql = $pdo->prepare('update User set hash_pass=? where user_id=?');
-            $sql->execute([$hashedPassword],[$id]);
+            $sql = $pdo->prepare('insert into User (hash_pass) values(?)');
+            $sql->execute([$_POST('password')]);
 
             // 登録が成功した場合、Top.php にリダイレクト
             header('Location: Top.php');
