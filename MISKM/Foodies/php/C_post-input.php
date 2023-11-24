@@ -1,7 +1,7 @@
 <?php require 'header.php' ?>
 <link rel="stylesheet" href="../css/coordinate.css">
 <link rel="stylesheet" href="../css/template.css">
-<link rel="stylesheet" href="../css/coordinate.css">
+<link rel="stylesheet" href="../css/coordinate.css?v=1.0.0">
 <title>CoordinatePost.html</title>
 </head>
 <?php require 'FoodiesMenu.php' ?>
