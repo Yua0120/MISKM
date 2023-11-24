@@ -82,7 +82,9 @@ input[type="file"] {
 }
 
 button{
-    width: 150px;
+
+    width: 25%;
+    margin: 4% 37.5%;
     font-size: 20px;
     color: #fff;
     border: none;
