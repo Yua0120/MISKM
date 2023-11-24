@@ -1,6 +1,10 @@
 <?php session_start();?>
 <?php require 'connect.php';?>
 <?php require 'header.php';?>
+    <link rel="stylesheet" href="../css/Cart.css">
+    <title>カート画面</title>
+</head>
+<?php require 'FoodiesMenu.php';?>
 <?php
 
 if(!isset($_SESSION['User'])){
@@ -15,3 +19,5 @@ foreach($result as $row){
 }
 }
 ?>
+</body>
+</html>
