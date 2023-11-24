@@ -7,9 +7,9 @@ input[type="file"] {
 #upload-wrapper {
     margin: 20% 5%;
     height: 10%;
+    width: 60%;
     font-size: 3rem;
     font-weight: bold;
-	display: inline-block;
 	background-color: #ddd;
 	color: #595858;
     cursor: pointer;
