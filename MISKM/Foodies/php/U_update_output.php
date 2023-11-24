@@ -29,5 +29,5 @@ if (empty($sql->fetchAll())) {
     }
 }
 
-header("Location: ./info_upddatte_input.php");
+header("Location: ./info_upddatte-input.php");
 exit;
