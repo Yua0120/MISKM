@@ -7,10 +7,14 @@
 <?php 
     if(isset($_SESSION['User'])){
         $Email=$_SESSION['User']['mail'];
+    }else{
+        $Email = '';
     }
     if(isset($_SESSION['Pass'])){
         $Pass1=$_SESSION['Pass']['hash_pass'];
         $Pass2=$_SESSION['Pass']['hash_pass'];
+    }else{
+        $Pass1 = $Pass2 = '';
     }
     echo '<center><h1>Up Date</h1></center>';
     echo '<form action="U_update_output.php" method="post">';
