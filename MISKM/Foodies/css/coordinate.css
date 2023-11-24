@@ -9,7 +9,7 @@ input[type="file"] {
 
 #upload-wrapper {
     margin: 10% 10%;
-    padding: 20% 22.8%;
+    text-align: center;
     display: block;
     font-size: 4rem;
     font-weight: bold;
@@ -36,7 +36,6 @@ input[type="file"] {
 #pro_name{
     border: none;
     background-color: #919ba747;
-    margin: 69%;
     margin-left: 5%;
 
 }
@@ -55,7 +54,7 @@ input[type="file"] {
     font-size: 0.8rem;
 }
 
-.review{
+#review{
     background-color: #ddd;
     border: none;
     text-decoration: none;
@@ -66,6 +65,7 @@ input[type="file"] {
 }
 
 #another_link{
+    background-color: #ddd;
     border: none;
     text-decoration: none;
     color: #47494a;
