@@ -37,9 +37,9 @@
                         <button class="example" type="submit"><span>Sign up</span></button>
                     </div>
 
-                    <input type="hidden" name="E-mail" valeu="<?= $_POST['E-mail'] ?>">
-                    <input type="hidden" name="password" valeu="<?= $_POST['Pass2'] ?>">
-                    <input type="hidden" name="Question" valeu="<?= $_POST['Question'] ?>">
+                    <input type="hidden" name="E-mail" value="<?= $_POST['E-mail'] ?>">
+                    <input type="hidden" name="password" value="<?= $_POST['Pass2'] ?>">
+                    <input type="hidden" name="Question" value="<?= $_POST['Question'] ?>">
                 </div>
             </div>
         </form>
