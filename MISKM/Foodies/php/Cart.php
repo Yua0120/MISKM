@@ -5,7 +5,7 @@
 
 if(!isset($_SESSION['User'])){
     $pdo = new PDO($connect,USER,PASS);
-    $sql = "select Product_image,Product.name,Product.size,Product.price,Cart.buy_count
+    $sql = "select Product.name,Product.size,Product.price,Cart.buy_count
             FROM Cart
             JOIN Product ON Cart.product_id = Product.id";
     $stmt = $pdo->query($sql);
