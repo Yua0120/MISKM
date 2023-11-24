@@ -3,13 +3,13 @@ session_start();
 require 'connect.php';
 
 try {
-    if (isset($_POST['E-mail'], $_POST['Name'], $_POST['Nickname'], $_POST['Postcode'], $_POST['Addres'], $_POST['Phonenumber'], $_POST['Question'], $_POST['password'])) {
+    if (isset($_POST['E-mail']) && isset($_POST['Name']) && isset($_POST['Nickname']) && isset($_POST['Postcode']) && isset($_POST['Addres']) && isset($_POST['Phonenumber']) && isset($_POST['Question']) && isset($_POST['password'])) {
         
         $pdo = new PDO($connect, USER, PASS);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // ニックネームの重複確認
-        $sql = $pdo->prepare('SELECT * FROM User WHERE nickname = ?');
+        $sql = $pdo->prepare('select * from User where nickname = ?');
         $sql->execute([$_POST['Nickname']]);
         $existingUser = $sql->fetch(PDO::FETCH_ASSOC);
 
