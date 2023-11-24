@@ -33,7 +33,7 @@
                     <div v-if="isAddressError" class="error">番地や部屋番号を入力してください</div>
                     <br><br>
                     <div class="bobo">
-                        <button class="example" type="submit" onclick="location.href='op.php';"><span>Sign up</span></button>
+                        <button class="example" type="submit"><span>Sign up</span></button>
                     </div>
                 </div>
             </div>
