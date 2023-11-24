@@ -8,7 +8,7 @@
 
     <center><h1>Sign up</h1></center>
     <div id="app">
-        <form @submit.prevent="submitForm" action="output.php" method="post">
+        <form @submit.prevent="submitForm" action="U_info-output.php" method="post">
             <div class="container">
                 <div class="left-aligned-text">
                     
@@ -29,7 +29,7 @@
                     <div v-if="isPostCodeError" class="error">正しい郵便番号を入力してください</div>
 
                     <h4>Address</h4>
-                    <input v-model="address" type="text" size="40" placeholder="番地や部屋番号まで書いてください" name="Address" class="text">
+                    <input v-model="address" type="text" size="40" placeholder="番地や部屋番号まで書いてください" name="Addres" class="text">
                     <div v-if="isAddressError" class="error">番地や部屋番号を入力してください</div>
                     <br><br>
                     <div class="bobo">
