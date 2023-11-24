@@ -1,6 +1,6 @@
 <?php require 'header.php'; ?>
-    <link rel="stylesheet" href="css/template.css">
-    <link rel="stylesheet" href="css/touroku.css">
+    <link rel="stylesheet" href="../css/template.css">
+    <link rel="stylesheet" href="../css/touroku.css">
     <title>ユーザー情報更新完了</title>
 </head>
 <body>
