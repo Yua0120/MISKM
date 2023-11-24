@@ -1,6 +1,7 @@
 .container{
     margin: 0 5%;
 }
+
 /*input要素を全部クリア*/
 /* input type="file"をカスタマイズして非表示にする */
 input[type="file"] {
@@ -8,13 +9,14 @@ input[type="file"] {
 }
 
 #upload-wrapper {
-    margin: 10% 10%;
+    margin: 10% 20% 5% 20%;
     text-align: center;
     display: block;
+    padding: 20%;
     font-size: 4rem;
     font-weight: bold;
-	background-color: #919ba747;
-	color: #bdc4ca;
+    background-color: #919ba747;
+    color: #bdc4ca;
     cursor: pointer;
 }
 
@@ -58,9 +60,10 @@ input[type="file"] {
     background-color: #ddd;
     border: none;
     text-decoration: none;
+    width: 96%;
 }
 
-.review :hover{
+#review :hover{
     border-bottom: 1px solid black;
 }
 
@@ -69,6 +72,11 @@ input[type="file"] {
     border: none;
     text-decoration: none;
     color: #47494a;
+    width: 96%;
+}
+
+#another_link :hover{
+    border-bottom: 1px solid black;
 }
 
 .error{

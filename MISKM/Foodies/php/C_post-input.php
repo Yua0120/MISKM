@@ -11,7 +11,6 @@
             <!--acceptで画像ファイルのみ投稿可能と指定 -->
             <input type="file" name="image_path" onchange="previewFile(this);" id="image_path" accept="image/*" aria-label="+">
         </label>
-        <br>
         <p>購入商品<input type="text" name="product_name" id="pro_name"></p>
         <p>サイズ
             <select name="size" id="pro_size">
@@ -24,10 +23,8 @@
         </p>
         <p class="suport">Comment</p>
         <textarea name="comment" id="review" cols="50" rows="10"></textarea>
-        <br>
         <p class="suport">URL</p>
         <textarea name="url" id="another_link" cols="50" rows="3">画像内の他サイトの商品リンクを掲載してください。</textarea>
-        <br>
         <button type="submit">投稿</button>
     </div>
 </form>
