@@ -42,12 +42,12 @@ input[type="file"] {
 
 }
 
-#pro_name :hover{
+#pro_name:hover{
     border-bottom: 1px solid black;
 }
 
 #pro_size{
-    border: none;
+    border: novscode-file://vscode-app/c:/Users/iy202/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.htmlne;
     background-color: #919ba747;
     margin-left: 5%;
 }
@@ -63,7 +63,7 @@ input[type="file"] {
     width: 96%;
 }
 
-#review :focus{
+#review:focus{
     outline: none;
     border-bottom: 1px solid black;
 }
@@ -76,9 +76,17 @@ input[type="file"] {
     width: 96%;
 }
 
-#another_link :focus{
+#another_link:focus{
     outline: none;
     border-bottom: 1px solid black;
+}
+
+button{
+    width: 150px;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    background-color: #9DA9B6;
 }
 
 .error{
