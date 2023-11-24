@@ -6,8 +6,7 @@ input[type="file"] {
 
 #upload-wrapper {
     margin: 20% 5%;
-    height: 10%;
-    width: 60%;
+    padding: 30% 15%;
     display: block;
     font-size: 3rem;
     font-weight: bold;
