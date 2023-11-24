@@ -8,6 +8,7 @@ input[type="file"] {
     margin: 20% 5%;
     height: 10%;
     width: 60%;
+    display: block;
     font-size: 3rem;
     font-weight: bold;
 	background-color: #ddd;
