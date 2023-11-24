@@ -8,11 +8,9 @@
 
 <form action="C_post-output.php" method="post">
     <div class="container">
-        <label id="upload-wrapper" for="upload">
-            <div id="upload-preview">
-                <!--acceptで画像ファイルのみ投稿可能と指定-->
-                <input type="file" name="image_path" onchange="previewFile(this);" id="upload" accept="image/*" aria-label="+">
-            </div>
+        <label id="upload-wrapper" for="upload">+
+            <!--acceptで画像ファイルのみ投稿可能と指定 -->
+            <input type="file" name="image_path" onchange="previewFile(this);" id="image_path" accept="image/*" aria-label="+">
         </label>
         <br>
         <p>購入商品<input type="text" name="product_name" id="pro_name"></p>

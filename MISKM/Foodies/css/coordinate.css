@@ -4,21 +4,15 @@ input[type="file"] {
     display: none; /* デフォルトの表示を非表示にする */
 }
 
-#upload{
-    position: relative;
-    display: inline-block;
-}
-
 #upload-wrapper {
-    margin: 0;
-	padding: 0;
-	background: none;
-	border: none;
-	border-radius: 0;
-	outline: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
+    margin: 20% 5%;
+    height: 10%;
+    font-size: 3rem;
+    font-weight: bold;
+	display: inline-block;
+	background-color: #ddd;
+	color: #595858;
+    cursor: pointer;
 }
 
 #upload-preview {
