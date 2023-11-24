@@ -36,9 +36,9 @@
                     <div class="bobo">
                         <button class="example" type="submit"><span>Sign up</span></button>
                     </div>
-                    
+
                     <input type="hidden" name="E-mail" valeu="<?= $_POST['E-mail'] ?>">
-                    <input type="hidden" name="Pass2" valeu="<?= $_POST['Pass2'] ?>">
+                    <input type="hidden" name="password" valeu="<?= $_POST['Pass2'] ?>">
                     <input type="hidden" name="Question" valeu="<?= $_POST['Question'] ?>">
                 </div>
             </div>
