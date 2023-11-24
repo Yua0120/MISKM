@@ -15,11 +15,11 @@
         <p>購入商品<input type="text" name="product_name" id="pro_name"></p>
         <p>サイズ
             <select name="size" id="pro_size">
-                <option value="">XS</option>
-                <option value="">S</option>
-                <option value="">M</option>
-                <option value="">L</option>
-                <option value="">XL</option>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
             </select>
         </p>
         <p class="suport">comment</p>
