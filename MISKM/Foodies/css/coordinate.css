@@ -46,10 +46,10 @@ input[type="file"] {
 
 .suport{
     font-size: 0.8rem;
-    border: none;
 }
 textarea :hover{
     background-color: #ddd;
+    border: none;
 }
 
 #another_link{
