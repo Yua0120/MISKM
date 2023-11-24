@@ -63,7 +63,8 @@ input[type="file"] {
     width: 96%;
 }
 
-#review :hover{
+#review :focus{
+    outline: none;
     border-bottom: 1px solid black;
 }
 
@@ -75,7 +76,8 @@ input[type="file"] {
     width: 96%;
 }
 
-#another_link :hover{
+#another_link :focus{
+    outline: none;
     border-bottom: 1px solid black;
 }
 
