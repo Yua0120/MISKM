@@ -24,7 +24,7 @@
         <p class="suport">Comment</p>
         <textarea name="comment" id="review" cols="50" rows="10"></textarea>
         <p class="suport">URL</p>
-        <textarea name="url" id="another_link" cols="50" rows="3" value="画像内の他サイトの商品リンクを掲載してください。"></textarea>
+        <textarea name="url" id="another_link" cols="50" rows="3">画像内の他サイトの商品リンクを掲載してください。</textarea>
         <button type="submit">投稿</button>
     </div>
 </form>
