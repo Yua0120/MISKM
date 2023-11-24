@@ -23,7 +23,7 @@ new Vue({
         submitForm: function () {
             if (this.validateForm()) {
                 // バリデーションが通過した場合、Vue Routerを使用してページ遷移
-                this.$router.push('/U_info.php'); // '/U_info.php' は実際の遷移先に合わせて変更してください
+                this.$router.push('../php/U_info.php');
             }
         },
         validateEmail: function (email) {
