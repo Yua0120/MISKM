@@ -47,7 +47,7 @@ input[type="file"] {
 }
 
 #pro_size{
-    border: novscode-file://vscode-app/c:/Users/iy202/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.htmlne;
+    border: none;
     background-color: #919ba747;
     margin-left: 5%;
 }
