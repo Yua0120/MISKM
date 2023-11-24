@@ -1,5 +1,18 @@
-<?php require 'connect.php'; ?>
-<!DOCTYPE html>
+<?php session_start();?>
+<?php require 'header.php';?>
+<?php
+$id=$_POST['id'];
+if(!isset($_SESSION['User'])){
+    $pdo = new PDO($connect,USER,PASS);
+    $sql = "select Product_image,Product.naem,Product.size,Product.price,Cart.count
+            FROM Cart
+            JOIN Product ON Cart.product_id = Product.id";
+foreach($result as $row){ 
+    echo '{$row['name']},sizee:{$row['size']},{row['price']},{$row['buy_count']}';
+}
+?>
+<!--<//?php require 'connect.php'; ?>-->
+<!--<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -7,8 +20,8 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <link rel="stylesheet" href="../css/Cart.css">
     <title>カート</title>
-</head>
-    <?php
+</head>-->
+    <!--<//?php
        $pdo = new PDO($connect, USER, PASS);
        $sql = $pdo->prepare('SELECT name, zip_code, addres, tel_number, mail FROM User WHERE nickname=?');
        $sql->execute([$_SESSION['Cart']['nickname']]);
@@ -36,4 +49,5 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="./script/Cart.js"></script>
-</html>
+</html>-->
+
