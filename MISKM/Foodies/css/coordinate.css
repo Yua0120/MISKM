@@ -5,13 +5,13 @@ input[type="file"] {
 }
 
 #upload-wrapper {
-    margin: 20% 5%;
-    padding: 30% 15%;
+    margin: 10% 20%;
+    padding: 20% 22.8%;
     display: block;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
-	background-color: #ddd;
-	color: #595858;
+	background-color: #919ba747;
+	color: #bdc4ca;
     cursor: pointer;
 }
 
@@ -30,8 +30,26 @@ input[type="file"] {
     color: white;
 }
 
+#pro_name{
+    border: none;
+    background-color: #919ba747;
+}
+
+#pro_name :hover{
+    border-bottom: 1px solid black;
+}
+
+#pro_size{
+    border: none;
+    background-color: #919ba747;
+}
+
 .suport{
     font-size: 0.8rem;
+    border: none;
+}
+textarea :hover{
+    background-color: #ddd;
 }
 
 #another_link{
