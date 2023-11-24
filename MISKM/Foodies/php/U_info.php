@@ -8,7 +8,7 @@
 
     <center><h1>Sign up</h1></center>
     <div id="app">
-        <form @submit.prevent="submitForm" action="U_info-output.php" method="post">
+        <form action="U_info-output.php" method="post">
             <div class="container">
                 <div class="left-aligned-text">
                     
@@ -17,7 +17,7 @@
                     <div v-if="isNameError" class="error">名前を入力してください</div>
                     
                     <h4>Nickname</h4>
-                    <input v-model="nicename" type="text" name="Nicename" class="text">
+                    <input v-model="nicename" type="text" name="Nickname" class="text">
                     <div v-if="isNicenameError" class="error">ニックネームを入力してください</div>
 
                     <h4>Phone number</h4>    
