@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="css/touroku.css">
     <title>ユーザー情報更新</title>
 </head>
-<?php require 'FOODiesTitle.php';?>  
+<?php require 'FoodiesTitle.php';?>  
 <?php 
     if(isset($_SESSION['User'])){
         $Email=$_SESSION['User']['mail'];
