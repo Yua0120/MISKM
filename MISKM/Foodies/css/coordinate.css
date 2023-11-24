@@ -36,7 +36,8 @@ input[type="file"] {
 #pro_name{
     border: none;
     background-color: #919ba747;
-    margin: 60%;
+    margin: 69%;
+    margin-left: 5%;
 
 }
 
@@ -47,18 +48,26 @@ input[type="file"] {
 #pro_size{
     border: none;
     background-color: #919ba747;
+    margin-left: 5%;
 }
 
 .suport{
     font-size: 0.8rem;
 }
-textarea :hover{
+
+.review{
     background-color: #ddd;
     border: none;
+    text-decoration: none;
+}
+
+.review :hover{
+    border-bottom: 1px solid black;
 }
 
 #another_link{
-    font-size: 0.5rem;
+    border: none;
+    text-decoration: none;
     color: #47494a;
 }
 
