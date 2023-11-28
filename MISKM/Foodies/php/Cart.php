@@ -9,7 +9,7 @@
 
 if(!isset($_SESSION['User'])){
     $pdo = new PDO($connect,USER,PASS);
-    $sql = "select Product.id,Product.name,Product.size,Product.price,Cart.buy_counts
+    $sql = "select Product.id,Product.name,Product.size,Product.price,Product.image,Cart.buy_counts
             FROM Cart
             JOIN Product ON Cart.product_id = Product.id";
     $stmt = $pdo->query($sql);
@@ -23,11 +23,11 @@ foreach($result as $row){
          ';
     echo "
          <div class = name>
-         {$row['name']},
+         {$row['name']}
          </div>
          <div class = prsi>
-         size:{$row['size']},
-         {$row['price']},
+         size:{$row['size']}
+         {$row['price']}
           <br>
          {$row['buy_counts']}
          </div>
