@@ -15,7 +15,22 @@ if(!isset($_SESSION['User'])){
     $stmt = $pdo->query($sql);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach($result as $row){ 
-    echo "{$row['name']},size:{$row['size']},{$row['price']},{$row['buy_counts']}";
+    $id = $row['product_id'];
+    echo "
+         <div class = img> 
+         {$row['image']},
+         </div>
+         <div class = name>
+         {$row['name']},
+         </div>
+         <div class = prsi>
+         size:{$row['size']},
+         {$row['price']},
+          <br>
+         {$row['buy_counts']}
+         </div>
+         ";
+    echo '<a href= "cart_delete.php?id =',$id,'">削除</a>'
 }
 }
 ?>
