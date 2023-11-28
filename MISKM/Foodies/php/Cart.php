@@ -34,6 +34,7 @@ foreach($result as $row){
          </p>";
     echo '</div>';     
     echo '<a href="Cart_delete.php?id =',$id,'">削除</a>';
+    echo '<p id="line">-</p>';
 } 
     echo '</div>';
 }
