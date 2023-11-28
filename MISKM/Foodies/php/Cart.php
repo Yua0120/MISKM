@@ -15,7 +15,7 @@ if(!isset($_SESSION['User'])){
     $stmt = $pdo->query($sql);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach($result as $row){ 
-    $id = $row['id'];
+    $id = $row['Product']['id'];
     echo '
          <div class = img> 
          <image src="./img/',$row[image],'">,
