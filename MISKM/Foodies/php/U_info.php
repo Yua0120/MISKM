@@ -17,8 +17,8 @@
                     <div v-if="isNameError" class="error">名前を入力してください</div>
                     
                     <h4>Nickname</h4>
-                    <input v-model="nicename" type="text" name="Nickname" class="text">
-                    <div v-if="isNicenameError" class="error">ニックネームを入力してください</div>
+                    <input v-model="nickname" type="text" name="Nickname" class="text">
+                    <div v-if="isNicknameError" class="error">ニックネームを入力してください</div>
 
                     <h4>Phone number</h4>    
                     <input v-model="phoneNumber" type="text" size="30" placeholder="ハイフンなしで入力してください" name="Phonenumber" class="text">
