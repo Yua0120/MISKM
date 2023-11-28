@@ -30,7 +30,7 @@ foreach($result as $row){
          {$row['buy_counts']}
          </div>
          ";
-    echo '<a href= "cart_delete.php?id =',$id,'">削除</a>'
+    echo '<a href= "cart_delete.php?id =',$id,'">削除</a>';
 }
 }
 ?>
