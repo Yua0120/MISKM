@@ -43,8 +43,8 @@ try {
                 $flagValue,
                 $_POST['Question'],
             ]);
-            $sql = $pdo->prepare('insert into User (hash_pass) values(?)');
-            $sql->execute([$_POST('password')]);
+            $sql = $pdo->prepare('insert into Pass (hash_pass) values(?)');
+            $sql->execute([$_POST['password']]);
 
             // 登録が成功した場合、Top.php にリダイレクト
             header('Location: Top.php');
