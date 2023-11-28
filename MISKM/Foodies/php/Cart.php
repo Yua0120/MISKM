@@ -15,10 +15,10 @@ if(!isset($_SESSION['User'])){
     $stmt = $pdo->query($sql);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach($result as $row){ 
-    $id = $row['Product']['id'];
+    $id = $row['product_id'];
     echo '
          <div class = img> 
-         <image src="./img/',$row[image],'">,
+         <image src="./img/',$row['image'],'">,
          </div>
          ';
     echo "
