@@ -39,13 +39,10 @@ try {
             $_POST['Question'],
         ]);
 
-        // PassテーブルのnicknameとUserテーブルのnicknameが一致する場合のidを取得する例
-        $nickname = $_POST['Nickname'];
-        $sql = $pdo->prepare('select user_id from User join Pass on User.nickname = Pass.nickname where Pass.nickname = ?');
-        $sql->execute([$nickname]);
-        $id = $sql->fetch(PDO::FETCH_COLUMN);
+        // PassテーブルのnicknameとUserテーブルのnicknameが一致する場合のidを取得
+        $id = $pdo->lastInsertId();
 
-        // Passテーブルに挿入
+        // Passテーブルに挿入(パスワードを入れるとこ)
         $sql = $pdo->prepare('insert into Pass (user_id, hash_pass, nickname) values (?,?,?)');
         $sql->execute([$id, $hashedPassword, $_POST['Nickname']]);
 
