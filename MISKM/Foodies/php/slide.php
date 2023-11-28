@@ -27,7 +27,7 @@ foreach($sql as $row){
     echo '</div>';
     //スライドの内容（ここでは画像）を記述します。
     //div要素に変えれば文字を加えることもできます。
-    echo '<img src="', $row['image'], '" class="shohin-img">';
+    echo '<img src="/MISKM/img/',$row['image'], '" class="shohin-img">';
     echo '</div>';
     //スライド（2番目）内容は1個めと同じ
     echo '<div class="slide">';
@@ -42,13 +42,15 @@ foreach($sql as $row){
     // "front"を"back"に置換
     $newImagePath = str_replace("front", "back", $imagePath);
 
-    if (file_exists($newImagePath)) {
+    if (file_exists("../../img/" . $newImagePath)) {
         echo '</div>';
-        echo '<img src="' . $newImagePath . '" alt="Image"><br>';
+        echo '<img src="/MISKM/img/',$newImagePath ,'" class="shohin-img" alt="Image">';
         echo '</div>';
     } else {
         echo '</div>';
-        echo $newImagePath;
+        echo '<div class="back-nai">';
+        echo '背面は無地です';
+        echo '</div>';
         echo '</div>';
     }
 
