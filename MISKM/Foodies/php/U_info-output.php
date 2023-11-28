@@ -32,7 +32,7 @@ try {
             $flagValue = isset($_POST['Addres']) ? 1 : '';
 
             // 正しいSQLクエリを使用
-            $sql = $pdo->prepare('insert into User (mail, name, nickname, zip_code, addres, tel_number, flag, question) values (?, ?, ?, ?, ?, ?, ?, ?,)');
+            $sql = $pdo->prepare('insert into User (mail, name, nickname, zip_code, addres, tel_number, flag, question) values (?, ?, ?, ?, ?, ?, ?, ?)');
             $sql->execute([
                 $_POST['E-mail'],
                 $_POST['Name'],
