@@ -18,7 +18,7 @@ foreach($result as $row){
     $id = isset($row['product_id']) ? $row['product_id'] : $row['id'];
     echo '
          <div class = "img"> 
-         <img src="./img/',$row['image'],'">,
+         <img src="/MISKM/img/',$row['image'],'">,
          </div>
          ';
     echo "
