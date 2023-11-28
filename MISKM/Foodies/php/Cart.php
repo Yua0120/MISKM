@@ -15,11 +15,13 @@ if(!isset($_SESSION['User'])){
     $stmt = $pdo->query($sql);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach($result as $row){ 
-    $id = $row['product_id'];
-    echo "
+    $id = $row['id'];
+    echo '
          <div class = img> 
-         {$row['image']},
+         <image src="./img/',{$row[image]},'">,
          </div>
+         ';
+    echo "
          <div class = name>
          {$row['name']},
          </div>
@@ -30,7 +32,7 @@ foreach($result as $row){
          {$row['buy_counts']}
          </div>
          ";
-    echo '<a href= "cart_delete.php?id =',$id,'">削除</a>';
+    echo '<a href= "Cart_delete.php?id =',$id,'">削除</a>';
 }
 }
 ?>
