@@ -43,8 +43,17 @@ try {
                 $flagValue,
                 $_POST['Question'],
             ]);
-            $sql = $pdo->prepare('insert into Pass (hash_pass) values(?)');
-            $sql->execute([$_POST['password']]);
+
+            // PassテーブルのnicknameとUserテーブルのnicknameが一致する場合のidを取得する例
+            $nickname = $_POST['Nickname'];
+            $sql = $pdo->prepare('select user_id from User join Pass on User.nickname = Pass.nickname
+            where Pass.nickname = ?');
+            $sql->execute([$nickname]);
+            $id = $sql->fetch(PDO::FETCH_COLUMN);
+
+            // Passテーブルに挿入
+            $sql = $pdo->prepare('insert into Pass (user_id, hash_pass, nickname) values (?, ?, ?)');
+            $sql->execute([$id, $_POST['password'], $_POST['Nickname']]);
 
             // 登録が成功した場合、Top.php にリダイレクト
             header('Location: Top.php');
