@@ -14,26 +14,28 @@ if(!isset($_SESSION['User'])){
             JOIN Product ON Cart.product_id = Product.id";
     $stmt = $pdo->query($sql);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    echo '<div class= "ALL">';
 foreach($result as $row){ 
-    $id = isset($row['product_id']) ? $row['product_id'] : $row['id'];
+    $id = $row['id'];
+
     echo '
          <div class = "img"> 
          <img src="/MISKM/img/',$row['image'],'">,
          </div>
          ';
+    echo '<div class = "item">';     
     echo "
-         <div class = name>
-         {$row['name']}
-         </div>
-         <div class = prsi>
+         <p id='name'>{$row['name']}</p>
+         <p id = 'item'>
          size:{$row['size']}
          {$row['price']}
           <br>
          {$row['buy_counts']}
-         </div>
-         ";
-    echo '<a href= "Cart_delete.php?id =',$id,'">削除</a>';
-}
+         </p>";
+    echo '</div>';     
+    echo '<a href="Cart_delete.php?id =',$id,'">削除</a>';
+} 
+    echo '</div>';
 }
 ?>
 </body>
