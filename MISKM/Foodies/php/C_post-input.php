@@ -7,9 +7,10 @@
 
 <form action="C_post-output.php" method="post">
     <div class="container">
-        <label id="upload-wrapper" for="upload">
+        <label id="upload-wrapper" for="upload">+
             <!--acceptで画像ファイルのみ投稿可能と指定 -->
-            <input type="file" name="image_path" onchange="previewFile(this);" id="image_path" accept="image/*" aria-label="+">
+            <img src="../../img/file_upload.png" onclick="fileUpload()" id="icon">
+            <input type="file" name="image_path" onchange="previewFile(this);" id="image_path" accept="image/*">
             <img id="preview">
         </label>
         <p>購入商品<input type="text" name="product_name" id="pro_name"></p>
@@ -39,6 +40,9 @@
             document.getElementById('preview').src = fileData.result;
         });
         fileData.readAsDataURL(hoge.files[0]);
+    }
+    function fileUpload(){
+        document.getElementById("image_path").click();
     }
 </script>
 <div class="post-fail">
