@@ -2,7 +2,6 @@
 session_start();
 require 'connect.php';
 
-var_dump($_POST);
 try {
     if (isset($_POST['E-mail']) && isset($_POST['Name']) && isset($_POST['Nickname']) && isset($_POST['Postcode']) && isset($_POST['Addres']) && isset($_POST['Phonenumber']) && isset($_POST['Question']) && isset($_POST['password'])) {
         
@@ -24,6 +23,7 @@ try {
             $existingUser['question'] == $_POST['Question']
         ) {
             echo '<script>alert("ユーザーが既に存在します。");</script>';
+            echo '<a href="login.php">ログイン画面に戻る</a><br>';
         } else {
             // ユーザーが存在しない場合、新規登録
             $hashedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -52,8 +52,8 @@ try {
             $id = $sql->fetch(PDO::FETCH_COLUMN);
 
             // Passテーブルに挿入
-            $sql = $pdo->prepare('insert into Pass (user_id, hash_pass, nickname) values (?, ?, ?)');
-            $sql->execute([$id, $_POST['password'], $_POST['Nickname']]);
+            $sql = $pdo->prepare('insert into Pass (user_id, hash_pass, nickname) values (?,?,?)');
+            $sql->execute([$id, $hashedPassword, $_POST['Nickname']]);
 
             // 登録が成功した場合、Top.php にリダイレクト
             header('Location: Top.php');
@@ -62,9 +62,11 @@ try {
     } else {
         // データが足りない場合の処理
         echo '<script>alert("データが不足しています。");</script>';
+        echo '<a href="U_reg.php">データ入力画面に戻る</a><br>';
     }
 } catch (PDOException $e) {
     // エラーハンドリング
-    echo 'データベースエラー: ' . $e->getMessage();
+    echo '<script>alert("データベースエラー")</script>' . $e->getMessage();
+    echo '<a href="U_reg.php">データ入力画面に戻る</a><br>';
 }
 ?>
