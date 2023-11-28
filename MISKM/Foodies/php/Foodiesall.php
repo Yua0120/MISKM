@@ -20,7 +20,7 @@
         <!-- メニュー -->
         <nav class="nav_content">
             <ul class="nav_list">
-            <li class="nav_item"><a href="">トップ</a></li>
+            <li class="nav_item"><a href="Top.php">トップ</a></li>
             <li class="nav_item"><a href="">投稿</a></li>
             <li class="nav_item"><a href="C_browsing.php">投稿一覧</a></li>
             <li class="nav_item"><a href="">カート</a></li>
