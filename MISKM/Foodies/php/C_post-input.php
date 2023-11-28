@@ -7,9 +7,9 @@
 
 <form action="C_post-output.php" method="post">
     <div class="container">
-        <label id="upload-wrapper" for="upload">+
+        <label id="upload-wrapper" for="upload">
             <!--acceptで画像ファイルのみ投稿可能と指定 -->
-            <img src="../../img/file_upload.png" onclick="fileUpload()" id="icon">
+            <p onclick="fileUpload()">+</p>
             <input type="file" name="image_path" onchange="previewFile(this);" id="image_path" accept="image/*">
             <img id="preview">
         </label>
