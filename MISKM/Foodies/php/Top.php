@@ -56,7 +56,7 @@
         $id = $row['id'];
         echo '<div class="shohin">';
         echo '<a href="P_detail-input.php?id=', $id, '">';
-        echo '<img src="', $row['image'], '" class="shohin-img">';
+        echo '<img src="/MISKM/img/',$row['image'], '" class="shohin-img">';
         echo '</a>';
         echo '<div class="shohin-item">';
         echo '<div class="shohin-item-name">';

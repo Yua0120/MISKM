@@ -33,7 +33,7 @@
             <button @click="increment" class="number-button" id="button">+</button>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script src="/MISKM/script/P_detail.js"></script>
+        <script src="/MISKM/Foodies/script/P_detail.js"></script>
     </div>
 
         <div class="size-img-box">
