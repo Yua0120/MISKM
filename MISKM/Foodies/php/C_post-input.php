@@ -6,13 +6,13 @@
 <?php require 'FoodiesMenu.php' ?>
 
 <form action="C_post-output.php" method="post">
-    <div class="container">
+    <div class="container" onload="img_hiddon()">
         <label id="upload-wrapper" for="upload">
             <!--acceptで画像ファイルのみ投稿可能と指定 -->
             <p onclick="fileUpload()">+</p>
             <input type="file" name="image_path" onchange="previewFile(this);" id="image_path" accept="image/*">
-            <img id="preview">
         </label>
+        <img id="preview">
         <p>購入商品<input type="text" name="product_name" id="pro_name"></p>
         <p>サイズ
             <select name="size" id="pro_size">
@@ -41,8 +41,13 @@
         });
         fileData.readAsDataURL(hoge.files[0]);
     }
+    function img_hiddon() {
+        document.getElementById("preview").style.display = "none";
+    }
     function fileUpload(){
         document.getElementById("image_path").click();
+        document.getElementById("upload_wrapper").style.display ="none";
+        document.getElementById("preview").style.display = "block";
     }
 </script>
 <div class="post-fail">
