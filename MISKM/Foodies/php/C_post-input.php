@@ -10,6 +10,7 @@
         <label id="upload-wrapper" for="upload">+
             <!--acceptで画像ファイルのみ投稿可能と指定 -->
             <input type="file" name="image_path" onchange="previewFile(this);" id="image_path" accept="image/*" aria-label="+">
+            <img id="preview">
         </label>
         <p>購入商品<input type="text" name="product_name" id="pro_name"></p>
         <p>サイズ
@@ -28,7 +29,6 @@
         <button type="submit">投稿</button>
     </div>
 </form>
-<img id="preview">
 
 <script>
     function previewFile(hoge) {
