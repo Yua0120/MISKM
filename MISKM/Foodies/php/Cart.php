@@ -18,7 +18,7 @@ foreach($result as $row){
     $id = $row['id'];
     echo '
          <div class = img> 
-         <image src="./img/',{$row[image]},'">,
+         <image src="./img/',$row[image],'">,
          </div>
          ';
     echo "
