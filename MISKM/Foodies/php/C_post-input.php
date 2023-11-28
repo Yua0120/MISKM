@@ -46,7 +46,7 @@
     }
     function fileUpload(){
         document.getElementById("image_path").click();
-        document.getElementById("upload_wrapper").style.display ="none";
+        document.getElementById("upload-wrapper").style.display ="none";
         document.getElementById("preview").style.display = "block";
     }
 </script>
