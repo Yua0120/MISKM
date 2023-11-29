@@ -1,7 +1,7 @@
 <?php
 $pdo = new PDO ($connect,USER,PASS);
 $sql=$pdo->prepare('select * from Product where id=?');
-$sql->execute([$_GET['id']]);
+$sql->execute([$_GET['id'].'-L']);
 foreach($sql as $row){
     $id = $row['id'];
     echo '<div class="shohin-detail">';

@@ -8,9 +8,9 @@
 <title>C_browsing</title>
 <script src="../script/likeButton.js" defer></script>
 </header>
-<?php require 'Foodiesall.php' ?>
+<?php require 'FoodiesAll.php' ?>
 <body>
-    <!--商品検索機能-->
+    <!--投稿検索機能-->
     <div class="search-box">
         <form action="Top.html" method="post">
             <input type="text" name="keyword" placeholder="user name" class="search">
