@@ -19,15 +19,22 @@ if(!isset($_SESSION['User'])){
 foreach($result as $row){ 
     $id = $row['id'];
     echo '<div class="display">';
-    echo '<img src="/MISKM/img/',$row['image'],'" class="cart_imag">';
+    echo '<div class="cart_img">';
+    echo '<img src="/MISKM/img/',$row['image'],'>';
+    echo '</div>';
     echo '<div class = "item">';  
     echo '<div class="item_name"';   
     echo $row['name'];
     echo '</div>';
+    echo '<div class="item_size>"';
     echo 'size:',$row['size'];
-    echo '￥',$row['price'],'JPY
-         <br>',
-          $row['buy_counts'];
+    echo '</div>';
+    echo '<div class="item_price>"';
+    echo '￥',$row['price'],'JPY<br>';
+    echo '</div>';
+    echo '<div class="item_count">';
+    echo $row['buy_counts'];
+    echo '</div>';
     echo '</div>';     
     echo '<a href="Cart_delete.php?id =',$id,'">削除</a>';
     echo '<p id="line">-</p>';
