@@ -20,7 +20,7 @@
                 </p>
             </div>
             <div class="login-confirmation">
-                <a href="U_check.php">パスワードを忘れた方はこちら</a><br>
+                <a href="U_check_input.php">パスワードを忘れた方はこちら</a><br>
             </div>
             <div class="NEWlogin-confirmation">
                 <a href="U_reg.php">新規の方はこちら</a><br>

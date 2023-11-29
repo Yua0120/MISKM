@@ -9,9 +9,10 @@
 
 <h1>Choice is yours</h1>
 
+<h2>本人確認が完了しました</h2><br>
+
 <div id="app">
     <form action="newpass-output.php" method="post" @submit.prevent="submitForm">    
-        <br><br><br>
         <div class="container">
         <div class="left-aligned-text">
         <div class="login-input">
