@@ -19,4 +19,4 @@
         header("Location: ./login.php?flag=fail");
         exit;
     }
-?>$_SESSION['User']['password']
+?>
