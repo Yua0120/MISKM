@@ -9,12 +9,12 @@
     <center><h1>Sign up</h1></center>
 
     <div id="app">
-    <form action="U_info.php" method="post">
+    <form id="appForm" action="U_info.php" method="post">
         <div class="container">
             <div class="left-aligned-text">
         
                 <h4>E-mail</h4>
-                <input v-model="email" type="text" size="40" name="E-mail" class="text">
+                <input v-model="email" type="text" size="30" name="E-mail" class="text">
                 <div v-if="isEmailError" class="error">無効なメール形式です</div>
     
                 <h4>Pass word</h4>
@@ -26,7 +26,7 @@
                 <div v-if="isMatchError" class="error">パスワードが一致しません。</div>
             
                 <h4>Security Question</h4>
-                <input v-model="question" type="text" placeholder="卒業した小学校は？" name="Question" class="text">
+                <input v-model="question" type="text" size="30" placeholder="卒業した小学校は？" name="Question" class="text">
                 <div v-if="isQuestionError" class="error">秘密の質問を入力してください</div>
                 <br><br>
                 <div class="bobo">
