@@ -24,7 +24,7 @@
                     <option value="10000">10000円以下</option>
                     <!-- 必要に応じて他の金額帯を追加 -->
                 </select>
-            <input type="submit" value="絞り込む">
+            <input type="submit" value="絞り込む" id="like">
         </form>
     </div>
 

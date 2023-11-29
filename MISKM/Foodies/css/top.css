@@ -22,7 +22,12 @@ body{
 }
 
 #priceFilter{
-    background-color: rgb(154, 167, 180);
+    background-color: rgb(186, 202, 218);
+    border: none;
+    text-decoration: none;
+}
+#id{
+    background-color: rgb(222, 236, 250);
     border: none;
     text-decoration: none;
 }
