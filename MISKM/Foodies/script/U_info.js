@@ -10,7 +10,7 @@ new Vue({
     isNicknameError: false,
     isPhoneNumberError: false,
     isPostCodeError: false,
-    isAddressError: false,
+    isAddressError: false
   },
   methods: {
     validateForm: function () {
