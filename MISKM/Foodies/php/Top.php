@@ -6,7 +6,6 @@
 <title>Top</title>
 </header>
 <?php require 'FoodiesMenu.php'?>
-<body>
     <!--商品検索機能-->
     <div class="search-box">
         <form action="Top.html" method="post">
