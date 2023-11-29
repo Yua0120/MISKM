@@ -20,7 +20,7 @@ foreach($result as $row){
     $id = $row['id'];
     echo '<div class="display">';
     echo '<div class="cart_img">';
-    echo '<img src="/MISKM/img/',$row['image'],'>';
+    echo '<img src="/MISKM/img/',$row['image'],'">';
     echo '</div>';
     echo '<div class = "item">';  
     echo '<div class="item_name"';   
