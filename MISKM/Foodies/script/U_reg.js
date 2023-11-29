@@ -20,12 +20,6 @@ new Vue({
             // 各フィールドがエラーでないかどうかを返す
             return !this.isEmailError && !this.isLengthError && !this.isMatchError && !this.isQuestionError;
         },
-        submitForm: function () {
-            if (this.validateForm()) {
-                // バリデーションが通過した場合、Vue Routerを使用してページ遷移
-                this.$router.push('../php/U_info.php');
-            }
-        },
         validateEmail: function (email) {
             var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return emailRegex.test(email);
