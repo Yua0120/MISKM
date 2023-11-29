@@ -1,39 +1,3 @@
-.bto2{
-        /*位置
-        position: absolute;
-        top: 70%;
-        left: 25%;
-        margin: 0 auto;
-        */
-       /*デザイン*/
-        width: 30px;
-        font-size: 20px;
-        border: 2px solid #000;
-
-}
-.bto{
-         /*位置*/
-        position: absolute;
-        top: 50%;
-        left: 10%;
-        margin: 0 auto;
-       /*デザイン*/
-       width: 200px;
-       font-size: 20px;
-       color: #fff;
-       background-color: #9da9b6;
-       border: 2px solid #000;
-       border: none;
-       border-radius: 10px;
-}
-.kei{
-    position: absolute;
-    top: 90%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-}
-
 /*11/28ここから描いてる*/
 .ALL{
     position: absolute;
@@ -56,6 +20,7 @@
     left: 5%;
     margin: 4px;
 }
+/*
 .item{
     position: absolute;
     top: 5%;
