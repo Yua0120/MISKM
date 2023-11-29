@@ -20,6 +20,12 @@ new Vue({
             // 各フィールドがエラーでないかどうかを返す
             return !this.isEmailError && !this.isLengthError && !this.isMatchError && !this.isQuestionError;
         },
+        submitForm: function () {
+            if (this.validateForm()) {
+                // バリデーションが通過した場合、通常のHTMLフォームの送信を行う
+                document.getElementById('appForm').submit();
+            }
+        },
         validateEmail: function (email) {
             var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return emailRegex.test(email);

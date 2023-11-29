@@ -26,10 +26,10 @@
 
                     <h4>Post code</h4>    
                     <input v-model="postCode" type="text" size="30" placeholder="ハイフンなしで入力してください" name="Postcode" class="text">
-                    <div v-if="isPostCodeError" class="error">正しい郵便番号を入力してください</div>
+                    <div v-if="isPostCodeError" class="error">7桁の郵便番号を入力してください</div>
 
                     <h4>Address</h4>
-                    <input v-model="address" type="text" size="40" placeholder="番地や部屋番号まで書いてください" name="Addres" class="text">
+                    <input v-model="address" type="text" size="30" placeholder="番地や部屋番号まで書いてください" name="Addres" class="text">
                     <div v-if="isAddressError" class="error">番地や部屋番号を入力してください</div>
                     <br><br>
 
