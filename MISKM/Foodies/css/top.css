@@ -11,7 +11,7 @@ body{
 .search{
     margin: auto;
     width: 95vw;
-    background-color: rgb(137, 148, 160);
+    background-color: rgb(202, 214, 226);
     border: none;
     text-decoration: none;
 }
@@ -22,7 +22,7 @@ body{
 }
 
 #priceFilter{
-    background-color: rgb(122, 132, 142);
+    background-color: rgb(154, 167, 180);
     border: none;
     text-decoration: none;
 }
