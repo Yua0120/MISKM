@@ -6,7 +6,7 @@
 </head>
 <?php require 'FoodiesMenu.php';?>
 <?php
-
+/*データベース接続*/
 if(!isset($_SESSION['User'])){
     $pdo = new PDO($connect,USER,PASS);
     $sql = "select Product.id,Product.name,Product.size,Product.price,Product.image,Cart.buy_counts
@@ -14,27 +14,24 @@ if(!isset($_SESSION['User'])){
             JOIN Product ON Cart.product_id = Product.id";
     $stmt = $pdo->query($sql);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+/*商品一覧*/
     echo '<div class= "ALL">';
 foreach($result as $row){ 
     $id = $row['id'];
-
-    echo '
-         <div class="img"> 
-         <img src="/MISKM/img/',$row['image'],'">,
-         </div>
-         ';
-    echo '<div class = "item">';     
-    echo "
-         <p id='name'>{$row['name']}</p>
-         <p id = 'item'>
-         size:{$row['size']}
-         {$row['price']}
-          <br>
-         {$row['buy_counts']}
-         </p>";
+    echo '<div class="display">';
+    echo '<img src="/MISKM/img/',$row['image'],'" class="cart_imag">';
+    echo '<div class = "item">';  
+    echo '<div class="item_name"';   
+    echo $row['name'];
+    echo '</div>';
+    echo 'size:',$row['size'];
+    echo '￥',$row['price'],'JPY';
+         '<br>',
+          $row['buy_counts'];
     echo '</div>';     
     echo '<a href="Cart_delete.php?id =',$id,'">削除</a>';
     echo '<p id="line">-</p>';
+    echo '</div>';
 } 
     echo '</div>';
 }
