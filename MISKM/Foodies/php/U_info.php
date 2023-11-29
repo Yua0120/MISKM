@@ -3,10 +3,10 @@
 <link rel="stylesheet" href="../css/touroku.css">
 <title>ユーザー個人情報登録</title>
 </head>
-<body>
     <?php require 'FoodiesReturn.php'; ?>
 
     <center><h1>Sign up</h1></center>
+    
     <div id="app">
         <form action="U_info-output.php" method="post">
             <div class="container">
