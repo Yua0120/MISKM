@@ -4,7 +4,7 @@
 <title>ユーザー個人情報登録</title>
 </head>
 <body>
-    <?php require 'FoodiesTitle.php'; ?>
+    <?php require 'FoodiesReturn.php'; ?>
 
     <center><h1>Sign up</h1></center>
     <div id="app">
