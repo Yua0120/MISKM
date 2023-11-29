@@ -3,7 +3,6 @@
 <link rel="stylesheet" href="../css/touroku.css">
 <title>ユーザー登録</title>
 </head>
-<body>
     <?php require 'FoodiesReturn.php'; ?>
 
     <center><h1>Sign up</h1></center>
@@ -29,6 +28,7 @@
                 <input v-model="question" type="text" size="30" placeholder="卒業した小学校は？" name="Question" class="text">
                 <div v-if="isQuestionError" class="error">秘密の質問を入力してください</div>
                 <br><br>
+                
                 <div class="bobo">
                     <button class="example" onclick="location.href='U_info.php'"><span>Next</span></button>
                 </div>

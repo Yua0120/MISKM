@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="../css/newpass.css">
     <title>新しいパスワード</title>
 </head>
+<body>
 <?php require 'FoodiesTitle.php' ?>
 
 <h1>Choice is yours</h1>
