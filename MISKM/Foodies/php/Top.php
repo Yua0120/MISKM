@@ -37,23 +37,23 @@
     // 金額の絞り込みとキーワード検索の判定
     if (isset($_POST['priceFilter']) && !empty($_POST['priceFilter'])) {
         $selectedPrice = intval($_POST['priceFilter']);
-        $sql = "SELECT * FROM Product WHERE price <= :selectedPrice";
+        $sql = "SELECT * FROM Product  WHERE size = 'L' && price <= :selectedPrice";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':selectedPrice', $selectedPrice, PDO::PARAM_INT);
         $stmt->execute();
         $filteredProducts = $stmt->fetchAll(PDO::FETCH_ASSOC);
     } elseif (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
         $keyword = '%' . $_POST['keyword'] . '%';
-        $sql = $pdo->prepare('SELECT * FROM Product WHERE name LIKE ?');
+        $sql = $pdo->prepare('SELECT * FROM Product WHERE size="L" && name LIKE ?');
         $sql->execute([$keyword]);
         $filteredProducts = $sql->fetchAll(PDO::FETCH_ASSOC);
     } else {
-        $sql = $pdo->query('SELECT * FROM Product');
+        $sql = $pdo->query('SELECT DISTINCT REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(id,"-S",""),"-M",""),"-L",""),"-XL",""),"-XS","") ID,name,price,image,stocks,good_counts FROM `Product`;');
         $filteredProducts = $sql->fetchAll(PDO::FETCH_ASSOC);
     }
 
     foreach ($filteredProducts as $row) {
-        $id = $row['id'];
+        $id = $row['ID'];
         echo '<div class="shohin">';
         echo '<a href="P_detail-input.php?id=', $id, '">';
         echo '<img src="/MISKM/img/',$row['image'], '" class="shohin-img">';
@@ -67,5 +67,4 @@
         echo '</div>';
     }
 ?>
-</body>
 </html>
