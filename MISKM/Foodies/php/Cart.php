@@ -25,8 +25,8 @@ foreach($result as $row){
     echo $row['name'];
     echo '</div>';
     echo 'size:',$row['size'];
-    echo '￥',$row['price'],'JPY';
-         '<br>',
+    echo '￥',$row['price'],'JPY
+         <br>',
           $row['buy_counts'];
     echo '</div>';     
     echo '<a href="Cart_delete.php?id =',$id,'">削除</a>';
