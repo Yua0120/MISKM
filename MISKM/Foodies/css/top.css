@@ -11,6 +11,9 @@ body{
 .search{
     margin: auto;
     width: 95vw;
+    background-color: rgb(137, 148, 160);
+    border: none;
+    text-decoration: none;
 }
 
 /*絞り込みプルダウン*/
@@ -18,6 +21,11 @@ body{
     text-align: right;
 }
 
+#priceFilter{
+    background-color: rgb(122, 132, 142);
+    border: none;
+    text-decoration: none;
+}
 .narrow{
     margin-left: 95%;
 }
