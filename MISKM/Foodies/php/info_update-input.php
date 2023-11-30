@@ -18,9 +18,9 @@
     <center><h1>Up Date</h1></center>
     <?php
         echo '<form action="info_update-output.php" method="post">';
-        echo '<div class="container">';
+        echo '<div class="container" onload="img_hiddon()">';
         echo '<div class="left-aligned-text">';
-        echo '<div id="circle" onload="img_hiddon()">';
+        echo '<div id="circle">';
         echo '<p onclick="fileUpload()">+</p>';
         echo '<input type="file" name="image_path" onchange="previewFile(this);" id="image_path" accept="image/*">';
         echo '</div>  <!--プロフィール画像の仮だよ！-->';// ここの画像をアップロードできるようにする！
