@@ -66,7 +66,7 @@
 /*info_update.htmlで使う！プロフィール画像の仮だよ*/
 
 /*アイコンの設定するとこ*/
-#id{
+#none{
   display: none;
 }
 input[type="file"] {
