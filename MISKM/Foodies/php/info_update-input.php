@@ -17,8 +17,9 @@
     ?>
     <center><h1>Up Date</h1></center>
     <?php
+        echo '<img src="#"  onload="img_hiddon()">';//プレビュー用のエリアを非表示
         echo '<form action="info_update-output.php" method="post">';
-        echo '<div class="container" onload="img_hiddon()">';
+        echo '<div class="container">';
         echo '<div class="left-aligned-text">';
         echo '<div id="circle">';
         echo '<p onclick="fileUpload()">+</p>';
