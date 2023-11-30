@@ -30,7 +30,7 @@
                 <br><br>
                 
                 <div class="bobo">
-                    <button class="example" onclick="location.href='U_info.php'"><span>Next</span></button>
+                    <button class="example" type="button" @click="submitForm"><span>Next</span></button>
                 </div>
     
             </div>

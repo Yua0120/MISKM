@@ -31,6 +31,12 @@ new Vue({
     validatePostCode: function (postCode) {
       // 郵便番号のバリデーション（正確に7桁であること）
       return /^\d{7}$/.test(postCode.trim());
+    },
+    submitForm: function () {
+      if (this.validateForm()) {
+          // バリデーションが通過した場合、通常のHTMLフォームの送信を行う
+          document.getElementById('appForm').submit();
+      }
     }
   }
 });
