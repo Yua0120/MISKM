@@ -20,7 +20,7 @@
         echo '<form action="info_update-output.php" method="post">';
         echo '<div class="container">';
         echo '<div class="left-aligned-text">';
-        echo '<div class="circle"></div>  <!--プロフィール画像の仮だよ！-->';
+        echo '<div class="circle"></div>  <!--プロフィール画像の仮だよ！-->';// ここの画像をアップロードできるようにする！
         echo '<h4>Name</h4>';
         echo '<input type="text" name="name" class="text">';
         echo '<h4>Nickname</h4>';
