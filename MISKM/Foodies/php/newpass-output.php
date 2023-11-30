@@ -5,9 +5,9 @@ require 'connect.php';
 $pdo = new PDO($connect, USER, PASS);
 
 // フォームが送信されたときの処理
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // 新しいパスワードを取得
-    $newPass = $_POST["new_pass"];
+    $newPass = $_POST['newpass2'];
 
     // フォームの入力検証（空でないか、適切なフォーマットかなどを確認）
     if (empty($newPass)) {
