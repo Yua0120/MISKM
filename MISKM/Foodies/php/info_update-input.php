@@ -20,7 +20,7 @@
         echo '<form action="info_update-output.php" method="post">';
         echo '<div class="container">';
         echo '<div class="left-aligned-text">';
-        echo '<div id="circle">';
+        echo '<div id="circle" onload="img_hiddon()">';
         echo '<p onclick="fileUpload()">+</p>';
         echo '<input type="file" name="image_path" onchange="previewFile(this);" id="image_path" accept="image/*">';
         echo '</div>  <!--プロフィール画像の仮だよ！-->';// ここの画像をアップロードできるようにする！
@@ -52,7 +52,7 @@
     </div>
     <script>
         function img_hiddon() {
-        document.getElementById("preview").style.display = "none";
+            document.getElementById("preview").style.display = "none";
         }
         function fileUpload(){
             document.getElementById("image_path").click();
