@@ -26,11 +26,11 @@ body{
     border: none;
     text-decoration: none;
 }
-#id{
-    display: none;
-    background-color: rgb(222, 236, 250);
-    border: 1px solid rgb(96, 113, 133);
+#like{
+    background-color: rgb(196 213 230);
+    border:none;
     text-decoration: none;
+    margin-right:2.5%;
 }
 .narrow{
     margin-left: 95%;
