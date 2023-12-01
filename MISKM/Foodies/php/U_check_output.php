@@ -1,4 +1,5 @@
-<?php require 'connect.php'; ?>
+<?php session_start();?>
+<?php require 'connect.php';?>
 <?php
 unset($_SESSION['User']);
 

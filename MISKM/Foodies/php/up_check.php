@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  このファイルは無しになりました
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
