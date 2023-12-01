@@ -124,6 +124,10 @@ p{
   opacity: 1;
 }
 
+.back-nai{
+  text-align: center;
+}
+
 .shohin-name-money-box{
     width: 70%;
     margin-left: 15%;
@@ -169,8 +173,7 @@ p{
     border: none;
     background: transparent;
     margin: 0;
-    padding-left: 10%;
-    padding-right: 10%;
+    width: "30%";
 }
 
 #button{

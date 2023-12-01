@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    height: 100vh; /* ビューポートの高さいっぱいに要素を配置 */
+     /*height: 100vh; ビューポートの高さいっぱいに要素を配置 */
   }
 
   /* テキスト要素のスタイル */
@@ -64,15 +64,42 @@
 }
 
 /*info_update.htmlで使う！プロフィール画像の仮だよ*/
-.circle {
-    background: lightblue;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
+
+/*アイコンの設定するとこ*/
+#none{
+  display: none;
+}
+input[type="file"] {
+  opacity: 0;
+  position: absolute;
+  display: none;
+}
+
+#circle {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: lightblue;
+  color: #797f83;
+  cursor: pointer;
+}
+
+#circle p{
+  padding-top: 26px;
+}
+#preview {
+  display: none;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: #cccccc;
 }
 /*ニックネームかぶった時のエラー文字用css*/
 .error{
   color: red;
-  text-align: center;
-  font-size: 0.5em;
 }
+
