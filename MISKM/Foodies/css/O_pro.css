@@ -8,8 +8,7 @@
 button{
     /*デザイン*/
     width: 150px;
-    
-    
+    height: 4%;
     border: none;
     border-radius: 4px;
     background-color: #9DA9B6;
