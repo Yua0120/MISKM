@@ -16,7 +16,7 @@
         $stmt = $pdo->query($sql);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         /* 商品一覧 */
-           echo '<div class="ALL">';
+          /* echo '<div class="ALL">';*/
         foreach ($result as $row) {
             $id = $row['id'];
             echo '<div class="main">';
@@ -30,7 +30,7 @@
             echo '</div>'; // .item divを閉じる
             echo '</div>'; // .main divを閉じる
         }
-           echo '</div>';
+          /* echo '</div>';*/
     }
     ?>
 </body>
