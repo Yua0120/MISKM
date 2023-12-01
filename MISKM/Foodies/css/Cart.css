@@ -1,42 +1,61 @@
-.bto2{
-        /*位置
-        position: absolute;
-        top: 70%;
-        left: 25%;
-        margin: 0 auto;
-        */
-       /*デザイン*/
-        width: 30px;
-        font-size: 20px;
-        border: 2px solid #000;
-
-}
-.bto{
-         /*位置*/
-        position: absolute;
-        top: 50%;
-        left: 10%;
-        margin: 0 auto;
-       /*デザイン*/
-       width: 200px;
-       font-size: 20px;
-       color: #fff;
-       background-color: #9da9b6;
-       border: 2px solid #000;
-       border: none;
-       border-radius: 10px;
-}
-.main{
+/*11/28ここから描いてる*/
+.ALL{
     position: absolute;
     top: 10%;
     left: 20%;
     right: 0;
     margin: 0 auto;
 }
-.kei{
+.main{
+    width: 100%;
+    top: 30%;
+    /*text-align: center;*/
+    /*float: left;*/
+}
+
+.cart_img{
+    width: 50%;
+    height: 50%;
     position: absolute;
-    top: 90%;
-    left: 0;
-    right: 0;
+    top: 5%;
+    left: 5%;
+    margin: 4px;
+}
+
+.item{
+    position: absolute;
+    top: 5%;
+    left: 60%;
+    margin: 4px;
+    display: flex;
+    flex-direction: column;
+}
+#line{
+    width:100px
+}
+/*.item_name{
+    position: absolute;
+    top: 5%;
+    left: 40%;
     margin: 0 auto;
 }
+.item_size{
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    margin: 0 auto;
+}
+.item_price{
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    margin: 0 auto;
+}
+.item_count{
+    position: absolute;
+    top: 15%;
+    left: 60%;
+    margin: 0 auto;
+}
+
+*/

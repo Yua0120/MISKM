@@ -1,36 +1,39 @@
-
 <?php require 'header.php'?>
-    <link rel="stylesheet" href="./css/centerYoo.css">
-    <link rel="stylesheet" href="./css/template.css">
-    <link rel="stylesheet" href="./css/newpass.css">
+    <link rel="stylesheet" href="../css/centerYoo.css">
+    <link rel="stylesheet" href="../css/newpass.css">
     <title>新しいパスワード</title>
 </head>
+<body>
 <?php require 'FoodiesTitle.php' ?>
 
-    <br><br><br>
-    <form action="newpass-output.php" method="post">
+<h1>Choice is yours</h1>
 
+<h2>本人確認が完了しました</h2><br>
+
+<div id="app">
+    <form action="newpass-output.php" method="post" @submit.prevent="submitForm">    
         <div class="container">
         <div class="left-aligned-text">
         <div class="login-input">
 
-            New PassWord
-            <input type="password"  class="in" name="new_pass" id="new_password" placeholder="8文字以上16文字以下で入力してください"><br>
-         <p><input type="password" class="in" name="new_pass2" id="new_password" placeholder="もう一度パスワードを入力してください"></p>
-    
-    <?php
-        if ($_POST["new_pass"] != $_POST["new_pass2"]) {
-            echo 'パスワードが一致しません。もう一度確認してください。';
-        }
-    ?>
-        <div class="login-button">
-            <p><button class="example" type="submit" name="login"><span>Login</span></button></p>
-        </div>
+            New Password<br>
+            <input type="password" class="in" v-model="password" size="13" @input="checkInput" name="newpass1" placeholder="8文字以上16文字以下で入力してください"><br>
+            <div v-if="isLengthError" class="error">パスワードは8文字以上16文字以下で入力してください。</div>
+                    
+            Confirm Password<br>
+            <input type="password" class="in" v-model="confirmPassword" size="13" @input="checkInput" name="newpass2" placeholder="もう一度パスワードを入力してください"><br>
+            <div v-if="isMatchError" class="error">パスワードが一致しません。</div>
+
+            <div class="login-button">
+                <p><button class="example" type="submit"><span>Login</span></button></p>
+            </div>
 
         </div>
         </div>
-        </div>    
+        </div>
     </form>
-
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="../script/newpass.js"></script>
 </body>
-</html> 
+</html>
