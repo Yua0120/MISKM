@@ -13,8 +13,7 @@
         $sql = "SELECT History.date,Product.neme
                 FROM History
                 JOIN History_detail ON History.id = History_detail.history_id
-                JOIN Product ON History_detail.product_id = Product.id
-                WHERE History.id = $history_id";
+                JOIN Product ON History_detail.product_id = Product.id";
         $stmt = $pdo->query($sql);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         /* 商品一覧 */
