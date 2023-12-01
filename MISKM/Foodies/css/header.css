@@ -23,7 +23,7 @@ title{
 .header {
   padding-top: 2rem;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   background-color: #9DA9B6;
 }
