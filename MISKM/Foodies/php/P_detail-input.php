@@ -34,8 +34,7 @@ foreach ($sql as $row) {
 
     <form id="productForm" action="P_detail-output.php" method="post">
         <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
-        <input type="hidden" name="product_id" value="<?php echo $row['id']; ?>">
-        <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
+        <input type="hidden" name="product_id" value="<?php echo $_GET['id']; ?>">
         <div class="shohin-size-number-box">
             <div class="size-box">
                 <select name="size" id="size">
