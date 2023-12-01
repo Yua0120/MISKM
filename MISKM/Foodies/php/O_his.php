@@ -14,14 +14,14 @@
                 FROM History
                 JOIN History_detail ON History.id = History_detail.history_id
                 JOIN Product ON History_detail.product_id = Product.id
-                WHERE History.id = $history_id;";
+                WHERE History.id = $history_id";
         $stmt = $pdo->query($sql);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $sql
         /* 商品一覧 */
           /* echo '<div class="ALL">';*/
         foreach ($result as $row) {
-            $id = $row['id'];
+            $id = $row['date'];
             echo '<div class="main">';
             echo '<div class="item">';
             echo "<p>{$row['date']}</p>";
