@@ -30,6 +30,7 @@ title{
   color: #fff;
   font-size: 3rem;
   font-family: 'Caveat', cursive;
+  text-align: center;
 }
 
 /* ここから下がハンバーガーメニューに関するCSS */
@@ -120,7 +121,7 @@ h1{
 }
   
 /*リターンボタン用*/
-return-button{
+#return-button{
   border: none;
   color: #fff;
   text-decoration: none;
