@@ -1,7 +1,7 @@
 <?php require 'header.php';?>
 
 <?php require 'connect.php';?>
-
+    <link rel="stylesheet" href="../css/O_pro.css">
     <title>注文確認</title>
 </head>
 <?php require 'FoodiesTitle.php';?>
