@@ -15,7 +15,7 @@
         <img id="preview">
         <p>購入商品<input type="text" name="product_name" id="pro_name"></p>
         <p>サイズ
-            <select name="size" id="pro_size">
+            <select name="size" id="product_size">
                 <option value="XS">XS</option>
                 <option value="S">S</option>
                 <option value="M">M</option>
