@@ -1,7 +1,7 @@
 <?php session_start();?>
 <?php require 'connect.php';?>
 <?php
-/*unset($_SESSION['User']);*/
+unset($_SESSION['User']);
 $pdo=new PDO($connect,USER,PASS);
 $sql=$pdo->prepare('select * from User where mail=?');
 $result = $sql->execute([$_POST['mail']]);
