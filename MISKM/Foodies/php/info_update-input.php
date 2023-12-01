@@ -17,7 +17,6 @@
     ?>
     <center><h1>Up Date</h1></center>
     <?php
-        echo '<img src="../../img/O_2.jpg" id="none" onload="img_hiddon()">';//プレビュー用のエリアを非表示
         echo '<form action="info_update-output.php" method="post">';
         echo '<div class="container">';
         echo '<div class="left-aligned-text">';
@@ -61,9 +60,6 @@
         });
         fileData.readAsDataURL(hoge.files[0]);
     }
-        function img_hiddon() {
-            document.getElementById("preview").style.display = "none";
-        }
         function fileUpload(){
             document.getElementById("image_path").click();
             document.getElementById("circle").style.display ="none";

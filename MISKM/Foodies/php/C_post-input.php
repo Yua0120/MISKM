@@ -6,7 +6,7 @@
 <?php require 'FoodiesMenu.php' ?>
 
 <form action="C_post-output.php" method="post">
-    <div class="container" onload="img_hiddon()">
+    <div class="container">
         <label id="upload-wrapper" for="upload">
             <!--acceptで画像ファイルのみ投稿可能と指定 -->
             <p onclick="fileUpload()">+</p>
@@ -40,9 +40,6 @@
             document.getElementById('preview').src = fileData.result;
         });
         fileData.readAsDataURL(hoge.files[0]);
-    }
-    function img_hiddon() {
-        document.getElementById("preview").style.display = "none";
     }
     function fileUpload(){
         document.getElementById("image_path").click();
