@@ -1,5 +1,4 @@
 <?php require 'header.php' ?>
-<link rel="stylesheet" href="../css/template.css">
 <title>CoordinatePost.html</title>
 </head>
 <?php require 'FoodiesMenu.php' ?>
