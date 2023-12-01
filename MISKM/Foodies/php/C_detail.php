@@ -37,6 +37,7 @@ if (isset($_GET['id'])) {
         echo '<div class="productdsize">';
         echo $row['product_size'];
         echo '</div>';
+        /*いいね*/
         echo '</div>';
         echo '<p class="comment-area">';
         echo 'coment';

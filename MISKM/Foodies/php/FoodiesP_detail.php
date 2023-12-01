@@ -4,9 +4,6 @@
         <div class="post-detail-button is_prev"><a id="return-button" href="Top.php">< Topへ</a></div>
         <!-- ヘッダーロゴ -->
         <div class="logo">Foodies</div>
-        <!-- ヘッダーロゴ -->
-        <div class="logo">Foodies</div>
-
         <!-- ハンバーガーメニュー部分 -->
         <div class="nav">
         <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->

@@ -40,14 +40,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // ボタンが押されたらカウント減
     downbutton.addEventListener('click', () => {
         // 0以下にはならないようにする
-        if (text.value >= 1) {
+        if (text.value > 0) {
             text.value--;
         }
     });
 
     // ボタンが押されたらカウント増
     upbutton.addEventListener('click', () => {
-        text.value++;
+        //10以上にならないようにする
+        if (text.value <= 9) {
+            text.value++;
+        }
     });
 });
 
