@@ -1,7 +1,6 @@
 <?php session_start(); ?>
 <?php require 'header.php' ;?>
 <?php require 'connect.php' ;?>
-<link rel="stylesheet" href="../css/template.css">
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/top.css">
 <title>Top</title>
@@ -49,23 +48,30 @@
         $sql->execute([$keyword]);
         $filteredProducts = $sql->fetchAll(PDO::FETCH_ASSOC);
     } else {
-        $sql = $pdo->query('SELECT DISTINCT REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(id,"-S",""),"-M",""),"-L",""),"-XL",""),"-XS","") ID,name,price,image,stocks,good_counts FROM `Product`;');
+        $sql = $pdo->query('SELECT DISTINCT REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(id,"-S",""),"-M",""),"-L",""),"-XL",""),"-XS","") id,name,price,image,stocks,good_counts FROM `Product`;');
         $filteredProducts = $sql->fetchAll(PDO::FETCH_ASSOC);
     }
-
-    foreach ($filteredProducts as $row) {
-        $id = $row['ID'];
-        echo '<div class="shohin">';
-        echo '<a href="P_detail-input.php?id=', $id, '">';
-        echo '<img src="/MISKM/img/',$row['image'], '" class="shohin-img">';
-        echo '</a>';
-        echo '<div class="shohin-item">';
-        echo '<div class="shohin-item-name">';
-        echo $row['name']; 
-        echo '</div>';
-        echo '￥', $row['price'], ' JPY';
-        echo '</div>';
-        echo '</div>';
+    
+    // 判定変数の追加
+    $noResults = empty($filteredProducts);
+    
+    if ($noResults) {
+        echo '該当商品なし';
+    } else {
+        foreach ($filteredProducts as $row) {
+            $id = $row['id'];
+            echo '<div class="shohin">';
+            echo '<a href="P_detail-input.php?id=', $id, '">';
+            echo '<img src="/MISKM/img/',$row['image'], '" class="shohin-img">';
+            echo '</a>';
+            echo '<div class="shohin-item">';
+            echo '<div class="shohin-item-name">';
+            echo $row['name']; 
+            echo '</div>';
+            echo '￥', $row['price'], ' JPY';
+            echo '</div>';
+            echo '</div>';
+        }
     }
-?>
+    ?>
 </html>

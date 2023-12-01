@@ -1,13 +1,11 @@
 <?php session_start(); ?>
 <?php require 'header.php' ?>
 <?php require 'connect.php' ?>
-<?php require 'return.php' ?>
-<link rel="stylesheet" href="../css/template.css">
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/P_detail.css">
 <title>商品詳細</title>
 </header>
-<?php require 'FoodiesAll.php' ?>
+<?php require 'FoodiesP_detail.php' ?>
 <?php
 $pdo = new PDO($connect, USER, PASS);
 
@@ -37,6 +35,7 @@ foreach ($sql as $row) {
     <form id="productForm" action="P_detail-output.php" method="post">
         <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
         <input type="hidden" name="product_id" value="<?php echo $row['id']; ?>">
+        <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
         <div class="shohin-size-number-box">
             <div class="size-box">
                 <select name="size" id="size">
@@ -60,7 +59,7 @@ foreach ($sql as $row) {
         </div>
 
         <div class="description-text-box">
-            <input type="text" placeholder="Description Of Item" class="description-text">
+            <?php echo nl2br(htmlspecialchars($row['description'])); ?>
         </div>
 
         <div class="cart-button-box">

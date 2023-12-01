@@ -5,8 +5,6 @@ require 'connect.php';
 require 'return.php';
 require 'FoodiesAll.php';
 ?>
-
-<link rel="stylesheet" href="../css/template.css">
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/C_browsing.css">
 
