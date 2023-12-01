@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php require 'header.php' ;?>
 <?php require 'connect.php' ;?>
 <link rel="stylesheet" href="../css/template.css">
