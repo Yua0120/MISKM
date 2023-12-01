@@ -1,6 +1,5 @@
 <?php session_start()?>
 <?php require 'header.php';?>
-    <link rel="stylesheet" href="../css/template.css">
     <link rel="stylesheet" href="../css/touroku.css">
     <title>ユーザー個人情報更新確認</title>
 </head>

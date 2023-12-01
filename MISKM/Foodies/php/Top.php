@@ -1,7 +1,5 @@
 <?php require 'header.php' ;?>
 <?php require 'connect.php' ;?>
-<link rel="stylesheet" href="../css/template.css">
-<link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/top.css">
 <title>Top</title>
 </header>

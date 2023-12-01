@@ -2,7 +2,6 @@
 <?php require 'header.php'?>
 <?php require 'connect.php'?>
 <?php require 'return.php'?>
-<link rel="stylesheet" href="../css/template.css">
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/C_browsing.css">
 <title>C_browsing</title>
