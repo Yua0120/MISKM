@@ -119,4 +119,11 @@ h1{
   text-align: center;
 }
   
+/*リターンボタン用*/
+#return-button{
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Caveat', cursive;
+}
   

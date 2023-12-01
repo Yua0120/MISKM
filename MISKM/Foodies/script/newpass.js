@@ -34,7 +34,8 @@ new Vue({
           if (response.ok) {
             // パスワード保存が成功した場合
             const result = await response.text();
-            alert(result);
+            // alert(result);
+            window.location.href('Top.php');
 
             // リダイレクト等の追加処理があればここに追加
           } else {

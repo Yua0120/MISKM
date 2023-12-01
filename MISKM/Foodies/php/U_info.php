@@ -1,14 +1,15 @@
 <?php require 'header.php'; ?>
+<?php require 'return.php'?>
 <link rel="stylesheet" href="../css/template.css">
 <link rel="stylesheet" href="../css/touroku.css">
 <title>ユーザー個人情報登録</title>
 </head>
-<body>
     <?php require 'FoodiesReturn.php'; ?>
 
     <center><h1>Sign up</h1></center>
+    
     <div id="app">
-        <form action="U_info-output.php" method="post">
+        <form id="appForm" action="U_info-output.php" method="post">
             <div class="container">
                 <div class="left-aligned-text">
                     
@@ -34,7 +35,7 @@
                     <br><br>
 
                     <div class="bobo">
-                        <button class="example" type="submit"><span>Sign up</span></button>
+                        <button class="example" type="button" @click="submitForm"><span>Sign up</span></button>
                     </div>
 
                     <input type="hidden" name="E-mail" value="<?= $_POST['E-mail'] ?>">
