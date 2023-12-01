@@ -17,7 +17,6 @@
                 WHERE History.id = $history_id";
         $stmt = $pdo->query($sql);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $sql
         /* 商品一覧 */
           /* echo '<div class="ALL">';*/
         foreach ($result as $row) {
