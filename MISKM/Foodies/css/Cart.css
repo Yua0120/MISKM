@@ -20,8 +20,8 @@
     padding: 0;}
 img{
         /*サイズ設定*/
-        width: 50px;
-        height: 50px;
+        width: 100px;
+        height: 100px;
 }
 
 .main.item{
@@ -34,39 +34,13 @@ img{
     display: flex;
     flex-direction: column;*/
 }
-.main.name{
+.name{
     margin: 0;
     padding: 0;
     font-weight:  bold;
     font-size: 18px;
 }
-.main.text{
+.text{
     margin: 10px 0 0;
     padding: 0;
 }
-/*.item_name{
-    position: absolute;
-    top: 5%;
-    left: 40%;
-    margin: 0 auto;
-}
-.item_size{
-    position: absolute;
-    top: 15%;
-    left: 20%;
-    margin: 0 auto;
-}
-.item_price{
-    position: absolute;
-    top: 15%;
-    left: 40%;
-    margin: 0 auto;
-}
-.item_count{
-    position: absolute;
-    top: 15%;
-    left: 60%;
-    margin: 0 auto;
-}
-
-*/
