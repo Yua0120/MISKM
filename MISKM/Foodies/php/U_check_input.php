@@ -13,10 +13,10 @@
     <div class="login-input">
 
         メール<br>
-        <input type="email" size="13" class="in" name ="mail" id="mail" required><br>
+        <input type="email" size="13" class="in" name ="mail" required><br>
 
         秘密の質問<br>
-        <input type="text" size="13" class="in" name="question" id="question" placeholder="卒業した小学校名を入力してください" required><br>
+        <input type="text" size="13" class="in" name="question" placeholder="卒業した小学校名を入力してください" required><br>
 
         <div class="next-button">
             <p><button class="example" type="submit"><span>Next</span></button></p>
