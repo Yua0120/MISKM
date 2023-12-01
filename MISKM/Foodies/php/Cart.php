@@ -26,11 +26,9 @@
             echo '<img src="/MISKM/img/', $row['image'], '" class="cart_img">';
             echo '</figure>';
             echo '<div class="item">';
-            echo '<div class="name">';
-            echo "<p>{$row['name']}</div>
-                  <br>
-                  <div class='text>'
-                 size:{$row['size']} {$row['price']}<br>{$row['buy_counts']}</p>";
+            echo "<p class='name'>{$row['name']}</p>";
+            echo "<br>";
+            echo "<p class='text'>size:{$row['size']} {$row['price']}<br>{$row['buy_counts']}</p>";
             echo '<a href="Cart_delete.php?id=', $id, '">削除</a>';
             echo '</div>'; // .item divを閉じる
             echo '</div>'; // .main divを閉じる
