@@ -21,7 +21,6 @@
         /* 商品一覧 */
           /* echo '<div class="ALL">';*/
         foreach ($result as $row) {
-            $id = $row['date'];
             echo '<div class="main">';
             echo '<div class="item">';
             echo "<p>{$row['date']}</p>";
