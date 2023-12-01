@@ -1,7 +1,3 @@
-<?php require 'header.php' ;?>
-<link rel="stylesheet" href="../css/template.css">
-<link rel="stylesheet" href="../css/header.css">
-<?php require 'FoodiesTitle' ;?>
 <?php
 session_start();
 require 'connect.php';
@@ -11,7 +7,9 @@ $pdo = new PDO($connect, USER, PASS);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //ここ心配だから聞く
-    $user_id = $_SESSION['id'];
+    //$user_id = $_SESSION['id'];
+    $id = $_POST['id'];
+    $user_id=4;
     $size = $_POST['size'];
     $quantity = isset($_POST['count']) ? $_POST['count'] : 1;
 
@@ -38,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // カートにアイテムが追加された場合のJavaScriptアラート
     echo "<script>
             alert('カートにアイテムが追加されました。');
-            window.location.href = 'Top.php';
+            window.location.href = 'P_detail-input.php?id=".$id."';
           </script>";
     exit();
 }

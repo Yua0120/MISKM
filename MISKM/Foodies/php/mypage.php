@@ -1,8 +1,6 @@
 <?php session_start() ;?>
-<?php require 'header.php' ;?>
 <?php require 'connect.php' ;?>
 <?php require 'return.php'?>
-<link rel="stylesheet" href="../css/template.css">
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/mypage.css">
     <title>mypage</title>
@@ -49,10 +47,10 @@
         //石島さんに聞く
         echo '<img src="'.$base64ImageData.'" class="shohin-img">';
         echo '<div class="toukou-box-nickname">';
-        echo $post['nickname'];
+        echo $row['nickname'];
         echo '</div>';
         echo '<div class="toukou-comentbox">';
-        echo '<input type="text" name="comment" value="' . htmlspecialchars($post['comment']) . '" disabled class="toukou-coment">';
+        echo nl2br(htmlspecialchars($row['comment']));
         echo '</div>';
         echo '<form action="post_delete.php" method="post" class="delete-form">';
         echo '<input type="hidden" name="id" value="' . $post['id'] . '">';
