@@ -13,14 +13,16 @@
 }
 
 .main.cart_img{
-    /*サイズ設定*/
-    width: 50px;
-    height: 50px;
     /*位置設定
     top: 5%;
     left: 5%;*/
     margin: 0;
     padding: 0;}
+img{
+        /*サイズ設定*/
+        width: 50px;
+        height: 50px;
+}
 
 .main.item{
     margin: 0 0 0  20px;
