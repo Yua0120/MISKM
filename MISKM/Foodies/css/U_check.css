@@ -6,6 +6,14 @@ input{
 .login-input{
     text-align: left;
 }
+#mail{
+    width: 250px;
+    height: 40px;
+}
+#question{
+    width: 250px;
+    height: 40px;
+}
 
 /*ボタン*/
 .example {
