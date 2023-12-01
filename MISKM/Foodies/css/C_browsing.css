@@ -1,3 +1,53 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*検索フォーム*/
+.search-box{
+    text-align: center;
+}
+
+.search{
+    margin: auto;
+    width: 95vw;
+}
+
+.search{
+    margin: auto;
+    width: 95vw;
+}
+
+
+/*絞り込みプルダウン*/
+.narrow-box{
+    text-align: right;
+}
+
+.narrow{
+    margin-left: 95%;
+}
+
+/*投稿box*/
+.toukou-box{
+    width: 50%;
+    text-align: center;
+    float: left;
+}
+
+
+/*コメント*/
+.commentbox{
+    text-align: center;
+    width: 80%;
+    height: 3rem;
+}
+
+.comment{
+    width: 80%;
+    height: 3rem;
+}
+
 .like-button {
     width: 50px;  /* 画像の幅 */
     height: 50px; /* 画像の高さ */

@@ -10,7 +10,8 @@ require 'return.php';
 $pdo = new PDO($connect, USER, PASS);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $user_id = 4;
+    //ここ心配だから聞く
+    $user_id = $_SESSION['id'];
     $size = $_POST['size'];
     $quantity = isset($_POST['count']) ? $_POST['count'] : 1;
 
