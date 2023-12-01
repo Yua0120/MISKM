@@ -17,7 +17,7 @@
        echo '現金（コンビニ払い）';
        ?>
     </div>
-    <p class="cheak"> 情報に誤りがないかご確認ください</p>
-    <button><a href="O_con.php" id="btn">注文確定</a></button>
+    <p class="cheak" id="btn"> 情報に誤りがないかご確認ください</p>
+    <button><a href="O_con.php">注文確定</a></button>
 </body>
 </html>
