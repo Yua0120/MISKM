@@ -5,10 +5,10 @@
 <title>カート画面</title>
 </head>
 <body>
+    <!--スクロール設定-->
+    <div style="width: 100%; height: 100px; overflow-y: scroll; border: 1px #999999 soild;">
     <?php require 'FoodiesMenu.php'; ?>
     <?php
-    /*スクロール設定*/
-        echo '<div style="width: 100%; height: 100px; overflow-y: scroll; border: 1px #999999 soild;">';
     /* データベース接続 */
     if (!isset($_SESSION['User'])) {
         $pdo = new PDO($connect, USER, PASS);
@@ -35,7 +35,7 @@
         }
           /* echo '</div>';*/
     }
-        echo '</div>';
     ?>
+    </div>
 </body>
 </html>
