@@ -8,13 +8,32 @@ body{
     right: 0;
     margin: 0 auto;
 }
-button{
+#btn{
     /*デザイン*/
     width: 150px;
     font-size: 20px;
     color: #fff;
     border: none;
     background-color: #9DA9B6;
+
+    position: absolute;
+    top: 90%;
+    left: 29%;
+    right: 9%;
+    margin: 20;
+}
+.text{
+    width: 300px;
+    height: 20px;
+    font-size: 15px;
+
+    border-style: none;
+    border-bottom:3px solid #ccc;
+    margin: 10px;
+}
+.sabtitle{
+    font-size: 20px;
+}
     /*位置
     position: absolute;
     top: 90%;
@@ -22,5 +41,5 @@ button{
     right: 9%;
     margin: 0 auto;
     */
-}
+
 

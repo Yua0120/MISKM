@@ -6,17 +6,16 @@
     right: 0;
     margin: 0 auto;
 }
-.display{
+.main{
     width: 100%;
+    top: 30%;
     /*text-align: center;*/
-    float: left;
-}
-img{
-    width: 50%;
-    height: 50%;
+    /*float: left;*/
 }
 
 .cart_img{
+    width: 50%;
+    height: 50%;
     position: absolute;
     top: 5%;
     left: 5%;
@@ -28,8 +27,13 @@ img{
     top: 5%;
     left: 60%;
     margin: 4px;
+    display: flex;
+    flex-direction: column;
 }
-.item_name{
+#line{
+    width:100px
+}
+/*.item_name{
     position: absolute;
     top: 5%;
     left: 40%;
@@ -54,6 +58,4 @@ img{
     margin: 0 auto;
 }
 
-p{
-    width: 100%;
-}
+*/

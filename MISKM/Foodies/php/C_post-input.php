@@ -1,12 +1,10 @@
 <?php require 'header.php' ?>
-<link rel="stylesheet" href="../css/template.css">
-<link rel="stylesheet" href="../css/coordinate.css">
 <title>CoordinatePost.html</title>
 </head>
 <?php require 'FoodiesMenu.php' ?>
 
 <form action="C_post-output.php" method="post">
-    <div class="container" onload="img_hiddon()">
+    <div class="container">
         <label id="upload-wrapper" for="upload">
             <!--acceptで画像ファイルのみ投稿可能と指定 -->
             <p onclick="fileUpload()">+</p>
@@ -15,7 +13,7 @@
         <img id="preview">
         <p>購入商品<input type="text" name="product_name" id="pro_name"></p>
         <p>サイズ
-            <select name="size" id="pro_size">
+            <select name="size" id="product_size">
                 <option value="XS">XS</option>
                 <option value="S">S</option>
                 <option value="M">M</option>
@@ -40,9 +38,6 @@
             document.getElementById('preview').src = fileData.result;
         });
         fileData.readAsDataURL(hoge.files[0]);
-    }
-    function img_hiddon() {
-        document.getElementById("preview").style.display = "none";
     }
     function fileUpload(){
         document.getElementById("image_path").click();
