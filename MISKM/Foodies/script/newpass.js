@@ -14,7 +14,6 @@ new Vue({
 
       // パスワードの長さに関するエラーチェック
       this.isLengthError = passwordLength < 8 || passwordLength > 16;
-
       // パスワードが一致しているかのエラーチェック
       this.isMatchError = this.password !== this.confirmPassword;
     },
@@ -35,7 +34,8 @@ new Vue({
           if (response.ok) {
             // パスワード保存が成功した場合
             const result = await response.text();
-            alert(result);
+            // alert(result);
+            window.location.href('Top.php');
 
             // リダイレクト等の追加処理があればここに追加
           } else {

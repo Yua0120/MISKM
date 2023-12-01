@@ -1,7 +1,6 @@
 <?php require 'header.php' ?>
-<link rel="stylesheet" href="../css/coordinate.css">
 <link rel="stylesheet" href="../css/template.css">
-<link rel="stylesheet" href="../css/cdinate.css">
+<link rel="stylesheet" href="../css/coordinate.css">
 <title>CoordinatePost.html</title>
 </head>
 <?php require 'FoodiesMenu.php' ?>
@@ -9,31 +8,28 @@
 <form action="C_post-output.php" method="post">
     <div class="container">
         <label id="upload-wrapper" for="upload">
-            <input type="file" name="image_path" onchange="previewFile(this);" id="upload">
-            <div id="upload-preview">
-                <div id="upload-text">+</div>
-            </div>
+            <!--acceptで画像ファイルのみ投稿可能と指定 -->
+            <p onclick="fileUpload()">+</p>
+            <input type="file" name="image_path" onchange="previewFile(this);" id="image_path" accept="image/*">
         </label>
-        <br>
+        <img id="preview">
         <p>購入商品<input type="text" name="product_name" id="pro_name"></p>
         <p>サイズ
-            <select name="size" id="pro_size">
-                <option value="">XS</option>
-                <option value="">S</option>
-                <option value="">M</option>
-                <option value="">L</option>
-                <option value="">XL</option>
+            <select name="size" id="product_size">
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
             </select>
         </p>
-        <p class="suport">comment</p>
+        <p class="suport">Comment</p>
         <textarea name="comment" id="review" cols="50" rows="10"></textarea>
-        <br>
         <p class="suport">URL</p>
         <textarea name="url" id="another_link" cols="50" rows="3">画像内の他サイトの商品リンクを掲載してください。</textarea>
-        <br>
         <button type="submit">投稿</button>
+    </div>
 </form>
-<img id="preview">
 
 <script>
     function previewFile(hoge) {
@@ -44,6 +40,11 @@
             document.getElementById('preview').src = fileData.result;
         });
         fileData.readAsDataURL(hoge.files[0]);
+    }
+    function fileUpload(){
+        document.getElementById("image_path").click();
+        document.getElementById("upload-wrapper").style.display ="none";
+        document.getElementById("preview").style.display = "block";
     }
 </script>
 <div class="post-fail">
