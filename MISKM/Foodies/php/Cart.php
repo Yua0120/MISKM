@@ -5,8 +5,8 @@
 <title>カート画面</title>
 </head>
 <body>
-    <!--スクロール設定-->
-    <div style="width: 100%; height: 100px; overflow-y: scroll; border: 1px #999999 soild;">
+    <!--スクロール設定
+    <div style="width: 100%; height: 100px; overflow-y: scroll; border: 1px #999999 soild;">-->
     <?php require 'FoodiesMenu.php'; ?>
     <?php
     /* データベース接続 */
@@ -36,6 +36,6 @@
           /* echo '</div>';*/
     }
     ?>
-    </div>
+    <!--</div>-->
 </body>
 </html>
