@@ -21,8 +21,8 @@
         foreach ($result as $row) {
             echo '<div class="main">';
             echo '<div class="item">';
-            echo "<p>{$row['date']}</p>";
-            echo "<p>{$row['name']}</p>";
+            echo "<p>{$row['date']}
+                  {$row['name']}</p>";
             echo "<br>";
             echo '<p id="line">-</p>';
             echo '</div>'; // .item divを閉じる
