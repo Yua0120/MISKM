@@ -1,20 +1,19 @@
 <?php
 session_start();
 require 'connect.php';
-require 'return.php';
 
 $pdo = new PDO($connect, USER, PASS);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //ここ心配だから聞く
-    //$user_id = $_SESSION['id'];
-    $id = $_POST['id'];
-    $user_id=4;
+    $user_id = $_SESSION['costomer']['id'];
+    $product_id = $_POST['product_id'];
     $size = $_POST['size'];
-    $quantity = isset($_POST['count']) ? $_POST['count'] : 1;
+    $quantity = isset($_POST['count']) ? $_POST['count'] : 0;
 
-    $sql_size_id = $pdo->prepare('SELECT id FROM Product WHERE size = ?');
-    $sql_size_id->execute([$size]);
+    $sql_size_id = $pdo->prepare('SELECT id FROM Product WHERE id LIKE ? AND size = ?');
+    $x = $product_id . "%";  // 検索条件
+    $sql_size_id->execute([$x, $size]);
     $size_id = $sql_size_id->fetchColumn();
 
     // 既存のカートアイテムを検索
@@ -36,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // カートにアイテムが追加された場合のJavaScriptアラート
     echo "<script>
             alert('カートにアイテムが追加されました。');
-            window.location.href = 'P_detail-input.php?id=".$id."';
+            window.location.href = 'P_detail-input.php?id=".$product_id."';
           </script>";
     exit();
 }

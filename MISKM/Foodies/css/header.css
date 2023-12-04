@@ -33,6 +33,13 @@ title{
   align-items: center;
   background-color: #9DA9B6;
 }
+.logo {
+  margin: 0px;
+  color: #fff;
+  font-size: 3rem;
+  font-family: 'Caveat', cursive;
+  margin: 0 23%;
+}
 
 /* ここから下がハンバーガーメニューに関するCSS */
   
