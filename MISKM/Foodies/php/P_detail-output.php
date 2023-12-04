@@ -1,7 +1,6 @@
 <?php
 session_start();
 require 'connect.php';
-require 'return.php';
 
 $pdo = new PDO($connect, USER, PASS);
 
