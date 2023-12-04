@@ -22,8 +22,8 @@
     padding: 0;}
 img{
         /*サイズ設定*/
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
 }
 
 .main.item{
@@ -43,7 +43,7 @@ img{
     font-size: 18px;
 }
 .text{
-    margin: 10px 0 0;
+    margin: 0;
     padding: 0;
 }
 a{
