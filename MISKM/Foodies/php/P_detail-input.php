@@ -10,7 +10,7 @@
 $pdo = new PDO($connect, USER, PASS);
 
 // ログインしている場合、セッションから user_id を取得
-$user_id = isset($_SESSION['User']['id']) ? $_SESSION['User']['id'] : '';
+$user_id = isset($_SESSION['User_id']) ? $_SESSION['User_id'] : '';
 
 $sql = $pdo->prepare('select * from Product where id=?');
 $sql->execute([$_GET['id'] . '-L']);
