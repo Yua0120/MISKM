@@ -1,14 +1,12 @@
 <?php
 session_start();
 require 'connect.php';
-require 'return.php';
 
 $pdo = new PDO($connect, USER, PASS);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //ここ心配だから聞く
-    //$user_id = $_SESSION['id'];
-    $user_id = 4;
+    $user_id = $_SESSION['id'];
     $product_id = $_POST['product_id'];
     $size = $_POST['size'];
     $quantity = isset($_POST['count']) ? $_POST['count'] : 0;
