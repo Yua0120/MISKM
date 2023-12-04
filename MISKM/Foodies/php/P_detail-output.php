@@ -6,7 +6,7 @@ $pdo = new PDO($connect, USER, PASS);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //ここ心配だから聞く
-    $user_id = $_POST['user_id'];
+    $user_id = isset($_SESSION['User']['id']) ? $_SESSION['User']['id'] : '';
     $product_id = $_POST['product_id'];
     $size = $_POST['size'];
     $quantity = isset($_POST['count']) ? $_POST['count'] : 0;
@@ -30,6 +30,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // 既存のアイテムがない場合は新しいアイテムを追加
         $add_new_item = $pdo->prepare('INSERT INTO Cart (user_id, product_id, buy_counts) VALUES (?, ?, ?)');
         $add_new_item->execute([$user_id, $size_id, $quantity]);
+
+        $existing_cart_item->execute([$user_id, $size_id]);
+
     }
 
     // カートにアイテムが追加された場合のJavaScriptアラート
