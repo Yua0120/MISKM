@@ -159,13 +159,12 @@ p{
 }
 
 .number-box{
-    width: 40%;
+    width: 25%;
     margin: 0;
-    text-align: center;
     float: right; 
-    margin-right: 8%;
     border: solid 1px;
     margin-bottom: 2%;
+    text-align: center;
 }
 
 .number-button{
@@ -173,12 +172,8 @@ p{
     border: none;
     background: transparent;
     margin: 0;
-    width: "30%";
-}
-
-#button{
-    width: 3%;
-    font-size: large;
+    width: 23%;
+    text-align: center;
 }
 
 .size-img-box{

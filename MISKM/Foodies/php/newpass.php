@@ -11,7 +11,7 @@
 <h2>本人確認が完了しました</h2><br>
 
 <div id="app">
-    <form action="newpass-output.php" method="post" @submit.prevent="submitForm">    
+    <form id="appForm" action="newpass-output.php" method="post" >    
         <div class="container">
         <div class="left-aligned-text">
         <div class="login-input">
@@ -25,7 +25,7 @@
             <div v-if="isMatchError" class="error">パスワードが一致しません。</div>
 
             <div class="login-button">
-                <p><button class="example" type="submit"><span>Login</span></button></p>
+                <p><button class="example" type="button" @click="submitForm"><span>Login</span></button></p>
             </div>
 
         </div>

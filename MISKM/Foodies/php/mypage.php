@@ -58,4 +58,5 @@
         echo '</div>';
     }
 ?>
+</body>
 </html>

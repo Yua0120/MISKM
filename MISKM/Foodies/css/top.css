@@ -53,6 +53,7 @@ body{
 .shohin-img{
     width: 80%;
     margin: 10 auto;
+    object-fit: contain;
 }
 
 /*部品*/

@@ -1,0 +1,137 @@
+body,ul,li,h1,p {margin: 0;padding: 0;}
+a {text-decoration: none; color: #000;}
+li {list-style-type: none;}
+/*------------------------------------
+汎用 ↓
+------------------------------------*/
+.flex {display: flex;}
+.aic {align-items: center;}
+.jcb {justify-content: space-between;}
+/*------------------------------------
+ヘッダー a hover:下線アンダーライン ↓
+------------------------------------*/
+header ul li a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+header ul li a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 3px;
+  background: #3b5d82;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .3s;
+}
+header ul li a:hover {
+  color: #3b5d82;
+}
+header ul li a:hover::after {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+/*------------------------------------
+ヘッダー spハンバーガーメニュー ↓
+------------------------------------*/
+header .sp_nav {
+  text-align: center;
+}
+.sidemenu {
+  height: 100vh;
+  padding-top: 100px;
+  position: fixed;
+  right: -40%; /*メニュー幅*/
+  transition: all 0.6s;
+  top: 0;
+  width: 40%; /*メニュー幅*/
+  z-index: 2;
+  background-color: #fff;
+}
+.sidemenu nav ul li {
+  padding: 20px;
+}
+.hamburger {
+  cursor: pointer;
+  height: 60px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 60px;
+  z-index: 3;
+}
+.hamburger span {  /*ハンバーガーメニューの線 */
+  background-color: #ffffff;
+  height: 4px;
+  left: 15px;
+  position: absolute;
+  transition: all 0.6s;
+  width: 30px;
+}
+.hamburger_linetop {
+  top: 20px;
+}
+.hamburger_linecenter {
+  top: 29px;
+}
+.hamburger_linebottom {
+  top: 38px;
+}
+/*------------------------------------
+メニュークリックした後 ↓
+------------------------------------*/
+.nav_open .sidemenu {
+  right: 0;
+}
+.nav_open .hamburger_linetop {
+  top: 26px;
+  transform: rotate(45deg);
+}
+.nav_open .hamburger_linecenter {
+  left: 50%;
+  width: 0;
+}
+.nav_open .hamburger_linebottom {
+  top: 26px;
+  transform: rotate(-45deg);
+}
+.nav_open .overlay {
+  opacity: 0.8;
+  visibility: visible;
+}
+/*------------------------------------
+メニュークリック後メニュー外の背景 ↓
+------------------------------------*/
+.overlay {
+  background-color: #000;
+  cursor: pointer;
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition: all 0.6s;
+  visibility: hidden;
+  width: 100vw;
+  z-index: 1;
+}
+/*------------------------------------
+@media screen 1000px~999px ↓
+------------------------------------*/
+@media screen and (max-width: 1000px) {
+  .sp_no {
+    display: none;
+  }
+  .sidemenu {
+    right: -50%; /*メニュー幅*/
+    width: 50%; /*メニュー幅*/
+  }
+}
+@media screen and (min-width: 999px) {
+  .pc_no {
+    display: none;
+  }
+}
