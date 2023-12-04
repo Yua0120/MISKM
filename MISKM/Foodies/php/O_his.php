@@ -1,11 +1,10 @@
 <?php require 'header.php';?>
 <?php require 'connect.php';?>
+<link rel="stylesheet" href="../css/O_his.css">
     <title>注文履歴</title>
 </head>
 <?php require 'FoodiesMenu.php';?>
     <p>注文履歴</p>
-    <!--スクロールの設定　お試し-->
-    <div style="width: 100%; height: 100px; overflow-y: scroll; border: 1px #999999 soild;">
        <?php
     /* データベース接続 */
     if (!isset($_SESSION['User'])) {
