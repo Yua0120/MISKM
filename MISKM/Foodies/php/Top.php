@@ -42,7 +42,7 @@
         $stmt->bindParam(':selectedPrice', $selectedPrice, PDO::PARAM_INT);
         $stmt->execute();
         $filteredProducts = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    } elseif (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
+    } else if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
         $keyword = '%' . $_POST['keyword'] . '%';
         $sql = $pdo->prepare('SELECT * FROM Product WHERE size="L" && name LIKE ?');
         $sql->execute([$keyword]);
