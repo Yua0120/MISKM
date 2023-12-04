@@ -32,6 +32,7 @@
             echo '</div>'; // .item divを閉じる
             echo '</div>'; // .main divを閉じる
     }
+}
     ?>
     </div>
 </body>
