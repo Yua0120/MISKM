@@ -8,8 +8,6 @@
 <?php require 'FoodiesReturn.php' ?>
 <?php
 
-$user_id = 4;
-
 $pdo = new PDO($connect, USER, PASS);
 
 // このページに対するユーザーのいいねを確認
