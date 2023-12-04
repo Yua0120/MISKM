@@ -18,7 +18,6 @@
         $stmt = $pdo->query($sql);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         /* 商品一覧 */
-          /* echo '<div class="ALL">';*/
         foreach ($result as $row) {
             $id = $row['id'];
             echo '<div class="main">';
@@ -28,13 +27,13 @@
             echo '<div class="item">';
             echo "<p class='name'>{$row['name']}</p>";
             echo "<br>";
-            echo "<p class='text'>size:{$row['size']} {$row['price']}<br>{$row['buy_counts']}</p>";
+            echo "<p class='text'>size:{$row['size']}　￥{$row['price']}<br>counts{$row['buy_counts']}</p>";
             echo '<a href="Cart_delete.php?id=', $id, '">削除</a>';
             echo '</div>'; // .item divを閉じる
             echo '</div>'; // .main divを閉じる
         }
-          /* echo '</div>';*/
     }
+            echo '<button type="submit" onclick=O_pro.php">購入手続き画面へ</button>'
     ?>
     <!--</div>-->
 </body>
