@@ -6,9 +6,16 @@
     }else{
         require 'connect.php';
         $pdo = new PDO($connect, USER, PASS);
-        $product_id = $_POST['product_name'] . '-' . $_POST['product_size'];
+        //アップロードされた画像の一時的な保管場所のアドレス(テンポラリファイル)のパス'tmp_file'を取得
+        $tmp_path = $_FILES['upimg']['tmp_name'];
+        // 画像の保存先フォルダと保存先のファイル名
+        $img_folder = '../../post_img/';//画像の保存先フォルダ
+        $img_filename = uniqid() . '_' . $_FILES['image_path']['name'];//アップロードされた画像の名前を一意的なものに変更
+        $img_path = $img_folder . $img_filename;//アップロードされた画像の最終的なパスを取得
+        //product_idの作成
+        $product_id = $_POST['product_name'] . '-' . $_POST['size'];
         $sql = $pdo->prepare('insert into Post(user_id,product_id,product_size,image_path,comment) values (?,?,?,?,?)');
-        $success = $sql->execute([$_SESSION['User']['id'], $product_id, $_POST['image_path'], $_POST['comment']]);
+        $success = $sql->execute([$_SESSION['User']['id'], $product_id, $_POST['size'],$image_path, $_POST['comment']]);
         if ($success) {
             header("Location: ./Top.php");
             exit;
