@@ -6,7 +6,7 @@ $pdo = new PDO($connect, USER, PASS);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //ここ心配だから聞く
-    $user_id = $_SESSION['User']['id'];
+    $user_id = isset($_SESSION['User']['id']) ? $_SESSION['User']['id'] : '';
     $product_id = $_POST['product_id'];
     $size = $_POST['size'];
     $quantity = isset($_POST['count']) ? $_POST['count'] : 0;

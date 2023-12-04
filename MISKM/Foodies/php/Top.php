@@ -34,6 +34,9 @@
     <?php
     $pdo = new PDO($connect, USER, PASS);
 
+        // ユーザーがログインしているかどうかを確認し、ログインしている場合はセッションから user_id を取得
+    $user_id = isset($_SESSION['User']['id']) ? $_SESSION['User']['id'] : '';
+
     // 金額の絞り込みとキーワード検索の判定
     if (isset($_POST['priceFilter']) && !empty($_POST['priceFilter'])) {
         $selectedPrice = intval($_POST['priceFilter']);
