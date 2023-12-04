@@ -7,7 +7,9 @@
     margin: 0 auto;
 }
 .main{
+    height: 100px;
     display: flex;/*横並び*/
+    border-bottom: black;/*下線*/
     /*text-align: center;*/
     /*float: left;*/
 }
@@ -43,4 +45,10 @@ img{
 .text{
     margin: 10px 0 0;
     padding: 0;
+}
+a{
+    text-decoration: none;/*下線削除*/
+}
+a:link{
+    color: #9DA9B6;
 }
