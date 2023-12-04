@@ -16,7 +16,7 @@
                 JOIN Product ON History_detail.product_id = Product.id";
         $stmt = $pdo->query($sql);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $product_id => $row['product_id'];
+        $product_id = $row['product_id'];
         /* 商品一覧 */
           /* echo '<div class="ALL">';*/
         foreach ($result as $row) {
@@ -26,13 +26,11 @@
             echo '</figure>';
             echo '<div class="item">';
             echo "<p>{$row['date']}
-                  <a herf='P_detail-input.php' ?id='".$product_id."'>{$row['name']}</a></p>";
+                  <a href='P_detail-input.php' ?id='".$product_id."'>{$row['name']}</a></p>";
             echo "<br>";
             echo '<p id="line">-</p>';
             echo '</div>'; // .item divを閉じる
             echo '</div>'; // .main divを閉じる
-        }
-          /* echo '</div>';*/
     }
     ?>
     </div>
