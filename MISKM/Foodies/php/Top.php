@@ -42,7 +42,7 @@
         $stmt->bindParam(':selectedPrice', $selectedPrice, PDO::PARAM_INT);
         $stmt->execute();
         $filteredProducts = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }elseif (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
+    } else if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
         $keyword = '%' . $_POST['keyword'] . '%';
         $sql = $pdo->prepare('SELECT DISTINCT REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(id,"-S",""),"-M",""),"-L",""),"-XL",""),"-XS","") id, name, price, image, stocks, good_counts FROM `Product` WHERE name LIKE :keyword');
         $sql->bindParam(':keyword', $keyword, PDO::PARAM_STR);
