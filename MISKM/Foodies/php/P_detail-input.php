@@ -18,12 +18,12 @@ $sql->execute([$_GET['id'] . '-L']);
 
 foreach ($sql as $row) {
 
-    $user_id = $product_id = $buy_counts = '';
-    if (isset($_SESSION['Cart'])) {
-        $user_id = $_SESSION['Cart']['user_id'];
-        $product_id = $_SESSION['Cart']['product_id'];
-        $buy_counts = $_SESSION['Cart']['buy_count'];
-    }
+    //$user_id = $product_id = $buy_counts = '';
+    //if (isset($_SESSION['Cart'])) {
+        //$user_id = $_SESSION['Cart']['user_id'];
+        //$product_id = $_SESSION['Cart']['product_id'];
+        //$buy_counts = $_SESSION['Cart']['buy_count'];
+    //}
     ?>
     <?php require_once 'slide.php' ?>
 
