@@ -1,7 +1,7 @@
 <body>
 <link rel="stylesheet" href="../css/header.css">
     <header class="header">
-        <div class="post-detail-button is_prev"><a id="return-button" href="Top.php">＜ return</a></div>
+        <div class="post-detail-button is_prev"><a id="return-button" href="Top.php">< return</a></div>
         <!-- ヘッダーロゴ -->
         <div class="logo">Foodies</div>
       
