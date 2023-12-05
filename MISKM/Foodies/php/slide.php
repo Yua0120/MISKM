@@ -27,7 +27,18 @@ foreach($sql as $row){
     echo '</div>';
     //スライドの内容（ここでは画像）を記述します。
     //div要素に変えれば文字を加えることもできます。
-    echo '<img src="/MISKM/img/',$row['image'], '" class="shohin-img">';
+    $imagePath = $row['image'];
+    
+    // "front"を"back"に置換
+    $newImagePath1 = str_replace("back", "front", $imagePath);
+
+    if (file_exists("../../img/" . $newImagePath1)) {
+        echo '<img src="/MISKM/img/',$newImagePath1 ,'" class="shohin-img" alt="Image">';
+    } else {
+        echo '<div class="back-nai">';
+        echo '前面は無地です';
+        echo '</div>';
+    }
     echo '</div>';
     //スライド（2番目）内容は1個めと同じ
     echo '<div class="slide">';
@@ -37,14 +48,13 @@ foreach($sql as $row){
 
     //backの画像があれば画像表示なければ背面無地とかく
     // 画像が存在するか確認して表示
-    $imagePath = $row['image'];
     
     // "front"を"back"に置換
-    $newImagePath = str_replace("front", "back", $imagePath);
+    $newImagePath2 = str_replace("front", "back", $imagePath);
 
-    if (file_exists("../../img/" . $newImagePath)) {
+    if (file_exists("../../img/" . $newImagePath2)) {
         echo '</div>';
-        echo '<img src="/MISKM/img/',$newImagePath ,'" class="shohin-img" alt="Image">';
+        echo '<img src="/MISKM/img/',$newImagePath2 ,'" class="shohin-img" alt="Image">';
         echo '</div>';
     } else {
         echo '</div>';

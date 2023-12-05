@@ -1,6 +1,4 @@
 <?php require 'header.php'; ?>
-<?php require 'return.php'?>
-<link rel="stylesheet" href="../css/template.css">
 <link rel="stylesheet" href="../css/touroku.css">
 <title>ユーザー個人情報登録</title>
 </head>

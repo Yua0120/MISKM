@@ -1,10 +1,9 @@
 <body>
 <link rel="stylesheet" href="../css/header.css">
     <header class="header">
-        <div class="post-detail-button is_prev"><a id="return-button" href="javascript:history.back();">＜ return</a></div>
+        <div class="post-detail-button is_prev"><a id="return-button" href="Top.php">＜ return</a></div>
         <!-- ヘッダーロゴ -->
         <div class="logo">Foodies</div>
-
         <!-- ハンバーガーメニュー部分 -->
         <div class="nav">
         <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
@@ -13,7 +12,7 @@
         <label for="drawer_input" class="drawer_open"><span></span></label>
 
         <?php $user_id = isset($_SESSION['User']['id']) ? $_SESSION['User']['id'] : '';?>
-
+    
         <!-- メニュー -->
         <nav class="nav_content">
             <ul class="nav_list">

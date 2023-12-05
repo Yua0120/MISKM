@@ -1,6 +1,6 @@
+<?php session_start(); ?>
 <?php require 'header.php' ;?>
 <?php require 'connect.php' ;?>
-<link rel="stylesheet" href="../css/template.css">
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/top.css">
 <title>Top</title>
@@ -37,34 +37,42 @@
     // 金額の絞り込みとキーワード検索の判定
     if (isset($_POST['priceFilter']) && !empty($_POST['priceFilter'])) {
         $selectedPrice = intval($_POST['priceFilter']);
-        $sql = "SELECT * FROM Product  WHERE size = 'L' && price <= :selectedPrice";
+        $sql = 'SELECT MAX(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(id,"-S",""),"-M",""),"-L",""),"-XL",""),"-XS","")) as id, name, MAX(price) as price, MAX(image) as image, MAX(stocks) as stocks, MAX(good_counts) as good_counts FROM `Product` WHERE price <= :selectedPrice GROUP BY name';
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':selectedPrice', $selectedPrice, PDO::PARAM_INT);
         $stmt->execute();
         $filteredProducts = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    } elseif (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
+    } else if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
         $keyword = '%' . $_POST['keyword'] . '%';
-        $sql = $pdo->prepare('SELECT * FROM Product WHERE size="L" && name LIKE ?');
-        $sql->execute([$keyword]);
+        $sql = $pdo->prepare('SELECT DISTINCT REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(id,"-S",""),"-M",""),"-L",""),"-XL",""),"-XS","") id, name, price, image, stocks, good_counts FROM `Product` WHERE name LIKE :keyword');
+        $sql->bindParam(':keyword', $keyword, PDO::PARAM_STR);
+        $sql->execute();
         $filteredProducts = $sql->fetchAll(PDO::FETCH_ASSOC);
     } else {
-        $sql = $pdo->query('SELECT DISTINCT REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(id,"-S",""),"-M",""),"-L",""),"-XL",""),"-XS","") ID,name,price,image,stocks,good_counts FROM `Product`;');
+        $sql = $pdo->query('SELECT DISTINCT REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(id,"-S",""),"-M",""),"-L",""),"-XL",""),"-XS","") id,name,price,image,stocks,good_counts FROM `Product`;');
         $filteredProducts = $sql->fetchAll(PDO::FETCH_ASSOC);
     }
-
-    foreach ($filteredProducts as $row) {
-        $id = $row['ID'];
-        echo '<div class="shohin">';
-        echo '<a href="P_detail-input.php?id=', $id, '">';
-        echo '<img src="/MISKM/img/',$row['image'], '" class="shohin-img">';
-        echo '</a>';
-        echo '<div class="shohin-item">';
-        echo '<div class="shohin-item-name">';
-        echo $row['name']; 
-        echo '</div>';
-        echo '￥', $row['price'], ' JPY';
-        echo '</div>';
-        echo '</div>';
+    
+    // 判定変数の追加
+    $noResults = empty($filteredProducts);
+    
+    if ($noResults) {
+        echo '該当商品なし';
+    } else {
+        foreach ($filteredProducts as $row) {
+            $id = $row['id'];
+            echo '<div class="shohin">';
+            echo '<a href="P_detail-input.php?id=', $id, '">';
+            echo '<img src="/MISKM/img/',$row['image'], '" class="shohin-img">';
+            echo '</a>';
+            echo '<div class="shohin-item">';
+            echo '<div class="shohin-item-name">';
+            echo $row['name']; 
+            echo '</div>';
+            echo '￥', $row['price'], ' JPY';
+            echo '</div>';
+            echo '</div>';
+        }
     }
-?>
+    ?>
 </html>

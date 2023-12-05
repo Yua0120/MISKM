@@ -1,44 +1,154 @@
-<?php session_start(); ?>
-<?php require 'header.php'?>
-<?php require 'connect.php'?>
-<?php require 'return.php'?>
-<link rel="stylesheet" href="../css/template.css">
+<?php
+session_start();
+require 'header.php';
+require 'connect.php';
+require 'Foodiesall.php';
+?>
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/C_browsing.css">
-<title>C_browsing</title>
-<script src="../script/likeButton.js" defer></script>
+
+<title>投稿一覧</title>
 </header>
-<?php require 'FoodiesAll.php' ?>
 <body>
-    <!--投稿検索機能-->
+    <!-- 投稿検索機能 -->
     <div class="search-box">
-        <form action="Top.html" method="post">
+        <form action="C_browsing.php" method="post">
             <input type="text" name="keyword" placeholder="user name" class="search">
         </form>
     </div>
 
-    <!--絞り込み機能-->
+    <!-- 絞り込み機能 -->
     <div class="narrow-box">
-        <select name="narrow">
-            <option value="">いいね　　順</option>
-            <option>新規投稿　順</option>
-            <!--ここは後々増やす-->
-        </select>
+        <form action="C_browsing.php" method="post">
+            <label for="postFilter">並び替え：</label>
+            <select name="postFilter" id="postFilter">
+                <option value="new">新規　順</option>
+                <option value="old">古い　順</option>
+                <option value="good_desc">いいね順</option>
+            </select>
+            <input type="submit" value="並び変える">
+        </form>
     </div>
 
-    <!--投稿一覧-->
-    <div class="toukou-box">
-        <img src="../../img/pa-ka-.jpg" class="shohin-img">
-        <div class="toukou-box-nickname">
-            <p>ニックネーム</p>
-        </div>
-        <div class="toukou-day">
-            <p>投稿日</p>
-        </div>
-        <div class="toukou-comentbox">
-            <input type="text" name="coment" placeholder="コメント" disabled class="toukou-coment">
-        </div>        
-    </div>
-    <img class="like-button" src="../../img/kuroha-to.jpg" data-product-id="商品のID" alt="いいね">
+    <!-- 投稿一覧 -->
+    <?php
+
+    $pdo = new PDO($connect, USER, PASS);
+
+    // ニックネーム検索と並び順の変更の判定
+if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
+    $keyword = '%' . $_POST['keyword'] . '%';
+    $userSql = $pdo->prepare('SELECT * FROM User WHERE nickname LIKE ?');
+    $userSql->execute([$keyword]);
+    $matchedUsers = $userSql->fetchAll(PDO::FETCH_ASSOC);
+
+    foreach ($matchedUsers as $user) {
+        $user_id = isset($_SESSION['User']['id']) ? $_SESSION['User']['id'] : '';
+        $order = getOrderOption($_POST['postFilter']);
+        $postSql = $pdo->prepare("SELECT Post.*, User.nickname, Post.good_count
+                                    FROM Post 
+                                    INNER JOIN User ON Post.user_id = User.id 
+                                    WHERE Post.user_id = ? 
+                                    GROUP BY Post.id
+                                    ORDER BY $order");
+        $postSql->execute([$userId]);
+        $filteredPosts = $postSql->fetchAll(PDO::FETCH_ASSOC);
+
+        // $filteredPosts が null でないことを確認してから foreach ループ
+        if ($filteredPosts) {
+            // 投稿を表示
+            foreach ($filteredPosts as $post) {
+                echo '<div class="imgukou-box">';
+                echo '<a href="C_detail.php?id=' . $post['id'] . '">';
+                echo '<img src="' . $post['image_path'] . '" class="shohin-img">';
+                echo '</a>';
+                echo '<div class="nickname">';
+                echo $post['nickname'];
+                echo '</div>';
+                echo '<div class="comentbox">';
+                echo '<input type="text" name="comment" value="' . htmlspecialchars($post['comment']) . '" disabled class="coment">';
+                echo '</div>';
+                echo '<div class="like-count">';
+
+                // ログインユーザーのいいね情報を取得
+                $checkLikeSql = $pdo->prepare('SELECT * FROM Good WHERE user_id = ? AND post_id = ?');
+                $checkLikeSql->execute([$_SESSION['User']['id'], $post['id']]);
+                $isLiked = $checkLikeSql->rowCount() > 0;
+
+                // いいねがある場合、いいね画像を表示
+                if ($isLiked) {
+                    echo '<img src="/MISKM/img/kuma.jpg" alt="いいね画像">';
+                } else {
+                    echo '<img src="/MISKM/img/kurokuma.jpg" alt="いいね画像">';
+                }
+
+                echo $post['good_count'];
+                echo '</div>';
+                echo '</div>';
+            }
+        }
+    }
+} else {
+// ニックネーム検索がない場合は全投稿を表示
+$order = getOrderOption(isset($_POST['postFilter']) ? $_POST['postFilter'] : '');
+$postSql = $pdo->prepare("SELECT Post.*, User.nickname, Post.good_count
+                            FROM Post 
+                            INNER JOIN User ON Post.user_id = User.id 
+                            GROUP BY Post.id
+                            ORDER BY $order");
+$postSql->execute();
+
+$allPosts = $postSql->fetchAll(PDO::FETCH_ASSOC);
+
+    // 投稿を表示
+    if ($allPosts) {
+        // 投稿を表示
+        foreach ($allPosts as $post) {
+            echo '<div class="imgukou-box">';
+            echo '<a href="C_detail.php?id=' . $post['id'] . '">';
+            echo '<img src="' . $post['image_path'] . '" class="shohin-img">';
+            echo '</a>';
+            echo '<div class="nickname">';
+            echo $post['nickname'];
+            echo '</div>';
+            echo '<div class="comentbox">';
+            echo '<input type="text" name="comment" value="' . htmlspecialchars($post['comment']) . '" disabled class="coment">';
+            echo '</div>';
+            echo '<div class="like-count">';
+
+            // ログインユーザーのいいね情報を取得
+            $checkLikeSql = $pdo->prepare('SELECT * FROM Good WHERE user_id = ? AND post_id = ?');
+            $checkLikeSql->execute([$_SESSION['User']['id'], $post['id']]);
+            $isLiked = $checkLikeSql->rowCount() > 0;
+
+            // いいねがある場合、いいね画像を表示
+            if ($isLiked) {
+                echo '<img src="/MISKM/img/kuma.jpg" alt="いいね画像">';
+            } else {
+                echo '<img src="/MISKM/img/kurokuma.jpg" alt="いいね画像">';
+            }
+
+            echo $post['good_count'];
+            echo '</div>';
+            echo '</div>';
+        }
+    }
+}
+
+// 並び替え
+function getOrderOption($filter)
+{
+    switch ($filter) {
+        case 'new':
+            return 'Post.id DESC';
+        case 'old':
+            return 'Post.id ASC';
+        case 'good_desc':
+            return 'good_count DESC, Post.id DESC';
+        default:
+            return 'Post.id DESC';
+    }
+}
+?>
 </body>
 </html>
