@@ -23,6 +23,7 @@
         $stmt = $pdo->query($sql);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+    ?>
      
 </body>
 </html>
