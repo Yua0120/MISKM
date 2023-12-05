@@ -19,21 +19,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $deletePostSql = $pdo->prepare('DELETE FROM Post WHERE id = ?');
             $deletePostSql->execute([$post_id]);
 
-            // 削除が成功したことをクライアントに通知
-            $response = ['success' => true];
         } catch (PDOException $e) {
             // エラーが発生した場合はエラーメッセージをクライアントに通知
             $response = ['success' => false, 'error' => $e->getMessage()];
         }
 
-        // JSON 形式でレスポンスを返す
-        header('Content-Type: application/json');
 
-        // JavaScript を使用して mypage.php にリダイレクト
-        echo '<script>
-            window.location.href = "mypage.php?id=' . $user_id . '";
-            </script>';
-        exit;
+        echo "<script>
+                alert('投稿を削除しました。');
+                window.location.href = 'mypage.php?id=".$user_id."';
+              </script>";
+        exit();
     }
 }
 

@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="../css/mypage.css">
     <title>mypage</title>
 </header>
-<?php require 'Foodiesall.php' ;?>
+<?php require 'FoodiesReturn-C_browsing.php' ;?>
 <!--アイコンとニックネーム-->
 <?php
     //ここに画像 改行はしない
