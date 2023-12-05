@@ -4,7 +4,7 @@
 </head>
 <?php require 'FoodiesMenu.php' ?>
 
-<form action="C_post-output.php" method="post">
+<form action="C_post-output.php" method="post" enctype="multipart/form-data">
     <div class="container">
         <label id="upload-wrapper" for="upload">
             <!--acceptで画像ファイルのみ投稿可能と指定 -->
