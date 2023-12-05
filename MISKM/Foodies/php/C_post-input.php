@@ -1,7 +1,9 @@
 <?php require 'header.php' ?>
 <link rel="stylesheet" href="../css/coordinate.css">
+<link rel="stylesheet" href="../css/hamburger.css">
 <title>CoordinatePost.html</title>
 </head>
+<body>
 <?php require 'FoodiesMenu.php' ?>
 
 <form action="C_post-output.php" method="post" enctype="multipart/form-data">
@@ -56,5 +58,4 @@
     }
     ?>
 </div>
-
-</html>
+<?php require 'footer.php' ;?>

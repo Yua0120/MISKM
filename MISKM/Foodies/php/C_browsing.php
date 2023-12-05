@@ -6,6 +6,7 @@ require 'Foodiesall.php';
 ?>
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/C_browsing.css">
+<link rel="stylesheet" href="../css/hamburger.css">
 
 <title>投稿一覧</title>
 </header>
@@ -150,5 +151,4 @@ function getOrderOption($filter)
     }
 }
 ?>
-</body>
-</html>
+<?php require 'footer.php' ;?>
