@@ -3,6 +3,7 @@
 <?php require 'connect.php' ?>
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/C_detail.css">
+<link rel="stylesheet" href="../css/hamburger.css">
 <title>投稿詳細</title>
 </header>
 <?php require 'FoodiesReturn-C_browsing.php' ?>
@@ -75,4 +76,4 @@ if (isset($_GET['id'])) {
     }
 }
 ?>
-</html>
+<?php require 'footer.php' ;?>

@@ -3,6 +3,7 @@
 <?php require 'connect.php' ?>
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/P_detail.css">
+<link rel="stylesheet" href="../css/hamburger.css">
 <title>商品詳細</title>
 </header>
 <?php require 'FoodiesReturn-top.php' ?>
@@ -63,5 +64,4 @@ foreach ($sql as $row) {
     <?php
 }
 ?>
-</body>
-</html>
+<?php require 'footer.php' ;?>

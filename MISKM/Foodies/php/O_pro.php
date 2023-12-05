@@ -24,7 +24,10 @@
         echo '<input type="text" class="text" name="tel_number" id="tel_number" value="', $row['tel_number'], '"><br>';
         echo '<input type="text" class="text" name="mail" id="mail" value="', $row['mail'], '"><br>';
         }else{
-            echo 'セッションが設定されていません。';
+            echo '<p class = "error">
+                  ログインしていません。<br>
+                  ログインしてください。
+                  </p>';
         }
         ?>
         <p class="sabtitle">支払い方法<p><br>

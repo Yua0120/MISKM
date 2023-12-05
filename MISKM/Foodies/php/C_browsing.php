@@ -1,15 +1,15 @@
-<?php
-session_start();
-require 'header.php';
-require 'connect.php';
-require 'Foodiesall.php';
-?>
+<?php session_start(); ?>
+<?php require 'header.php' ?>
+<?php require 'connect.php' ?>
+
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/C_browsing.css">
+<link rel="stylesheet" href="../css/hamburger.css">
 
 <title>投稿一覧</title>
 </header>
 <body>
+<?php require 'Foodiesall.php';?>
     <!-- 投稿検索機能 -->
     <div class="search-box">
         <form action="C_browsing.php" method="post">
@@ -77,9 +77,9 @@ if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
 
                 // いいねがある場合、いいね画像を表示
                 if ($isLiked) {
-                    echo '<img src="/MISKM/img/kuma.jpg" alt="いいね画像">';
+                    echo '<img src="/MISKM/img/kuma.jpg" width="30" alt="いいね画像">';
                 } else {
-                    echo '<img src="/MISKM/img/kurokuma.jpg" alt="いいね画像">';
+                    echo '<img src="/MISKM/img/kurokuma.jpg" width="30" alt="いいね画像">';
                 }
 
                 echo $post['good_count'];
@@ -123,9 +123,9 @@ $allPosts = $postSql->fetchAll(PDO::FETCH_ASSOC);
 
             // いいねがある場合、いいね画像を表示
             if ($isLiked) {
-                echo '<img src="/MISKM/img/kuma.jpg" alt="いいね画像">';
+                echo '<img src="/MISKM/img/kuma.jpg" width="30" alt="いいね画像">';
             } else {
-                echo '<img src="/MISKM/img/kurokuma.jpg" alt="いいね画像">';
+                echo '<img src="/MISKM/img/kurokuma.jpg" width="30" alt="いいね画像">';
             }
 
             echo $post['good_count'];
@@ -150,5 +150,4 @@ function getOrderOption($filter)
     }
 }
 ?>
-</body>
-</html>
+<?php require 'footer.php' ;?>
