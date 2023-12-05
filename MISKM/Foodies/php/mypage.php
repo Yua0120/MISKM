@@ -30,7 +30,7 @@
             echo '<img src="/MISKM/img/' . $userInfo['icon_image_path'] . '" class="icon">';
         } else {
             // icon_image_path が空の場合はデフォルトの画像を表示
-            echo '<img src="/MISKM/img/kuma.jpg" class="icon">';
+            echo '<img src="/MISKM/img/default_icon.jpg" class="icon">';
         }
         echo '</div>';
         echo '<div class="nickname">';
