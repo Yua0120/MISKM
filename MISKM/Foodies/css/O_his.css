@@ -15,8 +15,8 @@
 }
 img{
         /*サイズ設定*/
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
 }
 
 .main.item{
@@ -40,7 +40,7 @@ a:link{
 }
 button{
     /*位置*/
-      left: 25%;
+      text-align: center;
       margin: 0 auto;
        /*デザイン*/
        width: 200px;
