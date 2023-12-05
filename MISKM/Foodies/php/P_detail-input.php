@@ -15,9 +15,6 @@ $user_id = isset($_SESSION['User']['id']) ? $_SESSION['User']['id'] : '';
 $sql = $pdo->prepare('select * from Product where id=?');
 $sql->execute([$_GET['id'] . '-L']);
 
-// セッションに選択した商品idを登録しなおす
-//$_SESSION['product_id'] = $_GET['id'];
-
 foreach ($sql as $row) {
 
     $user_id = $product_id = $buy_counts = '';

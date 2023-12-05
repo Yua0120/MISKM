@@ -2,9 +2,7 @@
 session_start();
 require 'connect.php';
 
-
-//$user_id = $_SESSION['user_id'];
-$user_id=4;
+$user_id = isset($_SESSION['User']['id']) ? $_SESSION['User']['id'] : '';
 
 // 投稿のIDを取得
 if (isset($_GET['id'])) {
@@ -21,6 +19,10 @@ if (isset($_GET['id'])) {
             // いいねがまだ存在しない場合、Good テーブルに挿入
             $insertLikeSql = $pdo->prepare('INSERT INTO Good (user_id, post_id) VALUES (?, ?)');
             $insertLikeSql->execute([$user_id, $post_id]);
+
+            // いいねが追加されたら、Post テーブルの good_count カラムをインクリメント
+            $updateGoodCountSql = $pdo->prepare('UPDATE Post SET good_count = good_count + 1 WHERE id = ?');
+            $updateGoodCountSql->execute([$post_id]);
         }
 
         // この処理が成功したら元のページにリダイレクト（適切なURLに変更すること）

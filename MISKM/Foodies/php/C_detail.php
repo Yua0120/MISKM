@@ -5,12 +5,12 @@
 <link rel="stylesheet" href="../css/C_detail.css">
 <title>投稿詳細</title>
 </header>
-<?php require 'FoodiesReturn.php' ?>
+<?php require 'FoodiesReturn-C_browsingl.php' ?>
 <?php
 
-$user_id = 4;
-
 $pdo = new PDO($connect, USER, PASS);
+
+$user_id = isset($_SESSION['User']['id']) ? $_SESSION['User']['id'] : '';
 
 // このページに対するユーザーのいいねを確認
 if (isset($_GET['id'])) {
