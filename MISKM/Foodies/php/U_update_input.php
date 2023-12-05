@@ -1,5 +1,4 @@
 <?php require 'header.php';?>
-    <link rel="stylesheet" href="css/template.css">
     <link rel="stylesheet" href="css/touroku.css">
     <title>ユーザー情報更新</title>
 </head>

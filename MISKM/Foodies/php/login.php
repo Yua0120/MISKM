@@ -1,6 +1,5 @@
 <?php require 'header.php' ?>
 <link rel="stylesheet" href="../css/centerYoo.css">
-<link rel="stylesheet" href="../css/template.css">
 <link rel="stylesheet" href="../css/login.css">
 <title>login.html</title>
 </head>

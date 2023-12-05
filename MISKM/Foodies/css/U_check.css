@@ -1,49 +1,38 @@
-/*テキストボックスの色*/
 input{
     background-color: #d3d3d3;
     border: none;
+    width: 250px; height: 40px;
 }
-@media(max-width: 850px) {
-       
-button{
-    /*位置*/
-    position: absolute;
-    top: 60%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    /*デザイン*/
-    width: 150px;
-    font-size: 30px;
-    color: #fff;
-    border: none;
-    background-color: #9DA9B6;
+.login-input{
+    text-align: left;
+}
 
+/*ボタン*/
+.example {
+  background-color: #9DA9B6;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
 }
-.main{
-    position: absolute;
-    top: 40%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    /*デザイン*/
+.example span{
+  font-size: 25px;
 }
-.text1{
-    width: 260px;
-    position: absolute;
-    top: 18%;
-    left: 20%;
-    right: 0;
-    margin: 0 auto;
-    font-size: 15px;
+.next-button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
 }
-.text2{
-    width: 260px;
-    position: absolute;
-    top: 58%;
-    left: 20%;
-    right: 0;
-    margin: 0 auto;
-    font-size: 15px;
-    }
-}
+
+/*テキストボックス*/
+.in{
+    margin-top: 20px;
+    height: 30px;
+  }
+  .in :hover{
+    border-bottom: solid 1px black
+  }
+
+.error{
+    color: red;
+  }
