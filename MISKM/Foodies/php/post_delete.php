@@ -4,41 +4,41 @@ require 'connect.php';
 
 $pdo = new PDO($connect, USER, PASS);
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $post_id = $_POST['id'];
+$user_id = isset($_SESSION['User']['id']) ? $_SESSION['User']['id'] : '';
 
-    // JavaScript 確認ダイアログを表示
-    echo "<script>
-            if (confirm('本当に削除しますか？')) {
-                // 削除を実行
-                fetch('delete_post.php', {
-                    method: 'POST',
-                    body: new URLSearchParams({ 'id': '$post_id' }),
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded'
-                    }
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        alert('削除が完了しました。');
-                        window.location.href = 'mypage.php';
-                    } else {
-                        alert('削除に失敗しました。');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('削除に失敗しました。');
-                });
-            } else {
-                alert('削除がキャンセルされました。');
-            }
-        </script>";
-    exit;
-} else {
-    // 無効なリクエストメソッド
-    http_response_code(405);
-    exit('Method Not Allowed');
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $post_id = isset($_POST['id']) ? $_POST['id'] : null;
+
+    if ($post_id !== null) {
+        try {
+            // Good テーブルから削除
+            $deleteGoodSql = $pdo->prepare('DELETE FROM Good WHERE post_id = ?');
+            $deleteGoodSql->execute([$post_id]);
+
+            // Post テーブルから削除
+            $deletePostSql = $pdo->prepare('DELETE FROM Post WHERE id = ?');
+            $deletePostSql->execute([$post_id]);
+
+            // 削除が成功したことをクライアントに通知
+            $response = ['success' => true];
+        } catch (PDOException $e) {
+            // エラーが発生した場合はエラーメッセージをクライアントに通知
+            $response = ['success' => false, 'error' => $e->getMessage()];
+        }
+
+        // JSON 形式でレスポンスを返す
+        header('Content-Type: application/json');
+        echo json_encode($response);
+
+        // JavaScript を使用して mypage.php にリダイレクト
+        echo '<script>
+            window.location.href = "mypage.php?id=' . $user_id . '";
+            </script>';
+        exit;
+    }
 }
+
+// 無効なリクエストメソッド
+http_response_code(405);
+exit('Method Not Allowed');
 ?>
