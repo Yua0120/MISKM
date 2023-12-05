@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+<?php require 'connect.php'; ?>
 <?php require 'header.php';?>
 
     <link rel="stylesheet" href="../Foodies/css/header.css">
