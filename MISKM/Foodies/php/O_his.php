@@ -4,7 +4,7 @@
 <title>注文履歴</title>
 </head>
 <?php require 'FoodiesMenu.php';?>
-<p>注文履歴</p>
+<h3>注文履歴</h3>
 <?php
 /* データベース接続 */
 if (!isset($_SESSION['User'])) {
@@ -26,11 +26,11 @@ if (!isset($_SESSION['User'])) {
         echo '<div class="item">';
         echo "<p>{$row['date']} <a href='P_detail-input.php?id={$product_id}'>{$row['name']}</a></p>";
         echo "<br>";
-        echo '<p id="line">-</p>';
         echo '</div>'; // .item divを閉じる
         echo '</div>'; // .main divを閉じる
     }
 }
+       echo '<button type=submit onclik="O_pro.php">購入手続きへ</button>';
 ?>
 </div>
 </body>
