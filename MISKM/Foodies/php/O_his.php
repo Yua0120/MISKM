@@ -30,7 +30,7 @@ if (!isset($_SESSION['User'])) {
         echo '</div>'; // .main divを閉じる
     }
 }
-       echo '<button type=submit onclick="O_pro.php">購入手続きへ</button>';
+        echo '<button type="button" onclick="location.href=\'O_pro.php\'">購入手続きへ</button>';
 ?>
 </div>
 </body>
