@@ -10,7 +10,7 @@
     <?php require 'FoodiesMenu.php'; ?>
     <?php
     /* データベース接続 */
-    if (!isset($_SESSION['User'])) {
+    if (isset($_SESSION['User'])) {
         $userId = $_SESSION['User']['id'];
         $pdo = new PDO($connect, USER, PASS);
         $sql = "SELECT Product.id, Product.name, Product.size, Product.price, Product.image, Cart.buy_counts
@@ -36,8 +36,9 @@
             echo '</div>'; // .item divを閉じる
             echo '</div>'; // .main divを閉じる
         }
+        echo '<button type="button" onclick="location.href=\'O_pro.php\'">購入手続きへ</button>';
     }
-            echo '<button type="button" onclick="location.href=\'O_pro.php\'">購入手続きへ</button>';
+            
     ?>
     <!--</div>-->
 </body>
