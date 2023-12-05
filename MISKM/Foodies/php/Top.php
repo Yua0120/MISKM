@@ -37,14 +37,14 @@
     // 金額の絞り込みとキーワード検索の判定
     if (isset($_POST['priceFilter']) && !empty($_POST['priceFilter'])) {
         $selectedPrice = intval($_POST['priceFilter']);
-        $sql = "SELECT * FROM Product  WHERE size = 'L' && price <= :selectedPrice";
+        $sql = "select * from Product  where size = 'L' && price <= :selectedPrice";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':selectedPrice', $selectedPrice, PDO::PARAM_INT);
         $stmt->execute();
         $filteredProducts = $stmt->fetchAll(PDO::FETCH_ASSOC);
     } else if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
         $keyword = '%' . $_POST['keyword'] . '%';
-        $sql = $pdo->prepare('SELECT * FROM Product WHERE size="L" && name LIKE ?');
+        $sql = $pdo->prepare('select * from Product where size="L" && name like ?');
         $sql->execute([$keyword]);
         $filteredProducts = $sql->fetchAll(PDO::FETCH_ASSOC);
     } else {
