@@ -11,12 +11,17 @@
     <?php require 'FoodiesMenu.php'; ?>
     <?php
     /* データベース接続 */
-    if (!isset($_SESSION['User'])) {
+    if (isset($_SESSION['User'])) {
+      if(!empty($_SESSION['Cart'])){
+        $userId = $_SESSION['User']['id'];
         $pdo = new PDO($connect, USER, PASS);
         $sql = "SELECT Product.id, Product.name, Product.size, Product.price, Product.image, Cart.buy_counts
                 FROM Cart
-                JOIN Product ON Cart.product_id = Product.id";
-        $stmt = $pdo->query($sql);
+                JOIN Product ON Cart.product_id = Product.id
+                WHERE user_id = ?";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(1, $userId, PDO::PARAM_INT); 
+        $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         /* 商品一覧 */
         foreach ($result as $row) {
@@ -33,8 +38,14 @@
             echo '</div>'; // .item divを閉じる
             echo '</div>'; // .main divを閉じる
         }
+        echo '<button type="button" onclick="location.href=\'O_pro.php\'">購入手続きへ</button>';
+      }else{
+         echo '<p class ="error">カートに商品が入っていません。</p>';
+      }
+    }else{
+        echo  '<p class ="error">ログインしてください</p>';
     }
-            echo '<button type="submit" onclick=O_pro.php">購入手続き画面へ</button>'
+            
     ?>
     <!--</div>-->
     <?php require 'footer.php' ;?>

@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+<?php require 'connect.php'; ?>
 <?php require 'header.php';?>
 
     <link rel="stylesheet" href="../Foodies/css/header.css">
@@ -23,6 +25,7 @@
         $stmt = $pdo->query($sql);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+    ?>
      
 </body>
 </html>

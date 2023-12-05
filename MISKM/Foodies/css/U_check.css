@@ -26,6 +26,7 @@ input{
 
 /*テキストボックス*/
 .in{
+  
     margin-top: 20px;
     height: 30px;
   }
@@ -34,5 +35,6 @@ input{
   }
 
 .error{
+    text-align: center;
     color: red;
   }
