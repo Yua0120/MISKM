@@ -28,7 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // JSON 形式でレスポンスを返す
         header('Content-Type: application/json');
-        echo json_encode($response);
 
         // JavaScript を使用して mypage.php にリダイレクト
         echo '<script>
