@@ -5,21 +5,15 @@
 <link rel="stylesheet" href="../css/P_detail.css">
 <title>商品詳細</title>
 </header>
-<?php require 'FoodiesP_detail.php' ?>
+<?php require 'FoodiesReturn-top.php' ?>
 <?php
 $pdo = new PDO($connect, USER, PASS);
 
 // ログインしている場合、セッションから user_id を取得
-$user_id = isset($_SESSION['customer']) ? $_SESSION['customer']['id'] : '';
+$user_id = isset($_SESSION['User']['id']) ? $_SESSION['User']['id'] : '';
 
 $sql = $pdo->prepare('select * from Product where id=?');
 $sql->execute([$_GET['id'] . '-L']);
-// セッションに登録しておいた商品id情報を破棄
-if (isset($_SESSION['id'])) {
-    unset($_SESSION['id']);
-}
-// セッションに選択した商品idを登録しなおす
-$_SESSION['id'] = $_GET['id'];
 
 foreach ($sql as $row) {
 
