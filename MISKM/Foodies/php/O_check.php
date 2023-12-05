@@ -5,6 +5,7 @@
     <title>注文確認</title>
 </head>
 <?php require 'FoodiesTitle.php';?>
+    <form action="O_con.php" mrthods="post">
     <div class="main">
     <p>配送先住所</p>
     <?php
@@ -17,7 +18,8 @@
        echo '現金（コンビニ払い）';
        ?>
     </div>
-    <p class="cheak" id="btn"> 情報に誤りがないかご確認ください</p>
-    <button><a href="O_con.php">注文確定</a></button>
+    <p class="cheak"> 情報に誤りがないかご確認ください</p>
+    <button type="submit"><a href="O_con.php">注文確定</a></button>
+    </form>
 </body>
 </html>

@@ -136,14 +136,16 @@ p{
 .shohin-name{
     text-align: center;
     width: 50%;
+    height: 50px;
     float: left;
 }
 
 .shohin-money{
     text-align: center;
-    width: 40%;
+    width: 50%;
+    height: 40px;
+    padding-top: 10px;
     float: right;
-    padding-right: 10%;
 }
 
 .shohin-size-number-box{

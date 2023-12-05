@@ -3,7 +3,8 @@ session_start();
 require 'connect.php';
 
 
-$user_id = $_SESSION['user_id'];
+
+$user_id = isset($_SESSION['User']['id']) ? $_SESSION['User']['id'] : '';
 
 // 投稿のIDを取得
 if (isset($_GET['id'])) {
@@ -20,6 +21,10 @@ if (isset($_GET['id'])) {
             // いいねが存在する場合、Good テーブルから削除
             $deleteLikeSql = $pdo->prepare('DELETE FROM Good WHERE user_id = ? AND post_id = ?');
             $deleteLikeSql->execute([$user_id, $post_id]);
+
+            // いいねが解除されたら、Post テーブルの good_count カラムをデクリメント
+            $updateGoodCountSql = $pdo->prepare('UPDATE Post SET good_count = GREATEST(good_count - 1, 0) WHERE id = ?');
+            $updateGoodCountSql->execute([$post_id]);
         }
 
         // この処理が成功したら元のページにリダイレクト（適切なURLに変更すること）
