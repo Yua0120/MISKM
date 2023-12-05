@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="../css/C_detail.css">
 <title>投稿詳細</title>
 </header>
-<?php require 'FoodiesReturn-C_browsingl.php' ?>
+<?php require 'FoodiesReturn-C_browsing.php' ?>
 <?php
 
 $pdo = new PDO($connect, USER, PASS);

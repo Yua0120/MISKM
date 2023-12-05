@@ -31,5 +31,5 @@
   </div>
   <!-- spハンバーガーメニュー ↑ -->
 
-        </div>
-    </header>
+  </div>
+</header>
