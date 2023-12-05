@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../css/hamburger.css">
+<link rel="stylesheet" href="../css/humburger.css">
     <title>ハンバーガーメニュー専用</title>
 </head>
 <!--ヘッダー↓-->
