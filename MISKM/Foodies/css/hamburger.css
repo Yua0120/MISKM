@@ -63,8 +63,8 @@ header .sp_nav {
   width: 60px;
   z-index: 3;
 }
-.hamburger span {  /*ハンバーガーメニューの線 */
-  background-color: #ffffff;
+.hamburger span {
+  background-color: #000;
   height: 4px;
   left: 15px;
   position: absolute;
