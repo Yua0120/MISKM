@@ -1,8 +1,7 @@
 <body>
     <header class="header">
         <!-- ヘッダーロゴ -->
-        <div class="logo">Foodies</div>
-      
+      <div class="logo">Foodies</div>
         <!-- spハンバーガーメニュー ↓ -->
   <div class="sp_nav">
     <div class="overlay" id="js_overlay"></div>
@@ -30,6 +29,5 @@
     </div>
   </div>
   <!-- spハンバーガーメニュー ↑ -->
-
-        </div>
-    </header>
+</div>
+</header>
