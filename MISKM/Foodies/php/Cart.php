@@ -11,11 +11,15 @@
     <?php
     /* データベース接続 */
     if (!isset($_SESSION['User'])) {
+        $userId = $_SESSION['User']['id'];
         $pdo = new PDO($connect, USER, PASS);
         $sql = "SELECT Product.id, Product.name, Product.size, Product.price, Product.image, Cart.buy_counts
                 FROM Cart
-                JOIN Product ON Cart.product_id = Product.id";
-        $stmt = $pdo->query($sql);
+                JOIN Product ON Cart.product_id = Product.id
+                WHERE user_id = ?";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(1, $userId, PDO::PARAM_INT); 
+        $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         /* 商品一覧 */
         foreach ($result as $row) {
