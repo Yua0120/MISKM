@@ -77,9 +77,9 @@ if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
 
                 // いいねがある場合、いいね画像を表示
                 if ($isLiked) {
-                    echo '<img src="/MISKM/img/kuma.jpg" width="100" alt="いいね画像">';
+                    echo '<img src="/MISKM/img/kuma.jpg" width="30" alt="いいね画像">';
                 } else {
-                    echo '<img src="/MISKM/img/kurokuma.jpg" width="100" alt="いいね画像">';
+                    echo '<img src="/MISKM/img/kurokuma.jpg" width="30" alt="いいね画像">';
                 }
 
                 echo $post['good_count'];
@@ -123,9 +123,9 @@ $allPosts = $postSql->fetchAll(PDO::FETCH_ASSOC);
 
             // いいねがある場合、いいね画像を表示
             if ($isLiked) {
-                echo '<img src="/MISKM/img/kuma.jpg" width="100" alt="いいね画像">';
+                echo '<img src="/MISKM/img/kuma.jpg" width="30" alt="いいね画像">';
             } else {
-                echo '<img src="/MISKM/img/kurokuma.jpg" width="100" alt="いいね画像">';
+                echo '<img src="/MISKM/img/kurokuma.jpg" width="30" alt="いいね画像">';
             }
 
             echo $post['good_count'];
