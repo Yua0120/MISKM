@@ -1,6 +1,7 @@
 <?php require 'header.php';?>
 <?php require 'connect.php';?>
 <link rel="stylesheet" href="../css/O_his.css">
+<link rel="stylesheet" href="../css/hamburger.css">
 <title>注文履歴</title>
 </head>
 <?php require 'FoodiesMenu.php';?>
@@ -32,5 +33,4 @@ if (!isset($_SESSION['User'])) {
 }
 ?>
 </div>
-</body>
-</html>
+<?php require 'footer.php' ;?>
