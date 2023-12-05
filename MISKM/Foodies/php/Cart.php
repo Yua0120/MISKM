@@ -11,6 +11,7 @@
     <?php
     /* データベース接続 */
     if (isset($_SESSION['User'])) {
+      if(!empty($_SESSION['Cart'])){
         $userId = $_SESSION['User']['id'];
         $pdo = new PDO($connect, USER, PASS);
         $sql = "SELECT Product.id, Product.name, Product.size, Product.price, Product.image, Cart.buy_counts
@@ -37,6 +38,11 @@
             echo '</div>'; // .main divを閉じる
         }
         echo '<button type="button" onclick="location.href=\'O_pro.php\'">購入手続きへ</button>';
+      }else{
+         echo '<p class ="error">カートに商品が入っていません。</p>';
+      }
+    }else{
+        echo  '<p class ="error">ログインしてください</p>';
     }
             
     ?>
