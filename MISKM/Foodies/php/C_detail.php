@@ -7,10 +7,21 @@
 </header>
 <?php require 'FoodiesReturn.php' ?>
 <?php
+
 $pdo = new PDO($connect, USER, PASS);
 
+// このページに対するユーザーのいいねを確認
 if (isset($_GET['id'])) {
     $post_id = $_GET['id'];
+
+        $checkLikeSql = $pdo->prepare('SELECT * FROM Good WHERE user_id = ? AND post_id = ?');
+        $checkLikeSql->execute([$user_id, $post_id]);
+        $isFavorite = $checkLikeSql->rowCount() > 0;
+    
+        // この投稿に対するいいねの数を取得
+        $countLikesSql = $pdo->prepare('SELECT COUNT(*) as count FROM Good WHERE post_id = ?');
+        $countLikesSql->execute([$post_id]);
+        $likeCount = $countLikesSql->fetch()['count'];
 
     $sql = $pdo->prepare('SELECT * FROM Post WHERE id = ?');
     $sql->execute([$post_id]);
@@ -36,6 +47,21 @@ if (isset($_GET['id'])) {
         echo '</p>';
         echo '<div class="productdsize">';
         echo $row['product_size'];
+        echo '</div>';
+        
+        // いいね/いいね解除ボタンを表示
+        echo '<div class="favorite">';
+        if ($isFavorite) {
+            echo '<a href="like_out.php?id=', $post_id, '">';
+            echo '<img src="/MISKM/img/kuma.jpg" class="kuma-img">';
+            echo $likeCount;
+            echo '</a>';
+        } else {
+            echo '<a href="like_in.php?id=', $post_id, '">';
+            echo '<img src="/MISKM/img/kurokuma.jpg" class="kuma-img">';
+            echo $likeCount;
+            echo '</a>';
+        }
         echo '</div>';
         echo '</div>';
         echo '<p class="comment-area">';
