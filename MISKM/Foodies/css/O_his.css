@@ -29,3 +29,25 @@ img{
     display: flex;
     flex-direction: column;*/
 }
+h3{
+    color: #9DA9B6;
+}
+a{
+    text-decoration: none;/*下線削除*/
+}
+a:link{
+    color: #9DA9B6;
+}
+button{
+    /*位置*/
+      left: 25%;
+      margin: 0 auto;
+       /*デザイン*/
+       width: 200px;
+       font-size: 30px;
+       font-size: 20px;
+       color: #fff;
+       border: none;
+       background-color: #9DA9B6;
+       border-radius: 5px;
+   }
