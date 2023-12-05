@@ -40,8 +40,8 @@ a:link{
 }
 button{
     /*位置*/
-      text-align: center;
-      margin: 0 auto;
+      margin: 2% 33% 1%;
+      padding: 1% 2%;
        /*デザイン*/
        width: 200px;
        font-size: 30px;
