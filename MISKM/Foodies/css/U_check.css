@@ -26,7 +26,8 @@ input{
 
 /*テキストボックス*/
 .in{
-    margin-top: 20px;
+
+    margin: 30% 25%;
     height: 30px;
   }
   .in :hover{
