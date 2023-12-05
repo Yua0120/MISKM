@@ -3,11 +3,11 @@ session_start();
 require 'connect.php';
 
 $pdo = new PDO($connect, USER, PASS);
-
+$sql = $pdo->prepare('select * from Cart where user_id = ?');
 foreach ($sql as $row) {
 $_SESSION['Cart'] = [
     'id' => $row['user_id'],
-    'product' => $row['product'],
+    'product' => $row['product_id'],
     'counts' => $row['buy_counts']
 ];
 }
