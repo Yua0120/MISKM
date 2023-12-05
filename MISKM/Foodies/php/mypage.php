@@ -1,10 +1,11 @@
 <?php session_start() ;?>
+<?php require 'header.php' ;?>
 <?php require 'connect.php' ;?>
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/mypage.css">
     <title>mypage</title>
 </header>
-<?php require './FoodiesReturn-C_browsing.php' ;?>
+<?php require 'FoodiesMenu.php' ;?>
 <!--アイコンとニックネーム-->
 <?php
     //ここに画像 改行はしない
@@ -24,7 +25,16 @@
         $userInfo = $userSql->fetch(PDO::FETCH_ASSOC);
 
         //アイコンは石島さんに相談
-        echo '<img src="/MISKM/img/kuma.jpg" class="icon-img">';
+        echo '<div class="icon-img">';
+        if (!empty($userInfo['icon_image_path'])) {
+            // icon_image_path が空でない場合はその画像を表示
+            echo '<img src="/MISKM/img/' . $userInfo['icon_image_path'] . '" class="icon">';
+        } else {
+            // icon_image_path が空の場合はデフォルトの画像を表示
+            //echo '<img src="/MISKM/img/default_icon.jpg" class="icon">';
+            echo '<img src="/MISKM/img/kuma.jpg" class="icon">';
+        }
+        echo '</div>';
         echo '<div class="nickname">';
         echo $userInfo['nickname'];
         echo '</div>';
