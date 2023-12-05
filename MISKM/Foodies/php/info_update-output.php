@@ -13,6 +13,7 @@
         $img_folder = '../../icon_img/';//画像の保存先フォルダ
         $img_filename = uniqid() . '_' . $_FILES['image_path']['name'];//アップロードされた画像の名前を一意的なものに変更
         $img_path = $img_folder . $img_filename;//アップロードされた画像の最終的なパスを取得
+        move_uploaded_file($tmp_path, $img_path);//画像をicon_imgに保存する
         // 下のifは同じニックネームがあるかないかのチェック
         if ($sql->rowCount() == 0) {
             if ($id) {
