@@ -4,6 +4,14 @@ require 'connect.php';
 
 $pdo = new PDO($connect, USER, PASS);
 
+foreach ($sql as $row) {
+$_SESSION['Cart'] = [
+    'id' => $row['user_id'],
+    'product' => $row['product'],
+    'counts' => $row['buy_counts']
+];
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //ここ心配だから聞く
     $user_id = isset($_SESSION['User']['id']) ? $_SESSION['User']['id'] : '';
