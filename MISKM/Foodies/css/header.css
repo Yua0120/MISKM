@@ -13,10 +13,17 @@ body{
   position: relative;
   top: 3.5rem;
 }
-/*ヘッター*/
+/*タイトル*/
 title{
   color: #ffffff;
   font-family: "Dynalight";
+}
+.logo {
+  margin: 0 30%;
+  color: #fff;
+  font-size: 3rem;
+  font-family: 'Caveat', cursive;
+  /* text-align: center; */
 }
 
 /* ハンバーガーメニュー*/
@@ -26,13 +33,12 @@ title{
   align-items: center;
   background-color: #9DA9B6;
 }
-
 .logo {
   margin: 0px;
   color: #fff;
   font-size: 3rem;
   font-family: 'Caveat', cursive;
-  text-align: center;
+  margin: 0 23%;
 }
 
 /* ここから下がハンバーガーメニューに関するCSS */

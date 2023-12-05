@@ -3,6 +3,7 @@ session_start();
 require 'connect.php';
 
 
+
 $user_id = isset($_SESSION['User']['id']) ? $_SESSION['User']['id'] : '';
 
 // 投稿のIDを取得
