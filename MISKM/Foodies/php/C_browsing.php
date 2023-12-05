@@ -2,7 +2,7 @@
 session_start();
 require 'header.php';
 require 'connect.php';
-require 'FoodiesAll.php';
+require 'Foodiesall.php';
 ?>
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/C_browsing.css">
