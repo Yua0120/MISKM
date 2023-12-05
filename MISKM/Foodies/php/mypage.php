@@ -2,9 +2,11 @@
 <?php require 'connect.php' ;?>
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/mypage.css">
+<link rel="stylesheet" href="../css/hamburger.css">
     <title>mypage</title>
 </header>
-<?php require './FoodiesReturn-C_browsing.php' ;?>
+<body>
+<?php require 'FoodiesMenu.php'; ?>
 <!--アイコンとニックネーム-->
 <?php
     //ここに画像 改行はしない
@@ -84,5 +86,4 @@
         }
     }
 ?>
-</body>
-</html>
+<?php require 'footer.php' ;?>

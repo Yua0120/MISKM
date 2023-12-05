@@ -2,6 +2,7 @@
 <?php require 'connect.php'; ?>
 <?php require 'header.php'; ?>
 <link rel="stylesheet" href="../css/Cart.css">
+<link rel="stylesheet" href="../css/hamburger.css">
 <title>カート画面</title>
 </head>
 <body>
@@ -36,5 +37,4 @@
             echo '<button type="submit" onclick=O_pro.php">購入手続き画面へ</button>'
     ?>
     <!--</div>-->
-</body>
-</html>
+    <?php require 'footer.php' ;?>

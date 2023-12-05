@@ -1,5 +1,6 @@
 <?php require 'header.php' ?>
 <link rel="stylesheet" href="../css/coordinate.css">
+<link rel="stylesheet" href="../css/hamburger.css">
 <title>CoordinatePost.html</title>
 </head>
 <?php require 'FoodiesMenu.php' ?>
@@ -56,5 +57,4 @@
     }
     ?>
 </div>
-
-</html>
+<?php require 'footer.php' ;?>
