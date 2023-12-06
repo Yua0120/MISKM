@@ -3,23 +3,10 @@ body{
 }
 .main{
     position: absolute;
-    top: 15%;
-    left: 0;
+    top: 20%;
+    left: 7%;
     right: 0;
     margin: 0 auto;
-}
-#btn{
-    /*デザイン*/
-    width: 150px;
-    font-size: 20px;
-    color: #fff;
-    border: none;
-    background-color: #9DA9B6;
-    position: absolute;
-    top: 90%;
-    left: 29%;
-    right: 9%;
-    margin: 20px;
 }
 /* .text{
     width: 300px;
