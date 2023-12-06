@@ -7,13 +7,11 @@ $sql = $pdo->prepare('SELECT * FROM Cart WHERE product_id = ?');
 $sql->execute([$product_id]);
 $row = $sql->fetch(PDO::FETCH_ASSOC);
 
-if ($row) {
     $_SESSION['Cart'] = [
         'id' => $row['user_id'],
         'product' => $row['product_id'],
         'counts' => $row['buy_counts']
     ];
-}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //ここ心配だから聞く
