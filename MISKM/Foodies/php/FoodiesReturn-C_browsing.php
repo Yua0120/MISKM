@@ -24,7 +24,7 @@
           <li><a href="Cart.php">カート</a></li>
           <li><a href="O_his.php">注文履歴</a></li>
 	      <li><a href="mypage.php?id=<?php $user_id ?>">マイページ</a></li>
-	      <li><a href="U_update-input.php">アカウント情報更新</a></li>
+	      <li><a href="U_update-input.php?id=<?php $user_id ?>">アカウント情報更新</a></li>
 	      <li><a href="logout-check.php">ログアウト</a></li>
         </ul>
       </nav>

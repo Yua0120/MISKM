@@ -1,15 +1,11 @@
 <?php session_start(); ?>
+<?php require 'header.php' ?>
 <?php require 'connect.php' ?>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/C_browsing.css">
-        <link rel="stylesheet" href="../css/hamburger.css">
+<link rel="stylesheet" href="../css/C_browsing.css">
+<link rel="stylesheet" href="../css/hamburger.css">
 
 <title>投稿一覧</title>
-</header>
+</head>
 <body>
 <?php require 'FoodiesMenu.php';?>
     <!-- 投稿検索機能 -->
