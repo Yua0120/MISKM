@@ -19,6 +19,7 @@
       var_dump("333333");
      $user_id = $_SESSION['User']['id'];
 
+     var_dump($_POST['product_id']);
      if (isset($_POST['product_id'])) {
       var_dump("44444");
       exit;
