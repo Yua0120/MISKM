@@ -29,11 +29,9 @@ button{
     /* height: 4%; */
     border: none;
     border-radius: 5px;
-    background-color: #9DA9B6;
     /*位置*/
     position: absolute;
-    top: 100%;
-    left: 18%;
+    left: 22%;
     right: 9%;
     margin: 20px;
 }
