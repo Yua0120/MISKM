@@ -1,7 +1,7 @@
 .main{
     position: absolute;
     top: 20%;
-    left: 7%;
+    left: 11%;
     right: 0;
     margin: 0 auto;
 }
@@ -14,7 +14,7 @@ button{
     /*位置*/
     position: absolute;
     top: 100%;
-    left: 22%;
+    left: 19%;
     right: 9%;
     margin: 20px;
 }
