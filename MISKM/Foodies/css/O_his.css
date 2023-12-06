@@ -29,7 +29,7 @@ img{
     display: flex;
     flex-direction: column;*/
 }
-h3{
+.title{
     color: #9DA9B6;
 }
 a{
