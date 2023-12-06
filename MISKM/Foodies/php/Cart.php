@@ -26,6 +26,9 @@
         $stmt->bindParam(1, $userId, PDO::PARAM_INT); 
         $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        $sum_price = $result['price'] * $result['buy_counts'];
+        $total_price = 0;
         /* 商品一覧 */
         if(!empty($setid)){
             foreach ($result as $row) {
@@ -37,11 +40,16 @@
                 echo '<div class="item">';
                 echo "<p class='name'>{$row['name']}</p>";
                 echo "<br>";
-                echo "<p class='text'>size:{$row['size']}　￥{$row['price']}<br>counts{$row['buy_counts']}</p>";
+                echo "<p class='text'>
+                      size:{$row['size']}　￥{$row['price']}<br>
+                      counts:{$row['buy_counts']}　小計　￥",$sum_price,
+                      "</p>";
                 echo '<a href="Cart_delete.php?id=', $id, '">削除</a>';
                 echo '</div>'; // .item divを閉じる
                 echo '</div>'; // .main divを閉じる
+                $total_price += $sum_price; 
             }
+            echo '合計　￥',$total_price;
             echo '<button type="button" onclick="location.href=\'O_pro.php\'">購入手続きへ</button>';
         }else{
             echo '<p class="error">カートに商品が入っていません。</p>';

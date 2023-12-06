@@ -19,9 +19,13 @@
     </form>
     <?php
     /* データベース接続 */
+    $date = date("Y/m/d");
     if (!isset($_SESSION['User'])) {
+        $id => $_SESSION['User']['user_id'];
         $pdo = new PDO($connect, USER, PASS);
         $sql = "DELETE FROM Cart";/*カート内データ削除*/
+        $sql = "INSERT INTO  History (user_id, daily)
+                VALUES (",$id,$date")"; //注文履歴テーブルにデータ挿入
         $stmt = $pdo->query($sql);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
