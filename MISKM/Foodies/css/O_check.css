@@ -33,12 +33,8 @@ body{
 .sabtitle{
     font-size: 20px;
 }
-    /*位置
-    position: absolute;
-    top: 90%;
-    left: 0;
-    right: 9%;
-    margin: 0 auto;
-    */
+.check{
+    color: #ff5858;
+}
 
 
