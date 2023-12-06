@@ -8,6 +8,7 @@
     <form action="O_con.php" mrthods="post">
     <div class="container">
         <div class="left-aligned-text">
+            <br><br>
     <?php
        echo $_POST['name'],'<br>';/*-名前*/
        echo $_POST['zip_code'],'<br>';/*-郵便番号*/
