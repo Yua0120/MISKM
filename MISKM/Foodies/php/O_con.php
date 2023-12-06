@@ -8,7 +8,7 @@
 </head>
 <?php require 'FoodiesTitle.php';?>
     <form action="Top.php">
-    <img src="../../img/O_1.jpg" class="img1"><br><!--くまの画像-->
+    <!--<img src="../../img/O_1.jpg" class="img1"><br>くまの画像-->
     <?php
     echo '配達予定日　';
     echo date("m月d日",strtotime("+3 day"));
