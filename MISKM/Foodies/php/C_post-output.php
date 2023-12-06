@@ -14,7 +14,8 @@
         $img_path = $img_folder . $img_filename;//アップロードされた画像の最終的なパスを取得
         move_uploaded_file($tmp_path, $img_path);//画像をpost_imgに保存する
         //product_idの作成
-        $product_id = $_POST['product_name'] . '-' . $_POST['size'];
+        $product_id_name = str_replace(' ', '', $_POST['product_name']);
+        $product_id = $product_id_name . '-' . $_POST['size'];
         echo $product_id;
         $sql = $pdo->prepare('insert into Post(user_id,product_id,product_size,image_path,comment) values (?,?,?,?,?)');
         $success = $sql->execute([$_SESSION['User']['id'], $product_id, $_POST['size'],$img_path, $_POST['comment']]);
