@@ -8,12 +8,12 @@
 button{
     /*デザイン*/
     width: 150px;
-    height: 4%;
+    /* height: 4%; */
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     background-color: #9DA9B6;
     /*位置*/
-    position: absolute;
+    /* position: absolute; */
     top: 90%;
     left: 29%;
     right: 9%;

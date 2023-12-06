@@ -9,8 +9,6 @@
     <div class="container">
     <div class="left-aligned-text">
     <div class="login-input">
-    <!-- <div class="main"> -->
-    <p>配送先住所</p>
     <?php
        echo $_POST['name'],'<br>';/*-名前*/
        echo $_POST['zip_code'],'<br>';/*-郵便番号*/

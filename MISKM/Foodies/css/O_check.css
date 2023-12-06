@@ -1,7 +1,7 @@
-/* body{
-    font-size: 25px;
+body{
+    font-size: 15px;
 }
-.main{
+/* .main{
     position: absolute;
     top: 15%;
     left: 0;
@@ -35,6 +35,20 @@
 }
 .check{
     color: #ff5858;
+}
+button{
+    /*デザイン*/
+    width: 150px;
+    /* height: 4%; */
+    border: none;
+    border-radius: 5px;
+    background-color: #9DA9B6;
+    /*位置*/
+    /* position: absolute; */
+    top: 90%;
+    left: 29%;
+    right: 9%;
+    margin: 20px;
 }
 .example {
     background-color: #9DA9B6;
