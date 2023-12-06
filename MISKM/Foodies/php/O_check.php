@@ -1,13 +1,14 @@
 <?php require 'header.php';?>
-
 <?php require 'connect.php';?>
-    <link rel="stylesheet" href="../css/O_pro.css">
+    <link rel="stylesheet" href="../css/centerYoo.css">
+    <link rel="stylesheet" href="../css/O_check.css">
     <title>注文確認</title>
 </head>
-<?php require 'FoodiesTitle.php';?>
+<?php require 'FoodiesReturn.php'; ?>
     <form action="O_con.php" mrthods="post">
-    <div class="main">
-    <p>配送先住所</p>
+    <div class="container">
+        <div class="left-aligned-text">
+            <br><br>
     <?php
        echo $_POST['name'],'<br>';/*-名前*/
        echo $_POST['zip_code'],'<br>';/*-郵便番号*/
@@ -17,9 +18,10 @@
        echo '<p>支払方法</p>';
        echo '現金（コンビニ払い）';
        ?>
+    <p class="check"> 情報に誤りがないかご確認ください</p>
+    <button type="submit" class="example"><span>注文確定</span></button>
+        </div>
     </div>
-    <p class="cheak"> 情報に誤りがないかご確認ください</p>
-    <button type="submit"><a href="O_con.php">注文確定</a></button>
     </form>
 </body>
 </html>

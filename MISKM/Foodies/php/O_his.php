@@ -1,3 +1,4 @@
+<?php session_start();?>
 <?php require 'header.php';?>
 <?php require 'connect.php';?>
 <link rel="stylesheet" href="../css/O_his.css">
@@ -5,10 +6,10 @@
 <title>注文履歴</title>
 </head>
 <?php require 'FoodiesMenu.php';?>
-<h3>注文履歴</h3>
+<h3 class="title">注文履歴</h3>
 <?php
 /* データベース接続 */
-if (!isset($_SESSION['User'])) {
+if (isset($_SESSION['User'])) {
     $pdo = new PDO($connect, USER, PASS);
     $sql = "SELECT History.date, Product.name, Product.image, History_detail.product_id
             FROM History

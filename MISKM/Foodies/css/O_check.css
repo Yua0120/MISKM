@@ -1,27 +1,14 @@
 body{
-    font-size: 25px;
+    font-size: 15px;
 }
 .main{
     position: absolute;
-    top: 15%;
-    left: 0;
+    top: 20%;
+    left: 7%;
     right: 0;
     margin: 0 auto;
 }
-#btn{
-    /*デザイン*/
-    width: 150px;
-    font-size: 20px;
-    color: #fff;
-    border: none;
-    background-color: #9DA9B6;
-    position: absolute;
-    top: 90%;
-    left: 29%;
-    right: 9%;
-    margin: 20px;
-}
-.text{
+/* .text{
     width: 300px;
     height: 20px;
     font-size: 15px;
@@ -29,16 +16,32 @@ body{
     border-style: none;
     border-bottom:3px solid #ccc;
     margin: 10px;
-}
+} */
 .sabtitle{
     font-size: 20px;
 }
-    /*位置
+.check{
+    color: #ff5858;
+}
+button{
+    /*デザイン*/
+    width: 150px;
+    /* height: 4%; */
+    border: none;
+    border-radius: 5px;
+    /*位置*/
     position: absolute;
-    top: 90%;
-    left: 0;
+    left: 28%;
     right: 9%;
-    margin: 0 auto;
-    */
-
-
+    margin: 20px;
+}
+.example {
+    background-color: #9DA9B6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+.example span{
+    font-size: 25px;
+}
