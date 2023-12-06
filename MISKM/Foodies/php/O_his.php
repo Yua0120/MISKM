@@ -9,7 +9,7 @@
 <h3 class="title">注文履歴</h3>
 <?php
 /* データベース接続 */
-if (!isset($_SESSION['User'])) {
+if (isset($_SESSION['User'])) {
     $pdo = new PDO($connect, USER, PASS);
     $sql = "SELECT History.date, Product.name, Product.image, History_detail.product_id
             FROM History
