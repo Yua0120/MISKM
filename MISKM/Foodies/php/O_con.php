@@ -21,13 +21,14 @@
     /* データベース接続 */
     $date = date("Y/m/d");
     if (!isset($_SESSION['User'])) {
+        var_dump('2222');
         $id = $_SESSION['User']['user_id'];
         $pdo = new PDO($connect, USER, PASS);
         $sql = "INSERT INTO  History (user_id, daily)
                 VALUES ($id,$date)"; //注文履歴テーブルにデータ挿入
         
         $sql = "INSERT INTO History_detail(history_id,product_id,total,counts)
-                VALUES ()";
+                VALUES ()";//注文履歴詳細にデータ挿入
         $sql = "DELETE FROM Cart";/*カート内データ削除*/
         $stmt = $pdo->query($sql);  
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);

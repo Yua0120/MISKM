@@ -1,3 +1,4 @@
+<?php session_start();?>
 <?php require 'header.php';?>
 <?php require 'connect.php';?>
 <link rel="stylesheet" href="../css/O_his.css">
@@ -10,7 +11,7 @@
 /* データベース接続 */
 if (!isset($_SESSION['User'])) {
     $pdo = new PDO($connect, USER, PASS);
-    $sql = "SELECT History.date, Product.name, Product.image, History_detail.product_id
+    $sql = "SELECT History.daily, Product.name, Product.image, History_detail.product_id
             FROM History
             JOIN History_detail ON History.id = History_detail.history_id
             JOIN Product ON History_detail.product_id = Product.id";
