@@ -1,5 +1,5 @@
 <body>
-<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/C_browsing.css">
     <header class="header">
         <div class="post-detail-button is_prev"><a id="return-button" href="javascript:history.back();">< return</a></div>
         <!-- ヘッダーロゴ -->
