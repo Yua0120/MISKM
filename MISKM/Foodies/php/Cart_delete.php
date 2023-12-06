@@ -25,7 +25,7 @@
         $deleteStmt = $pdo->prepare($deleteSql);
         $deleteStmt->execute([$user_id, $product_id]);
        } 
-       header("Location: ./Cart.php");
-       exit;
+       /*header("Location: ./Cart.php");
+       exit;*/
      }
 ?>
