@@ -30,7 +30,7 @@
                         echo '<option value="',$row['name'],'">',$row['name'],'</option>';
                     };*/
                 ?>
-            </select -->>
+            </select> -->
         </p>
         <p>サイズ
             <select name="size" id="product_size">
