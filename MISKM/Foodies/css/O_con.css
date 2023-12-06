@@ -1,13 +1,13 @@
 .img1{
     position: absolute;
     top: 18%;
-    left: 10%;
+    left: 13%;
     margin: 0 auto;
 }
 .img2{
     position: absolute;
     top: 70%;
-    left: 5%;
+    left: 8%;
     margin: 0 auto;
 }
 p{
@@ -41,13 +41,6 @@ button{
     background-color: #9DA9B6;
     border-radius: 5px;
 }
-.example {
-    background-color: #9DA9B6;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-  }
 .example span{
     font-size: 25px;
 }
