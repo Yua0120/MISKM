@@ -21,7 +21,7 @@ body{
     right: 9%;
     margin: 20px;
 }
-.text{
+/* .text{
     width: 300px;
     height: 20px;
     font-size: 15px;
@@ -29,7 +29,7 @@ body{
     border-style: none;
     border-bottom:3px solid #ccc;
     margin: 10px;
-}
+} */
 .sabtitle{
     font-size: 20px;
 }
