@@ -9,7 +9,7 @@
         //アップロードされた画像の一時的な保管場所のアドレス(テンポラリファイル)のパス'tmp_file'を取得
         $tmp_path = $_FILES['image_path']['tmp_name'];
         // 画像の保存先フォルダと保存先のファイル名
-        $img_folder = __DIR__.'/MISKM/post_img/';//画像の保存先フォルダ
+        $img_folder = '/home/users/1/holy.jp-aso-2201002/web/MISKM/post_img/';//画像の保存先フォルダ
         $img_filename = uniqid() . '_' . basename($_FILES['image_path']['name']);//アップロードされた画像の名前を一意的なものに変更
         $img_path = $img_folder . $img_filename;//アップロードされた画像の最終的なパスを取得
         move_uploaded_file($tmp_path, $img_path);//画像をpost_imgに保存する
