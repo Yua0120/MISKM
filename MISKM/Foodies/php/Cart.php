@@ -17,7 +17,7 @@
         $sql -> execute([
             $_SESSION['User']['id']
         ]);
-        $setid = fetchAll(PDO::FETCH_ASSOC);
+        $setid = $sql->fetchAll(PDO::FETCH_ASSOC);
         $userId = $_SESSION['User']['id'];
         $sql = "SELECT Product.id, Product.name, Product.size, Product.price, Product.image, Cart.buy_counts
                 FROM Cart
