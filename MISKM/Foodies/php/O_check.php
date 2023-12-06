@@ -12,13 +12,11 @@
     <!-- <div class="main"> -->
     <p>配送先住所</p>
     <?php
-       echo '<div class="text">';
        echo $_POST['name'],'<br>';/*-名前*/
        echo $_POST['zip_code'],'<br>';/*-郵便番号*/
        echo $_POST['address'],'<br>';/*住所*/
        echo $_POST['tel_number'],'<br>';/*電話番号*/
        echo $_POST['mail'],'<br>';/*メールアドレス*/
-       echo '</div>';
        echo '<p>支払方法</p>';
        echo '現金（コンビニ払い）';
        ?>
