@@ -33,7 +33,7 @@
         /* 商品一覧 */
         if(!empty($setid)){
             foreach ($result as $row) {
-                $sum_price = $row['price'] * $ row['buy_counts'];
+                $sum_price = $row['price'] * $row['buy_counts'];
                 $id = $row['id'];
                 echo '<div class="main">';
                 echo '<figure class="image">';
