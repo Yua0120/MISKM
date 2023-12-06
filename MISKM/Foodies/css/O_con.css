@@ -32,7 +32,6 @@ button{
     position: absolute;
     top: 88%;
     left: 25%;
-    margin: 0 auto;
    /*デザイン*/
     width: 200px;
     font-size: 30px;
@@ -41,4 +40,14 @@ button{
     border: none;
     background-color: #9DA9B6;
     border-radius: 5px;
+}
+.example {
+    background-color: #9DA9B6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+.example span{
+    font-size: 25px;
 }
