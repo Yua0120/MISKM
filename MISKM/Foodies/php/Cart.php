@@ -28,13 +28,13 @@
         $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        /*$sum_price = $result['price'] * $result['Cart']['buy_counts'];*/
         $total_price = 0;
         /* 商品一覧 */
         if(!empty($setid)){
             foreach ($result as $row) {
                 $sum_price = $row['price'] * $row['buy_counts'];
                 $id = $row['id'];
+                echo '<h3>カート</h3>';
                 echo '<div class="main">';
                 echo '<figure class="image">';
                 echo '<img src="/MISKM/img/', $row['image'], '" class="cart_img">';
