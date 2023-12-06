@@ -1,7 +1,10 @@
 <?php session_start(); ?>
 <?php require 'connect.php';?>
 <?php
-  unset($_SESSION['Cart']['product_id'], $_GET['id']);
-  header("Location:./Cart.php");
-  exit;
+    $pdo = new PDO($connect, USER, PASS);
+    $sql = "ALTER TABLE Cart
+    DROP product_id;";/*カート内データ削除*/
+  
+     header("Location:./Cart.php");
+     exit;
   ?>
