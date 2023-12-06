@@ -24,6 +24,9 @@ title{
   /* justify-content: space-between; */
   align-items: center;
   background-color: #9DA9B6;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 .logo {
   margin: 0px;
