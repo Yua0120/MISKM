@@ -3,6 +3,7 @@
 <?php require 'connect.php' ;?>
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/top.css">
+<link rel="stylesheet" href="../css/hamburger.css">
 <title>Top</title>
 </header>
 <?php require 'FoodiesMenu.php' ;?>
@@ -75,4 +76,4 @@
         }
     }
     ?>
-</html>
+<?php require 'footer.php' ;?>

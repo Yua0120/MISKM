@@ -2,6 +2,7 @@
 <?php require 'connect.php'; ?>
 <?php require 'header.php'; ?>
 <link rel="stylesheet" href="../css/Cart.css">
+<link rel="stylesheet" href="../css/hamburger.css">
 <title>カート画面</title>
 </head>
 <body>
@@ -61,5 +62,4 @@
             
     ?>
     <!--</div>-->
-</body>
-</html>
+    <?php require 'footer.php' ;?>

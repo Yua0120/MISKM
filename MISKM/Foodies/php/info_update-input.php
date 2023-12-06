@@ -16,7 +16,7 @@
     ?>
     <center><h1>Up Date</h1></center>
     <?php
-        echo '<form action="info_update-output.php" method="post">';
+        echo '<form action="info_update-output.php" method="post" enctype="multipart/form-data">';
         echo '<div class="container">';
         echo '<div class="left-aligned-text">';
         echo '<div id="circle">';

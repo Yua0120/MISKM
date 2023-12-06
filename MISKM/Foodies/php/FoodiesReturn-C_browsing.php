@@ -1,9 +1,10 @@
-<link rel="stylesheet" href="../css/hamburger.css">
-    <title>ハンバーガーメニュー専用</title>
-</head>
-<!--ヘッダー↓-->
-<header>
-  <!-- spハンバーガーメニュー ↓ -->
+<body>
+        <header class="header">
+        <div class="post-detail-button is_prev"><a id="return-button" href="C_browsing.php">< return</a></div>
+        <!-- ヘッダーロゴ -->
+        <div class="logo">Foodies</div>
+      
+        <!-- spハンバーガーメニュー ↓ -->
   <div class="sp_nav">
     <div class="overlay" id="js_overlay"></div>
     <div class="hamburger" id="js_hamburger">
@@ -30,8 +31,6 @@
     </div>
   </div>
   <!-- spハンバーガーメニュー ↑ -->
-</header>
-<!--ヘッダー↑-->
 
-<!-- ハンバーガーメニューを表示させたいときは、bodyの中にhamburger.phpを呼ぶんだ。 -->
-<!-- ハンバーガーメニューを表示させたいときは、/bodyから下を消してfooter.phpを呼ぶんだ。 -->
+        </div>
+    </header>
