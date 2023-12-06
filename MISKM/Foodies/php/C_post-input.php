@@ -23,12 +23,6 @@
                     foreach ($pdo->query($sql) as $row) {
                         echo '<option value="',$row['name'],'">',$row['name'],'</option>';
                     }
-                    /*
-                    $sql = $pdo->prepare('select distinct name from Product');
-                    $result = $sql -> fetchAll(PDO::FETCH_ASSOC);
-                    foreach ($result as $row) {
-                        echo '<option value="',$row['name'],'">',$row['name'],'</option>';
-                    };*/
                 ?>
             </select>
         </p>
