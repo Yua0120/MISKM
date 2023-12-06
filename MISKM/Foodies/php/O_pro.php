@@ -34,7 +34,7 @@
         <input type="radio" name="pay" id="cash">現金（コンビニ払い）<br>
         </p>
     </div>
-    <p><button type="submit">注文確認</button></p>
+    <p><button type="submit" class="example"><span>注文確認</span></button></p>
     </form>
 </body>
 </html>
