@@ -6,7 +6,7 @@
 <title>注文履歴</title>
 </head>
 <?php require 'FoodiesMenu.php';?>
-<h3>注文履歴</h3>
+<h3 class="title">注文履歴</h3>
 <?php
 /* データベース接続 */
 if (!isset($_SESSION['User'])) {
