@@ -18,7 +18,6 @@
     <!-- 絞り込み機能 -->
     <div class="narrow-box">
         <form action="C_browsing.php" method="post">
-            <label for="postFilter">並び替え：</label>
             <select name="postFilter" id="postFilter">
                 <option value="new">新規　順</option>
                 <option value="old">古い　順</option>
