@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="../css/O_pro.css">
     <title>注文手続き</title>
 </head>
-<?php require 'FoodiesTitle.php';?>
+<?php require 'FoodiesReturn.php'; ?>
     <form action="O_check.php" method="post">
     <div class="main">
         <p class="sabtitle">
