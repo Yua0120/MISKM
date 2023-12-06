@@ -3,34 +3,52 @@ body{
     padding: 0;
 }
 
-p{
-    margin: 0;
-    padding: 0;
+.user-icon-name{
+    width: 80%;
+    margin: 0 auto;
 }
 
 /*ユーザー画像*/
+.icon {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px; 
+    object-fit: cover;
+}
+
 .icon-img{
-    width: 9rem;
-    height: 9rem;
-    margin: 10 auto;
+    margin-top: 10%;
+    width: 45%;
+    margin-left: 5%;
+    float: left;
+    
 }
 
 /*ニックネーム*/
 .nickname{
+    margin-top: 60px;
+    margin-bottom: 28.54px;
     width: 40%;
     text-align: center;
-    margin-top: 3.8rem;
-    padding-right: 15%;
+    height: 50px;
+    margin-right: 10%;
     font-size: 1.2rem;
     float:right;
+    display:table-cell ;
+    vertical-align: middle;
 }
 
 /*My投稿*/
 .toukou{
+    margin-top: 33%;
     width: 100%;
     font-size: 1.3rem;
     text-align: center;
     border-bottom:1px solid;
+}
+
+p{
+    height: 55px;
 }
 
 /*投稿box*/
