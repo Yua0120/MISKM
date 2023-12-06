@@ -33,8 +33,8 @@
         <p class="sabtitle">支払い方法<p><br>
         <input type="radio" name="pay" id="cash">現金（コンビニ払い）<br>
         </p>
+        <p><button type="submit" class="example"><span>注文確認</span></button></p>
     </div>
-    <p><button type="submit" class="example"><span>注文確認</span></button></p>
     </form>
 </body>
 </html>
