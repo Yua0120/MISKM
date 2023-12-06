@@ -16,9 +16,12 @@
      $pdo = new PDO($connect, USER, PASS);
 
      if (isset($_SESSION['User'])) {
+      var_dump("333333");
      $user_id = $_SESSION['User']['id'];
 
      if (isset($_POST['product_id'])) {
+      var_dump("44444");
+      exit;
         $product_id = $_POST['product_id'];
 
         $deleteSql = "DELETE FROM Cart WHERE user_id = ? AND product_id = ?";
