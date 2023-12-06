@@ -24,7 +24,7 @@
     </div>
     </div>
     <p class="check"> 情報に誤りがないかご確認ください</p>
-    <button type="submit" class="example"><a href="O_con.php"><span>注文確定</span></a></button>
+    <button type="submit" class="example"><span>注文確定</span></button>
     </form>
 </body>
 </html>
