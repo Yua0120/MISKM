@@ -11,13 +11,10 @@ body{
 .search{
     margin: auto;
     width: 95vw;
+    background-color: rgb(202, 214, 226);
+    border: none;
+    text-decoration: none;
 }
-
-.search{
-    margin: auto;
-    width: 95vw;
-}
-
 
 /*絞り込みプルダウン*/
 .narrow-box{
@@ -26,6 +23,18 @@ body{
 
 .narrow{
     margin-left: 95%;
+}
+
+#postFilter{
+    background-color: rgb(186, 202, 218);
+    border: none;
+    text-decoration: none;
+}
+#like{
+    background-color: rgb(196 213 230);
+    border:none;
+    text-decoration: none;
+    margin-right:2.5%;
 }
 
 /*投稿box*/

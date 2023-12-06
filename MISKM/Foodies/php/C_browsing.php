@@ -24,7 +24,7 @@
                 <option value="old">古い　順</option>
                 <option value="good_desc">いいね順</option>
             </select>
-            <input type="submit" value="並び変える">
+            <input type="submit" value="並び変える" id="like">
         </form>
     </div>
 
@@ -59,7 +59,7 @@ if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
                 echo '<div class="toukou-box">';
                 echo '<div class="toukou-img-box">';
                 echo '<a href="C_detail.php?id=' . $post['id'] . '">';
-                echo '<img src="/MISKM/img/' . $post['image_path'] . '" class="toukou-img">';
+                echo '<img src="',$post['image_path'],'" class="toukou-img">';
                 echo '</a>';
                 echo '</div>';
                 echo '<div class="nickname">';
