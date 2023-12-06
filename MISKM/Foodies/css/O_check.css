@@ -1,13 +1,13 @@
 body{
     font-size: 25px;
 }
-.main{
+/* .main{
     position: absolute;
     top: 15%;
     left: 0;
     right: 0;
     margin: 0 auto;
-}
+} */
 #btn{
     /*デザイン*/
     width: 150px;
