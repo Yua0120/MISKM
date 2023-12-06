@@ -20,7 +20,7 @@
                 <?php
                     $pdo = new PDO($connect, USER, PASS);
                     $sql = 'select distinct name from Product';
-                    foreach ($conn->query($sql) as $row) {
+                    foreach ($pdo->query($sql) as $row) {
                         print $row['name'] . "\t";
                     }
                     /*
