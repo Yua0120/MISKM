@@ -21,7 +21,7 @@
     /* データベース接続 */
     $date = date("Y/m/d");
     if (!isset($_SESSION['User'])) {
-        $id => $_SESSION['User']['user_id'];
+        $id = $_SESSION['User']['user_id'];
         $pdo = new PDO($connect, USER, PASS);
         $sql = "INSERT INTO  History (user_id, daily)
                 VALUES ($id,$date)"; //注文履歴テーブルにデータ挿入
