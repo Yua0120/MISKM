@@ -1,13 +1,11 @@
 <?php session_start(); ?>
 <?php require 'header.php' ?>
 <?php require 'connect.php' ?>
-
-<link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/C_browsing.css">
 <link rel="stylesheet" href="../css/hamburger.css">
 
 <title>投稿一覧</title>
-</header>
+</head>
 <body>
 <?php require 'FoodiesMenu.php';?>
     <!-- 投稿検索機能 -->
