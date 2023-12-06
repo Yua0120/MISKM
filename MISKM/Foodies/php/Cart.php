@@ -12,13 +12,13 @@
     <?php
     /* データベース接続 */
     if (isset($_SESSION['User'])) {
+        $pdo = new PDO($connect, USER, PASS);
         $sql = $pdo -> prepare('select * from Cart where user_id = ?');
         $sql -> execute([
             $_SESSION['User']['id']
         ]);
         $setid = fetchAll(PDO::FETCH_ASSOC);
         $userId = $_SESSION['User']['id'];
-        $pdo = new PDO($connect, USER, PASS);
         $sql = "SELECT Product.id, Product.name, Product.size, Product.price, Product.image, Cart.buy_counts
                 FROM Cart
                 JOIN Product ON Cart.product_id = Product.id
