@@ -24,7 +24,7 @@
     <?php
     /* データベース接続 */
     $date = date("Y/m/d");
-    if (!isset($_SESSION['User'])) {
+    if (isset($_SESSION['User'])) {
         var_dump('2222');
         $id = $_SESSION['User']['user_id'];
         $pdo = new PDO($connect, USER, PASS);
