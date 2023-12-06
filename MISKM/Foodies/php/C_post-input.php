@@ -14,12 +14,12 @@
         </label>
         <img id="preview">
         <p>購入商品
-           <!-- <select name="product_name" id="pro_name">
+           <select name="product_name" id="pro_name">
                 <?php
                     $pdo = new PDO($connect, USER, PASS);
                     $sql = 'select distinct name from Product';
                     foreach ($pdo->query($sql) as $row) {
-                        print $row['name'] . "\t";
+                        echo '<option value="',$row['name'],'">',$row['name'],'</option>';
                     }
                     /*
                     $sql = $pdo->prepare('select distinct name from Product');
@@ -28,7 +28,7 @@
                         echo '<option value="',$row['name'],'">',$row['name'],'</option>';
                     };*/
                 ?>
-            </select> -->
+            </select>
         </p>
         <p>サイズ
             <select name="size" id="product_size">
