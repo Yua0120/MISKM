@@ -36,5 +36,13 @@ body{
 .check{
     color: #ff5858;
 }
-
-
+.example {
+    background-color: #9DA9B6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+.example span{
+    font-size: 25px;
+}

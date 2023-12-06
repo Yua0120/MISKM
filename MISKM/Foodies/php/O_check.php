@@ -14,13 +14,13 @@
        echo $_POST['address'],'<br>';/*住所*/
        echo $_POST['tel_number'],'<br>';/*電話番号*/
        echo $_POST['mail'],'<br>';/*メールアドレス*/
-       echo '</div>'
+       echo '</div>';
        echo '<p>支払方法</p>';
        echo '現金（コンビニ払い）';
        ?>
     </div>
     <p class="check"> 情報に誤りがないかご確認ください</p>
-    <button type="submit"><a href="O_con.php">注文確定</a></button>
+    <button type="submit" class="example"><a href="O_con.php"><span>注文確定</span></a></button>
     </form>
 </body>
 </html>
