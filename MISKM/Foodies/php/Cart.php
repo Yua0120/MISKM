@@ -28,7 +28,7 @@
         $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        $sum_price = $result['price'] * $result['buy_counts'];
+        $sum_price = $result['Product']['price'] * $result['Cart']['buy_counts'];
         $total_price = 0;
         /* 商品一覧 */
         if(!empty($setid)){
