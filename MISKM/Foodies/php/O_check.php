@@ -5,7 +5,7 @@
     <title>注文確認</title>
 </head>
 <?php require 'FoodiesReturn.php'; ?>
-    <form action="O_con.php" mrthods="post">
+    <form action="O_con.php" method="post">
     <div class="container">
         <div class="left-aligned-text">
             <br><br>

@@ -28,7 +28,7 @@
         $id = $_SESSION['User']['id'];
         $pdo = new PDO($connect, USER, PASS);
         //Historyテーブルに挿入
-        $sql = "INSERT INTO  History (user_id, daily,total)
+        $sql = "INSERT INTO  History (user_id,daily,total)
                 VALUES (?,?,?)";
        $stmt = $pdo->prepare($sql);//30行目のsql挿入
        $stmt ->execute([$id,$date,$_POST['total']]);//?のとこにデータ挿入
