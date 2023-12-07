@@ -38,7 +38,9 @@
         $sql = "SELECT product_id,buy_counts,
                 FROM Cart
                 WHERE user_id = ?";
-        $result = fetchAll(PDO::FETCH_ASSOC);
+         $stmt = $pdo->prepare($sql);//40行目のsql挿入
+         $stmt ->execute([$id]);//?のとこにデータ挿入
+         $result = $stmt-> fetchAll(PDO::FETCH_ASSOC);
         //注文履歴詳細にデータ挿入
         foreach($result as $row){
             $sql = "INSERT INTO  History_detail (user_id,product_id,counts)
