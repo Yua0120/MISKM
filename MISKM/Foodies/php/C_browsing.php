@@ -78,7 +78,7 @@ if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
                 if ($isLiked) {
                     echo '<img src="/MISKM/img/kuma.jpg" width="30" alt="いいね画像">';
                 } else {
-                    echo '<img src="/MISKM/img/kurokuma.jpg" width="30" alt="いいね画像">';
+                    echo '<img src="/MISKM/img/shirokuma.jpg" width="30" alt="いいね画像">';
                 }
 
                 echo $post['good_count'];
@@ -126,7 +126,7 @@ $allPosts = $postSql->fetchAll(PDO::FETCH_ASSOC);
             if ($isLiked) {
                 echo '<img src="/MISKM/img/kuma.jpg" width="30" alt="いいね画像">';
             } else {
-                echo '<img src="/MISKM/img/kurokuma.jpg" width="30" alt="いいね画像">';
+                echo '<img src="/MISKM/img/shirokuma.jpg" width="30" alt="いいね画像">';
             }
 
             echo $post['good_count'];

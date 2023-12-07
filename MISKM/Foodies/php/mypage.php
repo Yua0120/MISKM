@@ -86,7 +86,7 @@
                 echo $likeCount;
                 echo '</a>';
             } else {
-                echo '<img src="/MISKM/img/kurokuma.jpg" width="40" class="kuma-img">';
+                echo '<img src="/MISKM/img/shirokuma.jpg" width="40" class="kuma-img">';
                 echo $likeCount;
                 echo '</a>';
             }
