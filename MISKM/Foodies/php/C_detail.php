@@ -45,7 +45,7 @@ if (isset($_GET['id'])) {
             echo '</a>';
         } else {
             echo '<a href="like_in.php?id=', $post_id, '">';
-            echo '<img src="/MISKM/img/kurokuma.jpg" width="50" class="like">';
+            echo '<img src="/MISKM/img/shirokuma.jpg" width="50" class="like">';
             echo '<div class="like">';
             echo $likeCount;
             echo '</div>';
