@@ -52,7 +52,10 @@
                 $total_price += $sum_price; 
             }
             echo '合計　￥',$total_price;
-            echo '<button type="button" onclick="location.href=\'O_pro.php\'">購入手続きへ</button>';
+            echo '<form action="O_pro.php" mthods="post">';
+            echo '<input type="hidden" name="total" value="',$total_price,'">';
+            echo '<button type="submit">購入手続きへ</button>';
+            echo '</form>';
         }else{
             echo '<p class="error">カートに商品が入っていません。</p>';
         }    

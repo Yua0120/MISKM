@@ -10,8 +10,6 @@
             $name=$_SESSION['User']['name'];
             $nickname=$_SESSION['User']['nickname'];
             $address=$_SESSION['User']['address'];
-            $tel_number=$_SESSION['User']['tel_number'];
-            $zip_code=$_SESSION['User']['zip_code'];
         }
     ?>
     <center><h1>Up Date</h1></center>

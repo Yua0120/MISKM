@@ -10,7 +10,7 @@
     <!--商品検索機能-->
     <div class="search-box">
         <form action="Top.php" method="post">
-            <input type="text" name="keyword" placeholder="search" class="search">
+            <input type="text" name="keyword" placeholder="キーワードを入力" class="search">
         </form>
     </div>
 
