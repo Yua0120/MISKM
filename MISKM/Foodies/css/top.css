@@ -42,7 +42,13 @@ body{
     height: 7rem;
 }
 
-/*商品box*/
+/*商品部分*/
+.shohin{
+    height: 70%;    
+    overflow: auto;  
+}
+
+/*各商品box*/
 .shohin{
     width: 50%;
     text-align: center;

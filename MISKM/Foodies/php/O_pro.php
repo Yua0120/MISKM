@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="../css/O_pro.css">
     <title>注文手続き</title>
 </head>
-<?php require 'FoodiesTitle.php';?>
+<?php require 'FoodiesReturn.php'; ?>
     <form action="O_check.php" method="post">
     <div class="main">
         <p class="sabtitle">
@@ -24,14 +24,17 @@
         echo '<input type="text" class="text" name="tel_number" id="tel_number" value="', $row['tel_number'], '"><br>';
         echo '<input type="text" class="text" name="mail" id="mail" value="', $row['mail'], '"><br>';
         }else{
-            echo 'セッションが設定されていません。';
+            echo '<p class = "error">
+                  ログインしていません。<br>
+                  ログインしてください。
+                  </p>';
         }
         ?>
         <p class="sabtitle">支払い方法<p><br>
         <input type="radio" name="pay" id="cash">現金（コンビニ払い）<br>
         </p>
+        <p><button type="submit" class="example"><span>注文確認</span></button></p>
     </div>
-    <p><button type="submit">注文確認</button></p>
     </form>
 </body>
 </html>

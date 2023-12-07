@@ -4,6 +4,7 @@ $sql=$pdo->prepare('select * from Product where id=?');
 $sql->execute([$_GET['id'].'-L']);
 foreach($sql as $row){
     $id = $row['id'];
+
     echo '<div class="shohin-detail">';
     echo '<div class="carousel">';
     //スライドのリスト
@@ -73,14 +74,11 @@ foreach($sql as $row){
     echo '</div>';
     echo '</div>';
     echo '</div>';
-    echo '<div class="shohin-name-money-box">';
     echo '<div class="shohin-name">';
     echo $row['name'];
     echo '</div>';
-
     echo '<div class="shohin-money">';
     echo '￥',$row['price'];
-    echo '</div>';
     echo '</div>';
 }
 ?>

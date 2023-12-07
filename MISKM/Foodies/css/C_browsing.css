@@ -11,13 +11,10 @@ body{
 .search{
     margin: auto;
     width: 95vw;
+    background-color: rgb(202, 214, 226);
+    border: none;
+    text-decoration: none;
 }
-
-.search{
-    margin: auto;
-    width: 95vw;
-}
-
 
 /*絞り込みプルダウン*/
 .narrow-box{
@@ -28,13 +25,35 @@ body{
     margin-left: 95%;
 }
 
+#postFilter{
+    background-color: rgb(186, 202, 218);
+    border: none;
+    text-decoration: none;
+}
+#like{
+    background-color: rgb(196 213 230);
+    border:none;
+    text-decoration: none;
+    margin-right:2.5%;
+}
+
 /*投稿box*/
 .toukou-box{
     width: 50%;
     text-align: center;
     float: left;
 }
+/*投稿画像*/
+.toukou-img{
+    width: 80%;
+}
 
+.toukou-img-box{
+    width: 80%;
+    text-align: center;
+    margin-bottom: 4px;
+    margin: 0 auto;
+}
 
 /*コメント*/
 .commentbox{
@@ -45,11 +64,11 @@ body{
 
 .comment{
     width: 80%;
-    height: 3rem;
+    height: 30px;
 }
 
 .like-button {
     width: 50px;  /* 画像の幅 */
     height: 50px; /* 画像の高さ */
     cursor: pointer; /* カーソルをポインターに変更 */
-}
+} 
