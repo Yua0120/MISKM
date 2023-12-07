@@ -8,11 +8,12 @@
 </header>
 <?php require 'FoodiesMenu.php' ;?>
     <!--商品検索機能-->
-    <div class="search-box">
-        <form action="Top.php" method="post">
-            <input type="text" name="keyword" placeholder="search" class="search">
+        <form action="Top.php" method="post" class="search-form-012">
+            <label>
+                <input type="text" name="keyword" placeholder="キーワードを入力" class="search">
+            </label>
+            <button type="submit" aria-label="検索"></button>
         </form>
-    </div>
 
     <!--絞り込み機能-->
     <div class="narrow-box">
