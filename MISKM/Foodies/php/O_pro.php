@@ -33,6 +33,7 @@
         <p class="sabtitle">支払い方法<p><br>
         <input type="radio" name="pay" id="cash">現金（コンビニ払い）<br>
         </p>
+        <input type="hidden" name="total" value="<?=$_POST['total'] ?> ">
         <p><button type="submit" class="example"><span>注文確認</span></button></p>
     </div>
     </form>
