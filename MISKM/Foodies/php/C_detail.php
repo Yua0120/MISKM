@@ -32,7 +32,7 @@ if (isset($_GET['id'])) {
     if ($row = $sql->fetch()) {
         $id = $row['id'];
         echo '<div class="toukou-img-box">';
-        echo '<img src="/MISKM/img/',$row['image_path'],'" class="toukou-img">';
+        echo '<img src="',$row['image_path'],'" class="toukou-img">';
         echo '</div>';
         // いいね/いいね解除ボタンを表示
         echo '<div class="favorite">';
