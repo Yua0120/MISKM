@@ -32,10 +32,11 @@
                 VALUES (?,?,?)";
        $stmt = $pdo->prepare($sql);//30行目のsql挿入
        $stmt ->execute([$id,$date,$_POST['total']]);//?のとこにデータ挿入
+       $history_id = $pdo->lastInsertId();
         // $sql = "INSERT INTO  History (user_id, daily,total)
                 // VALUES ($id,$date,$_POST['total'])"; //注文履歴テーブルにデータ挿入
         //1カートテーブルからデータ取得　条件：ユーザーID
-        $sql = "SELECT product_id,buy_counts,
+        $sql = "SELECT product_id,buy_counts
                 FROM Cart
                 WHERE user_id = ?";
          $stmt = $pdo->prepare($sql);//40行目のsql挿入
@@ -43,10 +44,10 @@
          $result = $stmt-> fetchAll(PDO::FETCH_ASSOC);
         //注文履歴詳細にデータ挿入
         foreach($result as $row){
-            $sql = "INSERT INTO  History_detail (user_id,product_id,counts)
+            $sql = "INSERT INTO  History_detail (history_id,product_id,counts)
                 VALUES (?,?,?)";
              $stmt = $pdo->prepare($sql);//30行目のsql挿入
-             $stmt ->execute([$id,$row['product_id'],$row['buy_counts']]);
+             $stmt ->execute([$history_id,$row['product_id'],$row['buy_counts']]);
         }
         /*カート内データ削除*/
         $sql = "DELETE FROM Cart";
