@@ -16,7 +16,6 @@
         //product_idの作成
         $product_id_name = str_replace([' ', 'hoodie','zip'], '', $_POST['product_name']);
         $product_id = $product_id_name . '-' . $_POST['size'];
-        echo $product_id;
         $sql = $pdo->prepare('insert into Post(user_id,product_id,product_size,image_path,comment) values (?,?,?,?,?)');
         $success = $sql->execute([$_SESSION['User']['id'], $product_id, $_POST['size'],$img_path, $_POST['comment']]);
         if ($success) {
