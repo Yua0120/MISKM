@@ -8,7 +8,7 @@
 </header>
 <?php require 'FoodiesMenu.php' ;?>
     <!--商品検索機能-->
-        <form action="Top.php" method="post" class="search-form-012">
+        <form action="Top.php" method="post" class="search-form-003">
             <label>
                 <input type="text" name="keyword" placeholder="キーワードを入力" class="search">
             </label>
