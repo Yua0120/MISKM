@@ -106,7 +106,7 @@ $allPosts = $postSql->fetchAll(PDO::FETCH_ASSOC);
         foreach ($allPosts as $post) {
             echo '<div class="imgukou-box">';
             echo '<a href="C_detail.php?id=' . $post['id'] . '">';
-            echo '<img src="' . $post['image_path'] . '" class="shohin-img">';
+            echo '<img src=' . $post['image_path'] . ' class="shohin-img">';
             echo '</a>';
             echo '<div class="nickname">';
             echo $post['nickname'];
