@@ -31,7 +31,7 @@
         $sql = "INSERT INTO  History (user_id, daily,total)
                 VALUES (?,?,?)";
        $stmt = $pdo->prepare($sql);//30行目のsql挿入
-       $stmt ->excecute([$id,$date,$_POST['total']]);//?のとこにデータ挿入
+       $stmt ->execute([$id,$date,$_POST['total']]);//?のとこにデータ挿入
         // $sql = "INSERT INTO  History (user_id, daily,total)
                 // VALUES ($id,$date,$_POST['total'])"; //注文履歴テーブルにデータ挿入
         //1カートテーブルからデータ取得　条件：ユーザーID
@@ -44,7 +44,7 @@
             $sql = "INSERT INTO  History_detail (user_id,product_id,counts)
                 VALUES (?,?,?)";
              $stmt = $pdo->prepare($sql);//30行目のsql挿入
-             $stmt ->excecute([$id,$row['product_id'],$row['buy_counts']]);
+             $stmt ->execute([$id,$row['product_id'],$row['buy_counts']]);
         }
         /*カート内データ削除*/
         $sql = "DELETE FROM Cart";
