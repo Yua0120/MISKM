@@ -50,8 +50,11 @@
              $stmt ->execute([$history_id,$row['product_id'],$row['buy_counts']]);
         }
         /*カート内データ削除*/
-        $sql = "DELETE FROM Cart";
-        $stmt = $pdo->query($sql);  
+        $sql = "DELETE FROM Cart
+                WHERE user_id = ?";
+        $stmt = $pdo->prepare($sql);
+        $stmt ->execute([$id]);
+
     }
     ?>
      
