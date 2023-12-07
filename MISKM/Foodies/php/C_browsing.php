@@ -106,7 +106,7 @@ $allPosts = $postSql->fetchAll(PDO::FETCH_ASSOC);
             echo '<div class="toukou-box">';
             echo '<div class="toukou-img-box">';
             echo '<a href="C_detail.php?id=' . $post['id'] . '">';
-            echo '<img src="/MISKM/img/' . $post['image_path'] . '" class="toukou-img">';
+            echo '<img src="'. $post['image_path'] . '" class="toukou-img">';
             echo '</a>';
             echo '</div>';
             echo '<div class="nickname">';
