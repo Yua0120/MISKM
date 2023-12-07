@@ -27,14 +27,28 @@
     if (isset($_SESSION['User'])) {
         $id = $_SESSION['User']['id'];
         $pdo = new PDO($connect, USER, PASS);
-        $sql = "INSERT INTO  History (user_id, daily)
-                VALUES ($id,$date)"; //注文履歴テーブルにデータ挿入
-        
-        $sql = "INSERT INTO History_detail(history_id,product_id,total,counts)
-                VALUES ()";//注文履歴詳細にデータ挿入
-        $sql = "DELETE FROM Cart";/*カート内データ削除*/
+        //Historyテーブルに挿入
+        $sql = "INSERT INTO  History (user_id, daily,total)
+                VALUES (?,?,?)";
+       $stmt = $pdo->prepare($sql);//30行目のsql挿入
+       $stmt ->excecute([$id,$date,$_POST['total']]);//?のとこにデータ挿入
+        // $sql = "INSERT INTO  History (user_id, daily,total)
+                // VALUES ($id,$date,$_POST['total'])"; //注文履歴テーブルにデータ挿入
+        //1カートテーブルからデータ取得　条件：ユーザーID
+        $sql = "SELECT product_id,buy_counts,
+                FROM Cart
+                WHERE user_id = ?";
+        $result = fetchAll(PDO::FETCH_ASSOC);
+        //注文履歴詳細にデータ挿入
+        foreach($result as $row){
+            $sql = "INSERT INTO  History_detail (user_id,product_id,counts)
+                VALUES (?,?,?)";
+             $stmt = $pdo->prepare($sql);//30行目のsql挿入
+             $stmt ->excecute([$id,$row['product_id'],$row['buy_counts']]);
+        }
+        /*カート内データ削除*/
+        $sql = "DELETE FROM Cart";
         $stmt = $pdo->query($sql);  
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
     ?>
      
