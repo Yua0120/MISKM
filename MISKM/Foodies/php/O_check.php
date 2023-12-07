@@ -19,6 +19,7 @@
        echo '現金（コンビニ払い）';
        ?>
     <p class="check"> 情報に誤りがないかご確認ください</p>
+    <input type="hidden" name="total" value="<?=$_POST['total'] ?> ">
     <button type="submit" class="example"><span>注文確定</span></button>
         </div>
     </div>
