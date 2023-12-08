@@ -51,7 +51,9 @@
                 echo '</div>'; // .main divを閉じる
                 $total_price += $sum_price; 
             }
+            echo '<div class="totall">';
             echo '合計　￥',$total_price;
+            echo '</div>';
             echo '<form action="O_pro.php" method="post">';
             echo '<input type="hidden" name="total" value="',$total_price,'">';
             echo '<button type="submit">購入手続きへ</button>';

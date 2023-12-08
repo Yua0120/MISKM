@@ -55,6 +55,9 @@ a:link{
     color: #9DA9B6;
 }
 button{
+    /*位置*/
+    position: absolute;
+    left: 32%;
     /*デザイン*/
     width: 150px;
     font-size: 20px;
@@ -65,4 +68,9 @@ button{
 }
 .error{
     color: red;
+}
+/* 合計 */
+.total{
+   position: absolute;
+   left: 80%;
 }
