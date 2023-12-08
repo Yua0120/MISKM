@@ -10,7 +10,7 @@ button{
     border-radius: 4px;
     background-color: #9DA9B6;
 }
-.container{
+body{
     position: absolute;
     text-align: center;
 }
