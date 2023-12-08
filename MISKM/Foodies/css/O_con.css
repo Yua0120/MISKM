@@ -1,13 +1,7 @@
 .img1{
     position: absolute;
-    top: 18%;
+    top: 30%;
     left: 10%;
-    margin: 0 auto;
-}
-.img2{
-    position: absolute;
-    top: 70%;
-    left: 5%;
     margin: 0 auto;
 }
 p{
@@ -32,13 +26,19 @@ button{
     position: absolute;
     top: 88%;
     left: 25%;
-    margin: 0 auto;
    /*デザイン*/
     width: 200px;
+    height: 50px;
     font-size: 30px;
     font-size: 20px;
     color: #fff;
     border: none;
     background-color: #9DA9B6;
     border-radius: 5px;
+}
+.example span{
+    font-size: 25px;
+}
+.will{
+    font-weight: bold;
 }

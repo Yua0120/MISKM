@@ -1,0 +1,53 @@
+.main{
+    height: 130px;
+    display: flex;/*横並び*/
+    border-bottom: 3px solid black;/*下線*/
+    /*text-align: center;*/
+    /*float: left;*/
+}
+
+.main.cart_img{
+    /*位置設定
+    top: 5%;
+    left: 5%;*/
+    margin: 0;
+    padding: 0;
+}
+img{
+        /*サイズ設定*/
+        width: 100px;
+        height: 100px;
+}
+
+.main.item{
+    margin: 0 0 0  20px;
+    padding: 0;
+   /* position: absolute;
+    top: 5%;
+    left: 60%;
+    margin: 4px;
+    display: flex;
+    flex-direction: column;*/
+}
+.title{
+    color: #9DA9B6;
+}
+a{
+    text-decoration: none;/*下線削除*/
+}
+a:link{
+    color: #9DA9B6;
+}
+button{
+    /*位置*/
+      margin: 2% 33% 1%;
+      padding: 1% 2%;
+       /*デザイン*/
+       width: 135px;
+       font-size: 30px;
+       font-size: 17px;
+       color: #fff;
+       border: none;
+       background-color: #9DA9B6;
+       border-radius: 5px;
+   }

@@ -4,8 +4,8 @@
     <link rel="stylesheet" href="../css/O_pro.css">
     <title>注文手続き</title>
 </head>
-<?php require 'FoodiesTitle.php';?>
-    <form action="O_check.php" method="post">
+<?php require 'FoodiesReturn.php'; ?>
+    <form action="O_check.php" method="post" onsubmit="return validateForm();">
     <div class="main">
         <p class="sabtitle">
             配送先住所
@@ -24,14 +24,35 @@
         echo '<input type="text" class="text" name="tel_number" id="tel_number" value="', $row['tel_number'], '"><br>';
         echo '<input type="text" class="text" name="mail" id="mail" value="', $row['mail'], '"><br>';
         }else{
-            echo 'セッションが設定されていません。';
+            echo '<p class = "error">
+                  ログインしていません。<br>
+                  ログインしてください。
+                  </p>';
         }
         ?>
         <p class="sabtitle">支払い方法<p><br>
-        <input type="radio" name="pay" id="cash">現金（コンビニ払い）<br>
+        <input type="radio" name="pay" id="cash" value="コンビニ払い">コンビニ払い<br>
+        <input type="radio" name="pay" id="bank" value="銀行振込">銀行振込<br>
         </p>
+        <input type="hidden" name="total" value="<?=$_POST['total']?>">
+        <p><button type="submit" class="example"><span>注文確認</span></button></p>
+
+        <script>
+            function validateForm(){
+                //  ラジオボタンが選択されているか確認
+                var selectedPayment = document.querySelector('input[name="pay"]:checked');  
+
+                // ラジオボタンが選択されていない場合は警告を表示、フォームは送信しない
+                if(!selectedPayment){
+                    alert("支払い方法を選択してください");
+                    return false;
+                }else{
+                    // ラジオボタンが選択されている場合はフォームを送信
+                    return true;
+                }
+            }
+        </script>
     </div>
-    <p><button type="submit">注文確認</button></p>
     </form>
 </body>
 </html>

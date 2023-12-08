@@ -7,16 +7,12 @@
         require 'FoodiesTitle.php';
         $name=$nickname=$address=$tel_number=$zip_code='';
         if(isset($_SESSION['User'])){
-            $name=$_SESSION['User']['name'];
             $nickname=$_SESSION['User']['nickname'];
-            $address=$_SESSION['User']['address'];
-            $tel_number=$_SESSION['User']['tel_number'];
-            $zip_code=$_SESSION['User']['zip_code'];
         }
     ?>
     <center><h1>Up Date</h1></center>
     <?php
-        echo '<form action="info_update-output.php" method="post">';
+        echo '<form action="info_update-output.php" method="post" enctype="multipart/form-data">';
         echo '<div class="container">';
         echo '<div class="left-aligned-text">';
         echo '<div id="circle">';

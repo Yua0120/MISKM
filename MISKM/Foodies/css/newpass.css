@@ -13,6 +13,7 @@ input{
   color: #fff;
   padding: 10px 20px;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 .example span{
@@ -26,7 +27,7 @@ input{
 
 /*テキストボックス*/
 .in{
-  margin-top: 30px;
+  margin-top: 20px;
   height: 30px;
 }
 .in :hover{

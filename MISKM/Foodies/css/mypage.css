@@ -3,34 +3,52 @@ body{
     padding: 0;
 }
 
-p{
-    margin: 0;
-    padding: 0;
+.user-icon-name{
+    width: 80%;
+    margin: 0 auto;
 }
 
 /*ユーザー画像*/
+.icon {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px; 
+    object-fit: cover;
+}
+
 .icon-img{
-    width: 9rem;
-    height: 9rem;
-    margin: 10 auto;
+    margin-top: 10%;
+    width: 45%;
+    height: 108px;
+    margin-left: 5%;
+    float: left;
+    
 }
 
 /*ニックネーム*/
 .nickname{
+    margin-top: 10%;
     width: 40%;
+    height: 108px;
     text-align: center;
-    margin-top: 3.8rem;
-    padding-right: 15%;
+    margin-right: 10%;
     font-size: 1.2rem;
     float:right;
+    display:table-cell ;
+    vertical-align: middle;
 }
 
 /*My投稿*/
 .toukou{
+    margin-top: 33%;
     width: 100%;
     font-size: 1.3rem;
     text-align: center;
     border-bottom:1px solid;
+}
+
+p{
+    height: 55px;
 }
 
 /*投稿box*/
@@ -38,6 +56,7 @@ p{
     margin-left: 5%;
     margin-right: 5%;
     width: 40%;
+    height: 326.5px;
     float: left;
     text-align: center;
 }
@@ -50,23 +69,12 @@ p{
 
 /*投稿box内のニックネーム*/
 .toukou-box-nickname{
-    width: 45%;
+    width: 100%;
     margin-left: 5%;
     padding-bottom: 0.3rem;
     text-align: left;
     float: left;
     font-size: 0.5rem;
-    border-bottom:1px solid;
-}
-
-/*投稿日*/
-.toukou-day{
-    margin-right: 5%;
-    padding-bottom: 0.3rem;
-    text-align: center;
-    width: 45%;
-    font-size: 0.5rem;
-    float: right;
     border-bottom:1px solid;
 }
 
@@ -80,5 +88,15 @@ p{
 
 /*削除ボタン*/
 .toukou-delete{
+    /* 位置 */
+    position: absolute;
+    left: 35%;
     margin: auto;
+    /* デザイン */
+    width: 50px;
+    font-size: 15px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    background-color: #9DA9B6;
 }
