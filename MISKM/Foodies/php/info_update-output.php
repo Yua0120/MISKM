@@ -35,7 +35,7 @@
                 $sql->execute([
                     $_POST['name'], $_POST['nickname'], $_POST['address'], $_POST['phonenumber'], $_POST['postcode'],$img_path
                 ]);
-                header("Location: ../Top.html");
+                header("Location: ../Top.php");
                 exit;
             }
         } else {
