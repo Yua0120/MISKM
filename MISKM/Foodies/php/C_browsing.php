@@ -9,22 +9,22 @@
 <body>
 <?php require 'FoodiesMenu.php';?>
     <!-- 投稿検索機能 -->
-    <div class="search-box">
-        <form action="C_browsing.php" method="post">
-            <input type="text" name="keyword" placeholder="user name" class="search">
-        </form>
-    </div>
+    <form action="C_browsing.php" method="post" class="search-form-003">
+            <label>
+                <input type="text" name="keyword" placeholder="user name" class="search">
+            </label>
+            <button type="submit" aria-label="検索"></button>
+    </form>
 
     <!-- 絞り込み機能 -->
     <div class="narrow-box">
         <form action="C_browsing.php" method="post">
-            <label for="postFilter">並び替え：</label>
             <select name="postFilter" id="postFilter">
                 <option value="new">新規　順</option>
                 <option value="old">古い　順</option>
                 <option value="good_desc">いいね順</option>
             </select>
-            <input type="submit" value="並び変える">
+            <input type="submit" value="並び変える" id="like">
         </form>
     </div>
 
@@ -59,7 +59,7 @@ if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
                 echo '<div class="toukou-box">';
                 echo '<div class="toukou-img-box">';
                 echo '<a href="C_detail.php?id=' . $post['id'] . '">';
-                echo '<img src="/MISKM/img/' . $post['image_path'] . '" class="toukou-img">';
+                echo '<img src="',$post['image_path'],'" class="toukou-img">';
                 echo '</a>';
                 echo '</div>';
                 echo '<div class="nickname">';
@@ -79,7 +79,7 @@ if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
                 if ($isLiked) {
                     echo '<img src="/MISKM/img/kuma.jpg" width="30" alt="いいね画像">';
                 } else {
-                    echo '<img src="/MISKM/img/kurokuma.jpg" width="30" alt="いいね画像">';
+                    echo '<img src="/MISKM/img/shirokuma.jpg" width="30" alt="いいね画像">';
                 }
 
                 echo $post['good_count'];
@@ -107,7 +107,7 @@ $allPosts = $postSql->fetchAll(PDO::FETCH_ASSOC);
             echo '<div class="toukou-box">';
             echo '<div class="toukou-img-box">';
             echo '<a href="C_detail.php?id=' . $post['id'] . '">';
-            echo '<img src="/MISKM/img/' . $post['image_path'] . '" class="toukou-img">';
+            echo '<img src="'. $post['image_path'] . '" class="toukou-img">';
             echo '</a>';
             echo '</div>';
             echo '<div class="nickname">';
@@ -127,7 +127,7 @@ $allPosts = $postSql->fetchAll(PDO::FETCH_ASSOC);
             if ($isLiked) {
                 echo '<img src="/MISKM/img/kuma.jpg" width="30" alt="いいね画像">';
             } else {
-                echo '<img src="/MISKM/img/kurokuma.jpg" width="30" alt="いいね画像">';
+                echo '<img src="/MISKM/img/shirokuma.jpg" width="30" alt="いいね画像">';
             }
 
             echo $post['good_count'];

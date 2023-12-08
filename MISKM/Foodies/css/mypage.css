@@ -56,6 +56,7 @@ p{
     margin-left: 5%;
     margin-right: 5%;
     width: 40%;
+    height: 326.5px;
     float: left;
     text-align: center;
 }
@@ -68,23 +69,12 @@ p{
 
 /*投稿box内のニックネーム*/
 .toukou-box-nickname{
-    width: 45%;
+    width: 100%;
     margin-left: 5%;
     padding-bottom: 0.3rem;
     text-align: left;
     float: left;
     font-size: 0.5rem;
-    border-bottom:1px solid;
-}
-
-/*投稿日*/
-.toukou-day{
-    margin-right: 5%;
-    padding-bottom: 0.3rem;
-    text-align: center;
-    width: 45%;
-    font-size: 0.5rem;
-    float: right;
     border-bottom:1px solid;
 }
 

@@ -16,7 +16,7 @@ p{
 
 .toukou-img{
   width: 320px;
-  height: 280px;
+  height: 380px;
 }
 
 /*いいね*/
@@ -86,4 +86,5 @@ p{
   width: 100%; /* 画面いっぱいの横幅 */
   height: 100%; /* コメントボックスの高さを100%に */
   box-sizing: border-box; /* ボックスサイジングを指定 */
+  text-align: left;
 }
