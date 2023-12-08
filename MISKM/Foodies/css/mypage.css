@@ -19,6 +19,7 @@ body{
 .icon-img{
     margin-top: 10%;
     width: 45%;
+    height: 108px;
     margin-left: 5%;
     float: left;
     
@@ -28,6 +29,7 @@ body{
 .nickname{
     margin-top: 10%;
     width: 40%;
+    height: 108px;
     text-align: center;
     margin-right: 10%;
     font-size: 1.2rem;
