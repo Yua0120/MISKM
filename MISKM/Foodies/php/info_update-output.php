@@ -27,7 +27,7 @@
                     'nickname' => $_POST['nickname'], 'addres' => $_POST['address'],
                     'tel_number' => $_POST['phonenumber'], 'zip_code' => $_POST['postcode'],
                 ];
-                header("Location: ../Top.html");
+                header("Location: ./Top.html");
                 exit;
             } else {
                 //　ここは詳細なユーザーデータを登録してなかった人のデータを挿入する処理
@@ -35,12 +35,12 @@
                 $sql->execute([
                     $_POST['name'], $_POST['nickname'], $_POST['address'], $_POST['phonenumber'], $_POST['postcode'],$img_path
                 ]);
-                header("Location: ../Top.php");
+                header("Location: ./Top.php");
                 exit;
             }
         } else {
             // nicknameが重複しているとき
-            header("Location: ../info_update-input.php?flag=rename");
+            header("Location: ./info_update-input.php?flag=rename");
             exit;
         }
     } catch (PDOException $e) {
