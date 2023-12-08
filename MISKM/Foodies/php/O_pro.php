@@ -31,8 +31,8 @@
         }
         ?>
         <p class="sabtitle">支払い方法<p><br>
-        <input type="radio" name="pay" id="cash">コンビニ払い<br>
-        <input type="radio" name="pay" id="bank">銀行振込<br>
+        <input type="radio" name="pay" id="cash" value="コンビニ払い">コンビニ払い<br>
+        <input type="radio" name="pay" id="bank" value="銀行振込">銀行振込<br>
         </p>
         <input type="hidden" name="total" value="<?=$_POST['total']?>">
         <p><button type="submit" class="example"><span>注文確認</span></button></p>
