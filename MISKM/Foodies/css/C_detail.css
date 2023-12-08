@@ -16,7 +16,7 @@ p{
 
 .toukou-img{
   width: 320px;
-  height: 280px;
+  height: 380px;
 }
 
 /*いいね*/
@@ -48,6 +48,7 @@ p{
 }
 
 .productname{
+  width: 100%;
   display: inline-block;
   border: none;
 }
