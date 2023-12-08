@@ -66,15 +66,17 @@ body{
 }
 
 #priceFilter{
-    background-color: rgb(186, 202, 218);
+    background-color: rgb(196 213 230);
     border: none;
     text-decoration: none;
+    border-radius: 3px;
 }
 #like{
     background-color: rgb(196 213 230);
     border:none;
     text-decoration: none;
     margin-right:2.5%;
+    border-radius: 3px;
 }
 .narrow{
     margin-left: 95%;
