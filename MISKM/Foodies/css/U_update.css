@@ -1,0 +1,16 @@
+button{
+    /*位置*/
+    position: absolute;
+    left: 37%;
+    /*デザイン*/
+    width: 150px;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    background-color: #9DA9B6;
+}
+body{
+    position: absolute;
+    text-align: center;
+}

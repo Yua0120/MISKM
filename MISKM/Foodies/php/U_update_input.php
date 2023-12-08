@@ -1,6 +1,7 @@
 <?php require 'header.php';?>
     <link rel="stylesheet" href="css/touroku.css">
     <link rel="stylesheet" href="../css/hamburger.css">
+    <link rel="stylesheet" href="../css/U_update.css">
     <title>ユーザー情報更新</title>
 </head>
 <?php require 'FoodiesMenu.php' ;?>
@@ -29,7 +30,7 @@
     echo '<h4>Pass word(confirmation)</h4>';
     echo '<input type="password" size="30" placeholder="8文字以上16以下で入力してください" name="Pass2" class="text" value="',$Pass2,'"><br><br>';    
     echo '<div class="bobo">';
-    echo '<button  type="submit" class="example"><span>Next</span></button>';
+    echo '<button  type="submit"><span>Next</span></button>';
     echo '</div>';
     echo '</div>';
     echo '</div>';  
