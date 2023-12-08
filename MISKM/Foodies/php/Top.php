@@ -8,16 +8,16 @@
 </header>
 <?php require 'FoodiesMenu.php' ;?>
     <!--商品検索機能-->
-    <div class="search-box">
-        <form action="Top.php" method="post">
-            <input type="text" name="keyword" placeholder="search" class="search">
-        </form>
-    </div>
+    <form action="Top.php" method="post" class="search-form-003">
+            <label>
+                <input type="text" name="keyword" placeholder="キーワードを入力" class="search">
+            </label>
+            <button type="submit" aria-label="検索"></button>
+    </form>
 
     <!--絞り込み機能-->
     <div class="narrow-box">
         <form action="Top.php" method="post">
-            <label for="priceFilter">金額絞り込み：</label>
                 <select name="priceFilter" id="priceFilter">
                     <option value="">絞り込まない</option>
                     <option value="6000">6000円以下</option>
