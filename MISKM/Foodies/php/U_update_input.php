@@ -1,8 +1,9 @@
 <?php require 'header.php';?>
     <link rel="stylesheet" href="css/touroku.css">
+    <link rel="stylesheet" href="../css/hamburger.css">
     <title>ユーザー情報更新</title>
 </head>
-<?php require 'FoodiesTitle.php';?>  
+<?php require 'FoodiesMenu.php' ;?>
 <?php 
     if(isset($_SESSION['User'])){
         $Email=$_SESSION['User']['mail'];
@@ -20,7 +21,7 @@
     echo  '<div class="container">';
     echo '<div class="left-aligned-text">';
     echo '<h4>E-mail</h4>';
-    echo '<input type="text" size="40" name="Email" class="text" value="',$Email,'">';
+    echo '<input type="text" size="30" name="Email" class="text" value="',$Email,'">';
     
     echo '<h4>Pass word</h4>';
     echo '<input type="password" size="30"  placeholder="8文字以上16以下で入力してください" name="Pass1" class="text" value="',$Pass1,'">';
@@ -35,3 +36,4 @@
     echo '</body>';
     echo '</html>';
     ?>
+<?php require 'footer.php' ;?>
