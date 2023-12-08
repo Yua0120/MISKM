@@ -51,7 +51,7 @@ if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
                                     WHERE Post.user_id = ? 
                                     GROUP BY Post.id
                                     ORDER BY $order");
-        $postSql->execute([$usre['id']]);
+        $postSql->execute([$user['id']]);
         $filteredPosts = $postSql->fetchAll(PDO::FETCH_ASSOC);
 
         // $filteredPosts が null でないことを確認してから foreach ループ
