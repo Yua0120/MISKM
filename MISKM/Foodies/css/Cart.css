@@ -6,7 +6,7 @@
     margin: 0 auto;
 }
 .main{
-    height: 130px;
+    height: 150px;
     display: flex;/*横並び*/
     border-bottom:3px solid black;/*下線*/
     margin: 1%;
