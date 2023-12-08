@@ -51,6 +51,7 @@ body{
 /*各商品box*/
 .shohin{
     width: 50%;
+    height: 272px;
     text-align: center;
     float: left;
 }
