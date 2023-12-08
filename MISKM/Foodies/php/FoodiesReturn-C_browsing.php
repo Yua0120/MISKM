@@ -18,7 +18,6 @@
 
       <nav>
         <ul>
-          <li><a href="login.php">ログイン</a></li>
           <li><a href="Top.php">トップ</a></li>
           <li><a href="C_post-input.php">投稿</a></li>
           <li><a href="C_browsing.php">投稿一覧</a></li>
