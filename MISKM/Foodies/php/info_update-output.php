@@ -27,7 +27,7 @@
                     'nickname' => $_POST['nickname'], 'addres' => $_POST['address'],
                     'tel_number' => $_POST['phonenumber'], 'zip_code' => $_POST['postcode'],
                 ];
-                header("Location: ../Top.html");
+                header("Location: ./Top.html");
                 exit;
             } else {
                 //　ここは詳細なユーザーデータを登録してなかった人のデータを挿入する処理
