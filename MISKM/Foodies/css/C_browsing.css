@@ -87,6 +87,18 @@ body{
     float: left;
 }
 
+/*投稿画像*/
+.toukou-img{
+    width: 80%;
+}
+
+.toukou-img-box{
+    width: 80%;
+    text-align: center;
+    margin-bottom: 4px;
+    margin: 0 auto;
+}
+
 
 /*コメント*/
 .commentbox{
