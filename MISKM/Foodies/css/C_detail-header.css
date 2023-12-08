@@ -1,0 +1,53 @@
+body{
+    margin: 0%;
+    width: 100%;
+  }
+  
+  /*リターンボタン用*/
+  #return-button{
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+    text-align: left;
+    position: relative;
+    top: 3.5rem;
+    margin-left: 8px;
+  }
+  /*タイトル*/
+  title{
+    color: #ffffff;
+    font-family: "Dynalight";
+  }
+  .header {
+    padding-top: 2rem;
+    /* justify-content: space-between; */
+    align-items: center;
+    background-color: #9DA9B6;
+  }
+  .logo {
+    margin: 0px;
+    color: #fff;
+    font-size: 3rem;
+    font-family: 'Caveat', cursive;
+    margin: 0 29%;
+  }
+  
+    /*h1*/
+  h1{
+    font-family: 'Sacramento', cursive;
+    text-align: center;
+  }
+    /*h2*/
+  h2{
+      font-family: 'Sacramento', cursive;
+      text-align: center;
+    }
+    /*h3*/
+  h3{
+        font-family: 'Sacramento', cursive;
+        text-align: center;
+    }
+  
+    

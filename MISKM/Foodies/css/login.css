@@ -10,11 +10,12 @@
 .example span{
   font-size: 25px;
 }
-/* .login-button {
+.login-button {
   display: flex;
   justify-content: center;
   margin-bottom: 5%;
-} */
+}
+
   /*リンクのところ*/
 .login-confirmation{
   text-align: right;
