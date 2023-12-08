@@ -11,7 +11,7 @@
         // 画像の保存先フォルダと保存先のファイル名
         $img_folder = '../../img/post_img/';//画像の保存先フォルダ
         $img_filename = uniqid() . '_' . basename($_FILES['image_path']['name']);//アップロードされた画像の名前を一意的なものに変更
-        $img_path = $img_folder . '/' . $img_filename;//アップロードされた画像の最終的なパスを取得
+        $img_path = $img_folder . $img_filename;//アップロードされた画像の最終的なパスを取得
         /*echo $img_path;
         echo $img_folder;
         echo $img_filename;*/
