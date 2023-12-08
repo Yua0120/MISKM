@@ -35,6 +35,21 @@
         </p>
         <input type="hidden" name="total" value="<?=$_POST['total'] ?>">
         <p><button type="submit" class="example"><span>注文確認</span></button></p>
+
+        <script>
+            function validateForm(){
+                //  ラジオボタンが選択されているか確認
+                var selectedPayment = doument.querySelector('input[name="pay]:checked');  
+
+                // ラジオボタンが選択されていない場合は警告を表示、フォームは送信しない
+                if(!selectedPayment){
+                    alert("支払い方法を選択してください");
+                    return false;
+                }
+                    // ラジオボタンが選択されている場合はフォームを送信
+                    return true;
+            }
+        </script>
     </div>
     </form>
 </body>
