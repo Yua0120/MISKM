@@ -1,24 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Foodies/css/header.css">
-    <title>注文履歴</title>
+<?php session_start();?>
+<?php require 'header.php';?>
+<?php require 'connect.php';?>
+<link rel="stylesheet" href="../css/O_his.css">
+<link rel="stylesheet" href="../css/hamburger.css">
+<title>注文履歴</title>
 </head>
-<body>
-    <header class="header">
-        <div class="logo">Foodies</div>
-        <!--ハンバーガーメニュー追加-->
-    </header>
-    <p>注文履歴</p>
-    <!--スクロールの設定　お試し-->
-    <div style="width: 100%; height: 100px; overflow-y: scroll; border: 1px #999999 soild;">
-       <p>〇月〇日　商品名　配達状況　<a href="S_sttus.html">▶</a></p>
-       <p>〇月〇日　商品名　配達状況　<a href="S_sttus.html">▶</a></p>
-       <p>〇月〇日　商品名　配達状況　<a href="S_sttus.html">▶</a></p>
-       <p>〇月〇日　商品名　配達状況　<a href="S_sttus.html">▶</a></p>
-       <p>〇月〇日　商品名　配達状況　<a href="S_sttus.html">▶</a></p>
-    </div>
-</body>
-</html>
+<?php require 'FoodiesMenu.php';?>
+<h3 class="title">注文履歴</h3>
+<?php
+/* データベース接続 */
+if (isset($_SESSION['User'])) {
+    $pdo = new PDO($connect, USER, PASS);
+    $sql = "SELECT History.daily, Product.name, Product.image, History_detail.product_id
+            FROM History
+            JOIN History_detail ON History.id = History_detail.history_id
+            JOIN Product ON History_detail.product_id = Product.id";
+    $stmt = $pdo->query($sql);
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    /* 商品一覧 */
+    foreach ($result as $row) {
+        $product_id = $row['product_id']; // $product_id をここで定義する
+        echo '<div class="main">';
+        echo '<figure class="image">';
+        echo '<img src="/MISKM/img/', $row['image'], '" class="his_img">';
+        echo '</figure>';
+        echo '<div class="item">';
+        $id_in = strpos($product_id,'-');
+        $id_out = ($id_in !== false) ? substr($product_id,0,$id_in):$product_id;
+        echo "<p>{$row['daily']} <a href='P_detail-input.php?id={$id_out}'><br>{$row['name']}</a></p>";
+        echo "<br>";
+        echo '</div>'; // .item divを閉じる
+        echo '</div>'; // .main divを閉じる
+    }
+}
+?>
+</div>
+<?php require 'footer.php' ;?>

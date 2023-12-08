@@ -1,15 +1,29 @@
 <?php
     session_start();
-    require 'connect.php';
-    unset($_SESSION['User']);
-    $pdo = new PDO($connect, USER, PASS);
-    $sql = $pdo->prepare('insert into Post(user_id,product_name,image_path,comment) values (?,?,?,?)');
-    $success=$sql->execute([$_SESSION['User']['id'],$_POST['product_name'],$_POST['image_path'],$_POST['comment']]);
-    if($success){
-        header("Location: ./Top.php");
+    if(!isset($_SESSION['User'])){
+        header("Location: ./C_post-input.php?flag=none");
         exit;
     }else{
-        header("Location: ./C_post-input.php?flag=fail");
-        exit;
+        require 'connect.php';
+        $pdo = new PDO($connect, USER, PASS);
+        //アップロードされた画像の一時的な保管場所のアドレス(テンポラリファイル)のパス'tmp_file'を取得
+        $tmp_path = $_FILES['image_path']['tmp_name'];
+        // 画像の保存先フォルダと保存先のファイル名
+        $img_folder = '../../img/post_img/';//画像の保存先フォルダ
+        $img_filename = uniqid() . '_' . basename($_FILES['image_path']['name']);//アップロードされた画像の名前を一意的なものに変更
+        $img_path = $img_folder . $img_filename;//アップロードされた画像の最終的なパスを取得
+        move_uploaded_file($tmp_path, $img_path);//画像をpost_imgに保存する
+        //product_idの作成
+        $product_id_name = str_replace([' ', 'hoodie','zip'], '', $_POST['product_name']);
+        $product_id = $product_id_name . '-' . $_POST['size'];
+        $sql = $pdo->prepare('insert into Post(user_id,product_id,product_size,image_path,comment) values (?,?,?,?,?)');
+        $success = $sql->execute([$_SESSION['User']['id'], $product_id, $_POST['size'],$img_path, $_POST['comment']]);
+        if ($success) {
+            header("Location: ./Top.php");
+            exit;
+        } else {
+            header("Location: ./C_post-input.php?flag=fail");
+            exit;
+        }
     }
 ?>

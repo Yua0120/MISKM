@@ -1,37 +1,70 @@
+<?php session_start(); ?>
 <?php require 'connect.php'; ?>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <link rel="stylesheet" href="../css/Cart.css">
-    <title>カート</title>
+<?php require 'header.php'; ?>
+<link rel="stylesheet" href="../css/Cart.css">
+<link rel="stylesheet" href="../css/hamburger.css">
+<title>カート画面</title>
 </head>
+<body>
+    <!--スクロール設定
+    <div style="width: 100%; height: 100px; overflow-y: scroll; border: 1px #999999 soild;">-->
+    <?php require 'FoodiesMenu.php'; ?>
     <?php
-       require 'FoodiesMenu.php';
-       echo '<div id="app">';
-       echo '<form action="O_pro.php">';
-       echo '<div class="main">';
-       echo '<p>';
-       echo '<img alt="image" src="../img/',$row['id'],'.jpg">';/*商品の画像*/
-       echo  $row['name'],'<br>';/*商品名*/
-       echo  $row['price']; /*金額*/
-       echo  $row['size'],'<br>';/*サイズ*/
-       echo '</p>';
-       echo '<p>';
-       echo '<button @click="decrement" class="bto2">-</button>';
-       echo '{{num}}';
-       echo '<button @click="increment" class="bto2">+</button>';
-       echo '</p>';
-       echo '<input type="hidden" name="price" id="price" value="',$_POST['price'],'">';
-       echo '<p class="kei">合計 {{count}}個 (税込):{{total}}円</p>';
-       echo '</div>';
-       echo '<button type="submit" class="bto">ご購入手続きへ</button>';
-       echo '</form>';
-       echo '</div>';
+    /* データベース接続 */
+    if (isset($_SESSION['User'])) {
+        $pdo = new PDO($connect, USER, PASS);
+        $sql = $pdo -> prepare('select * from Cart where user_id = ?');
+        $sql -> execute([
+            $_SESSION['User']['id']
+        ]);
+        $setid = $sql->fetchAll(PDO::FETCH_ASSOC);
+        $userId = $_SESSION['User']['id'];
+        $sql = "SELECT Product.id, Product.name, Product.size, Product.price, Product.image, Cart.buy_counts
+                FROM Cart
+                JOIN Product ON Cart.product_id = Product.id
+                WHERE user_id = ?";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(1, $userId, PDO::PARAM_INT); 
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        $total_price = 0;
+        /* 商品一覧 */
+        if(!empty($setid)){
+            foreach ($result as $row) {
+                $sum_price = $row['price'] * $row['buy_counts'];
+                $id = $row['id'];
+                echo '<h3>カート</h3>';
+                echo '<div class="main">';
+                echo '<figure class="image">';
+                echo '<img src="/MISKM/img/', $row['image'], '" class="cart_img">';
+                echo '</figure>';
+                echo '<div class="item">';
+                echo "<p class='name'>{$row['name']}</p>";
+                echo "<br>";
+                echo "<p class='text'>
+                      size:{$row['size']}　￥{$row['price']}<br>
+                      counts:{$row['buy_counts']}　小計　￥",$sum_price,
+                      "</p>";
+                echo '<a href="Cart_delete.php?id=', $id, '">削除</a>';
+                echo '</div>'; // .item divを閉じる
+                echo '</div>'; // .main divを閉じる
+                $total_price += $sum_price; 
+            }
+            echo '<div class="total">';
+            echo '合計　￥',$total_price;
+            echo '</div>';
+            echo '<form action="O_pro.php" method="post">';
+            echo '<input type="hidden" name="total" value="',$total_price,'">';
+            echo '<button type="submit">購入手続きへ</button>';
+            echo '</form>';
+        }else{
+            echo '<p class="error">カートに商品が入っていません。</p>';
+        }    
+    }else{
+        echo  '<p class ="error">ログインしてください</p>';
+    }
+            
     ?>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="./script/Cart.js"></script>
-</html>
+    <!--</div>-->
+    <?php require 'footer.php' ;?>

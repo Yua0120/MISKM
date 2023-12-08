@@ -3,31 +3,146 @@ body{
     padding: 0;
 }
 
+p{
+    margin: 0;
+}
 
 .shohin-img{
-    width: 50%;
-    margin-left: 25%;
+    width: 75%;
 }
 
-.img-box{
-    width: 100;
+/* カルーセル全体 */
+.carousel {
+  /* 水平方向中央寄せ */
+  display: flex;
+  justify-content: center;
+}
+/* カルーセル内容 */
+.contains {
+  /* サイズは自由に変更してください。*/
+  /* 下の.slideも同じサイズにしてください。 */
+  width: 320px;
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+/* スライド切り換え用ラジオボタンは常に非表示 */
+.slide_select {
+  display: none;
+}
+/* 各スライド */
+.slide {
+  /* サイズは自由に変更してください。*/
+  /* 上の.containsも同じサイズにしてください。 */
+  width: 320px;
+  height: 280px;
+  position: absolute;
+  /* スライドの初期値は選択されていないので透明にしておく */
+  opacity: 0;
+}
+/* 前へ次へボタン */
+.scroll_button {
+    background-color: #fdfdfd;
+    position: absolute;
+    display: block;
+    height: 30px;
+    width: 30px;
+    /* 縦中央から20px上の位置 */
+    top: 50%;
+    margin-top: -20px;
+    /* 上辺と右辺のみ幅5pxの枠線 */
+    border-width: 5px 5px 0 0;
+    border-style: solid;
+    border-color: #9DA9B6;
+    cursor: pointer;
+    /* 普段はボタンはやや薄くする */
+    opacity: 0.5;
+    /* スライドよりも前面にする */
+    z-index: 3;
+}
+/* ホバー時にボタンを強調 */
+.scroll_button:hover {
+  opacity: 1;
+}
+/* 前へボタン */
+.scroll_prev {
+  left: 15px;
+  /* 上辺と右辺の枠線を回転して"＜"にする */
+  transform: rotate(-135deg);
+}
+/* 次へボタン */
+.scroll_next {
+  right: 15px;
+  /* 上辺と右辺の枠線を回転して"＞"にする */
+  transform: rotate(45deg);
+}
+/* スライド移動ボタンエリア */
+.move_controler {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+/* スライド移動の各ボタン */
+.button_move {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  border-radius: 100%;
+  cursor: pointer;
+  /* 普段はやや薄くする */
+  opacity: 0.5;
+  /* スライドより前面にする */
+  z-index: 2;
+}
+/* ホバー時はやや明るくする */
+.button_move:hover {
+  opacity: 0.75;
+}
+/* スライド移動ボタンの色 */
+.button_move {
+  background-color: #fdfdfd;
+}
+/* 1番目のスライド選択時 */
+/* 1番目のスライドの透明度を0にして表示する */
+.slide_select:nth-of-type(1):checked ~ .slide:nth-of-type(1) {
+  opacity: 1;
+}
+/* スライド移動ボタンの1個目を明るくする */
+/* （今選択されていることが分かるように） */
+.slide_select:nth-of-type(1):checked ~ .move_controler .button_move:nth-of-type(1) {
+  opacity: 1;
+}
+.slide_select:nth-of-type(2):checked ~ .slide:nth-of-type(2) {
+  opacity: 1;
+}
+.slide_select:nth-of-type(2):checked ~ .move_controler .button_move:nth-of-type(2) {
+  opacity: 1;
 }
 
-.shohin-name-money-box{
-    width: 70%;
-    margin-left: 15%;
+.back-nai{
+  text-align: center;
 }
 
 .shohin-name{
-    text-align: center;
-    width: 50%;
-    float: left;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-weight: bold;
+  background-color: #9DA9B6;
+  color: #ffffff;
 }
 
 .shohin-money{
-    text-align: center;
+    text-align: right;
     width: 50%;
-    float: right;
+    padding-top: 2px;
+    margin: 0 auto;
 }
 
 .shohin-size-number-box{
@@ -37,18 +152,61 @@ body{
 
 .size-box{
     text-align: center;
-
     width: 50%;
+    height: 30px;
     float: left;
+    margin-bottom: 4.34px;
 }
 
 .number-box{
-    width: 50%;
-    text-align: right;
-    float: right;  
+    width: 25%;
+    border: solid 1px;
+    float: right;
+    text-align: center;
+    margin: 0;
+    margin-right: 11%;
+    margin-bottom: 9px;
 }
 
 .number-button{
     display: inline-block;
+    border: none;
+    background: transparent;
     margin: 0;
+    width: 23%;
+    text-align: center;
+}
+
+.size-img-box{
+    text-align: center;
+    height: 45%;
+}
+
+.size-img{
+    width: 45%;
+}
+
+.description-text{
+    background-color: #dee0e2;
+    width: 65%;
+    height: 5rem;
+    border: none;
+}
+
+.description-text-box{
+    text-align: left;
+}
+
+.cart-button{
+  width: 150px;
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  background-color: #9DA9B6;
+}
+
+.cart-button-box{
+    margin-top: 5%;
+    text-align: center;
 }

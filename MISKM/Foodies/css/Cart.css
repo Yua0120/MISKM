@@ -1,42 +1,76 @@
-.bto2{
-        /*位置
-        position: absolute;
-        top: 70%;
-        left: 25%;
-        margin: 0 auto;
-        */
-       /*デザイン*/
-        width: 30px;
-        font-size: 20px;
-        border: 2px solid #000;
-
-}
-.bto{
-         /*位置*/
-        position: absolute;
-        top: 50%;
-        left: 10%;
-        margin: 0 auto;
-       /*デザイン*/
-       width: 200px;
-       font-size: 20px;
-       color: #fff;
-       background-color: #9da9b6;
-       border: 2px solid #000;
-       border: none;
-       border-radius: 10px;
-}
-.main{
+.ALL{
     position: absolute;
     top: 10%;
     left: 20%;
     right: 0;
     margin: 0 auto;
 }
-.kei{
+.main{
+    height: 150px;
+    display: flex;/*横並び*/
+    border-bottom:3px solid black;/*下線*/
+    margin: 1%;
+}
+h3{
+    color: #9DA9B6;
+}
+/*写真*/
+.main.cart_img{
+    /*位置設定
+    top: 5%;
+    left: 5%;*/
+    margin: 0;
+    padding: 0;}
+img{
+        /*サイズ設定*/
+        width: 100px;
+        height: 100px;
+}
+/*表示*/
+.main.item{
+    margin: 0 0 0  20px;
+    padding: 0;
+   /* position: absolute;
+    top: 5%;
+    left: 60%;
+    margin: 4px;
+    display: flex;
+    flex-direction: column;*/
+}
+/*商品名*/
+.name{
+    margin: 0;
+    padding: 0;
+    font-weight:  bold;
+    font-size: 18px;
+}
+.text{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;/*下線削除*/
+}
+a:link{
+    color: #9DA9B6;
+}
+button{
+    /*位置*/
     position: absolute;
-    top: 90%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    left: 32%;
+    /*デザイン*/
+    width: 150px;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    background-color: #9DA9B6;
+}
+.error{
+    color: red;
+}
+/* 合計 */
+.total{
+   position: absolute;
+   left: 80%;
 }

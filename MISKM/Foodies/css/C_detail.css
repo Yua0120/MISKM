@@ -1,0 +1,90 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+p{
+  margin: 0;
+  padding: 0;
+}
+
+/*投稿画像*/
+.toukou-img-box{
+  width:100%;
+  text-align: center;
+}
+
+.toukou-img{
+  width: 320px;
+  height: 380px;
+}
+
+/*いいね*/
+.like{
+  width: 10%;
+  font-size: 1.4rem;
+  display: inline-block;
+  border: none;
+}
+
+.favorite{
+  width: 100%;
+  text-align: right;
+}
+.hidden {
+  display: none;
+}
+
+
+/*商品名や、サイズ*/
+.toukou-item-box{
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5%;
+  padding-bottom: 10xp;
+  border-top: 1px solid;
+  border-bottom: 1px solid; 
+}
+
+.productname{
+  display: inline-block;
+  border: none;
+}
+
+.productsize{
+  display: inline-block;
+  border: none;
+}
+
+#db{
+  font-family: 'Sacramento', cursive;
+  font-size: 1.1rem;
+}
+
+#item-text{
+  font-size: 1.3rem;
+}
+
+/*コメント*/ 
+.comment-text{
+  font-family: 'Sacramento', cursive;
+  font-size: 1.3rem;
+  width: 100%;
+  padding-top: 3%;
+  padding-left: 3%;
+}
+
+.comment-box {
+  /* ここにコメントの表示スタイルを追加 */
+  width: 100%; /* 画面いっぱいの横幅 */
+  height: 30vh; /* 画面全体の30%の高さ */
+}
+
+.comment{
+  /* ここにコメントの入力欄のスタイルを追加 */
+  width: 100%; /* 画面いっぱいの横幅 */
+  height: 100%; /* コメントボックスの高さを100%に */
+  box-sizing: border-box; /* ボックスサイジングを指定 */
+  text-align: left;
+}
