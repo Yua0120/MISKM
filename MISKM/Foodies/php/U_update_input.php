@@ -1,5 +1,5 @@
 <?php require 'header.php';?>
-    <link rel="stylesheet" href="css/U_update.css">
+    <link rel="stylesheet" href="../css/U_update.css">
     <title>ユーザー情報更新</title>
 </head>
 <?php require 'FoodiesTitle.php';?>  
