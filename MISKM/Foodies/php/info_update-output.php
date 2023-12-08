@@ -35,12 +35,12 @@
                 $sql->execute([
                     $_POST['name'], $_POST['nickname'], $_POST['address'], $_POST['phonenumber'], $_POST['postcode'],$img_path
                 ]);
-                header("Location: ../Top.php");
+                header("Location: ./Top.php");
                 exit;
             }
         } else {
             // nicknameが重複しているとき
-            header("Location: ../info_update-input.php?flag=rename");
+            header("Location: ./info_update-input.php?flag=rename");
             exit;
         }
     } catch (PDOException $e) {
