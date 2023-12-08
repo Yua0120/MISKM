@@ -5,7 +5,7 @@
     <title>注文手続き</title>
 </head>
 <?php require 'FoodiesReturn.php'; ?>
-    <form action="O_check.php" method="post">
+    <form action="O_check.php" method="post" onsubmit="return validateForm();">
     <div class="main">
         <p class="sabtitle">
             配送先住所
