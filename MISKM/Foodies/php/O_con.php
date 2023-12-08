@@ -16,7 +16,7 @@
     echo date("m月d日",strtotime("+3 day"));
     echo '<br>';
     ?>
-    <img src="../../img/O_2.jpg" class="img2"><br>
+   
     <button type="submit" class="example"><span>商品一覧へ戻る</span></button>
         </div>
     </div>
