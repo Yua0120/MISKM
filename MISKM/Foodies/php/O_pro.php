@@ -45,9 +45,10 @@
                 if(!selectedPayment){
                     alert("支払い方法を選択してください");
                     return false;
-                }
+                }else{
                     // ラジオボタンが選択されている場合はフォームを送信
                     return true;
+                }
             }
         </script>
     </div>
