@@ -24,13 +24,14 @@ if (empty($sql->fetchAll())) {
     }
 
     /* パスワードをDBに挿入（更新） */
-    if (isset($_SESSION['User']['pass'])) {
+    if (isset($_SESSION['User']['password'])) {
         $id = $_SESSION['User']['user_id'];
         $sql = $pdo->prepare('update User set hash_pass=? where user_id=?');
-        $sql->execute([$_POST['Pass1'], $id]);
-        $_SESSION['Pass']['hash_pass'] = $_POST['Pass1'];
+        $sql->execute([password_hash($_POST['Pass1'], PASSWORD_DEFAULT), $id]);
+        $_SESSION['User']['password'] = $_POST['Pass1'];
     }
 }
 
 header("Location: ./info_update-input.php");
 exit;
+?>
