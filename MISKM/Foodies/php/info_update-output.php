@@ -20,7 +20,7 @@
                 //　ここは登録してあるユーザーデータを更新する処理
                 $sql = $pdo->prepare('update User set name = ?, nickname = ?, addres = ?, tel_number = ?, zip_code = ? ,flag = 1, icon_image_path = ? where id = ?');
                 $sql->execute([
-                    $_POST['name'], $_POST['nickname'], $_POST['address'], $_POST['phonenumber'], $_POST['postcode'],$img_path, $id
+                    $_POST['name'], $_POST['nickname'], $_POST['address'], $_POST['phonenumber'], $_POST['postcode'],$img_filename, $id
                 ]);
                 $_SESSION['User'] = [
                     'id' => $id, 'name' => $_POST['name'],
