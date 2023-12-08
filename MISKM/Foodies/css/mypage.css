@@ -26,11 +26,9 @@ body{
 
 /*ニックネーム*/
 .nickname{
-    margin-top: 60px;
-    margin-bottom: 28.54px;
+    margin-top: 10%;
     width: 40%;
     text-align: center;
-    height: 50px;
     margin-right: 10%;
     font-size: 1.2rem;
     float:right;
