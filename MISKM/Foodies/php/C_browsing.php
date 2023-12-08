@@ -33,15 +33,17 @@
 
     $pdo = new PDO($connect, USER, PASS);
 
+    $user_id = isset($_SESSION['User']['id']) ? $_SESSION['User']['id'] : '';
+
     // ニックネーム検索と並び順の変更の判定
 if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
     $keyword = '%' . $_POST['keyword'] . '%';
-    $userSql = $pdo->prepare('SELECT * FROM User WHERE nickname LIKE ?');
-    $userSql->execute([$keyword]);
+    $userSql = $pdo->prepare('SELECT * FROM User WHERE nickname LIKE :keyword');
+    $userSql->bindParam(':keyword', $keyword, PDO::PARAM_STR);
+    $userSql->execute();
     $matchedUsers = $userSql->fetchAll(PDO::FETCH_ASSOC);
 
     foreach ($matchedUsers as $user) {
-        $user_id = isset($_SESSION['User']['id']) ? $_SESSION['User']['id'] : '';
         $order = getOrderOption($_POST['postFilter']);
         $postSql = $pdo->prepare("SELECT Post.*, User.nickname, Post.good_count
                                     FROM Post 
@@ -49,7 +51,7 @@ if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
                                     WHERE Post.user_id = ? 
                                     GROUP BY Post.id
                                     ORDER BY $order");
-        $postSql->execute([$userId]);
+        $postSql->execute([$usre['id']]);
         $filteredPosts = $postSql->fetchAll(PDO::FETCH_ASSOC);
 
         // $filteredPosts が null でないことを確認してから foreach ループ
