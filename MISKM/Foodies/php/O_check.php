@@ -16,7 +16,7 @@
        echo $_POST['tel_number'],'<br>';/*電話番号*/
        echo $_POST['mail'],'<br>';/*メールアドレス*/
        echo '<p>支払方法</p>';
-       echo '現金（コンビニ払い）';
+       echo $_POST['pay'];/*支払い方法*/
        ?>
     <p class="check"> 情報に誤りがないかご確認ください</p>
     <input type="hidden" name="total" value="<?=$_POST['total'] ?>">
