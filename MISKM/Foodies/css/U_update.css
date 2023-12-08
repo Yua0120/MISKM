@@ -1,6 +1,6 @@
 button{
     /*位置*/
-    position: absolute;
+    /* position: absolute; */
     left: 37%;
     /*デザイン*/
     width: 150px;
@@ -14,3 +14,19 @@ body{
     position: absolute;
     text-align: center;
 }
+.example {
+    background-color: #9DA9B6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+.example span{
+    font-size: 25px;
+}
+.bobo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+  }
