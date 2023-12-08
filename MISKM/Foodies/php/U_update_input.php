@@ -1,8 +1,10 @@
 <?php require 'header.php';?>
+    <link rel="stylesheet" href="css/touroku.css">
+    <link rel="stylesheet" href="../css/hamburger.css">
     <link rel="stylesheet" href="../css/U_update.css">
     <title>ユーザー情報更新</title>
 </head>
-<?php require 'FoodiesTitle.php';?>  
+<?php require 'FoodiesMenu.php' ;?>
 <?php 
     if(isset($_SESSION['User'])){
         $Email=$_SESSION['User']['mail'];
@@ -35,3 +37,4 @@
     echo '</body>';
     echo '</html>';
     ?>
+<?php require 'footer.php' ;?>
