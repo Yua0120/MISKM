@@ -9,11 +9,12 @@
 <body>
 <?php require 'FoodiesMenu.php';?>
     <!-- 投稿検索機能 -->
-    <div class="search-box">
-        <form action="C_browsing.php" method="post">
-            <input type="text" name="keyword" placeholder="user name" class="search">
-        </form>
-    </div>
+    <form action="C_browsing.php" method="post" class="search-form-003">
+            <label>
+                <input type="text" name="keyword" placeholder="user name" class="search">
+            </label>
+            <button type="submit" aria-label="検索"></button>
+    </form>
 
     <!-- 絞り込み機能 -->
     <div class="narrow-box">

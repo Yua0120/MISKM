@@ -7,7 +7,7 @@ $pdo = new PDO($connect, USER, PASS);
 // フォームが送信されたときの処理
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // 新しいパスワードを取得
-    $newPass = $_POST['newpass2'];
+    $newPass = $_POST['newpass1'];
 
     // フォームの入力検証（空でないか、適切なフォーマットかなどを確認）
     if (empty($newPass)) {
@@ -27,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // 適切なテーブルに対して更新
     $sql = $pdo->prepare('UPDATE Pass SET hash_pass = ? WHERE user_id = ?');
+    $sql->execute([$hashedpass, $id]);
 
     // ユーザーが存在する場合はTop.phpにリダイレクト
     if (isset($_SESSION['User'])) {

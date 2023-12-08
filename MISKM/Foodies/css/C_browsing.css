@@ -69,21 +69,20 @@ body{
 .narrow-box{
     text-align: right;
 }
+#postFilter{
+    background-color: rgb(196 213 230);
+    border: none;
+    text-decoration: none;
+    border-radius: 3px;
+}
 
 .narrow{
     margin-left: 95%;
 }
 
-#postFilter{
-    background-color: rgb(186, 202, 218);
-    border: none;
-    text-decoration: none;
-}
-
 /*投稿box*/
 .toukou-box{
     width: 50%;
-    height: 254px;
     text-align: center;
     float: left;
 }
@@ -100,6 +99,7 @@ body{
     margin: 0 auto;
 }
 
+
 /*コメント*/
 .commentbox{
     text-align: center;
@@ -109,7 +109,7 @@ body{
 
 .comment{
     width: 80%;
-    height: 30px;
+    height: 3rem;
 }
 
 .like-button {

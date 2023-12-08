@@ -5,7 +5,7 @@
     <title>注文確認</title>
 </head>
 <?php require 'FoodiesReturn.php'; ?>
-    <form action="O_con.php" mrthods="post">
+    <form action="O_con.php" method="post">
     <div class="container">
         <div class="left-aligned-text">
             <br><br>
@@ -19,7 +19,7 @@
        echo '現金（コンビニ払い）';
        ?>
     <p class="check"> 情報に誤りがないかご確認ください</p>
-    <input type="hidden" name="total" value="<?=$_POST['total'] ?> ">
+    <input type="hidden" name="total" value="<?=$_POST['total'] ?>">
     <button type="submit" class="example"><span>注文確定</span></button>
         </div>
     </div>

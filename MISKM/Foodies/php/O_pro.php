@@ -5,7 +5,7 @@
     <title>注文手続き</title>
 </head>
 <?php require 'FoodiesReturn.php'; ?>
-    <form action="O_check.php" method="post">
+    <form action="O_check.php" method="post" onsubmit="return validateForm();">
     <div class="main">
         <p class="sabtitle">
             配送先住所
@@ -33,8 +33,24 @@
         <p class="sabtitle">支払い方法<p><br>
         <input type="radio" name="pay" id="cash">現金（コンビニ払い）<br>
         </p>
-        <input type="hidden" name="total" value="<?=$_POST['total'] ?> ">
+        <input type="hidden" name="total" value="<?=$_POST['total']?>">
         <p><button type="submit" class="example"><span>注文確認</span></button></p>
+
+        <script>
+            function validateForm(){
+                //  ラジオボタンが選択されているか確認
+                var selectedPayment = document.querySelector('input[name="pay"]:checked');  
+
+                // ラジオボタンが選択されていない場合は警告を表示、フォームは送信しない
+                if(!selectedPayment){
+                    alert("支払い方法を選択してください");
+                    return false;
+                }else{
+                    // ラジオボタンが選択されている場合はフォームを送信
+                    return true;
+                }
+            }
+        </script>
     </div>
     </form>
 </body>

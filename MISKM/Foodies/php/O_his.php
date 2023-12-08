@@ -26,7 +26,9 @@ if (isset($_SESSION['User'])) {
         echo '<img src="/MISKM/img/', $row['image'], '" class="his_img">';
         echo '</figure>';
         echo '<div class="item">';
-        echo "<p>{$row['daily']} <a href='P_detail-input.php?id={$product_id}'><br>{$row['name']}</a></p>";
+        $id_in = strpos($product_id,'-');
+        $id_out = ($id_in !== false) ? substr($product_id,0,$id_in):$product_id;
+        echo "<p>{$row['daily']} <a href='P_detail-input.php?id={$id_out}'><br>{$row['name']}</a></p>";
         echo "<br>";
         echo '</div>'; // .item divを閉じる
         echo '</div>'; // .main divを閉じる

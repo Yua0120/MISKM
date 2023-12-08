@@ -6,7 +6,7 @@
     margin: 0 auto;
 }
 .main{
-    height: 130px;
+    height: 150px;
     display: flex;/*横並び*/
     border-bottom:3px solid black;/*下線*/
     margin: 1%;
@@ -55,6 +55,9 @@ a:link{
     color: #9DA9B6;
 }
 button{
+    /*位置*/
+    position: absolute;
+    left: 32%;
     /*デザイン*/
     width: 150px;
     font-size: 20px;
@@ -65,4 +68,9 @@ button{
 }
 .error{
     color: red;
+}
+/* 合計 */
+.total{
+   position: absolute;
+   left: 80%;
 }
