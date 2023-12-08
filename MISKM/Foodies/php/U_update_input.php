@@ -9,9 +9,9 @@
     }else{
         $Email = '';
     }
-    if(isset($_SESSION['Pass'])){
-        $Pass1=$_SESSION['Pass']['hash_pass'];
-        $Pass2=$_SESSION['Pass']['hash_pass'];
+    if(isset($_SESSION['User']['password'])){
+        $Pass1=$_SESSION['User']['password'];
+        $Pass2=$_SESSION['User']['password'];
     }else{
         $Pass1 = $Pass2 = '';
     }

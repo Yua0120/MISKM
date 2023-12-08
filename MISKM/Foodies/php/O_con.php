@@ -19,7 +19,7 @@
     echo '<br>';
     ?>
    
-    <button type="submit" class="example"><span>商品一覧へ戻る</span></button>
+    <button type="submit" class="example"><span>商品一覧へ</span></button>
         </div>
     </div>
     </form>

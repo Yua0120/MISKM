@@ -18,7 +18,8 @@
             echo '<button class="baba"><span>OK</span></button>';
             echo '</div>';
         }else{
-            echo 'すでにログアウトしています。';
+            echo '<center>すでにログアウトしています。</center>';
+            echo '<center><a href="login.php">ログイン画面へ</a></center>';
         }
     ?>
 

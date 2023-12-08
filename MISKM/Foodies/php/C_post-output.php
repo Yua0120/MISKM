@@ -11,12 +11,8 @@
         // 画像の保存先フォルダと保存先のファイル名
         $img_folder = '../../img/post_img/';//画像の保存先フォルダ
         $img_filename = uniqid() . '_' . basename($_FILES['image_path']['name']);//アップロードされた画像の名前を一意的なものに変更
-        $img_path = $img_folder . '/' . $img_filename;//アップロードされた画像の最終的なパスを取得
-        /*echo $img_path;
-        echo $img_folder;
-        echo $img_filename;*/
+        $img_path = $img_folder . $img_filename;//アップロードされた画像の最終的なパスを取得
         move_uploaded_file($tmp_path, $img_path);//画像をpost_imgに保存する
-        /*echo move_uploaded_file($tmp_path, $img_path);*/
         //product_idの作成
         $product_id_name = str_replace([' ', 'hoodie','zip'], '', $_POST['product_name']);
         $product_id = $product_id_name . '-' . $_POST['size'];

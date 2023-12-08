@@ -97,13 +97,14 @@ body{
 /*各商品box*/
 .shohin{
     width: 50%;
-    height: 272px;
+    height: 290px;
     text-align: center;
     float: left;
 }
 
 /*商品画像*/
 .shohin-img{
+    height: 220px;
     width: 80%;
     margin: 10 auto;
     object-fit: contain;
@@ -119,4 +120,3 @@ body{
 .shohin-item-name{
     margin: 0;
 }
-

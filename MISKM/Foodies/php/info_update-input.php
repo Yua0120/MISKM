@@ -7,9 +7,7 @@
         require 'FoodiesTitle.php';
         $name=$nickname=$address=$tel_number=$zip_code='';
         if(isset($_SESSION['User'])){
-            $name=$_SESSION['User']['name'];
             $nickname=$_SESSION['User']['nickname'];
-            $address=$_SESSION['User']['address'];
         }
     ?>
     <center><h1>Up Date</h1></center>
