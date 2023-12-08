@@ -12,8 +12,10 @@
         <div class="left-aligned-text">
              <img src="../../img/O_1.jpg" class="img1"><br><!--くまの画像-->
     <?php
+    echo '<div class="will>"';
     echo '配達予定日　';
     echo date("m月d日",strtotime("+3 day"));
+    echo '</div>';
     echo '<br>';
     ?>
    
