@@ -4,6 +4,19 @@ require 'connect.php';
 
 $pdo = new PDO($connect, USER, PASS);
 
+
+//$sql = $pdo->prepare('SELECT * FROM Cart WHERE user_id = ?');
+//$sql->execute([$user_id]);
+//$row = $sql->fetch(PDO::FETCH_ASSOC);
+
+//if ($row) {
+//$_SESSION['Cart'] = [
+//    'id' => $row['user_id'],
+//  'product' => $row['product_id'],
+//'counts' => $row['buy_counts']
+//];
+//}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //ここ心配だから聞く
     $user_id = isset($_SESSION['User']['id']) ? $_SESSION['User']['id'] : '';
@@ -30,10 +43,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // 既存のアイテムがない場合は新しいアイテムを追加
         $add_new_item = $pdo->prepare('INSERT INTO Cart (user_id, product_id, buy_counts) VALUES (?, ?, ?)');
         $add_new_item->execute([$user_id, $size_id, $quantity]);
-
         $existing_cart_item->execute([$user_id, $size_id]);
-
     }
+    var_dump($user_id,$size_id,$quantity);
 
     // カートにアイテムが追加された場合のJavaScriptアラート
     echo "<script>

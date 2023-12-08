@@ -1,4 +1,5 @@
 <?php require 'header.php' ?>
+<?php require 'connect.php'; ?>
 <link rel="stylesheet" href="../css/coordinate.css">
 <link rel="stylesheet" href="../css/hamburger.css">
 <title>CoordinatePost.html</title>
@@ -6,7 +7,7 @@
 <body>
 <?php require 'FoodiesMenu.php' ?>
 
-<form action="C_post-output.php" method="post">
+<form action="C_post-output.php" method="post" enctype="multipart/form-data">
     <div class="container">
         <label id="upload-wrapper" for="upload">
             <!--acceptで画像ファイルのみ投稿可能と指定 -->
@@ -14,7 +15,17 @@
             <input type="file" name="image_path" onchange="previewFile(this);" id="image_path" accept="image/*">
         </label>
         <img id="preview">
-        <p>購入商品<input type="text" name="product_name" id="pro_name"></p>
+        <p>購入商品
+           <select name="product_name" id="pro_name">
+                <?php
+                    $pdo = new PDO($connect, USER, PASS);
+                    $sql = 'select distinct name from Product';
+                    foreach ($pdo->query($sql) as $row) {
+                        echo '<option value="',$row['name'],'">',$row['name'],'</option>';
+                    }
+                ?>
+            </select>
+        </p>
         <p>サイズ
             <select name="size" id="product_size">
                 <option value="XS">XS</option>

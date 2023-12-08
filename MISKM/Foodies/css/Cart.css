@@ -6,12 +6,15 @@
     margin: 0 auto;
 }
 .main{
-    height: 130px;
+    height: 150px;
     display: flex;/*横並び*/
     border-bottom:3px solid black;/*下線*/
     margin: 1%;
 }
-
+h3{
+    color: #9DA9B6;
+}
+/*写真*/
 .main.cart_img{
     /*位置設定
     top: 5%;
@@ -23,7 +26,7 @@ img{
         width: 100px;
         height: 100px;
 }
-
+/*表示*/
 .main.item{
     margin: 0 0 0  20px;
     padding: 0;
@@ -34,6 +37,7 @@ img{
     display: flex;
     flex-direction: column;*/
 }
+/*商品名*/
 .name{
     margin: 0;
     padding: 0;
@@ -51,6 +55,9 @@ a:link{
     color: #9DA9B6;
 }
 button{
+    /*位置*/
+    position: absolute;
+    left: 32%;
     /*デザイン*/
     width: 150px;
     font-size: 20px;
@@ -61,4 +68,9 @@ button{
 }
 .error{
     color: red;
+}
+/* 合計 */
+.total{
+   position: absolute;
+   left: 80%;
 }

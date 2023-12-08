@@ -16,13 +16,19 @@ $user_id = isset($_SESSION['User']['id']) ? $_SESSION['User']['id'] : '';
 $sql = $pdo->prepare('select * from Product where id=?');
 $sql->execute([$_GET['id'] . '-L']);
 
+if (!isset($_SESSION['Cart'])) {
+    $_SESSION['Cart'] = [];
+}
+
 foreach ($sql as $row) {
 
-    $user_id = $product_id = $buy_counts = '';
+    //$user_id = $product_id = $buy_counts = '';
     if (isset($_SESSION['Cart'])) {
-        $user_id = $_SESSION['Cart']['user_id'];
-        $product_id = $_SESSION['Cart']['product_id'];
-        $buy_counts = $_SESSION['Cart']['buy_count'];
+        $_SESSION['Cart']=[];
+
+        //$user_id = $_SESSION['Cart']['user_id'];
+        //$product_id = $_SESSION['Cart']['product_id'];
+        //$buy_counts = $_SESSION['Cart']['buy_count'];
     }
     ?>
     <?php require_once 'slide.php' ?>

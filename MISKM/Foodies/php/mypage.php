@@ -26,25 +26,26 @@
         $userSql->execute([$user_id]);
         $userInfo = $userSql->fetch(PDO::FETCH_ASSOC);
 
-        //アイコンは石島さんに相談
-        echo '<div class="icon-img">';
-        if (!empty($userInfo['icon_image_path'])) {
-            // icon_image_path が空でない場合はその画像を表示
-            echo '<img src="/MISKM/img/' . $userInfo['icon_image_path'] . '" class="icon">';
-        } else {
-            // icon_image_path が空の場合はデフォルトの画像を表示
-            //echo '<img src="/MISKM/img/default_icon.jpg" class="icon">';
-            echo '<img src="/MISKM/img/kuma.jpg" class="icon">';
-        }
-        echo '</div>';
-        echo '<div class="nickname">';
-        echo $userInfo['nickname'];
+        echo '<div class="user-icon-name">';
+            //アイコンは石島さんに相談
+            echo '<div class="icon-img">';
+            if (!empty($userInfo['icon_image_path'])) {
+                // icon_image_path が空でない場合はその画像を表示
+                echo '<img src="'. $userInfo['icon_image_path'] . ' class="icon">';
+            } else {
+                // icon_image_path が空の場合はデフォルトの画像を表示
+                echo '<img src="/MISKM/img/default_icon.jpg" class="icon">';
+            }
+            echo '</div>';
+            echo '<div class="nickname">';
+            echo $userInfo['nickname'];
+            echo '</div>';
         echo '</div>';
     }
 ?>
 
 <div class="toukou">
-    <p>My投稿</p>
+    <p class="toukou-text">My投稿</p>
 </div>
 
 <!--過去に投稿した一覧-->
@@ -80,11 +81,11 @@
             // いいね/いいね解除ボタンを表示
             echo '<div class="favorite">';
             if ($isFavorite) {
-                echo '<img src="/MISKM/img/kuma.jpg" class="kuma-img">';
+                echo '<img src="/MISKM/img/kuma.jpg" width="40" class="kuma-img">';
                 echo $likeCount;
                 echo '</a>';
             } else {
-                echo '<img src="/MISKM/img/kurokuma.jpg" class="kuma-img">';
+                echo '<img src="/MISKM/img/shirokuma.jpg" width="40" class="kuma-img">';
                 echo $likeCount;
                 echo '</a>';
             }

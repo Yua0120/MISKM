@@ -128,24 +128,21 @@ p{
   text-align: center;
 }
 
-.shohin-name-money-box{
-    width: 70%;
-    margin-left: 15%;
-}
-
 .shohin-name{
-    text-align: center;
-    width: 50%;
-    height: 50px;
-    float: left;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-weight: bold;
+  background-color: #9DA9B6;
+  color: #ffffff;
 }
 
 .shohin-money{
-    text-align: center;
+    text-align: right;
     width: 50%;
-    height: 40px;
-    padding-top: 10px;
-    float: right;
+    padding-top: 2px;
+    margin: 0 auto;
 }
 
 .shohin-size-number-box{
@@ -156,17 +153,19 @@ p{
 .size-box{
     text-align: center;
     width: 50%;
+    height: 30px;
     float: left;
-    margin-bottom: 2.61%;
+    margin-bottom: 4.34px;
 }
 
 .number-box{
     width: 25%;
-    margin: 0;
-    float: right; 
     border: solid 1px;
-    margin-bottom: 2%;
+    float: right;
     text-align: center;
+    margin: 0;
+    margin-right: 11%;
+    margin-bottom: 9px;
 }
 
 .number-button{
@@ -195,7 +194,7 @@ p{
 }
 
 .description-text-box{
-    text-align: center;
+    text-align: left;
 }
 
 .cart-button-box{

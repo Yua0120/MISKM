@@ -18,7 +18,6 @@
     <!--絞り込み機能-->
     <div class="narrow-box">
         <form action="Top.php" method="post">
-            <label for="priceFilter">金額絞り込み：</label>
                 <select name="priceFilter" id="priceFilter">
                     <option value="">絞り込まない</option>
                     <option value="6000">6000円以下</option>

@@ -31,43 +31,48 @@ if (isset($_GET['id'])) {
 
     if ($row = $sql->fetch()) {
         $id = $row['id'];
-        echo '<div class="toukouimg-box">';
-        echo '<img src="',$row['image_path'],'">';
+        echo '<div class="toukou-img-box">';
+        echo '<img src="',$row['image_path'],'" class="toukou-img">';
         echo '</div>';
-        echo '<div class="toukuoitem-box">';
-        echo '<p class="productname">';
-        echo '購入商品';
+        // いいね/いいね解除ボタンを表示
+        echo '<div class="favorite">';
+        if ($isFavorite) {
+            echo '<a href="like_out.php?id=', $post_id, '">';
+            echo '<img src="/MISKM/img/kuma.jpg" width="50" class="like">';
+            echo '<div class="like">';
+            echo $likeCount;
+            echo '</div>';
+            echo '</a>';
+        } else {
+            echo '<a href="like_in.php?id=', $post_id, '">';
+            echo '<img src="/MISKM/img/shirokuma.jpg" width="50" class="like">';
+            echo '<div class="like">';
+            echo $likeCount;
+            echo '</div>';
+            echo '</a>';
+        }
+        echo '</div>';
+        echo '<div class="toukou-item-box">';
+        echo '<p class="productname" id="item-text">';
+        echo '購入商品 　: ';
         echo '</p>';
-        echo '<div class="productname">';
+        echo '<div class="productname" id="db">';
         // Product テーブルから商品名を取得
         $productSql = $pdo->prepare('SELECT name FROM Product WHERE id = ?');
         $productSql->execute([$row['product_id']]);
         $productRow = $productSql->fetch();  
         echo $productRow ? $productRow['name'] : '商品名なし';
         echo '</div>';
-        echo '<p class="productsize">';
-        echo '購入サイズ';
+        echo '<div class="productsize-box">';
+        echo '<p class="productsize" id="item-text">';
+        echo '購入サイズ : ';
         echo '</p>';
-        echo '<div class="productdsize">';
+        echo '<div class="productsize" id="db">';
         echo $row['product_size'];
         echo '</div>';
-        
-        // いいね/いいね解除ボタンを表示
-        echo '<div class="favorite">';
-        if ($isFavorite) {
-            echo '<a href="like_out.php?id=', $post_id, '">';
-            echo '<img src="/MISKM/img/kuma.jpg" class="kuma-img">';
-            echo $likeCount;
-            echo '</a>';
-        } else {
-            echo '<a href="like_in.php?id=', $post_id, '">';
-            echo '<img src="/MISKM/img/kurokuma.jpg" class="kuma-img">';
-            echo $likeCount;
-            echo '</a>';
-        }
         echo '</div>';
         echo '</div>';
-        echo '<p class="comment-area">';
+        echo '<p class="comment-text">';
         echo 'coment';
         echo '</p>';
         echo '<div class="comment-box">';

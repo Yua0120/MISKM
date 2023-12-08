@@ -19,7 +19,6 @@
     <!-- 絞り込み機能 -->
     <div class="narrow-box">
         <form action="C_browsing.php" method="post">
-            <label for="postFilter">並び替え：</label>
             <select name="postFilter" id="postFilter">
                 <option value="new">新規　順</option>
                 <option value="old">古い　順</option>
@@ -57,10 +56,12 @@ if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
         if ($filteredPosts) {
             // 投稿を表示
             foreach ($filteredPosts as $post) {
-                echo '<div class="imgukou-box">';
+                echo '<div class="toukou-box">';
+                echo '<div class="toukou-img-box">';
                 echo '<a href="C_detail.php?id=' . $post['id'] . '">';
-                echo '<img src="' . $post['image_path'] . '" class="shohin-img">';
+                echo '<img src="',$post['image_path'],'" class="toukou-img">';
                 echo '</a>';
+                echo '</div>';
                 echo '<div class="nickname">';
                 echo $post['nickname'];
                 echo '</div>';
@@ -78,7 +79,7 @@ if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
                 if ($isLiked) {
                     echo '<img src="/MISKM/img/kuma.jpg" width="30" alt="いいね画像">';
                 } else {
-                    echo '<img src="/MISKM/img/kurokuma.jpg" width="30" alt="いいね画像">';
+                    echo '<img src="/MISKM/img/shirokuma.jpg" width="30" alt="いいね画像">';
                 }
 
                 echo $post['good_count'];
@@ -103,10 +104,12 @@ $allPosts = $postSql->fetchAll(PDO::FETCH_ASSOC);
     if ($allPosts) {
         // 投稿を表示
         foreach ($allPosts as $post) {
-            echo '<div class="imgukou-box">';
+            echo '<div class="toukou-box">';
+            echo '<div class="toukou-img-box">';
             echo '<a href="C_detail.php?id=' . $post['id'] . '">';
-            echo '<img src="' . $post['image_path'] . '" class="shohin-img">';
+            echo '<img src="'. $post['image_path'] . '" class="toukou-img">';
             echo '</a>';
+            echo '</div>';
             echo '<div class="nickname">';
             echo $post['nickname'];
             echo '</div>';
@@ -124,7 +127,7 @@ $allPosts = $postSql->fetchAll(PDO::FETCH_ASSOC);
             if ($isLiked) {
                 echo '<img src="/MISKM/img/kuma.jpg" width="30" alt="いいね画像">';
             } else {
-                echo '<img src="/MISKM/img/kurokuma.jpg" width="30" alt="いいね画像">';
+                echo '<img src="/MISKM/img/shirokuma.jpg" width="30" alt="いいね画像">';
             }
 
             echo $post['good_count'];
