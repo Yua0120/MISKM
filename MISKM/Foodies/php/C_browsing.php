@@ -44,7 +44,7 @@ if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
     $matchedUsers = $userSql->fetchAll(PDO::FETCH_ASSOC);
 
     foreach ($matchedUsers as $user) {
-        $order = getOrderOption($_POST['postFilter']);
+        $order = getOrderOption(isset($_POST['postFilter']) ? $_POST['postFilter'] : 'new');
         $postSql = $pdo->prepare("SELECT Post.*, User.nickname, Post.good_count
                                     FROM Post 
                                     INNER JOIN User ON Post.user_id = User.id 
