@@ -43,8 +43,8 @@ try {
         $id = $pdo->lastInsertId();
 
         // Passテーブルに挿入(パスワードを入れるとこ)
-        $sql = $pdo->prepare('insert into Pass (user_id, hash_pass, nickname) values (?,?,?)');
-        $sql->execute([$id, $hashedPassword, $_POST['Nickname']]);
+        $sql = $pdo->prepare('insert into Pass (user_id, hash_pass) values (?,?)');
+        $sql->execute([$id, $hashedPassword]);
 
         // 登録が成功した場合、Top.php にリダイレクト
         header('Location: Top.php');
