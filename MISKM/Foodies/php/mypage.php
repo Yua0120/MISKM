@@ -31,7 +31,7 @@
             echo '<div class="icon-img">';
             if (!empty($userInfo['icon_image_path'])) {
                 // icon_image_path が空でない場合はその画像を表示
-                echo '<img src="/MISKM/img/icon_img/'. $userInfo['icon_image_path'] . ' class="icon">';
+                echo '<img src="../../img/icon_img/'. $userInfo['icon_image_path'] . '" class="icon">';
             } else {
                 // icon_image_path が空の場合はデフォルトの画像を表示
                 echo '<img src="/MISKM/img/default_icon.jpg" class="icon">';
