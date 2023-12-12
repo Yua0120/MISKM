@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="../css/login.css">
 <title>login.html</title>
 </head>
-<?php require 'FoodiesTitle.php' ?>
+<?php require 'FoodiesReturn.php'; ?>
 
 <h1>Choice is yours</h1>
 
