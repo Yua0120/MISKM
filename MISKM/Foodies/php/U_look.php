@@ -16,31 +16,31 @@
     $sql = "SELECT * FROM User WHERE nickname <> 'master'";
     $result = $pdo->query($sql);
     if ($result -> rowCount() > 0) {
-        foreach ($result as $post) {
+        foreach ($result as $row) {
             echo '<div class="user">';
             echo '<div class="username" id="name">';
             //ユーザー名
-            echo $post['name'];
+            echo $row['name'];
             echo '</div>';
             echo '<div class="username" id="nickname">';
             //ニックネーム
-            echo $post['nickname'];
+            echo $row['nickname'];
             echo '</div>';
             echo '<div class="mail">';
             //メールアドレス
-            echo $post['mail'];
+            echo $row['mail'];
             echo '</div>';
             echo '<div class="tel-number">';
             //電話番号
-            echo $post['tel_number'];
+            echo $row['tel_number'];
             echo '</div>';
             echo '<div class="zip-code">';
             //郵便番号 表示する横に郵便マークつける
-            echo '〒',$post['$zip_code'];
+            echo '〒',$row['$zip_code'];
             echo '</div>';
             echo '<div class="addres">';
             //住所
-            echo $post['$address'];
+            echo $row['$addres'];
             echo '</div>';
             echo '</div>';
         }
