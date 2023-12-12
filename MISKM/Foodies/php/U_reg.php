@@ -1,5 +1,4 @@
 <?php require 'header.php'?>
-<?php require 'return.php'?>
 <link rel="stylesheet" href="../css/touroku.css">
 <title>ユーザー登録</title>
 </head>
