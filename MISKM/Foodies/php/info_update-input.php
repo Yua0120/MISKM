@@ -4,7 +4,7 @@
     <title>ユーザー個人情報更新確認</title>
 </head>
     <?php
-        require 'FoodiesTitle.php';
+        require 'FoodiesReturn.php';
         $name=$nickname=$address=$tel_number=$zip_code='';
         if(isset($_SESSION['User'])){
             $nickname=$_SESSION['User']['nickname'];
