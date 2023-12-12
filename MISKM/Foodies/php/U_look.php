@@ -8,7 +8,7 @@
     <title>master-page</title>
 </header>
 <?php require 'FoodiesTitle.php' ;?>
-<a href="logout-check.php">ログアウト</a>
+<a href="logout-check.php" id="logout">ログアウト</a>
 <p class="text">ユーザー　一覧</p>
 
 <?php
