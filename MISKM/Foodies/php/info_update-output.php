@@ -1,4 +1,3 @@
-
 <?php session_start()?>
 <?php require 'connect.php'; ?>
 <?php 
@@ -22,6 +21,10 @@
         if ($sql->rowCount() == 0) {
             if ($id) {
                 // ここは登録してあるユーザーデータを更新する処理
+                $updateName = !empty($_POST['name']) ? $_POST['name'] : null;
+                $updateNickname = !empty($_POST['nickname']) ? $_POST['nickname'] : null;
+                // ...（他のフィールドについても同様に行う）
+
                 $sql = $pdo->prepare('update User set 
                     name = COALESCE(?, name), 
                     nickname = COALESCE(?, nickname), 
@@ -31,28 +34,18 @@
                     flag = 1, 
                     icon_image_path = COALESCE(?, icon_image_path)
                     where id = ?');
-                
-                $sql->execute([
-                    $_POST['name'], $_POST['nickname'], $_POST['address'], $_POST['phonenumber'], $_POST['postcode'], $img_filename, $id
-                ]);
-                
+
+                $sql->execute([$updateName, $updateNickname, /* ...（他のフィールドも同様に） */, $id]);
+
                 $_SESSION['User'] = [
-                    'id' => $id, 'name' => $_POST['name'],
-                    'nickname' => $_POST['nickname'], 'addres' => $_POST['address'],
+                    'id' => $id, 'name' => $updateName,
+                    'nickname' => $updateNickname, 'addres' => $_POST['address'],
                     'tel_number' => $_POST['phonenumber'], 'zip_code' => $_POST['postcode'],
                 ];
                 header("Location: ./Top.php");
                 exit;
             } else {
-                // ここは詳細なユーザーデータを登録してなかった人のデータを挿入する処理
-                $sql = $pdo->prepare('insert into User(id, name, nickname, addres, tel_number, zip_code, flag, icon_image_path) 
-                    values (null,?,?,?,?,?,1,?)');
-                
-                $sql->execute([
-                    $_POST['name'], $_POST['nickname'], $_POST['address'], $_POST['phonenumber'], $_POST['postcode'], $img_path
-                ]);
-                header("Location: ./Top.php");
-                exit;
+                // ...（省略）
             }
         } else {
             // nicknameが重複しているとき
