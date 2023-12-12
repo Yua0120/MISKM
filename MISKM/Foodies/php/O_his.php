@@ -11,10 +11,18 @@
 /* データベース接続 */
 if (isset($_SESSION['User'])) {
     $pdo = new PDO($connect, USER, PASS);
+    $sql = $pdo -> prepare('select * from History where user_id = ?');
+    $sql -> execute([
+            $_SESSION['User']['id']
+
+    ]);
+    $setid = $sql->fetchAll(PDO::FETCH_ASSOC);
+    $userId = $_SESSION['User']['id'];
     $sql = "SELECT History.daily, Product.name, Product.image, History_detail.product_id
             FROM History
             JOIN History_detail ON History.id = History_detail.history_id
-            JOIN Product ON History_detail.product_id = Product.id";
+            JOIN Product ON History_detail.product_id = Product.id
+            WHERE user_id = ?";
     $stmt = $pdo->query($sql);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
