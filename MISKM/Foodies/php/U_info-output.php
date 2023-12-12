@@ -45,7 +45,11 @@ try {
         // Passテーブルに挿入(パスワードを入れるとこ)
         $sql = $pdo->prepare('insert into Pass (user_id, hash_pass) values (?,?)');
         $sql->execute([$id, $hashedPassword]);
-
+        // セッションを設定
+        $_SESSION['User'] = [
+            'id' => $id,
+            'nickname' => $_POST['Nickname']
+        ];
         // 登録が成功した場合、Top.php にリダイレクト
         header('Location: Top.php');
         exit();
