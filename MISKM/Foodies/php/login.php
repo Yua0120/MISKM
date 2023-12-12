@@ -23,7 +23,9 @@
             </div>
             <div class="NEWlogin-confirmation">
                 <a href="U_reg.php">新規の方はこちら</a><br>
-
+            </div>
+            <div class="Master-confirmation">
+                <a href="admin-login.php">管理者の方はこちら</a><br>
             </div>
         </div>
     </div>
