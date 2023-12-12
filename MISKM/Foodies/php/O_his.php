@@ -11,7 +11,7 @@
 /* データベース接続 */
 if (isset($_SESSION['User'])) {
     $pdo = new PDO($connect, USER, PASS);
-    $sql = $pdo -> prepare('select * from History where user_id = ?');
+    $sql = $pdo -> prepare('select * from History WHERE user_id = ?');
     $sql -> execute([
             $_SESSION['User']['id']
 
@@ -23,7 +23,7 @@ if (isset($_SESSION['User'])) {
             JOIN History_detail ON History.id = History_detail.history_id
             JOIN Product ON History_detail.product_id = Product.id
             WHERE user_id = ?";
-    $stmt = $pdo->query($sql);
+    $stmt = $pdo->prepare($sql);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
     /* 商品一覧 */
