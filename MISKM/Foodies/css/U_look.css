@@ -58,5 +58,19 @@ p{
     text-align: left;
 }
 
-
+.a logout-button{
+    position: absolute;
+	bottom: 10px;
+	display: block;
+	width: 100px;
+	background: #338DC9;
+	color: #fff;
+	text-decoration: none;
+ 
+	font-size: 12px;
+	text-align: center;
+	left: 50%;
+	line-height: 30px;
+	transform: translateX( -50%);
+}
 
