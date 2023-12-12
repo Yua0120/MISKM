@@ -23,6 +23,8 @@ if (isset($_SESSION['User'])) {
             JOIN Product ON History_detail.product_id = Product.id
             WHERE user_id = ?";
     $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(1, $userId, PDO::PARAM_INT); 
+    $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
     /* 商品一覧 */
