@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="../css/hamburger.css">
     <title>master-page</title>
 </header>
-<?php require 'FoodiesTitle.php' ;?>
+<?php require 'FoodiesLogout.php' ;?>
 <p class="text">ユーザー　一覧</p>
 
 <?php
@@ -45,5 +45,4 @@
         }
     }
 ?>
-<a href="logout-check.php" class="logout-button">ログアウト</a>
 <?php require 'footer.php' ;?>
