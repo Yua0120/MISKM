@@ -12,7 +12,7 @@
         <div class="bobo">
             <button class="baba" onclick="location.href='logout-end.php'"><span>OK</span></button>
             <div class="space"></div>
-            <button class="example" onclick="location.href='Top.php'"><span>←Back</span></button>
+            <button class="example" onclick="location.href='javascript:history.back();'"><span>←Back</span></button>
         </div>
 </body>
 </html>
