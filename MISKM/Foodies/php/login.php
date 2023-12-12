@@ -18,6 +18,7 @@
                     <input type="password" name="password" class="in">
                 </p>
             </div>
+
             <div class="login-confirmation">
                 <a href="U_check_input.php">パスワードを忘れた方はこちら</a><br>
             </div>
@@ -27,6 +28,7 @@
             <div class="Master-confirmation">
                 <a href="admin-login.php">管理者の方はこちら</a><br>
             </div>
+            
         </div>
     </div>
     <div class="login-fail">
