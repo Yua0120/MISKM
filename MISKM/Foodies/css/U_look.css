@@ -19,17 +19,18 @@ p{
 
 .user{
     width: 80%;
-    border-bottom: 1px;
+    margin: 2% 10%;
+    border-bottom: 1px solid black;
 }
 
 .username{
     display: inline-block;
     width: 50%;
-    text-align: left;
+    text-align: center;
 }
 
 .mail{
-    text-align: left;
+    text-align: center;
 }
 
 .tel-number{
