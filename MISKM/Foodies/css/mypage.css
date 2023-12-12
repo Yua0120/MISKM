@@ -19,6 +19,7 @@ body{
 .icon-img{
     margin-top: 10%;
     width: 45%;
+    height: 108px;
     margin-left: 5%;
     float: left;
     
@@ -26,11 +27,11 @@ body{
 
 /*ニックネーム*/
 .nickname{
-    margin-top: 60px;
-    margin-bottom: 28.54px;
+    margin-top: 10%;
     width: 40%;
+    height: 108px;
+    line-height: 91px;
     text-align: center;
-    height: 50px;
     margin-right: 10%;
     font-size: 1.2rem;
     float:right;
@@ -88,9 +89,13 @@ p{
 
 /*削除ボタン*/
 .toukou-delete{
+    /* 位置 */
+    position: absolute;
+    left: 35%;
     margin: auto;
-    width: 40px;
-    font-size: 10px;
+    /* デザイン */
+    width: 50px;
+    font-size: 15px;
     color: #fff;
     border: none;
     border-radius: 4px;
