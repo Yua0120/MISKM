@@ -29,26 +29,33 @@ p{
     border-bottom: 1px solid black;
 }
 
+#name{
+    width: 30%;
+}
+
+#nickname{
+    width: 70%;
+}
+
 .username{
     display: inline-block;
-    width: 50%;
-    text-align: center;
+    text-align: left;
 }
 
 .mail{
-    text-align: center;
+    text-align: left;
 }
 
 .tel-number{
-    text-align: center;
+    text-align: left;
 }
 
 .zip-code{
-    text-align: center;
+    text-align: left;
 }
 
 .addres{
-    text-align: center;
+    text-align: left;
 }
 
 
