@@ -15,9 +15,8 @@ if (isset($_SESSION['User'])) {
     $sql -> execute([
             $_SESSION['User']['id']
     ]);
-    echo $sql;
-    $setid = $sql->fetchAll(PDO::FETCH_ASSOC);
-    $userId = $_SESSION['User']['id'];
+    //$setid = $sql->fetchAll(PDO::FETCH_ASSOC);
+    //$userId = $_SESSION['User']['id'];
     $sql = "SELECT History.daily, Product.name, Product.image, History_detail.product_id
             FROM History
             JOIN History_detail ON History.id = History_detail.history_id
