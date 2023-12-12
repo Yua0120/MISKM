@@ -36,11 +36,11 @@
             echo '</div>';
             echo '<div class="zip-code">';
             //郵便番号 表示する横に郵便マークつける
-            echo '〒',$row['$zip_code'];
+            echo '〒',$row['zip_code'];
             echo '</div>';
             echo '<div class="addres">';
             //住所
-            echo $row['$addres'];
+            echo $row['addres'];
             echo '</div>';
             echo '</div>';
         }
