@@ -12,6 +12,7 @@
 <p class="text">ユーザー　一覧</p>
 
 <?php
+    $pdo = new PDO($connect, USER, PASS);
     $sql = "SELECT * FROM User WHERE nickname <> 'master'";
     $result = $pdo->query($sql);
     if ($result -> rowCount() > 0) {
