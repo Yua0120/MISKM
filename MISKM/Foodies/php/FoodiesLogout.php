@@ -5,6 +5,8 @@
     <div class="logo">Foodies</div>
 
     <div class="post-detail-button is_prev">
-    <a id="return-button" href="logout-check.php">< logout</a>
+      <div class="sp_nav">  
+        <a id="return-button" href="logout-check.php">< logout</a>
+      </div>
     </div>
   </header>
