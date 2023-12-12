@@ -51,6 +51,7 @@ header .sp_nav {
   width: 40%; /*メニュー幅*/
   z-index: 2;
   background-color: #fff;
+  overflow-y: scroll;
 }
 .sidemenu nav ul li {
   padding: 20px;
