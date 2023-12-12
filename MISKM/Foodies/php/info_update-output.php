@@ -17,9 +17,9 @@
         $img_path = $img_folder . $img_filename; // アップロードされた画像の最終的なパスを取得
         move_uploaded_file($tmp_path, $img_path); // 画像をicon_imgに保存する
 
-        // 入力値が配列でないことを確認してから代入
-        $updateName = !empty($_POST['name']) ? $_POST['name'] : null;
-        $updateNickname = !empty($_POST['nickname']) ? $_POST['nickname'] : null;
+        // 入力値が空でないことを確認してから代入
+        $updateName = isset($_POST['name']) ? $_POST['name'] : null;
+        $updateNickname = isset($_POST['nickname']) ? $_POST['nickname'] : null;
         // ...（他のフィールドについても同様に行う）
 
         $sql = $pdo->prepare('update User set 
