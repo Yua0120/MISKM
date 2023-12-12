@@ -24,7 +24,7 @@
                 <option value="old">古い　順</option>
                 <option value="good_desc">いいね順</option>
             </select>
-            <input type="submit" value="並び変える" id="like">
+            <input type="submit" value="並び替える" id="like">
         </form>
     </div>
 
