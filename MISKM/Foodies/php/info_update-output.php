@@ -18,8 +18,8 @@
         move_uploaded_file($tmp_path, $img_path); // 画像をicon_imgに保存する
 
         // 入力値が配列でないことを確認してから代入
-        $updateName = isset($_POST['name']) && is_array($_POST['name']) ? null : $_POST['name'];
-        $updateNickname = isset($_POST['nickname']) && is_array($_POST['nickname']) ? null : $_POST['nickname'];
+        $updateName = !empty($_POST['name']) ? $_POST['name'] : null;
+        $updateNickname = !empty($_POST['nickname']) ? $_POST['nickname'] : null;
         // ...（他のフィールドについても同様に行う）
 
         $sql = $pdo->prepare('update User set 
