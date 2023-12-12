@@ -7,6 +7,12 @@ p{
     margin: 0;
     padding: 0;
 }
+#logout{
+    top: 2rem;
+    right: 0.5rem;
+    color: white;
+    font-weight: bold;
+}
 
 .text{
     margin-top: 10px;

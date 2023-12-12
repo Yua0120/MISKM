@@ -8,6 +8,7 @@
     <title>master-page</title>
 </header>
 <?php require 'FoodiesTitle.php' ;?>
+
 <p class="text">ユーザー　一覧</p>
 
 <?php
