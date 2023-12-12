@@ -14,8 +14,8 @@ if (isset($_SESSION['User'])) {
     $sql = $pdo -> prepare('select * from History WHERE user_id = ?');
     $sql -> execute([
             $_SESSION['User']['id']
-
     ]);
+    echo $_SESSION['User']['id'];
     $setid = $sql->fetchAll(PDO::FETCH_ASSOC);
     $userId = $_SESSION['User']['id'];
     $sql = "SELECT History.daily, Product.name, Product.image, History_detail.product_id
