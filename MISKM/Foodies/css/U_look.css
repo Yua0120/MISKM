@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+  
+p{
+    margin: 0;
+    padding: 0;
+}
+
+.text{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #9DA9B6;
+}
+
+.user{
+    width: 80%;
+    border-bottom: 1px;
+}
+
+.username{
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+}
+
+.mail{
+    text-align: left;
+}
+
+.tel-number{
+    text-align: center;
+}
+
+.zip-code{
+    text-align: center;
+}
+
+.addres{
+    text-align: center;
+}
+
+
+
