@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <?php require 'connect.php'; ?>
 <?php require 'header.php'; ?>
 <link rel="stylesheet" href="../css/Cart.css">
