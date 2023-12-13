@@ -67,7 +67,9 @@
 
             echo '<div class="toukou-box">';
             // 石島さんに聞く
+            echo '<div class="toukou-img-box">';
             echo '<img src="'.$base64ImageData.'" class="shohin-img">';
+            echo '</div>';
             echo '<div class="toukou-box-nickname">';
             echo $post['nickname'];
             echo '</div>';
