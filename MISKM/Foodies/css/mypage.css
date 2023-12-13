@@ -68,6 +68,13 @@ p{
     margin: auto;
 }
 
+.toukou-img-box{
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    height: 173.4px;
+}
+
 /*投稿box内のニックネーム*/
 .toukou-box-nickname{
     width: 100%;
@@ -90,7 +97,7 @@ p{
 /*削除ボタン*/
 .toukou-delete{
     /* 位置 */
-    position: absolute;
+    /*position: absolute;*/
     left: 35%;
     margin: auto;
     /* デザイン */
