@@ -59,7 +59,7 @@
         foreach ($sql as $post) {
 
             $checkLikeSql = $pdo->prepare('SELECT * FROM Good WHERE user_id = ? AND post_id = ?');
-            $checkLikeSql->execute([$user_id, $post_id]);
+            $checkLikeSql->execute([$user_id, $post['id']]);
             $isFavorite = $checkLikeSql->rowCount() > 0;
 
             // 画像データ
