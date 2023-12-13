@@ -1,9 +1,9 @@
 <?php
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
+    require 'connect.php';
 }
 ?>
-<?php require 'connect.php'; ?>
 <?php require 'header.php'; ?>
 <link rel="stylesheet" href="../css/Cart.css">
 <link rel="stylesheet" href="../css/hamburger.css">
